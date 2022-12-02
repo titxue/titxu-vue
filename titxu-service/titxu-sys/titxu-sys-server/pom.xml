@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>titxu-sys</artifactId>
+        <groupId>con.titxu</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>titxu-service-sys-server</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- web环境 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>con.titxu</groupId>
+            <artifactId>titxu-common-core</artifactId>
+            <version>${titxu-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>con.titxu</groupId>
+            <artifactId>titxu-common-swagger</artifactId>
+            <version>${titxu-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>con.titxu</groupId>
+            <artifactId>titxu-common-web</artifactId>
+            <version>${titxu-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>con.titxu</groupId>
+            <artifactId>titxu-common-mybatis</artifactId>
+            <version>${titxu-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>con.titxu</groupId>
+            <artifactId>titxu-sys-interface</artifactId>
+            <version>${titxu-cloud.version}</version>
+        </dependency>
+
+        <!--注册中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!-- LB 扩展 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
+        <!-- OAuth2 认证服务器-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>titxu-server-auth</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

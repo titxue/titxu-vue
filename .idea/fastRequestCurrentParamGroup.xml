@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentParamGroup">
+    <option name="className" value="com.titxu.cloud.sys.controller.LoginController" />
+    <option name="method" value="loginByPhone" />
+    <option name="methodDescription" value="手机验证码登陆" />
+    <option name="methodType" value="POST" />
+    <option name="module" value="titxu-sys-server" />
+    <option name="originUrl" value="/sys/loginByPhone" />
+    <option name="returnDocument" value="null" />
+    <option name="url" value="/sys/loginByPhone" />
+  </component>
+</project>
