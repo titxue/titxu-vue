@@ -4,17 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>titxu-common</artifactId>
-         <groupId>con.titxu.ddd</groupId>
-        <version>1.0-SNAPSHOT</version>
+         <groupId>com.titxu</groupId>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>titxu-common-core</artifactId>
     <packaging>jar</packaging>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
+    <name>titxu-commons-core</name>
+    <description>微服务公共组件核心模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+<!--            <optional>true</optional>-->
+        </dependency>
+    </dependencies>
 
 </project>

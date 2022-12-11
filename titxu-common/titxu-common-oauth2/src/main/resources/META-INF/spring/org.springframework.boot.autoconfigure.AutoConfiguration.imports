@@ -1,0 +1,5 @@
+com.titxu.oauth2.configuration.BearerTokenResolverConfiguration
+com.titxu.oauth2.configuration.JwtAuthenticationConverterConfiguration
+com.titxu.oauth2.handler.AccessDeniedHandlerImpl
+com.titxu.oauth2.impl.CsrfRequestMatcherImpl
+com.titxu.oauth2.point.AuthenticationEntryPointImpl

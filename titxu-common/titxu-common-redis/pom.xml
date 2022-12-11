@@ -4,22 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>titxu-common</artifactId>
-         <groupId>con.titxu.ddd</groupId>
-        <version>1.0-SNAPSHOT</version>
+         <groupId>com.titxu</groupId>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>titxu-common-redis</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
     <description>redis通用模块</description>
 
     <dependencies>
         <dependency>
-            <groupId>con.titxu.ddd</groupId>
+            <groupId>com.titxu</groupId>
             <artifactId>titxu-common-core</artifactId>
             <version>${titxu-cloud.version}</version>
         </dependency>

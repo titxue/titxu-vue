@@ -1,2 +1,2 @@
-com.titxu.cloud.common.core.properties.CloudClientProperties
-com.titxu.cloud.common.core.properties.CloudSecurityProperties
+com.titxu.core.common.core.properties.CloudClientProperties
+com.titxu.core.common.core.properties.CloudSecurityProperties

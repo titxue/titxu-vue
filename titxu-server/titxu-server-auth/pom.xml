@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>titxu-ops</artifactId>
-        <groupId>con.titxu</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>titxu-server</artifactId>
+        <groupId>com.titxu</groupId>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -24,27 +24,28 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>con.titxu</groupId>
+            <groupId>com.titxu</groupId>
             <artifactId>titxu-common-core</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
-            <groupId>con.titxu</groupId>
+            <groupId>com.titxu</groupId>
             <artifactId>titxu-common-swagger</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
-            <groupId>con.titxu</groupId>
+            <groupId>com.titxu</groupId>
             <artifactId>titxu-common-web</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
-            <groupId>con.titxu</groupId>
-            <artifactId>titxu-common-mybatis</artifactId>
-            <version>${titxu-cloud.version}</version>
+            <groupId>com.titxu</groupId>
+            <artifactId>titxu-common-oauth2</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.titxu</groupId>-->
+<!--            <artifactId>titxu-common-mybatis</artifactId>-->
+<!--            <version>${titxu-cloud.version}</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>con.titxu</groupId>
+            <groupId>com.titxu</groupId>
             <artifactId>titxu-sys-interface</artifactId>
             <version>${titxu-cloud.version}</version>
         </dependency>
@@ -65,15 +66,8 @@
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
-        <!-- OAuth2 认证服务器-->
-        <dependency>
-            <groupId>org.springframework.security.oauth.boot</groupId>
-            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-jose</artifactId>
-        </dependency>
+
+
 
     </dependencies>
     <build>
