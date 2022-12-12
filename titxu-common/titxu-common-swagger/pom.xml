@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>titxu-common</artifactId>
-         <groupId>com.titxu</groupId>
-        <version>1.0</version>
+        <groupId>com.titxu.cloud</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,16 +13,17 @@
     <packaging>jar</packaging>
 
     <description>swagger通用模块</description>
+
     <dependencies>
         <dependency>
-             <groupId>com.titxu</groupId>
+            <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-core</artifactId>
             <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
-            <version>${springfox.version}</version>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
 </project>

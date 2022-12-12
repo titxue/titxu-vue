@@ -9,17 +9,31 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>titxu-service</artifactId>
+    <artifactId>titxu-ops</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>titxu-sys</module>
+        <module>titxu-monitor-server</module>
+        <module>titxu-register-server</module>
+        <module>titxu-sentinel-server</module>
+        <module>titxu-auth-server</module>
+        <module>titxu-gateway-server</module>
     </modules>
+
+    <properties>
+        <spring-boot-admin.version>2.4.1</spring-boot-admin.version>
+    </properties>
 
     <dependencies>
         <!--监控-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--监控客户端-->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>${spring-boot-admin.version}</version>
         </dependency>
     </dependencies>
 </project>

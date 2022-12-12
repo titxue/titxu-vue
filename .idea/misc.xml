@@ -5,12 +5,20 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-common/cloud-starter-oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-common/titxu-common-oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-common/pom.xml" />
+        <option value="$PROJECT_DIR$/xtoon-ops/pom.xml" />
+        <option value="$PROJECT_DIR$/xtoon-service/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-ops/titxu-auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-ops/titxu-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-ops/titxu-monitor-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-ops/titxu-register-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-ops/titxu-sentinel-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/titxu-ops/titxu-auth-server/pom.xml" />
-        <option value="$PROJECT_DIR$/titxu-ops/titxu-gateway-server/pom.xml" />
         <option value="$PROJECT_DIR$/titxu-ops/titxu-server-auth/pom.xml" />
       </set>
     </option>

@@ -3,23 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>titxu_admin</artifactId>
-        <groupId>com.titxu</groupId>
-        <version>1.0</version>
+        <artifactId>titxu-cloud</artifactId>
+        <groupId>com.titxu.cloud</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
     <artifactId>titxu-common</artifactId>
     <packaging>pom</packaging>
 
-    <name>titxu-commons</name>
-    <description>微服务公共组件父模块</description>
+    <description>通用模块</description>
 
     <modules>
         <module>titxu-common-core</module>
-        <module>titxu-common-web</module>
-        <module>titxu-common-swagger</module>
+        <module>titxu-common-mybatis</module>
         <module>titxu-common-redis</module>
-        <module>titxu-common-oauth2</module>
+        <module>titxu-common-web</module>
+        <module>titxu-common-log</module>
+        <module>titxu-common-swagger</module>
+        <module>titxu-common-tenant</module>
     </modules>
 
 

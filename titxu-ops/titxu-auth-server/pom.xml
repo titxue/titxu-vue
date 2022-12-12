@@ -3,17 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>titxu-sys</artifactId>
+        <artifactId>titxu-ops</artifactId>
         <groupId>com.titxu.cloud</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>titxu-sys-server</artifactId>
-
-    <properties>
-        <kaptcha.version>0.0.9</kaptcha.version>
-    </properties>
+    <artifactId>titxu-auth-server</artifactId>
 
     <dependencies>
         <!-- web环境 -->
@@ -33,22 +29,17 @@
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
+            <artifactId>titxu-common-redis</artifactId>
+            <version>${titxu-cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-web</artifactId>
             <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-mybatis</artifactId>
-            <version>${titxu-cloud.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.titxu.cloud</groupId>
-            <artifactId>titxu-common-tenant</artifactId>
-            <version>${titxu-cloud.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.titxu.cloud</groupId>
-            <artifactId>titxu-common-log</artifactId>
             <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
@@ -71,15 +62,17 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
+
+        <!-- OAuth2 认证服务器-->
         <dependency>
-            <groupId>com.github.axet</groupId>
-            <artifactId>kaptcha</artifactId>
-            <version>${kaptcha.version}</version>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
+            <artifactId>spring-security-oauth2-jose</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-dubbo</artifactId>
@@ -89,30 +82,10 @@
             <artifactId>dubbo</artifactId>
             <version>2.7.8</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
-        <finalName>titxu-sys-server</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                    <include>**/*.json</include>
-                    <include>**/*.ftl</include>
-                </includes>
-            </resource>
-        </resources>
+        <finalName>xtoon-auth-server</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

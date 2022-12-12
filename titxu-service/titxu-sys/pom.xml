@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>titxu-service</artifactId>
-         <groupId>com.titxu</groupId>
-        <version>1.0</version>
+        <groupId>com.titxu.cloud</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,5 +15,6 @@
         <module>titxu-sys-interface</module>
         <module>titxu-sys-server</module>
     </modules>
+
 
 </project>

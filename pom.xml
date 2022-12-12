@@ -4,46 +4,52 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.titxu</groupId>
-    <artifactId>titxu_admin</artifactId>
+    <groupId>com.titxu.cloud</groupId>
+    <artifactId>titxu-cloud</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <modules>
         <module>titxu-common</module>
-        <module>titxu-server</module>
+        <module>titxu-ops</module>
         <module>titxu-service</module>
     </modules>
 
+    <name>titxu-cloud</name>
+    <description>titxu-cloud是一款基于DDD的微服务开发框架</description>
+
+
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <titxu-cloud.version>1.0</titxu-cloud.version>
-
-        <spring-boot.version>2.7.6</spring-boot.version>
-        <spring-cloud.version>2021.0.5</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.2.9.RELEASE</spring-cloud-alibaba.version>
-        <spring-security-oauth2-authorization-server.version>0.4.0
-        </spring-security-oauth2-authorization-server.version>
-        <hutool.version>5.8.10</hutool.version>
-        <mybatis-plus.version>3.5.2</mybatis-plus.version>
-        <mybatis-plus-generator.version>3.5.3</mybatis-plus-generator.version>
-        <springfox.version>3.0.0</springfox.version>
-        <commons-io.version>2.11.0</commons-io.version>
+        <titxu-cloud.version>1.0.0</titxu-cloud.version>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>2020.0.2</spring-cloud.version>
+        <com-alibaba-cloud.version>2.2.1.RELEASE</com-alibaba-cloud.version>
+        <hutool.version>5.6.5</hutool.version>
+        <mybatis-plus.version>3.4.3</mybatis-plus.version>
+        <slf4j.version>1.7.30</slf4j.version>
     </properties>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.0</version>
+        <relativePath/>
+    </parent>
+
     <dependencies>
+        <!--bootstrap 启动器-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!--bootstrap 启动器-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -55,17 +61,9 @@
             <version>${hutool.version}</version>
         </dependency>
     </dependencies>
+
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Boot 依赖控制 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- Spring Cloud 依赖控制 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -73,85 +71,28 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Alibaba Cloud 依赖控制 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
+                <version>${com-alibaba-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- OAuth 2.1 依赖 -->
-            <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-authorization-server -->
-            <!-- https://oss.sonatype.org/content/repositories/public/org/springframework/security/spring-security-oauth2-authorization-server -->
-            <!-- https://repo.spring.io/ui/native/milestone/org/springframework/security/spring-security-oauth2-authorization-server -->
-            <!-- https://github.com/spring-projects/spring-authorization-server -->
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-oauth2-authorization-server</artifactId>
-                <version>${spring-security-oauth2-authorization-server.version}</version>
-            </dependency>
-            <!-- MyBatis Plus -->
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus-boot-starter.version}</version>
-            </dependency>
-            <!-- MyBatis Plus Generator -->
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-generator</artifactId>
-                <version>${mybatis-plus-generator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis-plus-extension.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.titxu</groupId>
-                <artifactId>titxu-common-core</artifactId>
-                <version>${titxu-cloud.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.titxu</groupId>
-                <artifactId>titxu-common-redis</artifactId>
-                <version>${titxu-cloud.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.titxu</groupId>
-                <artifactId>titxu-common-web</artifactId>
-                <version>${titxu-cloud.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.titxu</groupId>
-                <artifactId>titxu-common-swagger</artifactId>
-                <version>${titxu-cloud.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.titxu</groupId>
-                <artifactId>titxu-common-oauth2</artifactId>
-                <version>${titxu-cloud.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>${commons-io.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>nexus-aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 </project>
