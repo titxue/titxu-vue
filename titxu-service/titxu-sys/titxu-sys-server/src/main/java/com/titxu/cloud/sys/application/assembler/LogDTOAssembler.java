@@ -7,7 +7,7 @@ import com.titxu.cloud.sys.dto.LogDTO;
 /**
  * 日志Assembler
  *
- * @author haoxin
+
  * @date 2021-06-21
  **/
 public class LogDTOAssembler {

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 请求工具类
  *
- * @author haoxin
+
  * @date 2021-06-01
  **/
 @Slf4j

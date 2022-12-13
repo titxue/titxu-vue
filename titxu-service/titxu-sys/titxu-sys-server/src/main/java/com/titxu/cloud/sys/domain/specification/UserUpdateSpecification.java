@@ -8,7 +8,7 @@ import com.titxu.cloud.common.core.domain.AbstractSpecification;
 /**
  * 用户修改Specification
  *
- * @author haoxin
+
  * @date 2021-02-27
  **/
 public class UserUpdateSpecification extends AbstractSpecification<User> {

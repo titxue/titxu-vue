@@ -15,7 +15,7 @@ import java.util.Locale;
 /**
  * 时间工具类
  *
- * @author haoxin
+
  * @date 2021-05-21
  **/
 public abstract class DateUtil {

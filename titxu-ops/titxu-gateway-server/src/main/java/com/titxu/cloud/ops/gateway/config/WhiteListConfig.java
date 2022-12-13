@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 白名单配置
  *
- * @author haoxin
+
  * @date 2021-05-29
  **/
 @Data

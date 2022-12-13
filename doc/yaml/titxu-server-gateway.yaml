@@ -3,9 +3,9 @@ server:
 
 spring:
   redis:
-    host: localhost
+    host: nas.titxu.com
     port: 6379
-    password: titxu123
+    password: lxue0422
     database: 0
   security:
     oauth2:
@@ -16,20 +16,20 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: nas.titxu.com:8848
     sentinel:
       transport:
         dashboard: localhost:5003
     gateway:
       routes:
       # 认证中心
-      - id: titxu-auth-server
-        uri: lb://titxu-auth-server
+      - id: titxu-server-auth
+        uri: lb://titxu-server-auth
         predicates:
         - Path=/auth/**
       # 用户
-      - id: titxu-sys-server
-        uri: lb://titxu-sys-server
+      - id: titxu-server-sys
+        uri: lb://titxu-server-sys
         predicates:
         - Path=/sys/**
       discovery:

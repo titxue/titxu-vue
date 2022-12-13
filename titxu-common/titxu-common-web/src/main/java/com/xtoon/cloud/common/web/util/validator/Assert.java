@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 数据校验
  *
- * @author haoxin
+
  */
 public abstract class Assert {
 

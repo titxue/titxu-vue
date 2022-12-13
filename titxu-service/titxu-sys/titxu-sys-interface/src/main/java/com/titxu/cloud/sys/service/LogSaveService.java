@@ -4,9 +4,6 @@ import com.titxu.cloud.sys.dto.LogDTO;
 
 /**
  * 日志保存服务接口
- *
- * @author haoxin
- * @date 2021-06-21
  **/
 public interface LogSaveService {
 

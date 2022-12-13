@@ -10,8 +10,8 @@ import java.util.List;
 /**
  * 用户
  *
- * @author haoxin
- * @date 2021-02-02
+
+
  **/
 public class User implements Entity<User> {
 

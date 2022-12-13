@@ -26,8 +26,8 @@ import java.util.Map;
 /**
  * 用户-Repository实现类
  *
- * @author haoxin
- * @date 2021-02-02
+
+
  **/
 @Repository
 public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> implements UserRepository, IService<SysUserDO> {

@@ -31,8 +31,8 @@ import java.util.List;
  * @date 2022/3/26
  * @apiNote
  */
-@EnableOpenApi
-@Configuration
+//@EnableOpenApi
+//@Configuration
 public class SpringFoxSwaggerConfig {
     /**
      * 配置基本信息

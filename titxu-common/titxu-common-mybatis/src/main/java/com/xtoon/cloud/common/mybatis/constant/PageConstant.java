@@ -3,7 +3,7 @@ package com.titxu.cloud.common.mybatis.constant;
 /**
  * 分页查询
  *
- * @author haoxin
+
  * @date 2021-05-21
  **/
 public interface PageConstant {

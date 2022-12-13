@@ -24,7 +24,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 /**
  * 安全配置
  *
- * @author haoxin
+
  * @date 2021-05-29
  **/
 @Configuration

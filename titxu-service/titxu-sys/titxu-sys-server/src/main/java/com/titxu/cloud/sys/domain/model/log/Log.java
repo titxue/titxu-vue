@@ -7,8 +7,8 @@ import com.titxu.cloud.common.core.domain.Entity;
 /**
  * 日志实体
  *
- * @author haoxin
- * @date 2021-02-02
+
+
  **/
 public class Log implements Entity<Log> {
 

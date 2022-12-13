@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 基础PO
  *
- * @author haoxin
+
  * @date 2021-01-26
  **/
 @Data

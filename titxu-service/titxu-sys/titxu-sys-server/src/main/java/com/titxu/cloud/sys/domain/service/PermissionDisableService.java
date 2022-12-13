@@ -7,7 +7,7 @@ import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
 /**
  * 权限禁用服务
  *
- * @author haoxin
+
  * @date 2021-05-11
  **/
 public class PermissionDisableService {

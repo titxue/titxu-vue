@@ -15,14 +15,14 @@ spring:
         refresh-enabled: true
         file-extension: yaml
         enabled: true
-#  boot:
-#    admin:
-#      client:
-#        url: http://localhost:5001
-#        username: admin
-#        password: admin
-#        instance:
-#          prefer-ip: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:5001
+        username: admin
+        password: admin
+        instance:
+          prefer-ip: true
 
 management:
   health:

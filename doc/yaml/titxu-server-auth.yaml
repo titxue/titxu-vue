@@ -1,36 +1,36 @@
 server:
   port: 8000
 
-dubbo:
-  application:
-    id: titxu-auth-server
-    name: titxu-auth-server
-    qosEnable: false
-  protocol:
-    name: dubbo
-    port: -1
-  registry:
-    address: nacos://localhost:8848
-    check: false
-  consumer.timeout: 30000
-  consumer.retries: 5
+#dubbo:
+#  application:
+#    id: titxu-server-auth
+#    name: titxu-server-auth
+#    qosEnable: false
+#  protocol:
+#    name: dubbo
+#    port: -1
+#  registry:
+#    address: nacos://localhost:8848
+#    check: false
+#  consumer.timeout: 30000
+#  consumer.retries: 5
 
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: haoxin963
+    password: Lxue0422..
     url: jdbc:mysql://localhost:3306/titxu-cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
   redis:
-    host: localhost
+    host: nas.titxu.com
     port: 6379
-    password: titxu123
+    password: lxue0422
     database: 0
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: nas.titxu.com:8848
     sentinel:
       transport:
         dashboard: localhost:5003

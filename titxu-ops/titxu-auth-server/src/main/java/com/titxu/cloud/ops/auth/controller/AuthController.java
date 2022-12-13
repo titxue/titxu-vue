@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.endpoint.TokenEndpoint;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -22,20 +23,25 @@ import java.util.Map;
 /**
  * 认证中心
  *
- * @author haoxin
+
  * @date 2021-05-29
  **/
 @Api(tags = "认证中心")
 @RestController
 @RequestMapping("/oauth")
-@AllArgsConstructor
 @Slf4j
 public class AuthController {
 
     private TokenEndpoint tokenEndpoint;
 
 
-    protected AuthenticationService authenticationService;
+
+    @Autowired
+    public void setTokenEndpoint(TokenEndpoint tokenEndpoint) {
+        this.tokenEndpoint = tokenEndpoint;
+    }
+
+
 
     @PostMapping("/token")
     @ApiOperation(value = "OAuth2认证", notes = "login")

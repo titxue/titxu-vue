@@ -3,8 +3,8 @@ package com.titxu.cloud.sys.domain.model.log;
 /**
  * 日志-Repository接口
  *
- * @author haoxin
- * @date 2021-02-02
+
+
  **/
 public interface LogRepository {
 

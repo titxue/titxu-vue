@@ -1,10 +1,16 @@
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   application:
-    name: titxu-auth-server
+    name: titxu-server-auth
   cloud:
     nacos:
       config:
-        server-addr: localhost:8848
+        server-addr: nas.titxu.com:8848
+        group: DEFAULT_GROUP
+        #配置自动刷新
+        refresh-enabled: true
         file-extension: yaml
         enabled: true
   boot:

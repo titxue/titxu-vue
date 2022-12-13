@@ -7,8 +7,8 @@ import lombok.Data;
 /**
  * 日志DO
  *
- * @author haoxin
- * @date 2021-02-02
+
+
  **/
 @Data
 @TableName("sys_log")

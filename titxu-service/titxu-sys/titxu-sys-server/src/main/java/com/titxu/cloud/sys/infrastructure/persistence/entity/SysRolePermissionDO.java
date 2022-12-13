@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * 角色权限关联DO
  *
- * @author haoxin
+
  * @date 2021-02-15
  **/
 @Data

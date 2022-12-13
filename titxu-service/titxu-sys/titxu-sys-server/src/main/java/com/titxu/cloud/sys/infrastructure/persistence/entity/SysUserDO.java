@@ -8,7 +8,7 @@ import lombok.Data;
 /**
  * 用户DO
  *
- * @author haoxin
+
  * @date 2021-02-09
  **/
 @Data

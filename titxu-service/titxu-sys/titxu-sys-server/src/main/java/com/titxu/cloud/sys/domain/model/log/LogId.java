@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 日志ID
  *
- * @author haoxin
+
  * @date 2021-04-02
  **/
 public class LogId implements ValueObject<LogId> {

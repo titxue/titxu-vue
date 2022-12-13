@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * hibernate-validator校验工具类
  *
- * @author haoxin
+
  */
 public class ValidatorUtils {
     private static Validator validator;

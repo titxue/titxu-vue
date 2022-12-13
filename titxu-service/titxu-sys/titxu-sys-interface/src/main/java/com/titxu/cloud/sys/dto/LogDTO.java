@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 日志dto
  *
- * @author haoxin
+
  * @date 2021-06-21
  **/
 @Data

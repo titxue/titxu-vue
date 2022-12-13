@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 /**
  * 多租户 tenant_id存储器
  *
- * @author haoxin
+
  * @date 2021-05-21
  **/
 @UtilityClass

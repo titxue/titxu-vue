@@ -5,7 +5,7 @@ import com.titxu.cloud.sys.dto.AuthenticationDTO;
 /**
  * 认证服务接口
  *
- * @author haoxin
+
  * @date 2021-06-23
  **/
 public interface AuthenticationService {

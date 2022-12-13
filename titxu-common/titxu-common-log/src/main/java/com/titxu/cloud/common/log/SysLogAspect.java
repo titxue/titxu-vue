@@ -13,7 +13,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -22,19 +21,16 @@ import java.lang.reflect.Method;
 
 /**
  * 系统日志，切面处理类
- *
- * @author haoxin
- * @date 2021-02-02
  **/
 @Aspect
 @Component
 public class SysLogAspect {
 
-    private Logger logger = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     private LogSaveService logSaveService;
 
-    @Autowired
+    @Resource
     public void setLogSaveService(LogSaveService logSaveService) {
         this.logSaveService = logSaveService;
     }

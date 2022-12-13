@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 /**
  * 返回数据定义
  *
- * @author haoxin
+
  * @date 2021-05-21
  */
 @AllArgsConstructor

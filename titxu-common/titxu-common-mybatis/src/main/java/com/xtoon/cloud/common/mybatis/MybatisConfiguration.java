@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * mybatis-plus配置
  *
- * @author haoxin
+
  * @date 2021-06-07
  **/
 @Slf4j

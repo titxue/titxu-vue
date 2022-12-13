@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * 监控服务
  *
- * @author haoxin
+
  * @date 2021-05-24
  **/
 @EnableAdminServer

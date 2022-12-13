@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * ValueObject interface
  *
- * @author haoxin
+
  * @date 2021-02-01
  **/
 public interface ValueObject<T> extends Serializable {

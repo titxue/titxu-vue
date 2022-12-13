@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 角色
  *
- * @author haoxin
+
  * @date 2021-02-08
  **/
 public class Role implements Entity<Role> {

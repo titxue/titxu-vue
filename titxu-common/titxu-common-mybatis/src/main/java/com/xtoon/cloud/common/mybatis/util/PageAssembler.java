@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 /**
  * Assembler class for the page.
  *
- * @author haoxin
+
  * @date 2021-04-04
  **/
 public class PageAssembler {

@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 /**
  * 鉴权管理器
  *
- * @author haoxin
+
  * @date 2021-05-28
  **/
 @Component

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 租户拦截
  *
- * @author haoxin
+
  * @date 2021-06-21
  **/
 @Component

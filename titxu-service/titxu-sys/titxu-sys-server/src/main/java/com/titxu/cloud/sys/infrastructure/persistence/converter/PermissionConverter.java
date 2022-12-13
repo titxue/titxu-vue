@@ -12,7 +12,7 @@ import java.util.*;
 /**
  * 权限Converter
  *
- * @author haoxin
+
  * @date 2021-02-16
  **/
 public class PermissionConverter {

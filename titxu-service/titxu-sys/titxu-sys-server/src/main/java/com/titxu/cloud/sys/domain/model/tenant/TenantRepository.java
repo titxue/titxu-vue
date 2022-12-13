@@ -3,7 +3,7 @@ package com.titxu.cloud.sys.domain.model.tenant;
 /**
  * 租户-Repository接口
  *
- * @author haoxin
+
  * @date 2021-02-14
  **/
 public interface TenantRepository {

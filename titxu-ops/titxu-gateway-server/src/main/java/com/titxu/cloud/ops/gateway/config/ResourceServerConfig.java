@@ -24,7 +24,7 @@ import reactor.core.publisher.Mono;
 /**
  * 资源服务器配置
  *
- * @author haoxin
+
  * @date 2021-06-15
  **/
 @AllArgsConstructor

@@ -15,16 +15,18 @@ import java.io.IOException;
 
 /**
  * 验证码Controller
- *
- * @author haoxin
- * @date 2021-06-23
  **/
 @Api(tags = "验证码管理")
 @RestController
 public class CaptchaController {
 
-    @Autowired
+
     private CaptchaApplicationService captchaApplicationService;
+
+    @Autowired
+    public void setCaptchaApplicationService(CaptchaApplicationService captchaApplicationService) {
+        this.captchaApplicationService = captchaApplicationService;
+    }
 
     @GetMapping("/captcha")
     public void captcha(HttpServletResponse response, String uuid) throws IOException {

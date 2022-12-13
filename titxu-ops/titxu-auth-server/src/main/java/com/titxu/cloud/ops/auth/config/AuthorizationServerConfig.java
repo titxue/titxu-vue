@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * 授权服务配置
  *
- * @author haoxin
+
  * @date 2021-06-15
  **/
 @Configuration
@@ -98,8 +98,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
      */
     @Bean
     public KeyPair keyPair() {
-        KeyStoreKeyFactory factory = new KeyStoreKeyFactory(new ClassPathResource("titxu.jks"), "123456".toCharArray());
-        KeyPair keyPair = factory.getKeyPair("titxu", "123456".toCharArray());
+        KeyStoreKeyFactory factory = new KeyStoreKeyFactory(new ClassPathResource("titxu.jks"), "lxue0422".toCharArray());
+        KeyPair keyPair = factory.getKeyPair("titxu", "lxue0422".toCharArray());
         return keyPair;
     }
 

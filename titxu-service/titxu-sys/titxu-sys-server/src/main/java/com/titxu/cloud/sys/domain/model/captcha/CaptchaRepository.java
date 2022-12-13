@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 /**
  * 验证码Repository
  *
- * @author haoxin
+
  * @date 2021-05-10
  **/
 public interface CaptchaRepository {
