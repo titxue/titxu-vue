@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.domain.model.tenant;
 
-import com.xtoon.cloud.common.core.domain.Entity;
-import com.xtoon.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.common.core.domain.Entity;
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.user.UserId;
 
 /**

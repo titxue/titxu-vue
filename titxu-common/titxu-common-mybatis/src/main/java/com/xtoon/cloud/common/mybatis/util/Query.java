@@ -1,9 +1,9 @@
-package com.xtoon.cloud.common.mybatis.util;
+package com.titxu.cloud.common.mybatis.util;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.xtoon.cloud.common.mybatis.constant.PageConstant;
+import com.titxu.cloud.common.mybatis.constant.PageConstant;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.mybatis.util;
+package com.titxu.cloud.common.mybatis.util;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 

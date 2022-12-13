@@ -2,7 +2,7 @@ package com.titxu.cloud.sys.domain.specification;
 
 import com.titxu.cloud.sys.domain.model.tenant.Tenant;
 import com.titxu.cloud.sys.domain.model.tenant.TenantRepository;
-import com.xtoon.cloud.common.core.domain.AbstractSpecification;
+import com.titxu.cloud.common.core.domain.AbstractSpecification;
 
 /**
  * 租户创建Specification

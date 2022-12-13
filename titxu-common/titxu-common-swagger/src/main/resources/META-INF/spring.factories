@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.xtoon.cloud.common.swagger.SwaggerConfiguration
+    com.titxu.cloud.common.swagger.SwaggerConfiguration

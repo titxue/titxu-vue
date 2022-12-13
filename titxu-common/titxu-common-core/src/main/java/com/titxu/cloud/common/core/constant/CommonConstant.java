@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.constant;
+package com.titxu.cloud.common.core.constant;
 
 /**
  * 通用常量类

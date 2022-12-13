@@ -1,6 +1,6 @@
 spring:
   application:
-    name: xtoon-gateway-server
+    name: titxu-gateway-server
   cloud:
     nacos:
       config:

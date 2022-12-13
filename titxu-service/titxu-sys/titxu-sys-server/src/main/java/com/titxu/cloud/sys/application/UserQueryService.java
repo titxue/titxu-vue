@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.application;
 
 import com.titxu.cloud.sys.application.dto.UserDTO;
-import com.xtoon.cloud.common.mybatis.util.Page;
+import com.titxu.cloud.common.mybatis.util.Page;
 
 import java.util.Map;
 

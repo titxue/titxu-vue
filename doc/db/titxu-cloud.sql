@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 50724
  Source Host           : localhost:3306
- Source Schema         : xtoon-cloud
+ Source Schema         : titxu-cloud
 
  Target Server Type    : MySQL
  Target Server Version : 50724
@@ -473,7 +473,7 @@ CREATE TABLE `sys_tenant` (
 -- Records of sys_tenant
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_tenant` VALUES ('1', 'xtoon', '享同科技', '1', '0', NULL, '0', NULL, NULL, NULL, NULL);
+INSERT INTO `sys_tenant` VALUES ('1', 'titxu', '享同科技', '1', '0', NULL, '0', NULL, NULL, NULL, NULL);
 COMMIT;
 
 -- ----------------------------

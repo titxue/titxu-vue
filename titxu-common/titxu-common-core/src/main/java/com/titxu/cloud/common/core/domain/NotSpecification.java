@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.domain;
+package com.titxu.cloud.common.core.domain;
 
 /**
  * NOT decorator, used to create a new specifcation that is the inverse (NOT) of the given spec.

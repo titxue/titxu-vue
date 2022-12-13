@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.swagger;
+package com.titxu.cloud.common.swagger;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.models.auth.In;
@@ -8,6 +8,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.builders.RequestParameterBuilder;
+import springfox.documentation.oas.annotations.EnableOpenApi;
 import springfox.documentation.schema.ScalarType;
 import springfox.documentation.service.*;
 import springfox.documentation.spi.DocumentationType;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.xtoon.cloud.common.core.constant.CommonConstant.AUTH_KEY;
+import static com.titxu.cloud.common.core.constant.CommonConstant.AUTH_KEY;
 
 /**
  * Swagger配置
@@ -26,7 +27,8 @@ import static com.xtoon.cloud.common.core.constant.CommonConstant.AUTH_KEY;
  * @author haoxin
  * @date 2021-06-08
  **/
-@Configuration
+//@EnableOpenApi
+//@Configuration
 public class SwaggerConfiguration {
 
     @Bean
@@ -44,8 +46,8 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("xtoon-cloud")
-                .description("xtoon-cloud是一款基于DDD领域模型设计并支持SaaS平台的微服务框架")
+                .title("titxu-cloud")
+                .description("titxu-cloud是一款基于DDD领域模型设计并支持SaaS平台的微服务框架")
                 .termsOfServiceUrl("http://www.xiangtoon.com")
                 .contact(new Contact("享同科技", "https://blog.csdn.net/haoxin963", "525899665@qq.com"))
                 .version("v1.0.0")
@@ -85,4 +87,6 @@ public class SwaggerConfiguration {
                 .build());
         return parameters;
     }
+
+
 }

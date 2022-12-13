@@ -2,10 +2,10 @@ package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.sys.application.TenantApplicationService;
 import com.titxu.cloud.sys.application.TenantQueryService;
-import com.xtoon.cloud.common.log.SysLog;
-import com.xtoon.cloud.common.mybatis.constant.PageConstant;
-import com.xtoon.cloud.common.mybatis.util.Page;
-import com.xtoon.cloud.common.web.util.Result;
+import com.titxu.cloud.common.log.SysLog;
+import com.titxu.cloud.common.mybatis.constant.PageConstant;
+import com.titxu.cloud.common.mybatis.util.Page;
+import com.titxu.cloud.common.web.util.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
-package com.xtoon.cloud.common.tenant.util;
+package com.titxu.cloud.common.tenant.util;
 
-import com.xtoon.cloud.common.core.constant.CommonConstant;
-import com.xtoon.cloud.common.core.util.TenantContext;
+import com.titxu.cloud.common.core.constant.CommonConstant;
+import com.titxu.cloud.common.core.util.TenantContext;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

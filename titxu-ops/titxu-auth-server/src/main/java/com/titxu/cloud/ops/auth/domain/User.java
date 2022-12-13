@@ -1,7 +1,7 @@
 package com.titxu.cloud.ops.auth.domain;
 
-import com.xtoon.cloud.common.core.constant.AuthConstants;
-import com.xtoon.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.common.core.constant.AuthConstants;
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;

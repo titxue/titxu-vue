@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.redis.util;
+package com.titxu.cloud.common.redis.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

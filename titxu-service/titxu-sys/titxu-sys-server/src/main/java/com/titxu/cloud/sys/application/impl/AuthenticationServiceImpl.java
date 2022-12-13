@@ -12,8 +12,8 @@ import com.titxu.cloud.sys.domain.service.CaptchaValidateService;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.service.AuthenticationService;
 import org.apache.commons.lang.StringUtils;
-import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -23,17 +23,26 @@ import java.util.List;
  * @author haoxin
  * @date 2021-05-10
  **/
-@DubboService
+@Service
 public class AuthenticationServiceImpl implements AuthenticationService {
 
-    @Autowired
+
     private CaptchaRepository captchaRepository;
-
-    @Autowired
     private UserRepository userRepository;
+    private PermissionQueryService permissionQueryService;
 
     @Autowired
-    private PermissionQueryService permissionQueryService;
+    public void setCaptchaRepository(CaptchaRepository captchaRepository) {
+        this.captchaRepository = captchaRepository;
+    }
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    @Autowired
+    public void setPermissionQueryService(PermissionQueryService permissionQueryService) {
+        this.permissionQueryService = permissionQueryService;
+    }
 
     @Override
     public boolean validateCaptcha(String uuid, String captchaCode) {

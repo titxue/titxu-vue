@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys.domain.model.user;
 
-import com.xtoon.cloud.common.core.domain.Entity;
+import com.titxu.cloud.common.core.domain.Entity;
 
 /**
  * 账号

@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys.domain.model.permission;
 
-import com.xtoon.cloud.common.core.domain.ValueObject;
+import com.titxu.cloud.common.core.domain.ValueObject;
 import org.apache.commons.lang.StringUtils;
 
 /**

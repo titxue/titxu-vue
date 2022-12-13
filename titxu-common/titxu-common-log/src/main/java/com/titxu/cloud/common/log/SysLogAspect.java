@@ -1,12 +1,11 @@
-package com.xtoon.cloud.common.log;
+package com.titxu.cloud.common.log;
 
 import com.google.gson.Gson;
-import com.xtoon.cloud.common.core.util.HttpContextUtils;
-import com.xtoon.cloud.common.core.util.IPUtils;
-import com.xtoon.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.HttpContextUtils;
+import com.titxu.cloud.common.core.util.IPUtils;
+import com.titxu.cloud.common.core.util.RequestUtils;
 import com.titxu.cloud.sys.dto.LogDTO;
 import com.titxu.cloud.sys.service.LogSaveService;
-import org.apache.dubbo.config.annotation.DubboReference;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,8 +13,10 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
@@ -31,10 +32,15 @@ public class SysLogAspect {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @DubboReference
     private LogSaveService logSaveService;
 
-    @Pointcut("@annotation(com.xtoon.cloud.common.log.SysLog)")
+    @Autowired
+    public void setLogSaveService(LogSaveService logSaveService) {
+        this.logSaveService = logSaveService;
+    }
+
+
+    @Pointcut("@annotation(com.titxu.cloud.common.log.SysLog)")
     public void logPointCut() {
 
     }

@@ -2,10 +2,10 @@ package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.sys.application.RegisterApplicationService;
 import com.titxu.cloud.sys.application.command.RegisterTenantCommand;
-import com.xtoon.cloud.common.log.SysLog;
-import com.xtoon.cloud.common.web.util.Result;
-import com.xtoon.cloud.common.web.util.validator.ValidatorUtils;
-import com.xtoon.cloud.common.web.util.validator.group.AddGroup;
+import com.titxu.cloud.common.log.SysLog;
+import com.titxu.cloud.common.web.util.Result;
+import com.titxu.cloud.common.web.util.validator.ValidatorUtils;
+import com.titxu.cloud.common.web.util.validator.group.AddGroup;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

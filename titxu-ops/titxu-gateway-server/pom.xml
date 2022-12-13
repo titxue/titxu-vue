@@ -81,7 +81,7 @@
     </dependencies>
 
     <build>
-        <finalName>xtoon-gateway-server</finalName>
+        <finalName>titxu-gateway-server</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

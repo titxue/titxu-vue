@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.domain;
+package com.titxu.cloud.common.core.domain;
 
 
 /**

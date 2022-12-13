@@ -1,6 +1,6 @@
-package com.xtoon.cloud.common.mybatis.util;
+package com.titxu.cloud.common.mybatis.util;
 
-import com.xtoon.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.RequestUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.executor.Executor;

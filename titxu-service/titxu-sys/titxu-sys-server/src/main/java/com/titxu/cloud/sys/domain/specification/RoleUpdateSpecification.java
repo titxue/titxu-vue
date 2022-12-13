@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.domain.specification;
 
 import com.titxu.cloud.sys.domain.model.role.Role;
-import com.xtoon.cloud.common.core.domain.AbstractSpecification;
+import com.titxu.cloud.common.core.domain.AbstractSpecification;
 
 /**
  * 角色修改Specification

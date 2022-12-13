@@ -7,10 +7,10 @@ import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
 import com.titxu.cloud.sys.domain.model.role.*;
 import com.titxu.cloud.sys.domain.model.tenant.*;
 import com.titxu.cloud.sys.domain.model.user.*;
-import com.xtoon.cloud.common.core.domain.StatusEnum;
-import com.xtoon.cloud.sys.domain.model.role.*;
-import com.xtoon.cloud.sys.domain.model.tenant.*;
-import com.xtoon.cloud.sys.domain.model.user.*;
+import com.titxu.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.sys.domain.model.role.*;
+import com.titxu.cloud.sys.domain.model.tenant.*;
+import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.sys.domain.specification.TenantCreateSpecification;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.exception;
+package com.titxu.cloud.common.core.exception;
 
 /**
  * 公用的自定义异常

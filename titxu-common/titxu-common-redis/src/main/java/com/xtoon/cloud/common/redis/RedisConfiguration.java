@@ -1,6 +1,6 @@
-package com.xtoon.cloud.common.redis;
+package com.titxu.cloud.common.redis;
 
-import com.xtoon.cloud.common.redis.util.RedisService;
+import com.titxu.cloud.common.redis.util.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;

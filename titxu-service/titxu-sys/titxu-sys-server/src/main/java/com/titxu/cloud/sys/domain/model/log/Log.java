@@ -2,7 +2,7 @@ package com.titxu.cloud.sys.domain.model.log;
 
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
 import com.titxu.cloud.sys.domain.model.user.UserName;
-import com.xtoon.cloud.common.core.domain.Entity;
+import com.titxu.cloud.common.core.domain.Entity;
 
 /**
  * 日志实体

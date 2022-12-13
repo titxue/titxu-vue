@@ -1,6 +1,6 @@
-package com.xtoon.cloud.common.web.util;
+package com.titxu.cloud.common.web.util;
 
-import com.xtoon.cloud.common.web.constant.ResultCode;
+import com.titxu.cloud.common.web.constant.ResultCode;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,7 @@
 package com.titxu.cloud.sys.domain.model.user;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
 /**

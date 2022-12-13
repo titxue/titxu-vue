@@ -1,12 +1,12 @@
-package com.xtoon.cloud.common.mybatis;
+package com.titxu.cloud.common.mybatis;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
-import com.xtoon.cloud.common.core.constant.CommonConstant;
-import com.xtoon.cloud.common.core.util.TenantContext;
+import com.titxu.cloud.common.core.constant.CommonConstant;
+import com.titxu.cloud.common.core.util.TenantContext;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.NullValue;

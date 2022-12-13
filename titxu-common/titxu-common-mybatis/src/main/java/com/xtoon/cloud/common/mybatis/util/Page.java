@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.mybatis.util;
+package com.titxu.cloud.common.mybatis.util;
 
 import java.io.Serializable;
 import java.util.List;

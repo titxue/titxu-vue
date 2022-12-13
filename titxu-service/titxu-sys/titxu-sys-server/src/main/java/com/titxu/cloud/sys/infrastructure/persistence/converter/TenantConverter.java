@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys.infrastructure.persistence.converter;
 
-import com.xtoon.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.tenant.Tenant;
 import com.titxu.cloud.sys.domain.model.tenant.TenantCode;
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;

@@ -4,7 +4,7 @@ import com.titxu.cloud.sys.domain.model.role.RoleId;
 import com.titxu.cloud.sys.domain.model.user.User;
 import com.titxu.cloud.sys.domain.model.user.UserId;
 import com.titxu.cloud.sys.domain.model.user.UserName;
-import com.xtoon.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.application.command.UserCommand;
 import com.titxu.cloud.sys.application.dto.UserDTO;
 

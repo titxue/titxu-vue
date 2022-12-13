@@ -1,12 +1,13 @@
 package com.titxu.cloud.ops.auth.filter;
 
-import com.alibaba.fastjson.JSONObject;
-import com.xtoon.cloud.common.core.constant.AuthConstants;
-import com.xtoon.cloud.common.web.util.Result;
+
+import com.alibaba.fastjson2.JSONObject;
+import com.titxu.cloud.common.core.constant.AuthConstants;
+import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.sys.service.AuthenticationService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.dubbo.config.annotation.DubboReference;
+
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -30,7 +31,7 @@ import java.io.IOException;
 @Component
 public class CaptchaFilter extends OncePerRequestFilter {
 
-    @DubboReference
+
     protected AuthenticationService authenticationService;
 
     @Override

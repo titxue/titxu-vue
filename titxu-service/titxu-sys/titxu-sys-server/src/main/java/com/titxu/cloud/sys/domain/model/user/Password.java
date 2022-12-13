@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys.domain.model.user;
 
-import com.xtoon.cloud.common.core.domain.ValueObject;
+import com.titxu.cloud.common.core.domain.ValueObject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

@@ -2,8 +2,8 @@ package com.titxu.cloud.ops.auth.config;
 
 import com.google.gson.Gson;
 import com.titxu.cloud.ops.auth.service.UserDetailsServiceImpl;
-import com.xtoon.cloud.common.web.constant.ResultCode;
-import com.xtoon.cloud.common.web.util.Result;
+import com.titxu.cloud.common.web.constant.ResultCode;
+import com.titxu.cloud.common.web.util.Result;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;

@@ -1,7 +1,7 @@
-package com.xtoon.cloud.common.web.util.validator;
+package com.titxu.cloud.common.web.util.validator;
 
 
-import com.xtoon.cloud.common.core.exception.BaseException;
+import com.titxu.cloud.common.core.exception.BaseException;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

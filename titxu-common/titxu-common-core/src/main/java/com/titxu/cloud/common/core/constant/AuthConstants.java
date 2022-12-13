@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.constant;
+package com.titxu.cloud.common.core.constant;
 
 /**
  * 认证常量类

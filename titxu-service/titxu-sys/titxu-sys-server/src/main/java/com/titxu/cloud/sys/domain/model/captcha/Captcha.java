@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.domain.model.captcha;
 
-import com.xtoon.cloud.common.core.domain.Entity;
-import com.xtoon.cloud.common.core.util.DateUtil;
+import com.titxu.cloud.common.core.domain.Entity;
+import com.titxu.cloud.common.core.util.DateUtil;
 
 import java.util.Date;
 

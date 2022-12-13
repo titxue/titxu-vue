@@ -26,11 +26,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Carpenter Lee
  */
 @SpringBootApplication
-public class XtoonCloudSentinelApplication {
+public class CloudSentinelApplication {
 
     public static void main(String[] args) {
         triggerSentinelInit();
-        SpringApplication.run(XtoonCloudSentinelApplication.class, args);
+        SpringApplication.run(CloudSentinelApplication.class, args);
     }
 
     private static void triggerSentinelInit() {

@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.util;
+package com.titxu.cloud.common.core.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

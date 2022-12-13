@@ -35,14 +35,20 @@
             <artifactId>aspectjrt</artifactId>
             <version>1.9.6</version>
         </dependency>
+
+        <!-- openfeign 远程调用 -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.7.8</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-dubbo</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo</groupId>-->
+<!--            <artifactId>dubbo</artifactId>-->
+<!--            <version>2.7.8</version>-->
+<!--        </dependency>-->
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.util;
+package com.titxu.cloud.common.core.util;
 
 import org.joda.time.DateTime;
 

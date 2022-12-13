@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.domain;
+package com.titxu.cloud.common.core.domain;
 
 /**
  * AND specification, used to create a new specifcation that is the AND of two other specifications.

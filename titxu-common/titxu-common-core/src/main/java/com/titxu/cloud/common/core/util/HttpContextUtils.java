@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.core.util;
+package com.titxu.cloud.common.core.util;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.domain.specification;
 
 import com.titxu.cloud.sys.domain.model.user.User;
-import com.xtoon.cloud.common.core.domain.AbstractSpecification;
+import com.titxu.cloud.common.core.domain.AbstractSpecification;
 
 /**
  * 账号登录Specification

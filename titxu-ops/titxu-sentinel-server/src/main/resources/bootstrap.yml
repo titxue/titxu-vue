@@ -6,7 +6,7 @@ server:
 
 spring:
   application:
-    name: xtoon-sentinel-server
+    name: titxu-sentinel-server
   cloud:
     nacos:
       discovery:

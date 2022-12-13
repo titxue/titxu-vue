@@ -1,8 +1,8 @@
 package com.titxu.cloud.ops.gateway.util;
 
 import com.google.gson.Gson;
-import com.xtoon.cloud.common.web.constant.ResultCode;
-import com.xtoon.cloud.common.web.util.Result;
+import com.titxu.cloud.common.web.constant.ResultCode;
+import com.titxu.cloud.common.web.util.Result;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpResponse;

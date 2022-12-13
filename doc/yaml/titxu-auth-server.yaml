@@ -3,8 +3,8 @@ server:
 
 dubbo:
   application:
-    id: xtoon-auth-server
-    name: xtoon-auth-server
+    id: titxu-auth-server
+    name: titxu-auth-server
     qosEnable: false
   protocol:
     name: dubbo
@@ -21,11 +21,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: haoxin963
-    url: jdbc:mysql://localhost:3306/xtoon-cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/titxu-cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
   redis:
     host: localhost
     port: 6379
-    password: xtoon123
+    password: titxu123
     database: 0
   cloud:
     nacos:

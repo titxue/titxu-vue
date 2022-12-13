@@ -1,6 +1,6 @@
-package com.xtoon.cloud.common.web.util;
+package com.titxu.cloud.common.web.util;
 
-import com.xtoon.cloud.common.core.exception.BaseException;
+import com.titxu.cloud.common.core.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

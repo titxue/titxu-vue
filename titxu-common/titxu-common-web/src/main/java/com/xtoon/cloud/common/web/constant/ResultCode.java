@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.web.constant;
+package com.titxu.cloud.common.web.constant;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

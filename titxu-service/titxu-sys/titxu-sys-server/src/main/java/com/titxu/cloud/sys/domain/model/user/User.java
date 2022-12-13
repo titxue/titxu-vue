@@ -1,8 +1,8 @@
 package com.titxu.cloud.sys.domain.model.user;
 
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
-import com.xtoon.cloud.common.core.domain.Entity;
-import com.xtoon.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.common.core.domain.Entity;
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.role.RoleId;
 
 import java.util.List;

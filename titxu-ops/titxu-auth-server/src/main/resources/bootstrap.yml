@@ -1,6 +1,6 @@
 spring:
   application:
-    name: xtoon-auth-server
+    name: titxu-auth-server
   cloud:
     nacos:
       config:

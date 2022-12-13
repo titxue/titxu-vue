@@ -1,6 +1,6 @@
-package com.xtoon.cloud.common.tenant.config;
+package com.titxu.cloud.common.tenant.config;
 
-import com.xtoon.cloud.common.tenant.util.TenantHandlerInterceptor;
+import com.titxu.cloud.common.tenant.util.TenantHandlerInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

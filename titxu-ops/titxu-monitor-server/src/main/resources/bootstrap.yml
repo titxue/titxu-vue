@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: xtoon-monitor-server
+    name: titxu-monitor-server
   cloud:
     nacos:
       discovery:

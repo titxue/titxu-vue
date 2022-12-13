@@ -2,7 +2,7 @@ package com.titxu.cloud.ops.auth.config;
 
 import com.titxu.cloud.ops.auth.service.JdbcClientDetailsServiceImpl;
 import com.titxu.cloud.ops.auth.service.UserDetailsServiceImpl;
-import com.xtoon.cloud.common.core.constant.AuthConstants;
+import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.ops.auth.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -98,8 +98,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
      */
     @Bean
     public KeyPair keyPair() {
-        KeyStoreKeyFactory factory = new KeyStoreKeyFactory(new ClassPathResource("xtoon.jks"), "123456".toCharArray());
-        KeyPair keyPair = factory.getKeyPair("xtoon", "123456".toCharArray());
+        KeyStoreKeyFactory factory = new KeyStoreKeyFactory(new ClassPathResource("titxu.jks"), "123456".toCharArray());
+        KeyPair keyPair = factory.getKeyPair("titxu", "123456".toCharArray());
         return keyPair;
     }
 

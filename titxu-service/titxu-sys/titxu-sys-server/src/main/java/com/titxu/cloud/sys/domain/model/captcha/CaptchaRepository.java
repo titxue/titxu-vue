@@ -1,5 +1,7 @@
 package com.titxu.cloud.sys.domain.model.captcha;
 
+import org.springframework.stereotype.Component;
+
 /**
  * 验证码Repository
  *

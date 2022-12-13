@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys.application.command;
 
-import com.xtoon.cloud.common.web.util.validator.group.AddGroup;
+import com.titxu.cloud.common.web.util.validator.group.AddGroup;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

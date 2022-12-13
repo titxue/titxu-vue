@@ -8,7 +8,7 @@ db:
   user: root
   password: haoxin963
   url:
-    0: jdbc:mysql://localhost:3306/xtoon-nacos?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    0: jdbc:mysql://localhost:3306/titxu-nacos?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
 
 
 nacos:
@@ -35,7 +35,7 @@ spring:
           prefer-ip: true
 
   application:
-    name: xtoon-register-server
+    name: titxu-register-server
 
 useAddressServer: true
 

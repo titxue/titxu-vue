@@ -7,9 +7,9 @@ pipeline {
     }
     parameters {
         string(name: 'HARBOR_HOST', defaultValue: '192.168.99.41:30002', description: 'harbor_url')
-        string(name: 'DOCKER_IMAGE', defaultValue: 'xtoon-cloud/xtoon-sys-server', description: 'docker_image_tag')
-        string(name: 'APP_NAME', defaultValue: 'xtoon-sys-server', description: 'app_name')
-        string(name: 'K8S_NAMESPACE', defaultValue: 'xtoon', description: 'k8s_namespace')
+        string(name: 'DOCKER_IMAGE', defaultValue: 'titxu-cloud/titxu-sys-server', description: 'docker_image_tag')
+        string(name: 'APP_NAME', defaultValue: 'titxu-sys-server', description: 'app_name')
+        string(name: 'K8S_NAMESPACE', defaultValue: 'titxu', description: 'k8s_namespace')
     }
     stages {
         stage('Maven Build') {
@@ -27,7 +27,7 @@ pipeline {
         stage('Docker Build') {
             agent any
             steps {
-                dir('xtoon-service/xtoon-sys/xtoon-sys-server') {
+                dir('titxu-service/titxu-sys/titxu-sys-server') {
                     sh "docker login -u ${HARBOR_CREDS_USR} -p ${HARBOR_CREDS_PSW} ${params.HARBOR_HOST}"
                     sh "docker build -t ${params.HARBOR_HOST}/${params.DOCKER_IMAGE}:${GIT_TAG} ."
                     sh "docker push ${params.HARBOR_HOST}/${params.DOCKER_IMAGE}:${GIT_TAG}"
@@ -43,7 +43,7 @@ pipeline {
                 }
             }
             steps {
-                dir('xtoon-service/xtoon-sys/xtoon-sys-server') {
+                dir('titxu-service/titxu-sys/titxu-sys-server') {
                     sh "mkdir -p ~/.kube"
                     sh "echo ${K8S_CONFIG} | base64 -d > ~/.kube/config"
                     sh "sed -e 's#{IMAGE_URL}#${params.HARBOR_HOST}/${params.DOCKER_IMAGE}#g;s#{IMAGE_TAG}#${GIT_TAG}#g;s#{APP_NAME}#${params.APP_NAME}#g;s#{SPRING_PROFILE}#k8s-test#g' k8s-deployment.tpl > k8s-deployment.yml"

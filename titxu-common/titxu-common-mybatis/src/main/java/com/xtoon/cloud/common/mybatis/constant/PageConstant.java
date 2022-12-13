@@ -1,4 +1,4 @@
-package com.xtoon.cloud.common.mybatis.constant;
+package com.titxu.cloud.common.mybatis.constant;
 
 /**
  * 分页查询

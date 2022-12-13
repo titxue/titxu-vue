@@ -2,7 +2,7 @@ package com.titxu.cloud.sys.infrastructure.persistence.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.xtoon.cloud.common.mybatis.util.BaseDO;
+import com.titxu.cloud.common.mybatis.util.BaseDO;
 import lombok.Data;
 
 /**
