@@ -14,6 +14,9 @@ const router = createRouter({
 });
 
 router.beforeEach(async (_to, _from, next) => {
+  // 圆圈加载：showSpinner
+  NProgress.configure({ showSpinner: false });
+
   NProgress.start();
   next();
 });

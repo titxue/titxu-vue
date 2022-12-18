@@ -17,8 +17,6 @@
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
   import bannerImage from '/@/assets/images/login-banner.png';
-  import qunErweima from '/@/assets/images/qunerweima.jpg';
-  import bannerImage02 from '/@/assets/images/banner2.svg';
 
   export default defineComponent({
     setup() {
@@ -31,12 +29,12 @@
         {
           slogan: '开箱即用，多种插件，动态加载',
           subSlogan: '可支持大型中后台应用或轻量级无线端应用',
-          image: bannerImage02,
+          image: bannerImage,
         },
         {
           slogan: '社区维护，来芜湖四海大厂核心大牛',
           subSlogan: '扫码进入社区微信群',
-          image: qunErweima,
+          image: bannerImage,
         },
       ]);
       return {
