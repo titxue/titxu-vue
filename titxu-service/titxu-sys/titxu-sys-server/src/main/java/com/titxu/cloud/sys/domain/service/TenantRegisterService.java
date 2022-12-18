@@ -22,7 +22,7 @@ import java.util.Map;
  * 租户注册服务
  *
 
- * @date 2021-05-10
+ 
  **/
 public class TenantRegisterService {
 

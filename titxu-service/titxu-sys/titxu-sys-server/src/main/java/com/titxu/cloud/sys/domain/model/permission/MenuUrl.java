@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * 菜单地址
  *
 
- * @date 2021-02-08
+ 
  **/
 public class MenuUrl implements ValueObject<MenuUrl> {
 

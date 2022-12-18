@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 账号Mapper
  *
 
- * @date 2021-02-10
+ 
  **/
 @Mapper
 public interface SysAccountMapper extends BaseMapper<SysAccountDO> {

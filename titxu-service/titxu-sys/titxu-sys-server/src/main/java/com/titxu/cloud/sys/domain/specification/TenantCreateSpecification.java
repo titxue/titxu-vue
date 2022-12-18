@@ -8,7 +8,7 @@ import com.titxu.cloud.common.core.domain.AbstractSpecification;
  * 租户创建Specification
  *
 
- * @date 2021-03-29
+
  **/
 public class TenantCreateSpecification extends AbstractSpecification<Tenant> {
 

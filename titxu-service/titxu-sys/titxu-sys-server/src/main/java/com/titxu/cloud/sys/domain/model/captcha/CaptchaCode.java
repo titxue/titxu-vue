@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.domain.model.captcha;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Pattern;
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * 验证码
  *
 
- * @date 2021-05-10
+ 
  **/
 public class CaptchaCode implements ValueObject<CaptchaCode> {
 

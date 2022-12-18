@@ -22,9 +22,6 @@ import java.util.Map;
 
 /**
  * 认证中心
- *
-
- * @date 2021-05-29
  **/
 @Api(tags = "认证中心")
 @RestController

@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
  * 注册应用服务实现类
  *
 
- * @date 2021-06-23
+
  **/
 @Service
 public class RegisterApplicationServiceImpl implements RegisterApplicationService {

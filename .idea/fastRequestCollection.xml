@@ -6,6 +6,136 @@
         <option name="childList">
           <list>
             <CollectionDetail>
+              <option name="childList">
+                <list>
+                  <CollectionDetail>
+                    <option name="childList">
+                      <list>
+                        <CollectionDetail>
+                          <option name="activeGroup" value="系统服务" />
+                          <option name="apiParamGroup">
+                            <map>
+                              <entry key="系统服务">
+                                <value>
+                                  <ParamGroupCollection>
+                                    <option name="className" value="com.titxu.cloud.sys.api.CaptchaController" />
+                                    <option name="method" value="captcha" />
+                                    <option name="methodDescription" value="New Request" />
+                                    <option name="multipartKeyValueListJson" value="[]" />
+                                    <option name="originUrl" value="/captcha" />
+                                    <option name="pathParamsKeyValueListJson" value="[]" />
+                                    <option name="preScript" value="" />
+                                    <option name="url" value="/captcha" />
+                                    <option name="urlEncodedKeyValueListJson" value="[]" />
+                                    <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;uuid&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;403d50aa-d260-4ac4-dacd-3091a8c5dcd4&quot;}]" />
+                                    <option name="urlParamsKeyValueListText" value="uuid=403d50aa-d260-4ac4-dacd-3091a8c5dcd4" />
+                                  </ParamGroupCollection>
+                                </value>
+                              </entry>
+                            </map>
+                          </option>
+                          <option name="domain" value="localhost:10000" />
+                          <option name="enableEnv" value="dev" />
+                          <option name="enableProject" value="admin" />
+                          <option name="id" value="id_com.titxu.cloud.sys.api.CaptchaController.captcha" />
+                          <option name="name" value="New Request" />
+                          <option name="paramGroup">
+                            <ParamGroupCollection>
+                              <option name="className" value="com.titxu.cloud.sys.api.CaptchaController" />
+                              <option name="method" value="captcha" />
+                              <option name="methodDescription" value="New Request" />
+                              <option name="multipartKeyValueListJson" value="[]" />
+                              <option name="originUrl" value="/captcha" />
+                              <option name="pathParamsKeyValueListJson" value="[]" />
+                              <option name="preScript" value="" />
+                              <option name="url" value="/captcha" />
+                              <option name="urlEncodedKeyValueListJson" value="[]" />
+                              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;uuid&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;403d50aa-d260-4ac4-dacd-3091a8c5dcd4&quot;}]" />
+                              <option name="urlParamsKeyValueListText" value="uuid=403d50aa-d260-4ac4-dacd-3091a8c5dcd4" />
+                            </ParamGroupCollection>
+                          </option>
+                          <option name="tempId" value="id_com.titxu.cloud.sys.api.CaptchaController.captcha" />
+                          <option name="type" value="2" />
+                        </CollectionDetail>
+                      </list>
+                    </option>
+                    <option name="id" value="20221218203739542" />
+                    <option name="name" value="CaptchaController" />
+                    <option name="type" value="3" />
+                  </CollectionDetail>
+                </list>
+              </option>
+              <option name="id" value="20221218203740542" />
+              <option name="name" value="titxu-sys-server" />
+              <option name="type" value="4" />
+            </CollectionDetail>
+            <CollectionDetail>
+              <option name="childList">
+                <list>
+                  <CollectionDetail>
+                    <option name="childList">
+                      <list>
+                        <CollectionDetail>
+                          <option name="apiParamGroup">
+                            <map>
+                              <entry key="授权">
+                                <value>
+                                  <ParamGroupCollection>
+                                    <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+                                    <option name="method" value="postAccessToken" />
+                                    <option name="methodDescription" value="OAuth2认证" />
+                                    <option name="methodType" value="POST" />
+                                    <option name="multipartKeyValueListJson" value="[]" />
+                                    <option name="originUrl" value="/oauth/token" />
+                                    <option name="pathParamsKeyValueListJson" value="[]" />
+                                    <option name="preScript" value="" />
+                                    <option name="returnDocument" value="null" />
+                                    <option name="url" value="/oauth/token" />
+                                    <option name="urlEncodedKeyValueListJson" value="[]" />
+                                    <option name="urlParamsKeyValueListJson" value="[]" />
+                                  </ParamGroupCollection>
+                                </value>
+                              </entry>
+                            </map>
+                          </option>
+                          <option name="domain" value="localhost:10000" />
+                          <option name="enableEnv" value="dev" />
+                          <option name="enableProject" value="admin" />
+                          <option name="id" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
+                          <option name="name" value="OAuth2认证" />
+                          <option name="paramGroup">
+                            <ParamGroupCollection>
+                              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+                              <option name="method" value="postAccessToken" />
+                              <option name="methodDescription" value="OAuth2认证" />
+                              <option name="methodType" value="POST" />
+                              <option name="multipartKeyValueListJson" value="[]" />
+                              <option name="originUrl" value="/oauth/token" />
+                              <option name="pathParamsKeyValueListJson" value="[]" />
+                              <option name="preScript" value="" />
+                              <option name="returnDocument" value="null" />
+                              <option name="url" value="/auth/oauth/token" />
+                              <option name="urlEncodedKeyValueListJson" value="[]" />
+                              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;403d50aa-d260-4ac4-dacd-3091a8c5dcd4&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+                              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;code=&#10;&amp;key=403d50aa-d260-4ac4-dacd-3091a8c5dcd4&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+                            </ParamGroupCollection>
+                          </option>
+                          <option name="tempId" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
+                          <option name="type" value="2" />
+                        </CollectionDetail>
+                      </list>
+                    </option>
+                    <option name="id" value="20221218191226127" />
+                    <option name="name" value="AuthController" />
+                    <option name="type" value="3" />
+                  </CollectionDetail>
+                </list>
+              </option>
+              <option name="id" value="20221218191227118" />
+              <option name="name" value="titxu-auth-server" />
+              <option name="type" value="4" />
+            </CollectionDetail>
+            <CollectionDetail>
               <option name="groupId" value="1" />
               <option name="id" value="1" />
               <option name="name" value="Default Group" />

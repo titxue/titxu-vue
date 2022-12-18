@@ -22,8 +22,6 @@ import java.util.Set;
 /**
  * 权限Controller
  *
-
- * @date 2021-02-16
  **/
 @Api(tags = "权限管理")
 @RestController

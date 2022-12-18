@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * 用户名
  *
 
- * @date 2021-02-08
+ 
  **/
 public class UserName implements ValueObject<UserName> {
 

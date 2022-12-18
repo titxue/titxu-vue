@@ -9,7 +9,7 @@ import com.titxu.cloud.common.core.domain.AbstractSpecification;
  * 权限删除Specification
  *
 
- * @date 2021-02-20
+ 
  **/
 public class PermissionDeleteSpecification extends AbstractSpecification<PermissionId> {
 

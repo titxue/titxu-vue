@@ -9,7 +9,7 @@ import java.util.List;
  * 权限
  *
 
- * @date 2021-02-08
+ 
  **/
 public class Permission implements Entity<Permission> {
 

@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * 账号ID
  *
 
- * @date 2021-02-08
+ 
  **/
 public class AccountId implements ValueObject<AccountId> {
 

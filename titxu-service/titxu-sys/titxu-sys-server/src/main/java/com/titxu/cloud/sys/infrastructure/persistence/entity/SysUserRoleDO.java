@@ -8,7 +8,7 @@ import lombok.Data;
  * 用户角色关联DO
  *
 
- * @date 2021-02-15
+ 
  **/
 @Data
 @TableName("sys_user_role")

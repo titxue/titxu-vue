@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * 密码
  *
 
- * @date 2021-02-08
+
  **/
 public class Password implements ValueObject<Password> {
 

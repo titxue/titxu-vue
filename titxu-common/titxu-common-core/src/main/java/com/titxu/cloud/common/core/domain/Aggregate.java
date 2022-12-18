@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Aggregate interface
  *
 
- * @date 2021-02-01
+
  **/
 public interface Aggregate<T> extends Serializable {
 

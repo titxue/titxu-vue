@@ -9,7 +9,7 @@ import java.util.Set;
  * 认证信息DTO
  *
 
- * @date 2021-06-23
+
  **/
 @Data
 public class AuthenticationDTO implements Serializable {

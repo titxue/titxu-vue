@@ -4,7 +4,7 @@ package com.titxu.cloud.common.mybatis.constant;
  * 分页查询
  *
 
- * @date 2021-05-21
+
  **/
 public interface PageConstant {
 

@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.domain.model.role;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Pattern;
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * 角色编码
  *
 
- * @date 2021-02-08
+ 
  **/
 public class RoleCode implements ValueObject<RoleCode> {
 

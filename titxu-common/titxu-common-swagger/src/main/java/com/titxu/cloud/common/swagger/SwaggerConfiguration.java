@@ -36,7 +36,7 @@ import static com.titxu.cloud.common.core.constant.CommonConstant.AUTH_KEY;
  * Swagger配置
  *
 
- * @date 2021-06-08
+
  **/
 @EnableOpenApi
 @Configuration

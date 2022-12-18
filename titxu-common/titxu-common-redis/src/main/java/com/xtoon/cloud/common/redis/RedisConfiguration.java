@@ -17,7 +17,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * Redis配置
  *
 
- * @date 2021-06-07
+
  **/
 @EnableCaching
 @Configuration(proxyBeanMethods = false)

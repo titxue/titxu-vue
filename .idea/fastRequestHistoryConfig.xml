@@ -4,30 +4,536 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.controller.LoginController" />
-          <option name="enableEnv" value="localhost" />
-          <option name="enableProject" value="ddd" />
-          <option name="method" value="loginByPhone" />
-          <option name="methodType" value="POST" />
-          <option name="name" value="手机验证码登陆" />
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.controller.LoginController" />
-              <option name="method" value="loginByPhone" />
-              <option name="methodDescription" value="手机验证码登陆" />
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/sys/loginByPhone" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18666666666&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;6yca4&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=18666666666&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=6yca4" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=6yca4&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=18666666666&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;6yca4&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=6yca4" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=6yca4&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;6yca4&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=6yca4" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=6yca4&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;6yca4&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=6yca4" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=6yca4&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;5de2g&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=5de2g" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=5de2g&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;验证码不正确&quot;,&quot;code&quot;:500}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;5de2g&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=5de2g" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=5de2g&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;验证码不正确&quot;,&quot;code&quot;:500}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;3a335f0b-2738-965a-9bd5-6cca76b7da6e&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;5de2g&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456&#10;&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&#10;&amp;code=5de2g" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?refresh_token=&amp;password=123456&amp;code=5de2g&amp;grant_type=password&amp;client_secret=123456&amp;key=3a335f0b-2738-965a-9bd5-6cca76b7da6e&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.api.CaptchaController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="captcha" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.sys.api.CaptchaController" />
+              <option name="method" value="captcha" />
+              <option name="methodDescription" value="New Request" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/captcha" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/sys/captcha" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;uuid&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;403d50aa-d260-4ac4-dacd-3091a8c5dcd4&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="uuid=403d50aa-d260-4ac4-dacd-3091a8c5dcd4" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/sys/captcha?uuid=403d50aa-d260-4ac4-dacd-3091a8c5dcd4&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="����JFIF��C&#9;&#9;&#10;&#13; $.' &quot;,#(7),01444'9=82&lt;.342��C&#9;&#9;&#9;&#13;&#13;2!!22222222222222222222222222222222222222222222222222��2�&quot;��&#9;&#10;���}!1AQa&quot;q2���#B��R��$3br�&#9;&#10;%&amp;'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz���������������������������������������������������������������������������&#9;&#10;���w!1AQaq&quot;2�B����&#9;#3R�br�&#10;$4�%�&amp;'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz��������������������������������������������������������������������������?�N�O��)��()��(*����iA�}����R����{�#�V����\��֊p�kþ8мM+C�\��A;pp�l+���)��()8P�8SEA�j6�M���Ӥ�������+�5���e�h3�[��\K�c�p:u�k��y�&amp;���In���P�CIx`I^�`g�(��M�@�H)))�(�Q@8�&#10;h���&lt;a�i:��Z�Z��%�O��^I� �5R�Ŀmm��xB+���ʬF}zt�H�@��k�n�x��w���n�-��c&gt;������t���9�q��6�=��h�X�$Uta�Vz\.���h��^ڛi��|D71��t��N��&#13;Ox��rٽ���`�V&lt;`��\�+����sJ�noR{�hP�&lt;�d`s��w�w��t��:,�(ާ����/�5�O�j6�Y���8�Crz�m�ό�-�o1��H���V�������.�����!N0�d�,�΋ؑ��lm)�~���=k���g%Ǐ��2�I����P�'�o���&lt;1R$��q�}�����;Y������#�&#9;F�&#13;x�����'�!��������7+�a��j���ҺM,HN��y�_�qز��&lt;����I���6p�{̕*�w)����n��i5[�ST�hR��ʥH$ߨ��c�¼��U��we#1�����I8��ں�x��w����J�1(�:�H`�%x�rI��t�B�S��Y&#9;�#�}&#13;xO��vk�R�L3����e��Ïƺ���~��vUX�'��&#10;����Y?����L]��&#10;���9'���R��&#9;��Ikmqj ��&gt;y��NNy�Sங��q 0ْĶ0&gt;fݴW?����qj�a[��lm�U###����~�h_&#9;ꈱ����`)���4�گ�t]&#10;h��u(,�Q��h`=�Vf���z�����q��܆i��g��^[�D��F���8�j����x��u�����f[]��$�@�PS῏�׉`�nt�iop�\sy��OL�q�ײ���Y�����,��H-u3�w+�x�QO���p��@P(�S� �&#10;̿�.��]�]CU����}�J��&lt;�)����R}��G����g�����u�jV���䙗��p8�X��g�o�oS����Pe�tI&gt;汧���(�YMKO�aom\�U9�kϛ��ߥ֨��̟�*�����K���좀;���J+�6]R�ZIp���#�h�nJO q������ձ�����ѪQ�BN;���k?��t�5��^+g}�oW��1��b��n�-�[��Xa�.��ǰ�OZ����Sy��s���B�F ���c�kS�6��]��ol.a��pK�dI�nH���(5�Z/�o&#10;ivił���S\I?N���|0���?�x-����a��A#�����|)?�~�6���61��?z�I?&gt;=I�^Q�kZe��&amp;��̚}Ġ-����L`�P:t#&#10;{`�%��kL�t�����.�`8q��W�|-����cą��!A���(;�1��2OP@&lt;k�{��s�v��n�+��&amp;A��f�����;�W��m��V���\U]-�ɐaB����y珥{5Οg|���|������J�5_���$��6p����8�'�c��G�xkĚ��%΁�oK#��v�PŘ��c'glaEy����E&lt;g�qauj���x��C3y�r� W�xc�ܞ�����|�,�X���In�'�'#s�^�&lt;`�uXL�m�3��ӓ@=��_&#13;Zi�[&#13;SHb�cDS�@��z&#10;�]?T���E�����D}�.ZhL�����s�׻��|%b���9���Oo�~U���t5NӠ���ʃ=1��@��Px�L�-3W�x$m��ɡ؞�������x(i���Yc�v&#13;���ӌr�ס�F�t�6���e��A:̲���W��q����{�M2�����q&quot;������z�T���mN�Q����zd���&lt;rF�FrA�=A����-�Kx�x�}�*��0qӕ��K�ֵ3��z5���@�I�o�t�;�V�VV���n�F!�B&quot;mP8�2�oxk_�zV�kws���|�N+�Z++Xe�b��$�7�`}jȠ&#10;)E�&#10;p��x�&#10;(��p��p��(�&#10;p��x�&#10;(�&#10;x��p��(�&#10;p��x�&#10;(�&#10;x��p��(�&#10;(��?��" />
+          <option name="url" value="/sys/captcha" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.api.CaptchaController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="captcha" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.sys.api.CaptchaController" />
+              <option name="method" value="captcha" />
+              <option name="methodDescription" value="New Request" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/captcha" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/captcha" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;uuid&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;403d50aa-d260-4ac4-dacd-3091a8c5dcd4&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="uuid=403d50aa-d260-4ac4-dacd-3091a8c5dcd4" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/captcha?uuid=403d50aa-d260-4ac4-dacd-3091a8c5dcd4&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/captcha" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
               <option name="pathParamsKeyValueListJson" value="[]" />
               <option name="returnDocument" value="null" />
-              <option name="url" value="/sys/loginByPhone" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="client_id=client&#10;&amp;client_secret=123456&#10;&amp;grant_type=password&#10;&amp;password=123456&#10;&amp;refresh_token=&#10;&amp;username=admin" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/sys/loginByPhone&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="ConnectException: Connection refused: connect" />
-          <option name="url" value="/sys/loginByPhone" />
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="client_id=client&#10;&amp;client_secret=123456&#10;&amp;grant_type=password&#10;&amp;password=123456&#10;&amp;refresh_token=&#10;&amp;username=admin" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:30:56.867+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="client_id=client&#10;&amp;client_secret=123456&#10;&amp;grant_type=password&#10;&amp;password=123456&#10;&amp;refresh_token=&#10;&amp;username=admin" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:30:18.151+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:24:06.560+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:23:17.370+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:19:41.477+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:15:35.566+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:15:27.959+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:10:32.127+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="postAccessToken" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="OAuth2认证" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+              <option name="method" value="postAccessToken" />
+              <option name="methodDescription" value="OAuth2认证" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/oauth/token" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/auth/oauth/token" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;授权模式&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;comment&quot;:&quot;Oauth2客户端ID&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;comment&quot;:&quot;Oauth2客户端秘钥&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;comment&quot;:&quot;刷新token&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;comment&quot;:&quot;登录用户名&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;comment&quot;:&quot;登录密码&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/oauth/token?password=123456&amp;client_secret=123456&amp;grant_type=password&amp;client_id=client&amp;username=admin&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-18T12:09:02.307+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/oauth/token&quot;}" />
+          <option name="url" value="/auth/oauth/token" />
         </ResponseHistory>
       </list>
     </option>

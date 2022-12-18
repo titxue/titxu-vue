@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
  * 验证码Repository
  *
 
- * @date 2021-05-10
+ 
  **/
 public interface CaptchaRepository {
 

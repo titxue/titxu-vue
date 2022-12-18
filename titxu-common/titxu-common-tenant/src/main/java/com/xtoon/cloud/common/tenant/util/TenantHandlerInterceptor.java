@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * 租户拦截
  *
 
- * @date 2021-06-21
+
  **/
 @Component
 public class TenantHandlerInterceptor implements HandlerInterceptor {

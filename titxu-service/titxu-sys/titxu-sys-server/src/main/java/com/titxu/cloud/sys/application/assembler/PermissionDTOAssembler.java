@@ -11,7 +11,7 @@ import java.util.*;
  * Assembler class for the Permission.
  *
 
- * @date 2021-02-17
+ 
  **/
 public class PermissionDTOAssembler {
 

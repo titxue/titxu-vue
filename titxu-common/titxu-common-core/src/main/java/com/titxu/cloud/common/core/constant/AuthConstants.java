@@ -4,7 +4,7 @@ package com.titxu.cloud.common.core.constant;
  * 认证常量类
  *
 
- * @date 2021-06-15
+
  **/
 public interface AuthConstants {
 

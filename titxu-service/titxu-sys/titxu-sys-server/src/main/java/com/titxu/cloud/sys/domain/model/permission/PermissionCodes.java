@@ -1,8 +1,8 @@
 package com.titxu.cloud.sys.domain.model.permission;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 
 import java.util.Set;
 
@@ -10,7 +10,7 @@ import java.util.Set;
  * 权限编码
  *
 
- * @date 2021-02-15
+ 
  **/
 public class PermissionCodes implements ValueObject<PermissionCodes> {
 

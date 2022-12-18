@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  * 权限查询服务实现类
  *
 
- * @date 2021-05-10
+ 
  **/
 @Service
 public class PermissionQueryServiceImpl implements PermissionQueryService {

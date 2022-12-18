@@ -6,7 +6,8 @@ import com.titxu.cloud.sys.domain.model.captcha.Uuid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-//@RestController
+@RestController
+@RequestMapping("/captcha")
 public class CaptchaApi {
     private CaptchaRepository captchaRepository;
 

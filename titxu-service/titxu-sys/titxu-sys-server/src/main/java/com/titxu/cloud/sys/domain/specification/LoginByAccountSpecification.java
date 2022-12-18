@@ -7,7 +7,7 @@ import com.titxu.cloud.common.core.domain.AbstractSpecification;
  * 账号登录Specification
  *
 
- * @date 2021-02-20
+ 
  **/
 public class LoginByAccountSpecification extends AbstractSpecification<User> {
 

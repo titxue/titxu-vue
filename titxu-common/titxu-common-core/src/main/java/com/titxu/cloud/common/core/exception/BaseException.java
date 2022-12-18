@@ -4,7 +4,7 @@ package com.titxu.cloud.common.core.exception;
  * 公用的自定义异常
  *
 
- * @date 2021-05-21
+
  **/
 public class BaseException extends RuntimeException {
 

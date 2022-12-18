@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 日志dto
  *
 
- * @date 2021-06-21
+
  **/
 @Data
 public class LogDTO implements Serializable {

@@ -8,7 +8,7 @@ import java.util.Map;
  * 租户查询服务接口
  *
 
- * @date 2021-05-10
+ 
  **/
 public interface TenantQueryService {
 

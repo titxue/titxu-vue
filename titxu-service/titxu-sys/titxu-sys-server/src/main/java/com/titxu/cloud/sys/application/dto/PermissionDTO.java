@@ -9,7 +9,7 @@ import java.util.List;
  * 权限DTO
  *
 
- * @date 2021-02-17
+ 
  **/
 @Data
 public class PermissionDTO implements Serializable {

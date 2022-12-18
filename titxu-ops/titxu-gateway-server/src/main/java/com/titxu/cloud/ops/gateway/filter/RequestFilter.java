@@ -19,7 +19,7 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.a
  * request过滤器
  *
 
- * @date 2021-05-28
+ 
  **/
 @Component
 public class RequestFilter implements GlobalFilter, Ordered {

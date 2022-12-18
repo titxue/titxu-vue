@@ -1,13 +1,13 @@
 package com.titxu.cloud.sys.domain.model.permission;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 权限类型
  *
 
- * @date 2021-02-08
+ 
  **/
 public enum PermissionTypeEnum implements ValueObject<PermissionTypeEnum> {
 

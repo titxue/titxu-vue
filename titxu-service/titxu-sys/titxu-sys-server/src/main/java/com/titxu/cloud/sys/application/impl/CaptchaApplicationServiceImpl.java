@@ -16,7 +16,7 @@ import java.awt.image.BufferedImage;
  * 验证码应用服务实现类
  *
 
- * @date 2021-06-23
+
  **/
 @Service
 public class CaptchaApplicationServiceImpl implements CaptchaApplicationService {

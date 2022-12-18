@@ -8,7 +8,7 @@ import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.common.mybatis.util.PageAssembler;
 import com.titxu.cloud.common.mybatis.util.Query;
 import com.titxu.cloud.sys.application.LogQueryService;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.Map;
  * 系统日志查询服务实现类
  *
 
- * @date 2021-05-10
+ 
  **/
 @Service
 public class LogQueryServiceImpl implements LogQueryService {

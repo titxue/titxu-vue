@@ -12,7 +12,7 @@ import javax.validation.constraints.NotBlank;
  * 权限Command
  *
 
- * @date 2021-02-18
+ 
  **/
 @Data
 @ApiModel(value = "权限", description = "权限")

@@ -11,7 +11,7 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
  * WebSecurityConfigurer
  *
 
- * @date 2021-05-24
+ 
  **/
 @Configuration
 public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {

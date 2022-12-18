@@ -8,7 +8,7 @@ import lombok.Data;
  * 角色DO
  *
 
- * @date 2021-02-15
+ 
  **/
 @Data
 @TableName("sys_role")

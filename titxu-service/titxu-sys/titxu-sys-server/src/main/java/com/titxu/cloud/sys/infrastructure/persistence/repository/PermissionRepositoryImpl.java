@@ -23,7 +23,7 @@ import java.util.Map;
  * 权限-Repository实现类
  *
 
- * @date 2021-02-14
+ 
  **/
 @Repository
 public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, SysPermissionDO> implements PermissionRepository, IService<SysPermissionDO> {

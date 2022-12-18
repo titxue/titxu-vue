@@ -9,7 +9,7 @@ import java.util.Set;
  * 权限查询服务接口
  *
 
- * @date 2021-05-10
+
  **/
 public interface PermissionQueryService {
 

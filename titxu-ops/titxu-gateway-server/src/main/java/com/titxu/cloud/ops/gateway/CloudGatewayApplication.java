@@ -9,7 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * 网关服务
  *
 
- * @date 2021-06-15
+ 
  **/
 @EnableDiscoveryClient
 @SpringBootApplication

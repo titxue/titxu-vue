@@ -6,7 +6,7 @@ import com.titxu.cloud.sys.application.command.RegisterTenantCommand;
  * 注册应用服务接口
  *
 
- * @date 2021-06-23
+
  **/
 public interface RegisterApplicationService {
 

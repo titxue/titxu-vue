@@ -25,7 +25,7 @@ import reactor.core.publisher.Mono;
  * 资源服务器配置
  *
 
- * @date 2021-06-15
+ 
  **/
 @AllArgsConstructor
 @Configuration

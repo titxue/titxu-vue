@@ -10,7 +10,7 @@ import java.util.Date;
  * 基础PO
  *
 
- * @date 2021-01-26
+
  **/
 @Data
 public class BaseDO implements Serializable {

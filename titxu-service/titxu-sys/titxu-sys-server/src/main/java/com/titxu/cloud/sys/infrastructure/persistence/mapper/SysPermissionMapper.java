@@ -12,7 +12,7 @@ import java.util.Map;
  * 权限Mapper
  *
 
- * @date 2021-02-14
+ 
  **/
 @Mapper
 public interface SysPermissionMapper extends BaseMapper<SysPermissionDO> {

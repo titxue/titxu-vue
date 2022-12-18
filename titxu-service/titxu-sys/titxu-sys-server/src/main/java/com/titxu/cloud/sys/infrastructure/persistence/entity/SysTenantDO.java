@@ -8,7 +8,7 @@ import lombok.Data;
  * 租户DO
  *
 
- * @date 2021-02-14
+ 
  **/
 @Data
 @TableName("sys_tenant")

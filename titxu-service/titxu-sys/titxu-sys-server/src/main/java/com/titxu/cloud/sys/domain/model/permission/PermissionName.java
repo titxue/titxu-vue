@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * 权限名称
  *
 
- * @date 2021-02-08
+ 
  **/
 public class PermissionName implements ValueObject<PermissionName> {
 

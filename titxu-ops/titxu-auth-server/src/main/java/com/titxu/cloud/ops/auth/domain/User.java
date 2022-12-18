@@ -5,7 +5,7 @@ import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;

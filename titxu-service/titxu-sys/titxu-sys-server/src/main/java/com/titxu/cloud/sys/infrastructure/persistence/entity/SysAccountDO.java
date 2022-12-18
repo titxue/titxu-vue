@@ -8,7 +8,7 @@ import lombok.Data;
  * 用户Token DO
  *
 
- * @date 2021-02-09
+ 
  **/
 @Data
 @TableName("sys_account")

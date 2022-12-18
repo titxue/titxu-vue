@@ -1,7 +1,8 @@
 package com.titxu.cloud.sys.domain.model.user;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
+
 
 import java.util.regex.Pattern;
 
@@ -9,7 +10,7 @@ import java.util.regex.Pattern;
  * 邮箱
  *
 
- * @date 2021-02-08
+ 
  **/
 public final class Email implements ValueObject<Email> {
 

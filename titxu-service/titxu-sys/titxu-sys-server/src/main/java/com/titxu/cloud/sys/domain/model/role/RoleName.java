@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * 角色名称
  *
 
- * @date 2021-02-08
+ 
  **/
 public class RoleName implements ValueObject<RoleName> {
 

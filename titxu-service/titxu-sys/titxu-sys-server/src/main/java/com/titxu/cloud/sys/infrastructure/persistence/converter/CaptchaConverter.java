@@ -9,7 +9,7 @@ import com.titxu.cloud.sys.infrastructure.persistence.entity.SysCaptchaDO;
  * 验证码转换类
  *
 
- * @date 2021-05-10
+ 
  **/
 public class CaptchaConverter {
 

@@ -12,7 +12,7 @@ import java.util.Map;
  * 租户Mapper
  *
 
- * @date 2021-02-14
+ 
  **/
 @Mapper
 public interface SysTenantMapper extends BaseMapper<SysTenantDO> {

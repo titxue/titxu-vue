@@ -12,7 +12,7 @@ import com.titxu.cloud.sys.infrastructure.persistence.entity.SysTenantDO;
  * 租户Converter
  *
 
- * @date 2021-02-15
+
  **/
 public class TenantConverter {
 

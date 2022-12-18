@@ -11,7 +11,7 @@ import javax.validation.constraints.NotBlank;
  * 注册租户Command
  *
 
- * @date 2021-02-14
+ 
  **/
 @Data
 @ApiModel(value = "注册租户", description = "注册租户")

@@ -8,7 +8,7 @@ import com.titxu.cloud.sys.domain.model.user.UserId;
  * 租户实体
  *
 
- * @date 2021-02-08
+ 
  **/
 public class Tenant implements Entity<Tenant> {
 

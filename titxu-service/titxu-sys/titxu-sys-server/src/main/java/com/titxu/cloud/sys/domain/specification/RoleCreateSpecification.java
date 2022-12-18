@@ -8,7 +8,7 @@ import com.titxu.cloud.common.core.domain.AbstractSpecification;
  * 角色创建Specification
  *
 
- * @date 2021-02-20
+ 
  **/
 public class RoleCreateSpecification extends AbstractSpecification<Role> {
 

@@ -5,7 +5,7 @@ import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.common.core.exception.BaseException;
 import com.titxu.cloud.sys.domain.model.permission.*;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysPermissionDO;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 
@@ -13,7 +13,7 @@ import java.util.*;
  * 权限Converter
  *
 
- * @date 2021-02-16
+ 
  **/
 public class PermissionConverter {
 

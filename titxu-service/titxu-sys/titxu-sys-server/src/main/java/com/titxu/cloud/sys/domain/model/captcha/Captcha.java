@@ -9,7 +9,7 @@ import java.util.Date;
  * 验证码
  *
 
- * @date 2021-05-10
+ 
  **/
 public class Captcha implements Entity<Captcha> {
 

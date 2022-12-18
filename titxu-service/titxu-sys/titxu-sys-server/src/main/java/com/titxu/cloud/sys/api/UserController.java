@@ -23,20 +23,27 @@ import java.util.Map;
 
 /**
  * 用户Controller
- *
-
- * @date 2021-02-20
  **/
 @Api(tags = "用户管理")
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-    @Autowired
+
     private UserApplicationService userApplicationService;
 
-    @Autowired
+
     private UserQueryService userQueryService;
+
+    @Autowired
+    public void setUserApplicationService(UserApplicationService userApplicationService) {
+        this.userApplicationService = userApplicationService;
+    }
+
+    @Autowired
+    public void setUserQueryService(UserQueryService userQueryService) {
+        this.userQueryService = userQueryService;
+    }
 
     /**
      * 用户分页查询

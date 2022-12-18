@@ -6,9 +6,6 @@ import java.util.List;
 
 /**
  * 用户-Repository接口
- *
-
-
  **/
 public interface UserRepository {
 

@@ -32,7 +32,7 @@ import java.util.Map;
  * 授权服务配置
  *
 
- * @date 2021-06-15
+
  **/
 @Configuration
 @EnableAuthorizationServer

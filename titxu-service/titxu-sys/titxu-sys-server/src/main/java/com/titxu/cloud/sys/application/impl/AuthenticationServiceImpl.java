@@ -11,7 +11,7 @@ import com.titxu.cloud.sys.application.PermissionQueryService;
 import com.titxu.cloud.sys.domain.service.CaptchaValidateService;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.service.AuthenticationService;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,6 @@ import java.util.List;
 /**
  * 身份验证应用服务实现类
  *
- * @date 2021-05-10
  **/
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {

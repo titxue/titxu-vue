@@ -4,7 +4,7 @@ package com.titxu.cloud.common.core.constant;
  * 通用常量类
  *
 
- * @date 2021-05-21
+
  **/
 public interface CommonConstant {
 

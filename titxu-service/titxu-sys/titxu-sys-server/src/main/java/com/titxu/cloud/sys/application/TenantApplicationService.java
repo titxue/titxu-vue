@@ -4,7 +4,7 @@ package com.titxu.cloud.sys.application;
  * 租户应用服务接口
  *
 
- * @date 2021-02-14
+
  **/
 public interface TenantApplicationService {
 

@@ -15,9 +15,6 @@ import java.util.Map;
 
 /**
  * 获取公钥接口
- *
-
- * @date 2021-05-29
  **/
 @Api(tags = "获取公钥接口")
 @RestController

@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 验证码Mapper
  *
 
- * @date 2021-02-08
+ 
  **/
 @Mapper
 public interface SysCaptchaMapper extends BaseMapper<SysCaptchaDO> {
