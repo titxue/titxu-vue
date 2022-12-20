@@ -8,6 +8,10 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/fastRequestCollection.xml
+.idea/fastRequestCurrentParamGroup.xml
+.idea/fastRequestCurrentProjectConfig.xml
+.idea/ffastRequestHistoryConfig.xml
 *.iws
 *.iml
 *.ipr
@@ -36,3 +40,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/fast-vue3/.vite/deps_temp/package.json
