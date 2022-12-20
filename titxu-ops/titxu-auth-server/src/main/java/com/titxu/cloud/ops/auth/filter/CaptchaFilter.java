@@ -41,12 +41,12 @@ public class CaptchaFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         RequestMatcher matcher = new AntPathRequestMatcher(AuthConstants.OAUTH_TOKEN, HttpMethod.POST.toString());
-        if (matcher.matches(httpServletRequest)
+        // 是否启用验证码
+        boolean isEnableCaptcha = false;
+        if (isEnableCaptcha && matcher.matches(httpServletRequest)
                 && StringUtils.equalsIgnoreCase(httpServletRequest.getParameter(AuthConstants.GRANT_TYPE_KEY), AuthConstants.PASSWORD)) {
             String code = httpServletRequest.getParameter(AuthConstants.VALIDATE_CODE_CODE);
             String key = httpServletRequest.getParameter(AuthConstants.VALIDATE_CODE_KEY);
-            // 暂时不使用验证码验证，直接跳过
-            filterChain.doFilter(httpServletRequest, httpServletResponse);
             if (!authenticationClient.validateCaptcha(key, code)) {
                 httpServletResponse.setContentType(MediaType.APPLICATION_JSON_VALUE);
                 httpServletResponse.setStatus(HttpServletResponse.SC_OK);

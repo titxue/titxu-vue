@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
                 .and()
-                .authorizeRequests().antMatchers("/getPublicKey", "/oauth/logout").permitAll()
+                .authorizeRequests().antMatchers("/getPublicKey", "/oauth/logout","/account/**").permitAll()
                 .antMatchers("/oauth/**", "/webjars/**", "/doc.html", "/swagger-resources/**", "/v2/api-docs").permitAll()
                 .antMatchers("/error").permitAll()
                 .anyRequest().authenticated()

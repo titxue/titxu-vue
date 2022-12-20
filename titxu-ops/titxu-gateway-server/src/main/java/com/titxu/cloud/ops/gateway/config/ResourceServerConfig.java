@@ -72,11 +72,8 @@ public class ResourceServerConfig {
      */
     @Bean
     ServerAuthenticationEntryPoint authenticationEntryPoint() {
-        return (exchange, e) -> {
-            Mono<Void> mono = Mono.defer(() -> Mono.just(exchange.getResponse()))
-                    .flatMap(response -> WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode()));
-            return mono;
-        };
+        return (exchange, e) -> Mono.defer(() -> Mono.just(exchange.getResponse()))
+                .flatMap(response -> WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode()));
     }
 
     @Bean

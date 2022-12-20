@@ -23,9 +23,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * 全局过滤器
- *
-
-
  **/
 @Component
 public class AuthGlobalFilter implements GlobalFilter, Ordered {
@@ -68,5 +65,11 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
     @Override
     public int getOrder() {
         return 0;
+    }
+
+
+    public static void main(String[] args) {
+        String token = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzE1NzU4NTAsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoiODBKNzlWU3U2ajlzb3JDTDlKTEpwUlZmQ3pJIiwiY2xpZW50X2lkIjoiY2xpZW50In0.s6afHe8hw-KAKmd-QriL2JzGa3pAWLViaLUSJREsV42ePeyeVRH4tYtQ4ldpq_7MVm0-yi9GwtpNwvF5ybGbcfyKo-SEC4Tuhb-wrLTMG2rM7ACkMbCggcQwaIFqK-jVvjjMXBXVeJqCmDn81gLB-D0FWHBfZKzi8lfmWKEqwPPuueP10QOdRYlBofNV399oW43MzR4jqjMHaHl55SpEW3fCx0weRAFxHI-LC67s-2mCeJ3ubjvtT5j4NCsguVe9J6jgOYhuku5Kc9fVxNgkFhu4SJckpsqz9IopCGLoQ4L2eneM4bIDlqXMF-4Yh1zLqhTzYk2-XqIaibvOGrVO5A";
+        token.startsWith(AuthConstants.AUTHORIZATION_PREFIX);
     }
 }

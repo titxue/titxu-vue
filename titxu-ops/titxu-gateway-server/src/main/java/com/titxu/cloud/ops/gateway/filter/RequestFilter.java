@@ -18,8 +18,6 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.a
 /**
  * request过滤器
  *
-
- 
  **/
 @Component
 public class RequestFilter implements GlobalFilter, Ordered {

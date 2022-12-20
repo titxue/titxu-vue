@@ -78,6 +78,23 @@
                         <CollectionDetail>
                           <option name="apiParamGroup">
                             <map>
+                              <entry key="密码登陆">
+                                <value>
+                                  <ParamGroupCollection>
+                                    <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+                                    <option name="method" value="postAccessToken" />
+                                    <option name="methodDescription" value="New Request" />
+                                    <option name="methodType" value="POST" />
+                                    <option name="multipartKeyValueListJson" value="[]" />
+                                    <option name="originUrl" value="/oauth/token" />
+                                    <option name="pathParamsKeyValueListJson" value="[]" />
+                                    <option name="preScript" value="" />
+                                    <option name="url" value="/auth/login/password" />
+                                    <option name="urlEncodedKeyValueListJson" value="[]" />
+                                    <option name="urlParamsKeyValueListJson" value="[]" />
+                                  </ParamGroupCollection>
+                                </value>
+                              </entry>
                               <entry key="授权">
                                 <value>
                                   <ParamGroupCollection>
@@ -96,28 +113,45 @@
                                   </ParamGroupCollection>
                                 </value>
                               </entry>
+                              <entry key="认证">
+                                <value>
+                                  <ParamGroupCollection>
+                                    <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
+                                    <option name="method" value="postAccessToken" />
+                                    <option name="methodDescription" value="New Request" />
+                                    <option name="methodType" value="POST" />
+                                    <option name="multipartKeyValueListJson" value="[]" />
+                                    <option name="originUrl" value="/oauth/token" />
+                                    <option name="pathParamsKeyValueListJson" value="[]" />
+                                    <option name="preScript" value="" />
+                                    <option name="url" value="/auth/oauth/token" />
+                                    <option name="urlEncodedKeyValueListJson" value="[]" />
+                                    <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;18666666666&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
+                                    <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;username=18666666666&#10;&amp;password=123456" />
+                                  </ParamGroupCollection>
+                                </value>
+                              </entry>
                             </map>
                           </option>
                           <option name="domain" value="localhost:10000" />
                           <option name="enableEnv" value="dev" />
                           <option name="enableProject" value="admin" />
                           <option name="id" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
-                          <option name="name" value="OAuth2认证" />
+                          <option name="name" value="New Request" />
                           <option name="paramGroup">
                             <ParamGroupCollection>
+                              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
                               <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
                               <option name="method" value="postAccessToken" />
-                              <option name="methodDescription" value="OAuth2认证" />
+                              <option name="methodDescription" value="New Request" />
                               <option name="methodType" value="POST" />
                               <option name="multipartKeyValueListJson" value="[]" />
                               <option name="originUrl" value="/oauth/token" />
                               <option name="pathParamsKeyValueListJson" value="[]" />
                               <option name="preScript" value="" />
-                              <option name="returnDocument" value="null" />
-                              <option name="url" value="/auth/oauth/token" />
+                              <option name="url" value="/auth/account/password" />
                               <option name="urlEncodedKeyValueListJson" value="[]" />
-                              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;grant_type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;password&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;client&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;client_secret&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;code&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;key&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;403d50aa-d260-4ac4-dacd-3091a8c5dcd4&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;refresh_token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;username&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;admin&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;password&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;123456&quot;}]" />
-                              <option name="urlParamsKeyValueListText" value="grant_type=password&#10;&amp;client_id=client&#10;&amp;client_secret=123456&#10;&amp;code=&#10;&amp;key=403d50aa-d260-4ac4-dacd-3091a8c5dcd4&#10;&amp;refresh_token=&#10;&amp;username=admin&#10;&amp;password=123456" />
+                              <option name="urlParamsKeyValueListJson" value="[]" />
                             </ParamGroupCollection>
                           </option>
                           <option name="tempId" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
@@ -139,6 +173,53 @@
               <option name="groupId" value="1" />
               <option name="id" value="1" />
               <option name="name" value="Default Group" />
+              <option name="paramGroup">
+                <ParamGroupCollection>
+                  <option name="methodDescription" value="Default Group" />
+                </ParamGroupCollection>
+              </option>
+              <option name="type" value="1" />
+            </CollectionDetail>
+            <CollectionDetail>
+              <option name="childList">
+                <list>
+                  <CollectionDetail>
+                    <option name="childList">
+                      <list>
+                        <CollectionDetail>
+                          <option name="domain" value="localhost:10000" />
+                          <option name="enableEnv" value="dev" />
+                          <option name="enableProject" value="admin" />
+                          <option name="id" value="20221219183548482" />
+                          <option name="name" value="New Request" />
+                          <option name="paramGroup">
+                            <ParamGroupCollection>
+                              <option name="className" value="" />
+                              <option name="method" value="postAccessToken" />
+                              <option name="methodDescription" value="New Request" />
+                              <option name="methodType" value="POST" />
+                              <option name="multipartKeyValueListJson" value="[]" />
+                              <option name="originUrl" value="/oauth/token" />
+                              <option name="pathParamsKeyValueListJson" value="[]" />
+                              <option name="preScript" value="" />
+                              <option name="url" value="/auth/login/password" />
+                              <option name="urlEncodedKeyValueListJson" value="[]" />
+                              <option name="urlParamsKeyValueListJson" value="[]" />
+                            </ParamGroupCollection>
+                          </option>
+                          <option name="tempId" value="20221219183548482" />
+                          <option name="type" value="2" />
+                        </CollectionDetail>
+                      </list>
+                    </option>
+                    <option name="id" value="20221219183548482" />
+                    <option name="name" value="Temp Group" />
+                    <option name="type" value="5" />
+                  </CollectionDetail>
+                </list>
+              </option>
+              <option name="id" value="20221219183445284" />
+              <option name="name" value="Group 3" />
               <option name="type" value="1" />
             </CollectionDetail>
           </list>

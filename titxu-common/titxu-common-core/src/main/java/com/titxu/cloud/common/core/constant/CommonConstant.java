@@ -3,8 +3,6 @@ package com.titxu.cloud.common.core.constant;
 /**
  * 通用常量类
  *
-
-
  **/
 public interface CommonConstant {
 
@@ -19,9 +17,14 @@ public interface CommonConstant {
     String USER_NAME = "username";
 
     /**
-     * 租户ID
+     * 租户ID tenantId
      */
     String TENANT_ID = "tenant_id";
+
+    /**
+     * 租户ID
+     */
+    String TENANT_KEY = "tenantId";
 
     /**
      * JWT载体key

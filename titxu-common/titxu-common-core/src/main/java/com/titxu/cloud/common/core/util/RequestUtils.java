@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 请求工具类
  *
-
-
  **/
 @Slf4j
 public class RequestUtils {

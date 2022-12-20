@@ -3,8 +3,6 @@ package com.titxu.cloud.common.core.constant;
 /**
  * 认证常量类
  *
-
-
  **/
 public interface AuthConstants {
 

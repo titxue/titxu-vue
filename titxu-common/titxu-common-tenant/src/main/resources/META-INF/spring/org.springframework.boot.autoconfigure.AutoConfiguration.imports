@@ -1,0 +1,2 @@
+com.titxu.cloud.common.tenant.util.TenantHandlerInterceptor
+com.titxu.cloud.common.tenant.config.WebConfigurer

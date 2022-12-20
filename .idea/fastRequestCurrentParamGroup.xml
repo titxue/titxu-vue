@@ -3,7 +3,6 @@
   <component name="fastRequestCurrentParamGroup">
     <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
     <option name="method" value="postAccessToken" />
-    <option name="module" value="titxu-sys-server" />
     <option name="originUrl" value="/oauth/token" />
     <option name="requestParamMap">
       <map>
@@ -14,7 +13,7 @@
         </entry>
       </map>
     </option>
-    <option name="tempId" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
+    <option name="tempId" value="" />
     <option name="url" value="/captcha" />
   </component>
 </project>

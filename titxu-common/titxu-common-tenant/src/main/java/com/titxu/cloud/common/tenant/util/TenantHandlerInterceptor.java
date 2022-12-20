@@ -9,11 +9,11 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static com.titxu.cloud.common.core.util.RequestUtils.getJwtPayload;
+
 /**
  * 租户拦截
  *
-
-
  **/
 @Component
 public class TenantHandlerInterceptor implements HandlerInterceptor {
@@ -21,7 +21,7 @@ public class TenantHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse response, Object handler) {
         // 多租户支持
-        String tenantId = httpServletRequest.getHeader(CommonConstant.TENANT_ID);
+        String tenantId =  getJwtPayload().getStr(CommonConstant.TENANT_KEY);;
         if (StringUtils.isNoneBlank(tenantId)) {
             TenantContext.setTenantId(tenantId);
         }

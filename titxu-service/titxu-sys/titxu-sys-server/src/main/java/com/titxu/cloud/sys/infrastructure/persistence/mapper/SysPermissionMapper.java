@@ -11,8 +11,6 @@ import java.util.Map;
 /**
  * 权限Mapper
  *
-
- 
  **/
 @Mapper
 public interface SysPermissionMapper extends BaseMapper<SysPermissionDO> {

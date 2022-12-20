@@ -28,7 +28,7 @@ import java.util.Map;
 @RequestMapping("/oauth")
 @Slf4j
 public class AuthController {
-
+//    grant_type=password&client_id=client&client_secret=123456&mobile=18666666666&password=123456
     private TokenEndpoint tokenEndpoint;
 
 
