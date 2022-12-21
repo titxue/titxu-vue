@@ -6,7 +6,7 @@ export interface RequestOptions {
 // 返回res.data的interface
 export interface IResponse<T = any> {
   code: number | string;
-  result: T;
+  data: T;
   message: string;
   status: string | number;
 }
@@ -14,7 +14,7 @@ export interface IResponse<T = any> {
 /**用户登录 */
 export interface ILogin {
   /** 账户名称 */
-  username: string;
+  mobile: string;
   /** 账户密码 */
   password: string;
 }

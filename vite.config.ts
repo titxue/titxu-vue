@@ -13,7 +13,7 @@ export default ({ command }: ConfigEnv): UserConfig => {
   const isBuild = command === 'build';
   let base: string;
   if (command === 'build') {
-    base = '/fast-vue3/';
+    base = '/titxu-admin/';
   } else {
     base = '/';
   }

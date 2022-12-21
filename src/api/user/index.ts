@@ -3,16 +3,16 @@ import { get, post } from '/@/utils/http/axios';
 import { UserState } from '/@/store/modules/user/types';
 // import axios from 'axios';
 enum URL {
-  login = '/user/login',
-  logout = '/user/logout',
-  profile = '/user/profile',
+  login = '/auth/account/password',
+  logout = '/auth/account/logout',
+  profile = '/auth/account/profile',
 }
 interface LoginRes {
   token: string;
 }
 
 export interface LoginData {
-  username: string;
+  mobile: string;
   password: string;
 }
 

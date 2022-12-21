@@ -5,12 +5,12 @@
     <div class="login-form-error-msg">{{ errorMessage }}</div>
     <el-form ref="ruleFormRef" :model="userFormData" class="login-form" layout="vertical" :rules="rules">
       <el-form-item
-        prop="username"
-        :rules="[{ required: true, message: '用户名不能为空' }]"
+        prop="mobile"
+        :rules="[{ required: true, message: '手机号不能为空' }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >
-        <el-input v-model="userFormData.username" placeholder="saodimangseng" />
+        <el-input v-model="userFormData.mobile" placeholder="saodimangseng" />
       </el-form-item>
       <el-form-item
         prop="password"
@@ -36,15 +36,16 @@
   const errorMessage = ref('');
   const userStore = useUserStore();
   const userFormData = reactive({
-    username: 'test',
-    password: 'test',
+    mobile: '18666666666',
+    password: '123456',
   });
+  
   const ruleFormRef = ref<FormInstance>();
   const rules = reactive<FormRules>({
     username: [
       {
         required: true,
-        message: '用户名不能为空',
+        message: '手机号不能为空',
       },
     ],
     password: [
@@ -57,11 +58,11 @@
   const handleSubmit = async (formEl: FormInstance | undefined) => {
     console.log(formEl);
     if (!formEl) return;
-    await formEl.validate((valid) => {
+    await formEl.validate(async (valid) => {
       if (valid) {
         ElMessage.success('欢迎使用');
-        router.push('/');
-        userStore.info();
+        await userStore.login(userFormData);
+        router.push('/admin');
       } else {
         ElMessage.error('错误信息');
       }

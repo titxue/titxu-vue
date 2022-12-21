@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import routes from 'virtual:generated-pages';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
+import { isLogin } from '../utils/auth';
 
 routes.push({
   path: '/',
@@ -18,11 +19,40 @@ router.beforeEach(async (_to, _from, next) => {
   NProgress.configure({ showSpinner: false });
 
   NProgress.start();
+
+
+  // 白名单
+  const whiteList = ["/login","/"];
+  if (whiteList.includes(_to.path)) {
+    next();
+    return;
+  }
+  if (isLogin()) {
+    next();
+    return;
+  }
+  if (!whiteList.includes(_to.path) && !isLogin()) {
+    next("/login");
+    return;
+  }
   next();
+
+
+
+
+
+
+
+
+
+
 });
 
 router.afterEach((_to) => {
   NProgress.done();
 });
+
+
+
 
 export default router;

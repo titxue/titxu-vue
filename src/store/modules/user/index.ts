@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { login as userLogin, logout as userLogout, getUserProfile, LoginData } from '/@/api/user/index';
-import { setToken, clearToken } from '/@/utils/auth';
+import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
 import { UserState } from './types';
 
 export const useUserStore = defineStore('user', {
@@ -44,10 +44,13 @@ export const useUserStore = defineStore('user', {
     },
     // 异步登录并存储token
     async login(loginForm: LoginData) {
-      const result = await userLogin(loginForm);
-      const token = result?.token;
+      const { data: result } = await userLogin(loginForm);
+      console.log('result', result);
+      const token = result?.value;
+      const refreshToken = result?.refreshToken;
       if (token) {
         setToken(token);
+        setRefreshToken(refreshToken);
       }
       return result;
     },
@@ -56,8 +59,9 @@ export const useUserStore = defineStore('user', {
       await userLogout();
       this.resetInfo();
       clearToken();
+      clearRefreshToken();
       // 路由表重置
-      // location.reload();
+      location.reload();
     },
   },
 });
