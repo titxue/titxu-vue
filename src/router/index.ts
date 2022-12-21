@@ -24,13 +24,21 @@ router.beforeEach(async (_to, _from, next) => {
   // 白名单
   const whiteList = ["/login","/"];
   if (whiteList.includes(_to.path)) {
+    if (isLogin()) {
+      // 如果在登陆页面，直接跳转到admin页面
+      if (_to.path === "/login") {
+        console.log("已经登陆，直接跳转到admin页面");
+        next("/admin");
+        return;
+      }
+      next();
+      return;
+    }
     next();
     return;
   }
-  if (isLogin()) {
-    next();
-    return;
-  }
+
+  // 如果不在白名单，判断是否登陆，如果没有登陆，跳转到登陆页面
   if (!whiteList.includes(_to.path) && !isLogin()) {
     next("/login");
     return;
