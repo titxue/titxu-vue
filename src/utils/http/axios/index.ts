@@ -58,7 +58,7 @@ axiosInstance.interceptors.response.use(
 axiosInstance.interceptors.request.use(
   (config: AxiosRequestConfig) => {
     const token = getToken();
-    console.log('url', whiteList.includes(config.url as string));
+    // console.log('url', whiteList.includes(config.url as string));
     // 白名单不需要携带token
     if (token && !whiteList.includes(config.url as string)) {
       if (config && config.headers) {

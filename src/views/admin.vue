@@ -29,10 +29,13 @@ import CommonAside from "./admin/components/CommonAside/commonAside.vue";
 
   &>.el-container {
     height: 100%;
+    background-color: #f5f5f5;
+    
 
     &>.el-aside {
-      height: 100%;
-      background: rgba(51, 65, 84, 1);
+      display: flex;
+      flex-direction: column;
+
     }
 
     &>.el-container {

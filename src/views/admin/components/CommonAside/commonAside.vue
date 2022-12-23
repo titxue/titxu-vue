@@ -1,7 +1,7 @@
 <template>
   <el-aside width="210px">
-    <el-menu active-text-color="#fff" background-color="rgba(51, 65, 84, 1)" class="el-menu-vertical-demo"
-      default-active="sys" text-color="rgba(192, 196, 204, 1)" @open="handleOpen" @close="handleClose">
+    <el-menu  class="el-menu-vertical-demo"
+      default-active="sys"  @open="handleOpen" @close="handleClose">
       <h3>{{ false ? '后台' : '后台管理' }}</h3>
       <el-menu-item :index="item.id + ''" v-for="item in noChildern()" :key="item.permissionName" @click="handleClick(item)">
         <component class="icons" :is="item.menuIcon"></component>
@@ -32,6 +32,7 @@ import { usePermissionStore } from '/@/store';
 import { Menu } from '/@/store/modules/permission/types';
 
 const router = useRouter();
+const route = useRoute();
 const permissionStore = usePermissionStore();
 // const list = [
 //   {
@@ -72,9 +73,10 @@ const handleClose = (key: string, keyPath: string[]) => {
 }
 
 const handleClick = (item: any) => {
-  console.log('router name', item)
-  console.log('router', router.getRoutes())
-  router.push("/admin/" + item.menuUrl)
+  console.log('aside item', item);
+  // console.log('router', router.getRoutes());
+  router.push("/admin/" + item.menuUrl);
+  route.meta.title = `${item.parentName}-${item.permissionName}`;
 };
 
 
@@ -107,17 +109,30 @@ onMounted(() => {
   margin-right: 10px;
 }
 
-.el-menu-item-group {
-  background-color: rgba(34, 45, 60, 1);
+// .el-menu-item-group {
+//   background-color: rgba(34, 45, 60, 1);
+// }
+::v-deep(.el-menu){
+  // 填满父元素
+  flex: 1;
 }
-
+.el-aside{
+  background-color: #ffffff;
+  margin: 16px 0 16px 16px;
+  // height: calc(100vh - 32px);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: width .3s ease;
+  width: 260px;
+}
 
 .el-menu-vertical-demo {
   width: 100%;
   border-right: none;
 
   h3 {
-    color: #fff;
+    color: rgb(70, 163, 221);
     text-align: center;
     margin-top: 10px;
   }

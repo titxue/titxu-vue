@@ -1,16 +1,16 @@
 <template>
-    <el-header>
-        <div class="l-content">
-            <!-- 这个button本来应该是有用途的，但是与本笔记主体内容无关，所以去除了，只保留样式 -->
-            <!-- <el-button size="small" plain>
-              <el-icon :size="20">
-                  <Menu />
-              </el-icon>
-          </el-button> -->
+    <el-header class="header">
+
+        <div class="nav-tab">
+            <el-tabs v-model="activeTab" type="card" class="demo-tabs" closable @tab-change="tabChange"
+                @tab-remove="removeTab">
+                <el-tab-pane v-for="item in tabList" :key="item.path" :label="item.title" :name="item.path">
+                </el-tab-pane>
+            </el-tabs>
         </div>
-        <div class="r-content">
+        <div class="nav-menus">
             <el-dropdown>
-                <span class="el-dropdown-link">
+                <span class="user-info">
                     <img class="user" :src="getImgSrc()" alt="头像" />
                     <span class="user-name">用户名</span>
                 </span>
@@ -23,17 +23,69 @@
             </el-dropdown>
 
         </div>
+
     </el-header>
 </template>
 
 
 <script setup lang="ts">
-import { ElMessage } from 'element-plus';
+import { ElMessage, TabPaneName } from 'element-plus';
 import { useUserStore } from '/@/store';
 
 const router = useRouter();
 const userStore = useUserStore();
 
+
+// 激活标签页
+const activeTab = ref('')
+
+const tabList = ref([
+    {
+        title: 'user',
+        path: '/admin/sys/user',
+    },
+    {
+        title: 'admin',
+        path: '/admin',
+    },
+])
+
+// 点击标签跳转路由
+const tabChange = (tab: TabPaneName) => {
+    console.log(tab)
+    router.push(tab as string)
+    activeTab.value = tab as string
+}
+
+
+//添加标签导航
+//  function addTab(tab:any) {
+//     const notTab = tabList.value.findIndex((e) => e.path == tab.path) == -1;
+//     if (notTab) {
+//       tabList.value.push(tab);
+//     }
+//   }
+
+
+
+// 删除标签
+const removeTab = (targetName: string) => {
+    const tabs = tabList.value
+    let activeName = activeTab.value
+    if (activeName === targetName) {
+        tabs.forEach((tab, index) => {
+            if (tab.path === targetName) {
+                const nextTab = tabs[index + 1] || tabs[index - 1]
+                if (nextTab) {
+                    activeName = nextTab.path
+                }
+            }
+        })
+    }
+
+    activeTab.value = activeName
+    tabList.value = tabs.filter((tab) => tab.path !== targetName)
+}
 
 const logout = async () => {
     await userStore.logout();
@@ -47,57 +99,79 @@ let getImgSrc = () => {
     // console.log(new URL("../assets/images/user.png", import.meta.url))
     return new URL("../../../../assets/images/user.jpg", import.meta.url).href;
 };
+  //添加标签导航
+  function addTab(tab: { title: string; path: string; }) {
+    const notTab = tabList.value.findIndex((e) => e.path == tab.path) == -1;
+    if (notTab) {
+      tabList.value.push(tab);
+    }
+  }
 
+//获取路由跳转后的tab数据
+onBeforeRouteUpdate((p) => {
+    activeTab.value = p.path;
+    console.log("p", p)
+    addTab({
+      title: p.meta.title as string,
+      path: p.path,
+    });
+  });
 
 </script>
 
 <style lang="less" scoped>
 header {
+    height: 50px;
+    margin: 20px 16px 0 16px;
+    // box-shadow: 0 0 8px rgba(0 0 0 / 8%);
+    // 测试颜色
+    // background: rgba(255, 255, 255, 1);
+
+}
+.demo-tabs > .el-tabs__content {
+  padding: 32px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.el-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 56px;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 1px 4px 0px rgba(0, 21, 41, 0.12);
-}
+    padding: 0;
+    // background-color: #ffffff;
 
-.l-content {
-    display: flex;
-    align-items: center;
+    .nav-menus {
+        background-color: #ffffff;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        height: 100%;
 
-    .el-button {
-        margin-right: 16px;
-        margin-left: 10px;
-    }
+        .user {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
-    h3 {
-        color: #fff;
-    }
-}
+        .user-info {
+            // header 用户信息相对右边的距离
+            padding: 0 10px 0 10px;
+        }
 
-.r-content {
-    .user {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    .el-dropdown-link {
-        // header 用户信息相对右边的距离
-        margin-right: 10px;
-    }
-
-    .user-name {
-        /** 文本1 */
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0px;
-        line-height: 22px;
-        color: rgba(0, 0, 0, 0.65);
-        text-align: left;
-        vertical-align: top;
+        .user-name {
+            /** 文本1 */
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.65);
+            text-align: left;
+            vertical-align: top;
+        }
     }
 }
 </style>

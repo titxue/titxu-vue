@@ -45,18 +45,14 @@ router.beforeEach(async (_to, _from, next) => {
   }
   next();
 
-
-
-
-
-
-
-
-
-
 });
 
-router.afterEach((_to) => {
+router.afterEach((_to,_from) => {
+   //获取 document.querySelector title = 直接改掉 这么简单
+   if(_from.meta.title) {
+    document.title = _from.meta.title.toString();
+    console.log("title",document.title);
+   }
   NProgress.done();
 });
 
