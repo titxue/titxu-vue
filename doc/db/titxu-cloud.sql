@@ -473,7 +473,7 @@ CREATE TABLE `sys_tenant` (
 -- Records of sys_tenant
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_tenant` VALUES ('1', 'titxu', '享同科技', '1', '0', NULL, '0', NULL, NULL, NULL, NULL);
+INSERT INTO `sys_tenant` VALUES ('1', 'titxu', '一只小鸟', '1', '0', NULL, '0', NULL, NULL, NULL, NULL);
 COMMIT;
 
 -- ----------------------------
