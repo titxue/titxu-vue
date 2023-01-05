@@ -74,7 +74,8 @@ axiosInstance.interceptors.request.use(
     // 白名单不需要携带token
     if (token && !whiteList.includes(config.url as string)) {
       if (config && config.headers) {
-        config.headers.Authorization = `${TokenPrefix}${token}`;
+        // config.headers.Authorization = `${TokenPrefix}${token}`;
+        config.headers['Authorization'] = `${TokenPrefix}${token}`;
       }
     }
     return config;

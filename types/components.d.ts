@@ -9,10 +9,23 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     EasyDialog: typeof import('./../src/components/EasyDialog/index.vue')['default'];
     EasyForm: typeof import('./../src/components/EasyForm/index.vue')['default'];
+    ElAside: typeof import('element-plus/es')['ElAside'];
     ElButton: typeof import('element-plus/es')['ElButton'];
+    ElContainer: typeof import('element-plus/es')['ElContainer'];
+    ElDropdown: typeof import('element-plus/es')['ElDropdown'];
+    ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem'];
+    ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu'];
     ElForm: typeof import('element-plus/es')['ElForm'];
     ElFormItem: typeof import('element-plus/es')['ElFormItem'];
+    ElHeader: typeof import('element-plus/es')['ElHeader'];
     ElInput: typeof import('element-plus/es')['ElInput'];
+    ElMain: typeof import('element-plus/es')['ElMain'];
+    ElMenu: typeof import('element-plus/es')['ElMenu'];
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem'];
+    ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup'];
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu'];
+    ElTabPane: typeof import('element-plus/es')['ElTabPane'];
+    ElTabs: typeof import('element-plus/es')['ElTabs'];
     ElTooltip: typeof import('element-plus/es')['ElTooltip'];
     Footer: typeof import('./../src/components/Footer/index.vue')['default'];
     Header: typeof import('./../src/components/Header/index.vue')['default'];
