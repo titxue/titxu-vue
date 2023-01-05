@@ -5,7 +5,6 @@ import { usePermissionStore } from './modules/permission';
 
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
-
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 

@@ -20,15 +20,14 @@ router.beforeEach(async (_to, _from, next) => {
 
   NProgress.start();
 
-
   // 白名单
-  const whiteList = ["/login","/"];
+  const whiteList = ['/login', '/'];
   if (whiteList.includes(_to.path)) {
     if (isLogin()) {
       // 如果在登陆页面，直接跳转到admin页面
-      if (_to.path === "/login") {
-        console.log("已经登陆，直接跳转到admin页面");
-        next("/admin");
+      if (_to.path === '/login') {
+        console.log('已经登陆，直接跳转到admin页面');
+        next('/admin');
         return;
       }
       next();
@@ -40,23 +39,19 @@ router.beforeEach(async (_to, _from, next) => {
 
   // 如果不在白名单，判断是否登陆，如果没有登陆，跳转到登陆页面
   if (!whiteList.includes(_to.path) && !isLogin()) {
-    next("/login");
+    next('/login');
     return;
   }
   next();
-
 });
 
-router.afterEach((_to,_from) => {
-   //获取 document.querySelector title = 直接改掉 这么简单
-   if(_from.meta.title) {
+router.afterEach((_to, _from) => {
+  //获取 document.querySelector title = 直接改掉 这么简单
+  if (_from.meta.title) {
     document.title = _from.meta.title.toString();
-    console.log("title",document.title);
-   }
+    console.log('title', document.title);
+  }
   NProgress.done();
 });
-
-
-
 
 export default router;

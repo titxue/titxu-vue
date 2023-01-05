@@ -39,7 +39,7 @@
     mobile: '18666666666',
     password: '123456',
   });
-  
+
   const ruleFormRef = ref<FormInstance>();
   const rules = reactive<FormRules>({
     username: [

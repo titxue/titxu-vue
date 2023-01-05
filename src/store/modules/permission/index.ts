@@ -10,7 +10,7 @@ export const usePermissionStore = defineStore('permission', {
   getters: {
     permissionsProfile(state: PermissionState): PermissionState {
       return { ...state };
-    }
+    },
   },
   actions: {
     // 设置权限的信息

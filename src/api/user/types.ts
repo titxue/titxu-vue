@@ -34,48 +34,48 @@ export interface ResResultData {
 }
 
 export interface UserInfoType {
-  id: string
-  delFlag: string
-  createdBy: string
-  createdTime: string
-  updatedBy: string
-  updatedTime: string
-  userName: string
-  accountId: string
-  userType?: string
-  linkId?: string
-  status: string
-  remarks?: string
-  tenantId: string
-  tenantCode?: string
-  tenantName?: string
-  mobile: string
-  email?: string
+  id: string;
+  delFlag: string;
+  createdBy: string;
+  createdTime: string;
+  updatedBy: string;
+  updatedTime: string;
+  userName: string;
+  accountId: string;
+  userType?: string;
+  linkId?: string;
+  status: string;
+  remarks?: string;
+  tenantId: string;
+  tenantCode?: string;
+  tenantName?: string;
+  mobile: string;
+  email?: string;
 }
 
 export interface ReqUserUpdateParams {
-  id: string
-  userName: string
-  mobile: string
-  email?: string
-  roleIdList: string[]
+  id: string;
+  userName: string;
+  mobile: string;
+  email?: string;
+  roleIdList: string[];
 }
 
 export interface PageUserInfoType {
-  totalCount: number
-  pageSize: number
-  totalPage: number
-  currPage: number
-  list?: UserInfoType[]
+  totalCount: number;
+  pageSize: number;
+  totalPage: number;
+  currPage: number;
+  list?: UserInfoType[];
 }
 
 export interface ResultListType {
-  msg: string
-  code: number
-  page: PageUserInfoType
+  msg: string;
+  code: number;
+  page: PageUserInfoType;
 }
 
 export interface ResultOkType {
-  msg: string
-  code: number
+  msg: string;
+  code: number;
 }

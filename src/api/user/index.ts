@@ -33,4 +33,4 @@ const login = async (data: LoginData) => post<any>({ url: URL.login, data });
 // 刷新token
 const refresh = async (refreshToken: string) => post<any>({ url: URL.refresh, data: { refreshToken } });
 const logout = async () => post<LoginRes>({ url: URL.logout });
-export { getUserProfile, logout, login, getUserList,refresh };
+export { getUserProfile, logout, login, getUserList, refresh, deleteUser, updateUser };

@@ -43,7 +43,6 @@ export const useUserStore = defineStore('user', {
       const result = await getUserList(params);
       console.log('result', result);
       return result;
-
     },
     // 获取用户信息
     async info() {

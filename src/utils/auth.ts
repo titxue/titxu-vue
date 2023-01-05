@@ -1,4 +1,4 @@
-import { refresh } from "../api/user";
+import { refresh } from '../api/user';
 
 const AccessToken = 'accessToken';
 const RefreshTokenKey = 'refreshToken';
@@ -15,7 +15,6 @@ const setToken = (token: string) => {
 const clearToken = () => {
   localStorage.removeItem(AccessToken);
 };
-
 
 const getRefreshToken = () => {
   return localStorage.getItem(RefreshTokenKey);

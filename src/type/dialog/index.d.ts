@@ -1,7 +1,3 @@
-declare namespace Dialog {
-  interface Options {
-
-  }
-}
-
-
+// declare namespace Dialog {
+//   interface Options {}
+// }
