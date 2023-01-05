@@ -3,6 +3,7 @@ package com.titxu.cloud.ops.auth.controller;
 import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.ops.auth.application.LoginService;
 import com.titxu.cloud.ops.auth.application.command.LoginPasswordCommand;
+import com.titxu.cloud.ops.auth.application.command.RefreshCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,14 @@ public class LoginController {
     @PostMapping("/password")
     public Result login(@RequestBody LoginPasswordCommand loginPasswordCommand) {
         return Result.ok().put("data", loginService.login(loginPasswordCommand));
+    }
+    /**
+     * 刷新登陆
+     */
+    @ApiOperation("刷新登陆")
+    @PostMapping("/refresh")
+    public Result refresh(@RequestBody RefreshCommand refreshCommand) {
+        return Result.ok().put("data", loginService.refresh(refreshCommand));
     }
     /**
      * 退出登陆

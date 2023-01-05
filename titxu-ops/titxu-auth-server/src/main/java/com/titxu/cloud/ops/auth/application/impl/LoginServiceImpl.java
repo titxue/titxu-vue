@@ -4,6 +4,7 @@ package com.titxu.cloud.ops.auth.application.impl;
 import com.alibaba.fastjson2.JSON;
 import com.titxu.cloud.ops.auth.application.LoginService;
 import com.titxu.cloud.ops.auth.application.command.LoginPasswordCommand;
+import com.titxu.cloud.ops.auth.application.command.RefreshCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -35,14 +36,15 @@ public class LoginServiceImpl implements LoginService {
         this.restTemplate = restTemplate;
     }
 
+
     @Override
     public Map<String, Object>  login(LoginPasswordCommand loginPasswordCommand) {
         log.info("登陆手机号:{}", loginPasswordCommand.getMobile());
         // TODO Auto-generated method stub
         //配置请求头
-        MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
-//        headers.add("authorization", "Bearer 774720e6-8193-48b9-9fb0-7f0591ffbeef");
-        headers.add("content-type", "application/json");
+//        MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
+////        headers.add("authorization", "Bearer 774720e6-8193-48b9-9fb0-7f0591ffbeef");
+//        headers.add("content-type", "application/json");
 
         MultiValueMap<String, Object> parameters = new LinkedMultiValueMap<>();
         parameters.add("grant_type", "password");
@@ -53,6 +55,11 @@ public class LoginServiceImpl implements LoginService {
         parameters.add("password", loginPasswordCommand.getPassword());
         parameters.add("key", loginPasswordCommand.getUuid());
         parameters.add("code", loginPasswordCommand.getCode());
+        return getAuthToken(parameters);
+
+    }
+
+    private Map<String, Object> getAuthToken(MultiValueMap<String, Object> parameters) {
         HttpEntity<MultiValueMap<String, Object>> multiValueMapHttpEntity = new HttpEntity<>(parameters);
 
         //指定 restTemplate当遇到400或401响应时候也不要抛出异常，也要正常返回值
@@ -80,7 +87,22 @@ public class LoginServiceImpl implements LoginService {
         parseObject.remove("expired");
         parseObject.remove("expired");
         return parseObject;
+    }
 
+    /**
+     * 刷新登陆
+     * @param refreshCommand 刷新token
+     * @return token
+     */
+    @Override
+    public Map<String, Object> refresh(RefreshCommand refreshCommand) {
+        log.info("刷新token:{}", refreshCommand.getRefreshToken());
+        MultiValueMap<String, Object> parameters = new LinkedMultiValueMap<>();
+        parameters.add("grant_type", "refresh_token");
+        parameters.add("client_id", "client");
+        parameters.add("client_secret", "123456");
+        parameters.add("refresh_token", refreshCommand.getRefreshToken());
+        return getAuthToken(parameters);
     }
 
 
