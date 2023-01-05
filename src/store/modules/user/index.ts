@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia';
-import { login as userLogin, logout as userLogout, getUserProfile, LoginData } from '/@/api/user/index';
+import { login as userLogin, logout as userLogout, getUserProfile, LoginData, getUserList } from '/@/api/user/index';
 import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
 import { UserState } from './types';
+import { ReqListParams, ResultListType } from '/@/api/user/types';
 
 export const useUserStore = defineStore('user', {
   state: (): UserState => ({
@@ -36,6 +37,13 @@ export const useUserStore = defineStore('user', {
     // 重置用户信息
     resetInfo() {
       this.$reset();
+    },
+    // 获取用户列表
+    async list(params?: ReqListParams): Promise<ResultListType> {
+      const result = await getUserList(params);
+      console.log('result', result);
+      return result;
+
     },
     // 获取用户信息
     async info() {

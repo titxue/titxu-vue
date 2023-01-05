@@ -1,7 +1,8 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { showMessage } from './status';
 import { IResponse } from './type';
-import { getToken, TokenPrefix } from '/@/utils/auth';
+import { refresh } from '/@/api/user';
+import { getRefreshToken, getToken, TokenPrefix } from '/@/utils/auth';
 
 // 如果请求话费了超过 `timeout` 的时间，请求将被中断
 axios.defaults.timeout = 5000;
@@ -12,7 +13,7 @@ axios.defaults.withCredentials = false;
 axios.defaults.headers.post['Access-Control-Allow-Origin-Type'] = '*';
 // 无需携带凭证url白名单
 // todo 白名单需要优化,后台动态返回
-const whiteList = ['/auth/account/password', '/auth/account/logout', '/user/refreshToken'];
+const whiteList = ['/auth/account/password', '/auth/account/logout', '/auth/account/refresh'];
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_BASEURL + '',
@@ -26,7 +27,7 @@ const axiosInstance: AxiosInstance = axios.create({
   // ],
 });
 
-
+let flag = false;
 // axios实例拦截响应
 axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => {
@@ -35,8 +36,22 @@ axiosInstance.interceptors.response.use(
     // } else if (response.data && response.data.token) {
     //   localStorage.setItem('app_token', response.data.token)
     // }
-
+    
+    
     if (response.status === 200) {
+      // 判断token是否过期
+      if (response.data.code === 401) {
+        // todo token过期后的处理
+        console.log('认证失败', response);
+        // const refreshToken = getRefreshToken();
+        // if (refreshToken && !flag) {
+        //   const newToken = refresh(refreshToken);
+        //   console.log('newToken', newToken);
+        //   flag = true;
+        // }
+        showMessage(response.data.code);
+        return response;
+      } 
       return response;
     }
     showMessage(response.status);

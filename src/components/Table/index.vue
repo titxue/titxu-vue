@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-config-provider :locale="locale">
     <el-table ref="tableRef" :data="tableData" v-bind="_options" @selection-change="handleSelectionChange"
       @row-click="handleRowClick" @cell-click="handleCellClick" @sort-change="handleSortChange">
       <template v-for="(col, index) in columns" :key="index">
@@ -25,6 +26,7 @@
     <div v-if="_options.showPagination" class="mt20">
       <el-pagination v-bind="_paginationConfig" @size-change="pageSizeChange" @current-change="currentPageChange" />
     </div> 
+  </el-config-provider>
   </div>
 </template>
 <script lang="ts" setup>
@@ -32,6 +34,8 @@ import { ComputedRef, computed } from 'vue'
 import type { TableColumnCtx } from 'element-plus/es/components/table/src/table-column/defaults'
 import TableColumn from './TableColumn.vue'
 import { ElTable } from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import en from 'element-plus/dist/locale/en.mjs'
 export type SortParams<T> = {
   column: TableColumnCtx<T | any>
   prop: string
@@ -44,6 +48,11 @@ interface TableProps {
 }
 const props = defineProps<TableProps>()
 const tableRef = ref<InstanceType<typeof ElTable>>()
+
+
+
+const language = ref('zh-cn')
+const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en))
 // 设置option默认值，如果传入自定义的配置则合并option配置项
 const _options: ComputedRef<Table.Options> = computed(() => {
   const option = {

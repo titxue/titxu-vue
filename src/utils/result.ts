@@ -9,6 +9,13 @@ export function successResult<T = Recoverable>(result: T, { message = 'Request s
     status: 'ok',
   };
 }
+export function okResult({ msg = 'Request success' } = {}) {
+  return {
+    code: 200,
+    msg,
+    status: 'ok',
+  };
+}
 export function errorResult(message = 'Request failed', { code = -1, result = null } = {}) {
   return {
     code,
