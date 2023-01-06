@@ -195,8 +195,8 @@
         ElMessage.success(`删除${row.userName}用户成功`);
         refreshTable();
       })
-      .catch(() => {
-        ElMessage.info('已取消删除');
+      .catch((err) => {
+        ElMessage.error(err);
       });
   };
   const handleSelection = (val: UserInfoType[]) => {
