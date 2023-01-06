@@ -3,6 +3,7 @@
     <el-card>
       <template #header>
         <ElButton type="info" :icon="Refresh" @click="refreshTable" />
+        <ElButton type="info" :icon="Refresh" @click="handleRefreshToken" />
       </template>
       <Table
         :columns="tableColumn"
@@ -45,6 +46,7 @@
   // import { refreshToken } from '/@/utils/auth';
   import { exampleForm } from '/@/config/form';
   import { Refresh } from '@element-plus/icons-vue';
+  import { refreshToken } from '/@/utils/token';
   // const { proxy } = getCurrentInstance()
   const router = useRouter();
 
@@ -62,9 +64,9 @@
   const handleBaseSubmit = (model: Record<string, any>) => {
     console.log(model);
   };
-  // const handleTest = () => {
-  //     refreshToken()
-  // }
+  const handleRefreshToken = () => {
+    refreshToken();
+  };
 
   // 取消编辑
   const cancelEdit = () => {
