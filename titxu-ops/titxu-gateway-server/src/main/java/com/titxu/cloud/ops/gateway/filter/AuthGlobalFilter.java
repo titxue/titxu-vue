@@ -51,6 +51,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         String jti = jsonObject.getStr(AuthConstants.JWT_JTI);
         Boolean isBlack = redisService.hasKey(AuthConstants.TOKEN_BLACKLIST_PREFIX + jti);
         if (isBlack) {
+            response.setRawStatusCode(ResultCode.UNAUTHORIZED.getCode());
             return WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode());
         }
 

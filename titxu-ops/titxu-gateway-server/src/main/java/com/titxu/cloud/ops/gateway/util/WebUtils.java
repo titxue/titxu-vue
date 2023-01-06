@@ -26,7 +26,7 @@ public class WebUtils {
     private static final String MAX_AGE = "18000L";
 
     public static Mono<Void> getAuthFailResult(ServerHttpResponse response, Integer code) {
-        response.setStatusCode(HttpStatus.OK);
+        response.setRawStatusCode(code);
         response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
         response.getHeaders().add("Access-Control-Allow-Headers", ALLOWED_HEADERS);
         response.getHeaders().add("Access-Control-Allow-Methods", ALLOWED_METHODS);
