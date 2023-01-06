@@ -2,6 +2,8 @@
   <div>
     <el-card>
       <template #header>
+        <ElButton type="success" @click="handleRefreshToken"> 新增用户 </ElButton>
+        <ElButton type="danger" @click="handleRefreshToken"> 删除删除 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshTable" />
         <ElButton type="info" :icon="Refresh" @click="handleRefreshToken" />
       </template>
