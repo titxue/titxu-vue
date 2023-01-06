@@ -1,48 +1,90 @@
 import { defineStore } from 'pinia';
-import { login as userLogin, logout as userLogout, getUserProfile, LoginData, getUserList } from '/@/api/user/index';
+import {
+  login as userLogin,
+  logout as userLogout,
+  getUserProfile,
+  LoginData,
+  getUserList,
+  updateUser,
+  deleteUser,
+  disableUser,
+} from '/@/api/user/index';
 import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
-import { UserState } from './types';
-import { ReqListParams, ResultListType } from '/@/api/user/types';
+import { PageUserInfoType, ReqListParams, UserInfoType } from '/@/api/user/types';
 
 export const useUserStore = defineStore('user', {
-  state: (): UserState => ({
-    user_name: undefined,
-    avatar: undefined,
-    organization: undefined,
-    location: undefined,
-    email: undefined,
-    blogJuejin: undefined,
-    blogZhihu: undefined,
-    blogGithub: undefined,
-    profileBio: undefined,
-    devLanguages: undefined,
-    role: '',
+  state: (): UserInfoType => ({
+    id: '',
+    delFlag: '',
+    createdBy: '',
+    createdTime: '',
+    updatedBy: '',
+    updatedTime: '',
+    userName: '',
+    accountId: '',
+    userType: '',
+    linkId: '',
+    status: '',
+    remarks: '',
+    tenantId: '',
+    tenantCode: '',
+    tenantName: '',
+    mobile: '',
+    email: '',
   }),
   getters: {
-    userProfile(state: UserState): UserState {
+    userProfile(state: UserInfoType): UserInfoType {
       return { ...state };
     },
   },
   actions: {
-    switchRoles() {
-      return new Promise((resolve) => {
-        this.role = this.role === 'user' ? 'user' : 'admin';
-        resolve(this.role);
-      });
-    },
+    // switchRoles() {
+    //   return new Promise((resolve) => {
+    //     this.role = this.role === 'user' ? 'user' : 'admin';
+    //     resolve(this.role);
+    //   });
+    // },
     // 设置用户的信息
-    setInfo(partial: Partial<UserState>) {
+    setInfo(partial: Partial<UserInfoType>) {
       this.$patch(partial);
     },
     // 重置用户信息
     resetInfo() {
       this.$reset();
     },
+    // 修改用户状态
+    async changeStatus(id: string) {
+      const { code } = await disableUser(id);
+      if (code !== 0) {
+        return Promise.reject('修改用户状态失败');
+      }
+    },
+    // 删除用户
+    async deleteUser(id: string[]) {
+      const { code } = await deleteUser(id);
+      if (code !== 0) {
+        return Promise.reject('删除用户失败');
+      }
+    },
+    // 修改用户信息
+    async updateUser(data: UserInfoType) {
+      const { code } = await updateUser({
+        id: data.id,
+        userName: data.userName,
+        mobile: data.mobile,
+        email: data.email,
+      });
+      if (code !== 0) {
+        return Promise.reject('修改用户信息失败');
+      }
+    },
     // 获取用户列表
-    async list(params?: ReqListParams): Promise<ResultListType> {
-      const result = await getUserList(params);
-      console.log('result', result);
-      return result;
+    async list(params?: ReqListParams): Promise<PageUserInfoType> {
+      const { code, page } = await getUserList(params);
+      if (code !== 0) {
+        return Promise.reject('获取用户列表失败');
+      }
+      return page;
     },
     // 获取用户信息
     async info() {

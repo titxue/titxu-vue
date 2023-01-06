@@ -58,7 +58,7 @@ export interface ReqUserUpdateParams {
   userName: string;
   mobile: string;
   email?: string;
-  roleIdList: string[];
+  roleIdList?: string[];
 }
 
 export interface PageUserInfoType {

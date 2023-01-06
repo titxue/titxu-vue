@@ -11,7 +11,6 @@
         :options="options"
         @pagination-change="handlePaginationChange"
         @selection-change="handleSelection"
-        @command="handleAction"
       >
         <!-- 插槽自定义表头  addressHeader就是tableColumn中地址那一列定义的
                 <template #addressHeader="{ column }">
@@ -24,7 +23,7 @@
       title="编辑用户"
       :fieldList="fieldList"
       :model="formData"
-      @submit="handleBaseSubmit"
+      @submit="handleUserSubmit"
       @update:visible="recorddialogVisible"
       :visible="dialogVisible"
       :options="optionsDialog"
@@ -52,27 +51,11 @@
 
   const route = useRoute();
   const store = useUserStore();
-  const { list } = store;
+  const { list, changeStatus, updateUser, deleteUser } = store;
 
   const dialogVisible = ref(false);
   const fieldList: Form.FieldItem[] = exampleForm.editUser;
   const formData = ref<Record<string, any>>();
-  /**
-   * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
-   *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
-   */
-  const handleBaseSubmit = (model: Record<string, any>) => {
-    console.log(model);
-  };
-  const handleRefreshToken = () => {
-    refreshToken();
-  };
-
-  // 取消编辑
-  const cancelEdit = () => {
-    dialogVisible.value = false;
-    ElMessage.warning('取消编辑');
-  };
 
   // import { h } from 'vue'
   // import Table from '@/components/Table/index.vue'
@@ -125,25 +108,14 @@
     {
       width: '140',
       label: '操作',
-      render: ({ row }: Record<string, UserInfoType>, scope: any) =>
-        // 渲染单个元素
-        //   h(
-        //             ElButton,
-        //             {
-        //                 type: 'primary',
-        //                 size: 'small',
-        //                 onClick: () => handleRenderEdit(row, index)
-        //             },
-        //             { default: () => '编辑' }
-        //         ),
-        // 渲染多个元素
+      render: ({ row }: Record<string, UserInfoType>) =>
         h('div', null, [
           h(
             ElButton,
             {
               type: 'primary',
               size: 'small',
-              onClick: () => handleRenderEdit(row, scope.attrs.index),
+              onClick: () => handleRenderEdit(row),
             },
             { default: () => '编辑' },
           ),
@@ -152,7 +124,7 @@
             {
               type: 'danger',
               size: 'small',
-              onClick: () => handleRenderDelete(row, scope.attrs.index),
+              onClick: () => handleRenderDelete(row),
             },
             { default: () => '删除' },
           ),
@@ -165,34 +137,70 @@
     dialogVisible.value = n;
   };
 
-  // 编辑用户
-  const handleRenderEdit = (row: UserInfoType, index: number) => {
-    dialogVisible.value = true;
-    console.log('row', row);
-    formData.value = row;
-
-    ElMessage.success(`${row.userName} ----- ${index}`);
+  const handleRefreshToken = () => {
+    refreshToken();
   };
-  const handleRenderDelete = (row: UserInfoType, index: number) => {
-    ElMessage.error(`${row.userName} ----- ${index}`);
+
+  // 取消编辑
+  const cancelEdit = () => {
+    dialogVisible.value = false;
+    ElMessage.warning('取消编辑');
+  };
+  // 修改用户状态
+  const handleStatusChange = async (row: UserInfoType, currentStatus: string) => {
+    const { id, status: newStatus } = row;
+    if (currentStatus === newStatus) return;
+    if (newStatus === '0') {
+      await changeStatus(id);
+    }
+    if (newStatus === '1') {
+      await changeStatus(id);
+    }
+  };
+  /**
+   * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
+   *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
+   */
+  const handleUserSubmit = async (model: Record<string, UserInfoType>) => {
+    const userInfo = model as unknown as UserInfoType;
+    // 编辑用户
+    if (userInfo.id) {
+      await updateUser(model as unknown as UserInfoType);
+      // 修改用户状态
+      const currentStatus: string | undefined = state.tableDataList.find((item) => item.id === userInfo.id)?.status;
+      if (!currentStatus) return;
+      await handleStatusChange(model as unknown as UserInfoType, currentStatus);
+      ElMessage.success(`编辑${model.userName}用户成功`);
+    } else {
+      // 新增用户
+      ElMessage.success('新增用户成功');
+    }
+    refreshTable();
+  };
+  // 编辑用户
+  const handleRenderEdit = (row: UserInfoType) => {
+    dialogVisible.value = true;
+    // json数据深拷贝
+    const data = JSON.parse(JSON.stringify(row));
+    formData.value = data;
+  };
+  const handleRenderDelete = (row: UserInfoType) => {
+    ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning',
+    })
+      .then(async () => {
+        await deleteUser(new Array(row.id));
+        ElMessage.success(`删除${row.userName}用户成功`);
+        refreshTable();
+      })
+      .catch(() => {
+        ElMessage.info('已取消删除');
+      });
   };
   const handleSelection = (val: UserInfoType[]) => {
     console.log('父组件接收的多选数据', val);
-  };
-  const handleAction = (command: Table.Command, row: UserInfoType) => {
-    switch (command) {
-      case 'edit':
-        alert('点击了编辑');
-        break;
-      case 'delete':
-        console.log('row', row);
-        ElMessageBox.confirm('确认删除吗？', '提示').then(() => {
-          ElMessage(JSON.stringify(row));
-        });
-        break;
-      default:
-        break;
-    }
   };
 
   watch(
@@ -201,7 +209,7 @@
       const { page, pageSize } = newval;
       params.page = Number(page) || params.page;
       params.limit = Number(pageSize) || params.limit;
-      const { page: result } = await list(params);
+      const result = await list(params);
       const { list: UserList } = result;
       if (UserList) {
         state.tableDataList = UserList;
@@ -215,9 +223,12 @@
     { immediate: true },
   );
   // 刷新表格数据
-  const refreshTable = () => {
-    list(params);
-    ElMessage.success('刷新成功');
+  const refreshTable = async () => {
+    const result = await list(params);
+    const { list: UserList } = result;
+    if (UserList) {
+      state.tableDataList = UserList;
+    }
   };
 
   // pageSize或者currentPage改变触发

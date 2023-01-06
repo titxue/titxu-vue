@@ -63,7 +63,6 @@ axiosInstance.interceptors.response.use(
         });
       }
       showMessage(response.status);
-      console.log('response', response);
       return Promise.reject(response.data);
     }
     showMessage('网络连接异常,请稍后再试!');
@@ -96,7 +95,6 @@ const request = <T = any>(config: AxiosRequestConfig): Promise<T> => {
     axiosInstance
       .request<any, AxiosResponse<IResponse>>(conf)
       .then((res: AxiosResponse<IResponse>) => {
-        console.log('res', res);
         // resolve(res as unknown as Promise<T>);
         const { data } = res;
         resolve(data as T);
