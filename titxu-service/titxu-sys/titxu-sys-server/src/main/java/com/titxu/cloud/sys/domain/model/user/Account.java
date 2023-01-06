@@ -42,11 +42,23 @@ public class Account implements Entity<Account> {
         this.mobile = mobile;
         this.password = Password.create(password);
     }
+    public Account(Mobile mobile, Email email) {
+        this.mobile = mobile;
+        this.email = email;
+    }
 
     public Account(Mobile mobile, Email email, Password password) {
         this.mobile = mobile;
         this.email = email;
         this.password = password;
+    }
+
+    public void setMobile(Mobile mobile) {
+        this.mobile = mobile;
+    }
+
+    public void setEmail(Email email) {
+        this.email = email;
     }
 
     @Override
@@ -57,22 +69,19 @@ public class Account implements Entity<Account> {
     /**
      * 密码是否正确
      *
-     * @param passwordStr
-     * @return
+     * @param passwordStr 原始密码
      */
     public boolean checkPassword(String passwordStr) {
-        return password != null && this.password.sameValueAs(Password.create(passwordStr));
+        return password == null || !this.password.sameValueAs(Password.create(passwordStr));
     }
 
     /**
      * 修改密码
-     *
-     * @param oldPasswordStr
-     * @param newPasswordStr
-     * @return
+     * @param oldPasswordStr 旧
+     * @param newPasswordStr 新
      */
     public void changePassword(String oldPasswordStr, String newPasswordStr) {
-        if (!checkPassword(oldPasswordStr)) {
+        if (checkPassword(oldPasswordStr)) {
             throw new RuntimeException("原密码不正确");
         }
         this.password = Password.create(newPasswordStr);

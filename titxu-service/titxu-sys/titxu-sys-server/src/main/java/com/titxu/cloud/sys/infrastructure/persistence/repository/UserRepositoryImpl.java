@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.common.core.util.TenantContext;
 import com.titxu.cloud.sys.domain.model.role.RoleId;
-import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.sys.infrastructure.persistence.converter.UserConverter;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysAccountDO;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysRoleDO;
@@ -69,7 +68,12 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
 
     @Override
     public UserId store(User user) {
-        SysAccountDO sysAccountDO = UserConverter.getSysAccountDO(user);
+        /*
+          获取数据库中user的数据，设置到并把前端数据set进去
+         */
+        User dataBaseUser = dataBaseToUser(user);
+
+        SysAccountDO sysAccountDO = UserConverter.getSysAccountDO(dataBaseUser);
         String accountId = null;
         if (sysAccountDO != null) {
             if (sysAccountDO.getId() != null) {
@@ -80,14 +84,14 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
             accountId = sysAccountDO.getId();
         }
         if (TenantContext.getTenantId() != null) {
-            SysUserDO sysUserDO = UserConverter.fromUser(user, accountId);
+            SysUserDO sysUserDO = UserConverter.fromUser(dataBaseUser, accountId);
             this.saveOrUpdate(sysUserDO);
             String userId = sysUserDO.getId();
             //先删除用户与角色关系
             List<String> userIds = new ArrayList<>();
             userIds.add(userId);
             sysUserRoleMapper.deleteByUserIds(userIds);
-            List<RoleId> roleIds = user.getRoleIds();
+            List<RoleId> roleIds = dataBaseUser.getRoleIds();
             if (roleIds != null && !roleIds.isEmpty()) {
                 //保存角色与菜单关系
                 for (RoleId roleId : roleIds) {
@@ -101,6 +105,24 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
         } else {
             return null;
         }
+    }
+
+    private User dataBaseToUser(User user) {
+        Account account = user.getAccount();
+        User dataBaseUser = this.find(user.getUserId());
+        Account dataBaseAccount = dataBaseUser.getAccount();
+        dataBaseUser.setStatus(user.getStatus());
+
+        if (user.getRoleIds()!=null){
+            dataBaseUser.setRoleIds(user.getRoleIds());
+        }
+        if (account.getEmail()!=null){
+            dataBaseAccount.setEmail(account.getEmail());
+        }
+        if (account.getMobile()!=null){
+            dataBaseAccount.setMobile(account.getMobile());
+        }
+        return dataBaseUser;
     }
 
     @Override

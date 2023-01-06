@@ -1,9 +1,7 @@
 package com.titxu.cloud.sys.application.assembler;
 
 import com.titxu.cloud.sys.domain.model.role.RoleId;
-import com.titxu.cloud.sys.domain.model.user.User;
-import com.titxu.cloud.sys.domain.model.user.UserId;
-import com.titxu.cloud.sys.domain.model.user.UserName;
+import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.application.command.UserCommand;
 import com.titxu.cloud.sys.application.dto.UserDTO;
@@ -13,9 +11,6 @@ import java.util.List;
 
 /**
  * 用户Assembler
- *
-
- 
  **/
 public class UserDTOAssembler {
 
@@ -32,7 +27,12 @@ public class UserDTOAssembler {
         if (userCommand.getUserName() != null) {
             userName = new UserName(userCommand.getUserName());
         }
-        return new User(new UserId(userCommand.getId()), userName, StatusEnum.ENABLE, null, null, roleIdList);
+        Email email = null;
+        if (userCommand.getEmail() != null) {
+            email = new Email(userCommand.getEmail());
+        }
+        Account account = new Account(new Mobile(userCommand.getMobile()), email);
+        return new User(new UserId(userCommand.getId()), userName, StatusEnum.ENABLE, account, null, roleIdList);
     }
 
     public static UserDTO fromUser(final User user) {

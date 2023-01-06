@@ -10,8 +10,6 @@ import java.util.List;
 /**
  * 用户
  *
-
-
  **/
 public class User implements Entity<User> {
 
@@ -19,6 +17,8 @@ public class User implements Entity<User> {
      * UserId
      */
     private UserId userId;
+
+
 
     /**
      * 用户名
@@ -64,8 +64,6 @@ public class User implements Entity<User> {
 
     /**
      * 是否有效
-     *
-     * @return
      */
     public boolean isEnable() {
         return status == StatusEnum.ENABLE;
@@ -80,12 +78,18 @@ public class User implements Entity<User> {
      * 禁用
      */
     public void disable() {
-        StatusEnum status = this.status == StatusEnum.DISABLE ? StatusEnum.ENABLE : StatusEnum.DISABLE;
-        this.status = status;
+        this.status = this.status == StatusEnum.DISABLE ? StatusEnum.ENABLE : StatusEnum.DISABLE;
     }
 
     public void changePassword(String oldPasswordStr, String newPasswordStr) {
         account.changePassword(oldPasswordStr, newPasswordStr);
+    }
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    public void setRoleIds(List<RoleId> roleIds) {
+        this.roleIds = roleIds;
     }
 
     public UserId getUserId() {

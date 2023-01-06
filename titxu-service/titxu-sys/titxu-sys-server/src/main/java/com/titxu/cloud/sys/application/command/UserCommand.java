@@ -12,8 +12,6 @@ import java.util.List;
 /**
  * 用户Command
  *
-
-
  **/
 @Data
 @ApiModel(value = "用户", description = "用户")
@@ -44,7 +42,7 @@ public class UserCommand {
      * 邮箱
      */
     @ApiModelProperty(value = "邮箱")
-    @NotBlank(message = "邮箱不能为空", groups = AddGroup.class)
+//    @NotBlank(message = "邮箱不能为空", groups = AddGroup.class)
     private String email;
 
     /**

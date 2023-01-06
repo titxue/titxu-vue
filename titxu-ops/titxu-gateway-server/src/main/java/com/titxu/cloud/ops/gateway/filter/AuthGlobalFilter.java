@@ -6,7 +6,6 @@ import cn.hutool.json.JSONUtil;
 import com.nimbusds.jose.JWSObject;
 import com.titxu.cloud.ops.gateway.util.WebUtils;
 import com.titxu.cloud.common.core.constant.AuthConstants;
-import com.titxu.cloud.common.core.constant.CommonConstant;
 import com.titxu.cloud.common.redis.util.RedisService;
 import com.titxu.cloud.common.web.constant.ResultCode;
 import lombok.SneakyThrows;

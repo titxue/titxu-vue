@@ -1,6 +1,5 @@
 package com.titxu.cloud.sys.infrastructure.persistence.converter;
 
-import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.role.RoleId;
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
@@ -13,8 +12,6 @@ import java.util.List;
 /**
  * 用户Converter
  *
-
- 
  **/
 public class UserConverter {
 
@@ -22,8 +19,7 @@ public class UserConverter {
         if (sysUserDO == null) {
             return null;
         }
-        User user = new User(new UserId(sysUserDO.getId()), new UserName(sysUserDO.getUserName()), StatusEnum.getStatusEnum(sysUserDO.getStatus()), account, new TenantId(sysUserDO.getTenantId()), roleIdList);
-        return user;
+        return new User(new UserId(sysUserDO.getId()), new UserName(sysUserDO.getUserName()), StatusEnum.getStatusEnum(sysUserDO.getStatus()), account, new TenantId(sysUserDO.getTenantId()), roleIdList);
     }
 
     public static SysUserDO fromUser(User user, String accountId) {
@@ -65,7 +61,6 @@ public class UserConverter {
             password = new Password(sysAccountDO.getPassword());
         }
 
-        Account account = new Account(new AccountId(sysAccountDO.getId()), mobile, email, password);
-        return account;
+        return new Account(new AccountId(sysAccountDO.getId()), mobile, email, password);
     }
 }
