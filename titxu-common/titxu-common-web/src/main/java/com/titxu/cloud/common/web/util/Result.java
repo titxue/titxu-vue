@@ -2,6 +2,7 @@ package com.titxu.cloud.common.web.util;
 
 import com.titxu.cloud.common.web.constant.ResultCode;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ titxu
  */
 public class Result extends HashMap<String, Object> {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     public Result() {

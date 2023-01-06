@@ -5,11 +5,8 @@ import com.alibaba.fastjson2.JSONObject;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.ops.auth.client.AuthenticationClient;
-import io.micrometer.core.lang.NonNullApi;
-import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -29,7 +26,6 @@ import java.io.IOException;
  **/
 @Slf4j
 @Component
-//@NonNullApi
 public class CaptchaFilter extends OncePerRequestFilter {
 
 

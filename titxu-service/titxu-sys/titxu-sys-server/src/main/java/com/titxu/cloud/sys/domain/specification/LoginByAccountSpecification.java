@@ -20,7 +20,7 @@ public class LoginByAccountSpecification extends AbstractSpecification<User> {
 
     @Override
     public boolean isSatisfiedBy(User user) {
-        if (!user.getAccount().checkPassword(password)) {
+        if (user.getAccount().checkPassword(password)) {
             throw new IllegalArgumentException("用户或密码不正确");
         }
         return true;

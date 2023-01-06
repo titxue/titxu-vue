@@ -46,8 +46,7 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
         if (sysUserDO == null) {
             return null;
         }
-        User user = UserConverter.toUser(sysUserDO, getUserAccount(sysUserDO.getAccountId()), getUserRoleIds(sysUserDO.getId()));
-        return user;
+        return UserConverter.toUser(sysUserDO, getUserAccount(sysUserDO.getAccountId()), getUserRoleIds(sysUserDO.getId()));
     }
 
     @Override
@@ -128,31 +127,26 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
     @Override
     public void remove(List<UserId> userIds) {
         List<String> ids = new ArrayList<>();
-        userIds.forEach(userId -> {
-            ids.add(userId.getId());
-        });
+        userIds.forEach(userId -> ids.add(userId.getId()));
         this.removeByIds(ids);
         sysUserRoleMapper.deleteByUserIds(ids);
     }
 
     /**
      * 添加账号
-     *
-     * @param accountId
+     * @param accountId 账号id
      */
     private Account getUserAccount(String accountId) {
         SysAccountDO sysAccountDO = sysAccountMapper.selectById(accountId);
         if (sysAccountDO == null) {
             return null;
         }
-        Account account = UserConverter.toAccount(sysAccountDO);
-        return account;
+        return UserConverter.toAccount(sysAccountDO);
     }
 
     /**
      * 获取管理角色Id
-     *
-     * @param userId
+     * @param userId 用户id
      */
     private List<RoleId> getUserRoleIds(String userId) {
         List<RoleId> roleIdList = null;
