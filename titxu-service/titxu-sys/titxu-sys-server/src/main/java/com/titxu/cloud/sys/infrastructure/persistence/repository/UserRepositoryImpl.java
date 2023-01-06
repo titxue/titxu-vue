@@ -110,8 +110,10 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
         Account account = user.getAccount();
         User dataBaseUser = this.find(user.getUserId());
         Account dataBaseAccount = dataBaseUser.getAccount();
-        dataBaseUser.setStatus(user.getStatus());
 
+        if (user.getStatus()!=null){
+            dataBaseUser.setStatus(user.getStatus());
+        }
         if (user.getRoleIds()!=null){
             dataBaseUser.setRoleIds(user.getRoleIds());
         }
