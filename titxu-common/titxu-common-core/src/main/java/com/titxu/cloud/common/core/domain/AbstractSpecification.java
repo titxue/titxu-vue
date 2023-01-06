@@ -13,12 +13,13 @@ public abstract class AbstractSpecification<T> implements Specification<T> {
     @Override
     public abstract boolean isSatisfiedBy(T t);
 
+
     /**
      * {@inheritDoc}
      */
     @Override
     public Specification<T> and(final Specification<T> specification) {
-        return new AndSpecification<T>(this, specification);
+        return new AndSpecification<>(this, specification);
     }
 
     /**
@@ -26,7 +27,7 @@ public abstract class AbstractSpecification<T> implements Specification<T> {
      */
     @Override
     public Specification<T> or(final Specification<T> specification) {
-        return new OrSpecification<T>(this, specification);
+        return new OrSpecification<>(this, specification);
     }
 
     /**
@@ -34,6 +35,6 @@ public abstract class AbstractSpecification<T> implements Specification<T> {
      */
     @Override
     public Specification<T> not(final Specification<T> specification) {
-        return new NotSpecification<T>(specification);
+        return new NotSpecification<>(specification);
     }
 }

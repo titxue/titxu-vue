@@ -24,6 +24,11 @@ public enum ResultCode {
     SERVER_ERROR(500, "系统异常"),
 
     /**
+     * 禁止删除系统管理员
+     */
+    DELETE_SYSTEM_ERROR(500, "禁止删除系统管理员"),
+
+    /**
      * 认证失败
      */
     UNAUTHORIZED(401, "认证失败");

@@ -37,9 +37,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     public void save(UserCommand userCommand) {
         List<RoleId> roleIdList = new ArrayList<>();
         if (userCommand.getRoleIdList() != null) {
-            userCommand.getRoleIdList().forEach(roleId -> {
-                roleIdList.add(new RoleId(roleId));
-            });
+            userCommand.getRoleIdList().forEach(roleId -> roleIdList.add(new RoleId(roleId)));
         }
         UserFactory userFactory = new UserFactory(userRepository);
         User user = userFactory.createUser(new Mobile(userCommand.getMobile()), new Email(userCommand.getEmail()), Password.create(Password.DEFAULT),
@@ -57,12 +55,11 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     @Transactional(rollbackFor = Exception.class)
     public void deleteBatch(List<String> ids) {
         List<UserId> userIds = new ArrayList<>();
-        ids.forEach(id -> {
-            userIds.add(new UserId(id));
-        });
+        ids.forEach(id -> userIds.add(new UserId(id)));
         UserUpdateSpecification userUpdateSpecification = new UserUpdateSpecification(tenantRepository);
         for (UserId userId : userIds) {
             User user = userRepository.find(userId);
+            userUpdateSpecification.isDeleteVerifiedBy(userId);
             userUpdateSpecification.isSatisfiedBy(user);
         }
         userRepository.remove(userIds);
