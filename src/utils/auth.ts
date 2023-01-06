@@ -5,7 +5,13 @@ const isLogin = () => {
   return !!localStorage.getItem(AccessToken);
 };
 const getToken = () => {
-  return localStorage.getItem(AccessToken);
+  //防止请求头header中放入了中文，
+  // 出现类型错误 request:fail TypeError: Failed to execute 'setRequestHeader' on 'XMLHttpRequest': String contains non ISO-8859-1 code point.
+  // 进行编码
+  const token = localStorage.getItem(AccessToken);
+  if (token) {
+    return encodeURIComponent(token);
+  }
 };
 const setToken = (token: string) => {
   localStorage.setItem(AccessToken, token);

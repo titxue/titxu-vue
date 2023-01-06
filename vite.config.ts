@@ -10,7 +10,9 @@ function pathResolve(dir: string) {
 
 // https://vitejs.dev/config/
 export default ({ command }: ConfigEnv): UserConfig => {
+  console.log('command', command);
   const isBuild = command === 'build';
+
   let base: string;
   if (command === 'build') {
     base = '/titxu-admin/';

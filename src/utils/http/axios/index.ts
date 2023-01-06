@@ -2,6 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { showMessage } from './status';
 import { IResponse } from './type';
 import { getToken, TokenPrefix } from '/@/utils/auth';
+import { ElMessage, ElMessageBox } from 'element-plus';
 
 // 如果请求话费了超过 `timeout` 的时间，请求将被中断
 axios.defaults.timeout = 5000;
@@ -36,19 +37,6 @@ axiosInstance.interceptors.response.use(
     // }
 
     if (response.status === 200) {
-      // 判断token是否过期
-      if (response.data.code === 401) {
-        // todo token过期后的处理
-        console.log('认证失败', response);
-        // const refreshToken = getRefreshToken();
-        // if (refreshToken && !flag) {
-        //   const newToken = refresh(refreshToken);
-        //   console.log('newToken', newToken);
-        //   flag = true;
-        // }
-        showMessage(response.data.code);
-        return response;
-      }
       return response;
     }
     showMessage(response.status);
@@ -59,7 +47,23 @@ axiosInstance.interceptors.response.use(
     const { response } = error;
     if (response) {
       // 请求已发出，但是不在2xx的范围
+      const { code, msg } = response.data;
+      if (code === 401) {
+        ElMessageBox.confirm('当前页面已失效，请重新登录', '提示', {
+          confirmButtonText: 'OK',
+          type: 'warning',
+        }).then(() => {
+          localStorage.clear();
+          window.location.href = '/';
+        });
+      } else {
+        ElMessage({
+          message: msg || '系统出错',
+          type: 'error',
+        });
+      }
       showMessage(response.status);
+      console.log('response', response);
       return Promise.reject(response.data);
     }
     showMessage('网络连接异常,请稍后再试!');
@@ -81,6 +85,7 @@ axiosInstance.interceptors.request.use(
     return config;
   },
   (error: any) => {
+    console.log('error', error);
     return Promise.reject(error);
   },
 );
@@ -88,11 +93,17 @@ axiosInstance.interceptors.request.use(
 const request = <T = any>(config: AxiosRequestConfig): Promise<T> => {
   const conf = config;
   return new Promise((resolve) => {
-    axiosInstance.request<any, AxiosResponse<IResponse>>(conf).then((res: AxiosResponse<IResponse>) => {
-      // resolve(res as unknown as Promise<T>);
-      const { data: result } = res;
-      resolve(result as T);
-    });
+    axiosInstance
+      .request<any, AxiosResponse<IResponse>>(conf)
+      .then((res: AxiosResponse<IResponse>) => {
+        console.log('res', res);
+        // resolve(res as unknown as Promise<T>);
+        const { data } = res;
+        resolve(data as T);
+      })
+      .catch((err) => {
+        console.log('err', err);
+      });
   });
 };
 

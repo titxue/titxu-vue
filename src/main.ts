@@ -7,6 +7,7 @@ import '/@/styles/reset.less';
 import 'uno.css';
 import '/@/assets/styles/base.less';
 import 'element-plus/es/components/message/style/css'; // 引入样式
+import 'element-plus/theme-chalk/index.css';
 
 // 支持SVG
 import 'virtual:svg-icons-register';
