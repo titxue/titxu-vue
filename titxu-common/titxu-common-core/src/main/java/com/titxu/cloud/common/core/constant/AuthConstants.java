@@ -89,6 +89,16 @@ public interface AuthConstants {
 
     String GRANT_TYPE_KEY = "grant_type";
 
+    String GRANT_TYPE_PASSWORD = "password";
+
+    String CLIENT_ID_KEY = "client_id";
+
+    String CLIENT_SECRET_KEY = "client_secret";
+
+    String SCOPE_KEY = "scope";
+
+
+    String REFRESH_TOKEN_KEY = "refresh_token";
     String REFRESH_TOKEN = "refresh_token";
 
     /**
@@ -105,4 +115,6 @@ public interface AuthConstants {
      * 验证码 key
      */
     String VALIDATE_CODE_KEY = "key";
+
+
 }
