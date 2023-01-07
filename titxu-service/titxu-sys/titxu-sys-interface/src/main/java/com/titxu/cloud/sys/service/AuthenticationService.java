@@ -4,25 +4,20 @@ import com.titxu.cloud.sys.dto.AuthenticationDTO;
 
 /**
  * 认证服务接口
- *
-
-
  **/
 public interface AuthenticationService {
 
     /**
      * 验证验证码
-     *
-     * @param uuid
-     * @return
+     * @param uuid uuid
+     * @return 成功返回true，失败返回false
      */
     boolean validateCaptcha(String uuid, String captchaCode);
 
     /**
      * 认证
-     *
      * @param userName 用户名
-     * @return
+     * @return 认证信息 一般为手机号
      */
     AuthenticationDTO loginByUserName(String userName);
 }

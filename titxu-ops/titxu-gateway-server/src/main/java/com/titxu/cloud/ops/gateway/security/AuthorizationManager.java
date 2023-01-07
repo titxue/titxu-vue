@@ -9,15 +9,11 @@ import org.springframework.security.authorization.ReactiveAuthorizationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.server.authorization.AuthorizationContext;
 import org.springframework.stereotype.Component;
-import org.springframework.util.AntPathMatcher;
-import org.springframework.util.PathMatcher;
 import reactor.core.publisher.Mono;
 
 /**
  * 鉴权管理器
  *
-
-
  **/
 @Component
 @AllArgsConstructor
@@ -29,7 +25,7 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
         ServerHttpRequest request = authorizationContext.getExchange().getRequest();
         String restPath = request.getMethodValue() + "_" + request.getURI().getPath();
         log.info("请求路径：{}", restPath);
-        PathMatcher pathMatcher = new AntPathMatcher();
+//        PathMatcher pathMatcher = new AntPathMatcher();
         // 对应跨域的预检请求直接放行
         if (request.getMethod() == HttpMethod.OPTIONS) {
             return Mono.just(new AuthorizationDecision(true));
