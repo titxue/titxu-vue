@@ -2,6 +2,7 @@ package com.titxu.cloud.ops.auth.application.impl;
 
 
 import com.alibaba.fastjson2.JSON;
+import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.ops.auth.application.LoginService;
 import com.titxu.cloud.ops.auth.application.command.LoginPasswordCommand;
 import com.titxu.cloud.ops.auth.application.command.RefreshCommand;
@@ -38,7 +39,7 @@ public class LoginServiceImpl implements LoginService {
 
 
     @Override
-    public Map<String, Object>  login(LoginPasswordCommand loginPasswordCommand) {
+    public Map<String, Object> login(LoginPasswordCommand loginPasswordCommand) {
         log.info("登陆手机号:{}", loginPasswordCommand.getMobile());
         // TODO Auto-generated method stub
         //配置请求头
@@ -47,14 +48,14 @@ public class LoginServiceImpl implements LoginService {
 //        headers.add("content-type", "application/json");
 
         MultiValueMap<String, Object> parameters = new LinkedMultiValueMap<>();
-        parameters.add("grant_type", "password");
-        parameters.add("client_id", "client");
-        parameters.add("client_secret", "123456");
-        parameters.add("refresh_token", loginPasswordCommand.getRefreshToken());
-        parameters.add("username", loginPasswordCommand.getMobile());
-        parameters.add("password", loginPasswordCommand.getPassword());
-        parameters.add("key", loginPasswordCommand.getUuid());
-        parameters.add("code", loginPasswordCommand.getCode());
+        parameters.add(AuthConstants.GRANT_TYPE_KEY, AuthConstants.GRANT_TYPE_PASSWORD);
+        parameters.add(AuthConstants.CLIENT_ID_KEY, "client");
+        parameters.add(AuthConstants.CLIENT_SECRET_KEY, "123456");
+        parameters.add(AuthConstants.REFRESH_TOKEN_KEY, loginPasswordCommand.getRefreshToken());
+        parameters.add(AuthConstants.USER_NAME_KEY, loginPasswordCommand.getMobile());
+        parameters.add(AuthConstants.PASSWORD, loginPasswordCommand.getPassword());
+        parameters.add(AuthConstants.VALIDATE_CODE_KEY, loginPasswordCommand.getUuid());
+        parameters.add(AuthConstants.VALIDATE_CODE_CODE, loginPasswordCommand.getCode());
         return getAuthToken(parameters);
 
     }
@@ -81,7 +82,7 @@ public class LoginServiceImpl implements LoginService {
                 OAuth2AccessToken.class);
         // 转换成map
         OAuth2AccessToken oAuth2AccessToken = oAuth2AccessTokenResponseString.getBody();
-        Map<String, Object> parseObject = JSON.parseObject(JSON.toJSONString(oAuth2AccessToken), Map.class);
+        Map parseObject = JSON.parseObject(JSON.toJSONString(oAuth2AccessToken), Map.class);
         parseObject.remove("additionalInformation");
         parseObject.remove("scope");
         parseObject.remove("expired");
@@ -91,6 +92,7 @@ public class LoginServiceImpl implements LoginService {
 
     /**
      * 刷新登陆
+     *
      * @param refreshCommand 刷新token
      * @return token
      */
@@ -98,10 +100,10 @@ public class LoginServiceImpl implements LoginService {
     public Map<String, Object> refresh(RefreshCommand refreshCommand) {
         log.info("刷新token:{}", refreshCommand.getRefreshToken());
         MultiValueMap<String, Object> parameters = new LinkedMultiValueMap<>();
-        parameters.add("grant_type", "refresh_token");
-        parameters.add("client_id", "client");
-        parameters.add("client_secret", "123456");
-        parameters.add("refresh_token", refreshCommand.getRefreshToken());
+        parameters.add(AuthConstants.GRANT_TYPE_KEY, AuthConstants.REFRESH_TOKEN);
+        parameters.add(AuthConstants.CLIENT_ID_KEY, "client");
+        parameters.add(AuthConstants.CLIENT_SECRET_KEY, "123456");
+        parameters.add(AuthConstants.REFRESH_TOKEN_KEY, refreshCommand.getRefreshToken());
         return getAuthToken(parameters);
     }
 
