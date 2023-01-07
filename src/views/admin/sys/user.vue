@@ -102,7 +102,7 @@
       prop: 'status',
       label: '状态',
       render: ({ row }: Record<string, UserInfoType>) => {
-        return h(ElTag, { type: 'success' }, () => (row.status === '0' ? '有效' : '禁用'));
+        return h(ElTag, { type: row.status === '0' ? 'success' : 'danger' }, () => (row.status === '0' ? '有效' : '禁用'));
       },
     },
 
