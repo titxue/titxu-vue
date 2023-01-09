@@ -14,7 +14,9 @@ const getToken = () => {
   }
 };
 const setToken = (token: string) => {
-  localStorage.setItem(AccessToken, token);
+  if (token) {
+    localStorage.setItem(AccessToken, token);
+  }
 };
 const clearToken = () => {
   localStorage.removeItem(AccessToken);
@@ -25,7 +27,9 @@ const getRefreshToken = () => {
 };
 
 const setRefreshToken = (token: string) => {
-  localStorage.setItem(RefreshTokenKey, token);
+  if (token) {
+    localStorage.setItem(RefreshTokenKey, token);
+  }
 };
 const clearRefreshToken = () => {
   localStorage.removeItem(RefreshTokenKey);

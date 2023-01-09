@@ -36,7 +36,7 @@
   const errorMessage = ref('');
   const userStore = useUserStore();
   const userFormData = reactive({
-    mobile: '18666666666',
+    mobile: '18555555555',
     password: '123456',
   });
 
