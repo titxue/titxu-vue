@@ -15,16 +15,15 @@
  */
 package com.titxu.oauth2.authorizationserversamples.jose;
 
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
 import java.math.BigInteger;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
+import java.security.*;
+import java.security.cert.Certificate;
 import java.security.spec.ECFieldFp;
 import java.security.spec.ECParameterSpec;
 import java.security.spec.ECPoint;
 import java.security.spec.EllipticCurve;
-
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
 
 /**
  * @author Joe Grandja
@@ -43,6 +42,23 @@ final class KeyGeneratorUtils {
 			throw new IllegalStateException(ex);
 		}
 		return hmacKey;
+	}
+	/**
+	 * 从classpath下的密钥库中获取密钥对(公钥+私钥)
+	 */
+	static KeyPair loadRsaKey() throws Exception {
+		KeyStore keyStore = KeyStore.getInstance("JKS");
+		keyStore.load(KeyGeneratorUtils.class.getResourceAsStream("/titxu.jks"), "lxue0422".toCharArray());
+		Key key = keyStore.getKey("titxu", "lxue0422".toCharArray());
+		if (key instanceof PrivateKey) {
+			// Get certificate of public key
+			Certificate certificate = keyStore.getCertificate("titxu");
+			// Get public key
+			PublicKey publicKey = certificate.getPublicKey();
+			// Return a key pair
+			return new KeyPair(publicKey, (PrivateKey) key);
+		}
+		return new KeyPair(null, null);
 	}
 
 	static KeyPair generateRsaKey() {

@@ -19,7 +19,6 @@ import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
-import com.titxu.oauth2.authorizationserversamples.jose.Jwks;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -51,12 +50,17 @@ import org.springframework.security.web.authentication.LoginUrlAuthenticationEnt
 
 import java.util.UUID;
 
+import static com.titxu.oauth2.authorizationserversamples.jose.Jwks.generateLoadRsa;
+
 /**
  * @author Joe Grandja
  * @since 0.0.1
  */
 @Configuration(proxyBeanMethods = false)
 public class AuthorizationServerConfig {
+
+
+
 
 	@Bean
 	@Order(Ordered.HIGHEST_PRECEDENCE)
@@ -115,8 +119,8 @@ public class AuthorizationServerConfig {
 	}
 
 	@Bean
-	public JWKSource<SecurityContext> jwkSource() {
-		RSAKey rsaKey = Jwks.generateRsa();
+	public JWKSource<SecurityContext> jwkSource() throws Exception {
+		RSAKey rsaKey = generateLoadRsa();
 		JWKSet jwkSet = new JWKSet(rsaKey);
 		return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
 	}

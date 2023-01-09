@@ -31,6 +31,16 @@ public final class Jwks {
                 .keyID(UUID.randomUUID().toString())
                 .build();
     }
+
+    public static RSAKey generateLoadRsa() throws Exception {
+        KeyPair keyPair = KeyGeneratorUtils.loadRsaKey();
+        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+        RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
+        return new RSAKey.Builder(publicKey)
+                .privateKey(privateKey)
+                .keyID(UUID.randomUUID().toString())
+                .build();
+    }
  
     public static ECKey generateEc() {
         KeyPair keyPair = KeyGeneratorUtils.generateEcKey();
