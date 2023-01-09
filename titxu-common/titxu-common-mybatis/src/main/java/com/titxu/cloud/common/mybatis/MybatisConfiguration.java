@@ -19,9 +19,6 @@ import java.util.List;
 
 /**
  * mybatis-plus配置
- *
-
-
  **/
 @Slf4j
 @Configuration
@@ -31,7 +28,8 @@ public class MybatisConfiguration {
     /**
      * 需要排除的多租户的表
      */
-    private List<String> ignoreTables = Arrays.asList("sys_captcha", "sys_tenant", "sys_account", "sys_permission");
+    private final List<String> ignoreTables = Arrays.asList("sys_captcha", "sys_tenant", "sys_account", "sys_permission");
+
 
     /**
      * 分页插件
