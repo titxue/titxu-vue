@@ -74,6 +74,8 @@ public interface AuthConstants {
 
     String USER_NAME_KEY = "userName";
 
+    String USER_NAME_TOKEN_KEY = "username";
+
     String TENANT_ID_KEY = "tenantId";
 
     /**

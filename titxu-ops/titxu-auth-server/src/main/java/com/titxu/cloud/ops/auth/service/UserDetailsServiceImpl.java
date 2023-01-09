@@ -32,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (authenticationDTO != null) {
             return new User(authenticationDTO);
         } else {
-            throw new UsernameNotFoundException("");
+            throw new UsernameNotFoundException("用户不存在");
         }
     }
 }

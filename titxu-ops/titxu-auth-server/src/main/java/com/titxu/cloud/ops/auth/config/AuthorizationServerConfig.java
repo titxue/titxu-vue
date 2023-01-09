@@ -23,21 +23,16 @@ import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFacto
 
 import javax.sql.DataSource;
 import java.security.KeyPair;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 授权服务配置
  *
-
-
  **/
 @Configuration
 @EnableAuthorizationServer
 @AllArgsConstructor
-public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter  {
 
     private DataSource dataSource;
     private AuthenticationManager authenticationManager;
@@ -109,10 +104,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Bean
     public TokenEnhancer tokenEnhancer() {
         return (accessToken, authentication) -> {
+            LinkedHashMap details = (LinkedHashMap) authentication.getUserAuthentication().getDetails();
             Map<String, Object> map = new HashMap<>(8);
             User user = (User) authentication.getUserAuthentication().getPrincipal();
             map.put(AuthConstants.USER_ID_KEY, user.getId());
-            map.put(AuthConstants.USER_NAME_KEY, user.getUsername());
+            map.put(AuthConstants.USER_NAME_KEY, details.get(AuthConstants.USER_NAME_TOKEN_KEY));
             map.put(AuthConstants.TENANT_ID_KEY, user.getTenantId());
             ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(map);
             return accessToken;

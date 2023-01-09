@@ -52,7 +52,7 @@ public class LoginServiceImpl implements LoginService {
         parameters.add(AuthConstants.CLIENT_ID_KEY, "client");
         parameters.add(AuthConstants.CLIENT_SECRET_KEY, "123456");
         parameters.add(AuthConstants.REFRESH_TOKEN_KEY, loginPasswordCommand.getRefreshToken());
-        parameters.add(AuthConstants.USER_NAME_KEY, loginPasswordCommand.getMobile());
+        parameters.add(AuthConstants.USER_NAME_TOKEN_KEY, loginPasswordCommand.getMobile());
         parameters.add(AuthConstants.PASSWORD, loginPasswordCommand.getPassword());
         parameters.add(AuthConstants.VALIDATE_CODE_KEY, loginPasswordCommand.getUuid());
         parameters.add(AuthConstants.VALIDATE_CODE_CODE, loginPasswordCommand.getCode());
