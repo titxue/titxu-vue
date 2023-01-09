@@ -1,0 +1,15 @@
+
+
+server:
+  port: 8080
+# Thymeleaf 配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: lxue0422
+    url: jdbc:mysql://nas.titxu.com:5555/titxu-cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+
+  thymeleaf:
+    # 是否启用模板缓存。
+    cache: false
