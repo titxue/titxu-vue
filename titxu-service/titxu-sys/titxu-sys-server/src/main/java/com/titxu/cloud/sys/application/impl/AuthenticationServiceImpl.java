@@ -6,6 +6,7 @@ import com.titxu.cloud.sys.domain.model.captcha.CaptchaRepository;
 import com.titxu.cloud.sys.domain.model.captcha.Uuid;
 import com.titxu.cloud.sys.domain.model.user.Mobile;
 import com.titxu.cloud.sys.domain.model.user.User;
+import com.titxu.cloud.sys.domain.model.user.UserId;
 import com.titxu.cloud.sys.domain.model.user.UserRepository;
 import com.titxu.cloud.sys.application.PermissionQueryService;
 import com.titxu.cloud.sys.domain.service.CaptchaValidateService;
@@ -15,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -53,7 +55,14 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public AuthenticationDTO loginByUserName(String userName) {
-        List<User> users = userRepository.find(new Mobile(userName));
+        List<User> users = new ArrayList<>();
+        if (userName.equals("超级管理员")){
+            User user = userRepository.find(new UserId("1"));
+            users.add(user);
+        }else {
+            users = userRepository.find(new Mobile(userName));
+        }
+
         if (users == null || users.isEmpty()) {
             throw new RuntimeException("用户或密码不正确");
         }
