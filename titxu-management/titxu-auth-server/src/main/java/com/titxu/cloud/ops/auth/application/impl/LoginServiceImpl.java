@@ -41,12 +41,6 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public Map<String, Object> login(LoginPasswordCommand loginPasswordCommand) {
         log.info("登陆手机号:{}", loginPasswordCommand.getMobile());
-        // TODO Auto-generated method stub
-        //配置请求头
-//        MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
-////        headers.add("authorization", "Bearer 774720e6-8193-48b9-9fb0-7f0591ffbeef");
-//        headers.add("content-type", "application/json");
-
         MultiValueMap<String, Object> parameters = new LinkedMultiValueMap<>();
         parameters.add(AuthConstants.GRANT_TYPE_KEY, AuthConstants.GRANT_TYPE_PASSWORD);
         parameters.add(AuthConstants.CLIENT_ID_KEY, "client");
@@ -67,13 +61,12 @@ public class LoginServiceImpl implements LoginService {
         restTemplate.setErrorHandler(new DefaultResponseErrorHandler() {
             @Override
             public void handleError(ClientHttpResponse response) throws IOException {
-                //当响应的值为400或401时候也要正常响应，不要抛出异常
+                //当响应的值为400或401 时候也要正常响应，不要抛出异常
                 if (response.getRawStatusCode() != 400 && response.getRawStatusCode() != 401) {
                     super.handleError(response);
                 }
             }
         });
-
 
         ResponseEntity<OAuth2AccessToken> oAuth2AccessTokenResponseString = restTemplate.exchange(
                 "http://localhost:8000/oauth/token",
@@ -98,7 +91,7 @@ public class LoginServiceImpl implements LoginService {
      */
     @Override
     public Map<String, Object> refresh(RefreshCommand refreshCommand) {
-        log.info("刷新token:{}", refreshCommand.getRefreshToken());
+        log.info("刷新token:{}", refreshCommand.getRefreshToken().substring(0, 16));
         MultiValueMap<String, Object> parameters = new LinkedMultiValueMap<>();
         parameters.add(AuthConstants.GRANT_TYPE_KEY, AuthConstants.REFRESH_TOKEN);
         parameters.add(AuthConstants.CLIENT_ID_KEY, "client");
