@@ -23,19 +23,19 @@
     <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-tenant/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-web/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-auth-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-auth-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-gateway-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-gateway-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-monitor-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-monitor-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-register-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-register-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-sentinel-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-sentinel-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/titxu-ops/titxu-sentinel-server/src/main/webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-auth-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-gateway-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-monitor-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-monitor-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-register-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-register-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-sentinel-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-sentinel-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-management/titxu-sentinel-server/src/main/webapp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-server/titxu-server-auth/src/main/java" charset="UTF-8" />

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>titxu-ops</artifactId>
+    <artifactId>titxu-management</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>titxu-monitor-server</module>

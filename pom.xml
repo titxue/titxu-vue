@@ -10,7 +10,7 @@
     <version>1.0.0</version>
     <modules>
         <module>titxu-common</module>
-        <module>titxu-ops</module>
+        <module>titxu-management</module>
         <module>titxu-service</module>
     </modules>
 
