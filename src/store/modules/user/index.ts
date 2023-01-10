@@ -12,6 +12,7 @@ import {
 import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
 import { PageUserInfoType, ReqListParams, UserInfoType } from '/@/api/user/types';
 import { refreshToken } from '/@/utils/token';
+import { ElMessage } from 'element-plus';
 
 export const useUserStore = defineStore('user', {
   state: (): UserInfoType => ({
@@ -55,7 +56,12 @@ export const useUserStore = defineStore('user', {
     },
     // 刷新token
     async refreshAccessToken() {
-      refreshToken();
+      const code = await refreshToken();
+      if (code !== 0) {
+        ElMessage.error('刷新token失败');
+        return;
+      }
+      ElMessage.success('刷新token成功');
     },
     // 修改用户状态
     async changeStatus(id: string) {

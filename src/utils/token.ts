@@ -16,6 +16,10 @@ const refreshToken = async () => {
     const { value, refreshToken } = result;
     setToken(value);
     setRefreshToken(refreshToken);
+    if (value === '' || refreshToken === '') {
+      Promise.resolve<number>(1);
+    }
+    return Promise.resolve<number>(0);
   }
 };
 export { refreshToken };
