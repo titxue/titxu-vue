@@ -1,5 +1,5 @@
 <p align="center" style="background:#e6e6e6;padding:20px">
-    <h1>vue+ts 后台</h1>
+    <h1 align="center">vue+ts 后台</h1>
 </p>
 
 <p align="center">
