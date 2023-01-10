@@ -3,7 +3,6 @@ package com.titxu.cloud.sys.infrastructure.persistence.repository;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.titxu.cloud.sys.domain.model.tenant.*;
 import com.titxu.cloud.common.core.util.TenantContext;
 import com.titxu.cloud.sys.domain.model.tenant.*;
 import com.titxu.cloud.sys.infrastructure.persistence.converter.TenantConverter;
@@ -14,9 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 租户-Repository实现类
- *
-
- 
  **/
 @Repository
 public class TenantRepositoryImpl extends ServiceImpl<SysTenantMapper, SysTenantDO> implements TenantRepository, IService<SysTenantDO> {

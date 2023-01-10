@@ -10,9 +10,6 @@ import javax.validation.constraints.NotBlank;
 
 /**
  * 权限Command
- *
-
- 
  **/
 @Data
 @ApiModel(value = "权限", description = "权限")

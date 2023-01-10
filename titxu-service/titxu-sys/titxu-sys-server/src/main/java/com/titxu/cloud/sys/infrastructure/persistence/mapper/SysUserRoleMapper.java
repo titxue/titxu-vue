@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * 用户角色关联Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysUserRoleMapper extends BaseMapper<SysUserRoleDO> {

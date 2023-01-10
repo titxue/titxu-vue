@@ -29,10 +29,6 @@ import javax.servlet.Filter;
  * </ul>
  * <p>
  * The excluded urls and urlSuffixes could be configured in {@code application.properties} file.
- *
- * @author cdfive
- * @author wxq
- * @since 1.6.0
  */
 public interface LoginAuthenticationFilter extends Filter {
 

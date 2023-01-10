@@ -6,9 +6,6 @@ import com.titxu.cloud.sys.dto.LogDTO;
 
 /**
  * 日志Assembler
- *
-
-
  **/
 public class LogDTOAssembler {
 

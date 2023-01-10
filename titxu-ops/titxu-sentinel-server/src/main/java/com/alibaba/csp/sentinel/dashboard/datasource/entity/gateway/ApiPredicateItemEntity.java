@@ -21,9 +21,6 @@ import java.util.Objects;
 
 /**
  * Entity for {@link ApiPredicateItem}.
- *
- * @author cdfive
- * @since 1.7.0
  */
 public class ApiPredicateItemEntity {
 

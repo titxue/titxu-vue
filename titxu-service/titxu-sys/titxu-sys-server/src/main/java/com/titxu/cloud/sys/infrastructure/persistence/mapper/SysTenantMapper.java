@@ -10,9 +10,6 @@ import java.util.Map;
 
 /**
  * 租户Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysTenantMapper extends BaseMapper<SysTenantDO> {

@@ -15,16 +15,12 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.vo;
 
+import com.alibaba.csp.sentinel.command.vo.NodeVo;
+import com.alibaba.csp.sentinel.dashboard.domain.ResourceTreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alibaba.csp.sentinel.command.vo.NodeVo;
-
-import com.alibaba.csp.sentinel.dashboard.domain.ResourceTreeNode;
-
-/**
- * @author leyou
- */
 public class ResourceVo {
     private String parentTtId;
     private String ttId;

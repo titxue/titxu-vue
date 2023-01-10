@@ -17,7 +17,6 @@ import java.util.Map;
 
 /**
  * 系统日志Controller
- *
  **/
 @Api(tags = "日志管理")
 @RestController

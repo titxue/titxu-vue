@@ -20,9 +20,7 @@ import java.util.Date;
 import com.alibaba.csp.sentinel.slots.block.flow.ClusterFlowConfig;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 
-/**
- * @author leyou
- */
+
 public class FlowRuleEntity implements RuleEntity {
 
     private Long id;

@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.state;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class ClusterRequestLimitVO {
 
     private String namespace;
@@ -55,9 +52,9 @@ public class ClusterRequestLimitVO {
     @Override
     public String toString() {
         return "ClusterRequestLimitVO{" +
-            "namespace='" + namespace + '\'' +
-            ", currentQps=" + currentQps +
-            ", maxAllowedQps=" + maxAllowedQps +
-            '}';
+                "namespace='" + namespace + '\'' +
+                ", currentQps=" + currentQps +
+                ", maxAllowedQps=" + maxAllowedQps +
+                '}';
     }
 }

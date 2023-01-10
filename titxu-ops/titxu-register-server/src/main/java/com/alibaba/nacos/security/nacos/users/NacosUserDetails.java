@@ -25,8 +25,6 @@ import java.util.Collection;
 
 /**
  * custom user.
- *
- * @author wfnuser
  */
 public class NacosUserDetails implements UserDetails {
 

@@ -16,10 +16,6 @@
 package com.alibaba.csp.sentinel.dashboard.domain.cluster;
 
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
 public class ConnectionDescriptorVO {
 
     private String address;
@@ -46,8 +42,8 @@ public class ConnectionDescriptorVO {
     @Override
     public String toString() {
         return "ConnectionDescriptorVO{" +
-            "address='" + address + '\'' +
-            ", host='" + host + '\'' +
-            '}';
+                "address='" + address + '\'' +
+                ", host='" + host + '\'' +
+                '}';
     }
 }

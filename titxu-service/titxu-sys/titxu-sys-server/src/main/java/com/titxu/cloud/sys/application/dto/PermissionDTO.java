@@ -7,9 +7,6 @@ import java.util.List;
 
 /**
  * 权限DTO
- *
-
- 
  **/
 @Data
 public class PermissionDTO implements Serializable {

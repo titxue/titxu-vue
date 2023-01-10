@@ -7,9 +7,6 @@ import com.titxu.cloud.sys.domain.model.captcha.Uuid;
 
 /**
  * 验证码校验服务
- *
-
- 
  **/
 public class CaptchaValidateService {
 

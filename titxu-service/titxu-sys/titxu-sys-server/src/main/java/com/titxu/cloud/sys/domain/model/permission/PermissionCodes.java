@@ -8,9 +8,6 @@ import java.util.Set;
 
 /**
  * 权限编码
- *
-
- 
  **/
 public class PermissionCodes implements ValueObject<PermissionCodes> {
 

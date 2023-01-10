@@ -13,7 +13,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * 鉴权管理器
- *
  **/
 @Component
 @AllArgsConstructor

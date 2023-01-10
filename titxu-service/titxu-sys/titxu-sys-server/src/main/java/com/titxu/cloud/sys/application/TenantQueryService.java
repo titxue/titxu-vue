@@ -6,9 +6,6 @@ import java.util.Map;
 
 /**
  * 租户查询服务接口
- *
-
- 
  **/
 public interface TenantQueryService {
 

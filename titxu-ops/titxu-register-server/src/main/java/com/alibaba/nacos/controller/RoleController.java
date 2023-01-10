@@ -34,9 +34,6 @@ import java.util.List;
 
 /**
  * Role operation controller.
- *
- * @author nkorange
- * @since 1.2.0
  */
 @RestController
 @RequestMapping("/v1/auth/roles")

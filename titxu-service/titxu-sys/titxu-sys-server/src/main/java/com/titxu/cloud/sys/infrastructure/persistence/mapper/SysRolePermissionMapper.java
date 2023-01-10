@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * 角色权限关联Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysRolePermissionMapper extends BaseMapper<SysRolePermissionDO> {

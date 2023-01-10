@@ -9,9 +9,6 @@ import javax.validation.constraints.NotBlank;
 
 /**
  * 注册租户Command
- *
-
- 
  **/
 @Data
 @ApiModel(value = "注册租户", description = "注册租户")

@@ -9,9 +9,6 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * 认证服务
- *
-
- 
  **/
 @EnableDiscoveryClient
 @SpringBootApplication

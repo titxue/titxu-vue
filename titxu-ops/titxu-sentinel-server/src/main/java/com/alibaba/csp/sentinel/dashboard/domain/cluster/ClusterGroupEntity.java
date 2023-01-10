@@ -18,10 +18,7 @@ package com.alibaba.csp.sentinel.dashboard.domain.cluster;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class ClusterGroupEntity {
 
     private String machineId;
@@ -81,11 +78,11 @@ public class ClusterGroupEntity {
     @Override
     public String toString() {
         return "ClusterGroupEntity{" +
-            "machineId='" + machineId + '\'' +
-            ", ip='" + ip + '\'' +
-            ", port=" + port +
-            ", clientSet=" + clientSet +
-            ", belongToApp=" + belongToApp +
-            '}';
+                "machineId='" + machineId + '\'' +
+                ", ip='" + ip + '\'' +
+                ", port=" + port +
+                ", clientSet=" + clientSet +
+                ", belongToApp=" + belongToApp +
+                '}';
     }
 }

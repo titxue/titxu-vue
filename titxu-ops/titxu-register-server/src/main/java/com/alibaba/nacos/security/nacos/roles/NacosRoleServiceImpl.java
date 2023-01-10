@@ -43,9 +43,6 @@ import java.util.regex.Pattern;
 
 /**
  * Nacos builtin role service.
- *
- * @author nkorange
- * @since 1.2.0
  */
 @Service
 public class NacosRoleServiceImpl {

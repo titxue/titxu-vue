@@ -28,10 +28,6 @@ import java.lang.reflect.Method;
  * The web interceptor for privilege-based authorization.
  * <p>
  * move from old {@link AuthorizationInterceptor}.
- *
- * @author lkxiaolou
- * @author wxq
- * @since 1.7.1
  */
 public class DefaultAuthorizationInterceptor implements AuthorizationInterceptor {
 

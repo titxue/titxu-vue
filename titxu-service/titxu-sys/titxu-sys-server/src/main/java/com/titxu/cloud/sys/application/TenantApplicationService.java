@@ -2,9 +2,6 @@ package com.titxu.cloud.sys.application;
 
 /**
  * 租户应用服务接口
- *
-
-
  **/
 public interface TenantApplicationService {
 

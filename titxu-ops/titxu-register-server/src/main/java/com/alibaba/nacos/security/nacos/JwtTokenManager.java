@@ -34,9 +34,6 @@ import java.util.List;
 
 /**
  * JWT token manager.
- *
- * @author wfnuser
- * @author nkorange
  */
 @Component
 public class JwtTokenManager {

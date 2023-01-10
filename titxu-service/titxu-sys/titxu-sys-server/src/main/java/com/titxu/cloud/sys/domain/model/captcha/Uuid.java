@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * uuid
- *
-
- 
  **/
 public class Uuid implements ValueObject<Uuid> {
 

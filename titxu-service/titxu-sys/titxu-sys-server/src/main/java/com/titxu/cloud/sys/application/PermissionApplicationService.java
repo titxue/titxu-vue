@@ -4,9 +4,6 @@ import com.titxu.cloud.sys.application.command.PermissionCommand;
 
 /**
  * 权限应用服务接口
- *
-
-
  **/
 public interface PermissionApplicationService {
 

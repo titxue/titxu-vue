@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 菜单权限DO
- *
-
- 
  **/
 @Data
 @TableName("sys_permission")

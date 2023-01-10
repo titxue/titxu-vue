@@ -1,14 +1,11 @@
 package com.titxu.cloud.sys.domain.model.log;
 
+import com.titxu.cloud.common.core.domain.Entity;
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
 import com.titxu.cloud.sys.domain.model.user.UserName;
-import com.titxu.cloud.common.core.domain.Entity;
 
 /**
  * 日志实体
- *
-
-
  **/
 public class Log implements Entity<Log> {
 

@@ -6,9 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 账号Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysAccountMapper extends BaseMapper<SysAccountDO> {

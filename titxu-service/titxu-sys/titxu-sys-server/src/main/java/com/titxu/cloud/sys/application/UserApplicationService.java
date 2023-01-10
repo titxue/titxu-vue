@@ -7,9 +7,6 @@ import java.util.List;
 
 /**
  * 用户应用服务接口
- *
-
- 
  **/
 public interface UserApplicationService {
 

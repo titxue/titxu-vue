@@ -30,8 +30,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Health Controller.
- *
- * @author <a href="mailto:huangxiaoyu1018@gmail.com">hxy1991</a>
  */
 @RestController("consoleHealth")
 @RequestMapping("/v1/console/health")

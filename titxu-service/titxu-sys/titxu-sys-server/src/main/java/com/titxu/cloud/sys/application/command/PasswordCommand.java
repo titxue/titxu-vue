@@ -4,9 +4,6 @@ import lombok.Data;
 
 /**
  * 密码Command
- *
-
- 
  **/
 @Data
 public class PasswordCommand {

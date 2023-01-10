@@ -32,9 +32,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Permission operation controller.
- *
- * @author nkorange
- * @since 1.2.0
  */
 @RestController
 @RequestMapping("/v1/auth/permissions")

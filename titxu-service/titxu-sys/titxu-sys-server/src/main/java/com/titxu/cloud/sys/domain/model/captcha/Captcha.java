@@ -7,9 +7,6 @@ import java.util.Date;
 
 /**
  * 验证码
- *
-
- 
  **/
 public class Captcha implements Entity<Captcha> {
 

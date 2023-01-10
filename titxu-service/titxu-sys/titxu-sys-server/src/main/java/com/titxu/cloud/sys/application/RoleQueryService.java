@@ -8,9 +8,6 @@ import java.util.Map;
 
 /**
  * 角色查询服务接口
- *
-
-
  **/
 public interface RoleQueryService {
 

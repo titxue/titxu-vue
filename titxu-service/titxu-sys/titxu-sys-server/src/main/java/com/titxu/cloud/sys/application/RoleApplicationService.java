@@ -6,9 +6,6 @@ import java.util.List;
 
 /**
  * 角色应用服务接口
- *
-
-
  **/
 public interface RoleApplicationService {
 

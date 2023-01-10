@@ -47,8 +47,6 @@ import static com.alibaba.nacos.security.nacos.roles.NacosRoleServiceImpl.GLOBAL
 
 /**
  * LDAP auth provider.
- *
- * @author zjw
  */
 @Component
 public class LdapAuthenticationProvider implements AuthenticationProvider {

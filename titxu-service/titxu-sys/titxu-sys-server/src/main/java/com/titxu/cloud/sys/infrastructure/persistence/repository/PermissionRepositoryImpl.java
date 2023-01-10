@@ -3,15 +3,15 @@ package com.titxu.cloud.sys.infrastructure.persistence.repository;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.titxu.cloud.sys.infrastructure.persistence.converter.PermissionConverter;
-import com.titxu.cloud.sys.infrastructure.persistence.mapper.SysRolePermissionMapper;
 import com.titxu.cloud.sys.domain.model.permission.Permission;
 import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 import com.titxu.cloud.sys.domain.model.permission.PermissionName;
 import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
 import com.titxu.cloud.sys.domain.model.role.RoleCode;
+import com.titxu.cloud.sys.infrastructure.persistence.converter.PermissionConverter;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysPermissionDO;
 import com.titxu.cloud.sys.infrastructure.persistence.mapper.SysPermissionMapper;
+import com.titxu.cloud.sys.infrastructure.persistence.mapper.SysRolePermissionMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -21,9 +21,6 @@ import java.util.Map;
 
 /**
  * 权限-Repository实现类
- *
-
- 
  **/
 @Repository
 public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, SysPermissionDO> implements PermissionRepository, IService<SysPermissionDO> {

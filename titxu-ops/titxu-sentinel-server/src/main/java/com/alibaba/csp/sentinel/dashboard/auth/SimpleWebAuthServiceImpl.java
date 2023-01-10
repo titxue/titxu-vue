@@ -18,10 +18,6 @@ package com.alibaba.csp.sentinel.dashboard.auth;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-/**
- * @author cdfive
- * @since 1.6.0
- */
 public class SimpleWebAuthServiceImpl implements AuthService<HttpServletRequest> {
 
     public static final String WEB_SESSION_KEY = "session_sentinel_admin";

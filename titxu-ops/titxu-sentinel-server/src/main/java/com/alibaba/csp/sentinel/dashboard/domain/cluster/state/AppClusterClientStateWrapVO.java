@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.state;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class AppClusterClientStateWrapVO {
 
     /**
@@ -70,10 +67,10 @@ public class AppClusterClientStateWrapVO {
     @Override
     public String toString() {
         return "AppClusterClientStateWrapVO{" +
-            "id='" + id + '\'' +
-            ", commandPort=" + commandPort +
-            ", ip='" + ip + '\'' +
-            ", state=" + state +
-            '}';
+                "id='" + id + '\'' +
+                ", commandPort=" + commandPort +
+                ", ip='" + ip + '\'' +
+                ", state=" + state +
+                '}';
     }
 }

@@ -1,13 +1,10 @@
 package com.titxu.cloud.sys.domain.specification;
 
-import com.titxu.cloud.sys.domain.model.user.User;
 import com.titxu.cloud.common.core.domain.AbstractSpecification;
+import com.titxu.cloud.sys.domain.model.user.User;
 
 /**
  * 账号登录Specification
- *
-
- 
  **/
 public class LoginByAccountSpecification extends AbstractSpecification<User> {
 

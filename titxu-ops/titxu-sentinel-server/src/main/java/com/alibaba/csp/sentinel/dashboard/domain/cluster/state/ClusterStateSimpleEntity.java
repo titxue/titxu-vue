@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.state;
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
+
 public class ClusterStateSimpleEntity {
 
     private Integer mode;
@@ -65,10 +62,10 @@ public class ClusterStateSimpleEntity {
     @Override
     public String toString() {
         return "ClusterStateSimpleEntity{" +
-            "mode=" + mode +
-            ", lastModified=" + lastModified +
-            ", clientAvailable=" + clientAvailable +
-            ", serverAvailable=" + serverAvailable +
-            '}';
+                "mode=" + mode +
+                ", lastModified=" + lastModified +
+                ", clientAvailable=" + clientAvailable +
+                ", serverAvailable=" + serverAvailable +
+                '}';
     }
 }

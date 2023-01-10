@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 import com.titxu.cloud.sys.domain.model.role.*;
-import com.titxu.cloud.sys.domain.model.role.*;
 import com.titxu.cloud.sys.infrastructure.persistence.converter.RoleConverter;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysPermissionDO;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysRoleDO;
@@ -22,9 +21,6 @@ import java.util.List;
 
 /**
  * 角色-Repository实现类
- *
-
- 
  **/
 @Repository
 public class RoleRepositoryImpl extends ServiceImpl<SysRoleMapper, SysRoleDO> implements RoleRepository, IService<SysRoleDO> {

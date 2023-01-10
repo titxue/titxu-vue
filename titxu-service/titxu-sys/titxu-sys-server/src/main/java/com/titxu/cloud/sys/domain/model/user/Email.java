@@ -3,23 +3,18 @@ package com.titxu.cloud.sys.domain.model.user;
 import com.titxu.cloud.common.core.domain.ValueObject;
 import org.apache.commons.lang3.Validate;
 
-
 import java.util.regex.Pattern;
 
 /**
  * 邮箱
- *
-
- 
  **/
 public final class Email implements ValueObject<Email> {
-
-    private String email;
 
     /**
      * 有效性正则
      */
     private static final Pattern VALID_PATTERN = Pattern.compile("^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$");
+    private String email;
 
     /**
      * Constructor.

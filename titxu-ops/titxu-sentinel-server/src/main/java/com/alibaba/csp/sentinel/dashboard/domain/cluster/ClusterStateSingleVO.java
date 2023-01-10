@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class ClusterStateSingleVO {
 
     private String address;
@@ -55,9 +52,9 @@ public class ClusterStateSingleVO {
     @Override
     public String toString() {
         return "ClusterStateSingleVO{" +
-            "address='" + address + '\'' +
-            ", mode=" + mode +
-            ", target='" + target + '\'' +
-            '}';
+                "address='" + address + '\'' +
+                ", mode=" + mode +
+                ", target='" + target + '\'' +
+                '}';
     }
 }

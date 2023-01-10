@@ -15,6 +15,9 @@
  */
 package com.alibaba.csp.sentinel.dashboard.discovery;
 
+import com.alibaba.csp.sentinel.util.AssertUtil;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -22,13 +25,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import com.alibaba.csp.sentinel.util.AssertUtil;
 
-import org.springframework.stereotype.Component;
-
-/**
- * @author leyou
- */
 @Component
 public class SimpleMachineDiscovery implements MachineDiscovery {
 

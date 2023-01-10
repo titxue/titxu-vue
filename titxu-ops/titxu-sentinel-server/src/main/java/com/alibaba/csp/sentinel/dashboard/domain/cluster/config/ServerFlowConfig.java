@@ -15,18 +15,15 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.config;
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
+
 public class ServerFlowConfig {
 
     public static final double DEFAULT_EXCEED_COUNT = 1.0d;
     public static final double DEFAULT_MAX_OCCUPY_RATIO = 1.0d;
 
     public static final int DEFAULT_INTERVAL_MS = 1000;
-    public static final int DEFAULT_SAMPLE_COUNT= 10;
-    public static final double DEFAULT_MAX_ALLOWED_QPS= 30000;
+    public static final int DEFAULT_SAMPLE_COUNT = 10;
+    public static final double DEFAULT_MAX_ALLOWED_QPS = 30000;
 
     private final String namespace;
 
@@ -97,12 +94,12 @@ public class ServerFlowConfig {
     @Override
     public String toString() {
         return "ServerFlowConfig{" +
-            "namespace='" + namespace + '\'' +
-            ", exceedCount=" + exceedCount +
-            ", maxOccupyRatio=" + maxOccupyRatio +
-            ", intervalMs=" + intervalMs +
-            ", sampleCount=" + sampleCount +
-            ", maxAllowedQps=" + maxAllowedQps +
-            '}';
+                "namespace='" + namespace + '\'' +
+                ", exceedCount=" + exceedCount +
+                ", maxOccupyRatio=" + maxOccupyRatio +
+                ", intervalMs=" + intervalMs +
+                ", sampleCount=" + sampleCount +
+                ", maxAllowedQps=" + maxAllowedQps +
+                '}';
     }
 }

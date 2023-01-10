@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 权限ID
- *
-
- 
  **/
 public class PermissionId implements ValueObject<PermissionId> {
 

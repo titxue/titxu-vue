@@ -17,10 +17,7 @@ package com.alibaba.csp.sentinel.dashboard.domain.cluster.request;
 
 import java.util.Set;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class ClusterAppAssignMap {
 
     private String machineId;
@@ -100,13 +97,13 @@ public class ClusterAppAssignMap {
     @Override
     public String toString() {
         return "ClusterAppAssignMap{" +
-            "machineId='" + machineId + '\'' +
-            ", ip='" + ip + '\'' +
-            ", port=" + port +
-            ", belongToApp=" + belongToApp +
-            ", clientSet=" + clientSet +
-            ", namespaceSet=" + namespaceSet +
-            ", maxAllowedQps=" + maxAllowedQps +
-            '}';
+                "machineId='" + machineId + '\'' +
+                ", ip='" + ip + '\'' +
+                ", port=" + port +
+                ", belongToApp=" + belongToApp +
+                ", clientSet=" + clientSet +
+                ", namespaceSet=" + namespaceSet +
+                ", maxAllowedQps=" + maxAllowedQps +
+                '}';
     }
 }

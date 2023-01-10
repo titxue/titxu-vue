@@ -39,9 +39,7 @@ import com.alibaba.csp.sentinel.util.StringUtil;
 import com.alibaba.csp.sentinel.dashboard.datasource.entity.MetricEntity;
 import com.alibaba.csp.sentinel.dashboard.domain.vo.MetricVo;
 
-/**
- * @author leyou
- */
+
 @Controller
 @RequestMapping(value = "/metric", produces = MediaType.APPLICATION_JSON_VALUE)
 public class MetricController {

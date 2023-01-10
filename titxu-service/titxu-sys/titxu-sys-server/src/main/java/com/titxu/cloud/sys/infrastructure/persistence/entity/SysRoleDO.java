@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 角色DO
- *
-
- 
  **/
 @Data
 @TableName("sys_role")

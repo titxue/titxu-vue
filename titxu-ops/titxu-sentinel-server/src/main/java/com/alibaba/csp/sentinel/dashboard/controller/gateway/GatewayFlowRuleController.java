@@ -43,9 +43,6 @@ import static com.alibaba.csp.sentinel.dashboard.datasource.entity.gateway.Gatew
 
 /**
  * Gateway flow rule Controller for manage gateway flow rules.
- *
- * @author cdfive
- * @since 1.7.0
  */
 @RestController
 @RequestMapping(value = "/gateway/flow")

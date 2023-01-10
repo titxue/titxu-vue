@@ -24,10 +24,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.List;
 
-/**
- * @author Eric Zhao
- * @since 0.2.1
- */
+
 public class ParamFlowRuleEntity extends AbstractRuleEntity<ParamFlowRule> {
 
     public ParamFlowRuleEntity() {

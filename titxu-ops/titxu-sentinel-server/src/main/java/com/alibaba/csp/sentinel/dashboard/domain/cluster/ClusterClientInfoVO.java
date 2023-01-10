@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class ClusterClientInfoVO {
 
     private String serverHost;
@@ -67,10 +64,10 @@ public class ClusterClientInfoVO {
     @Override
     public String toString() {
         return "ClusterClientInfoVO{" +
-            "serverHost='" + serverHost + '\'' +
-            ", serverPort=" + serverPort +
-            ", clientState=" + clientState +
-            ", requestTimeout=" + requestTimeout +
-            '}';
+                "serverHost='" + serverHost + '\'' +
+                ", serverPort=" + serverPort +
+                ", clientState=" + clientState +
+                ", requestTimeout=" + requestTimeout +
+                '}';
     }
 }

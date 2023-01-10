@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 角色ID
- *
-
-
  **/
 public class RoleId implements ValueObject<RoleId> {
 

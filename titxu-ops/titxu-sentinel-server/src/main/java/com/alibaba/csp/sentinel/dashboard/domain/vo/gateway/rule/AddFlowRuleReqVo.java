@@ -17,9 +17,6 @@ package com.alibaba.csp.sentinel.dashboard.domain.vo.gateway.rule;
 
 /**
  * Value Object for add gateway flow rule.
- *
- * @author cdfive
- * @since 1.7.0
  */
 public class AddFlowRuleReqVo {
 

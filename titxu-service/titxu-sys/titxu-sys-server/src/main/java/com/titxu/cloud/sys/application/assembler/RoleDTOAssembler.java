@@ -15,9 +15,6 @@ import java.util.List;
 
 /**
  * 角色Assembler
- *
-
- 
  **/
 public class RoleDTOAssembler {
 

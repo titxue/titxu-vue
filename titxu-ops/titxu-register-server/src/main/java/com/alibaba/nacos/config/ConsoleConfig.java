@@ -33,10 +33,6 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * Console config.
- *
- * @author yshen
- * @author nkorange
- * @since 1.2.0
  */
 @Component
 @EnableScheduling

@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * 角色DTO
- *
-
-
  **/
 @Data
 public class RoleDTO implements Serializable {

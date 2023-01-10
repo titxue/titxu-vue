@@ -18,8 +18,6 @@ package com.alibaba.nacos.model;
 
 /**
  * all namespace info.
- *
- * @author Nacos
  */
 public class NamespaceAllInfo extends Namespace {
 

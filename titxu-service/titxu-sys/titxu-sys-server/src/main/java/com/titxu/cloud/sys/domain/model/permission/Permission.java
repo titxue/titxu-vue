@@ -7,9 +7,6 @@ import java.util.List;
 
 /**
  * 权限
- *
-
- 
  **/
 public class Permission implements Entity<Permission> {
 

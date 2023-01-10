@@ -8,7 +8,6 @@ import javax.sql.DataSource;
 
 /**
  * 客户端信息配置
- *
  **/
 public class JdbcClientDetailsServiceImpl extends JdbcClientDetailsService {
 

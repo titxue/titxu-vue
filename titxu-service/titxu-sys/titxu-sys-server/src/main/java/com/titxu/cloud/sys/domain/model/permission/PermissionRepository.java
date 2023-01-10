@@ -7,9 +7,6 @@ import java.util.Map;
 
 /**
  * 权限-Repository接口
- *
-
- 
  **/
 public interface PermissionRepository {
 

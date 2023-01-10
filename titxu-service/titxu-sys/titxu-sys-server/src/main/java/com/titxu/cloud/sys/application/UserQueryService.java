@@ -7,9 +7,6 @@ import java.util.Map;
 
 /**
  * 用户查询服务接口
- *
-
- 
  **/
 public interface UserQueryService {
 

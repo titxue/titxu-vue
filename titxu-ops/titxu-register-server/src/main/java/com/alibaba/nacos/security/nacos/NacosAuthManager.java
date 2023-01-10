@@ -42,9 +42,6 @@ import java.util.List;
 
 /**
  * Builtin access control entry of Nacos.
- *
- * @author nkorange
- * @since 1.2.0
  */
 @Component
 public class NacosAuthManager implements AuthManager {

@@ -1,22 +1,18 @@
 package com.titxu.cloud.sys.domain.model.tenant;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 
 import java.util.regex.Pattern;
 
 /**
  * 租户编码
- *
-
- 
  **/
 public class TenantCode implements ValueObject<TenantCode> {
 
-    private String code;
-
     private static final Pattern VALID_PATTERN = Pattern.compile("^[A-Za-z0-9]+$");
+    private String code;
 
 
     public TenantCode(final String code) {

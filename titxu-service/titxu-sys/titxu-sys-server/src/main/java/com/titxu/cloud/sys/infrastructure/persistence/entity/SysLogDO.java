@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 日志DO
- *
-
-
  **/
 @Data
 @TableName("sys_log")

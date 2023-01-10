@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 租户id
- *
-
-
  **/
 public class TenantId implements ValueObject<TenantId> {
 

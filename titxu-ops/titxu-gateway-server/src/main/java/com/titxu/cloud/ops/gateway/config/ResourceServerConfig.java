@@ -23,9 +23,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * 资源服务器配置
- *
-
- 
  **/
 @AllArgsConstructor
 @Configuration

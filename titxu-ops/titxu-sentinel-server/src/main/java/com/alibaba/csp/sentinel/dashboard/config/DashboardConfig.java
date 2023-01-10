@@ -29,9 +29,6 @@ import org.springframework.lang.NonNull;
  * 1. System.properties<br>
  * 2. Env
  * </p>
- *
- * @author jason
- * @since 1.5.0
  */
 public class DashboardConfig {
 

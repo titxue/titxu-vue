@@ -5,9 +5,6 @@ import com.titxu.cloud.sys.infrastructure.persistence.entity.SysLogDO;
 
 /**
  * 日志转换类
- *
-
-
  **/
 public class LogConverter {
 

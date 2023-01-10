@@ -12,9 +12,6 @@ import java.util.Map;
 
 /**
  * 用户Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysUserMapper extends BaseMapper<SysUserDO> {

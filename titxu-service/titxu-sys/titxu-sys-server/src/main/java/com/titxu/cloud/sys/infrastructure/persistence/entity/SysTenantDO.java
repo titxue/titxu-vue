@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 租户DO
- *
-
- 
  **/
 @Data
 @TableName("sys_tenant")

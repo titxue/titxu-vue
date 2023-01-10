@@ -7,9 +7,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * 监控服务
- *
-
- 
  **/
 @EnableAdminServer
 @EnableDiscoveryClient

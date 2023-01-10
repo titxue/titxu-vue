@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 用户角色关联DO
- *
-
- 
  **/
 @Data
 @TableName("sys_user_role")

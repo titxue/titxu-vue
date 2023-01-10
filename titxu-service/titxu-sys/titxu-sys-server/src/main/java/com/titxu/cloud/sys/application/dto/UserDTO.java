@@ -8,9 +8,6 @@ import java.util.Set;
 
 /**
  * 用户DTO
- *
-
- 
  **/
 @Data
 public class UserDTO implements Serializable {

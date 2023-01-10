@@ -7,9 +7,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * 网关服务
- *
-
- 
  **/
 @EnableDiscoveryClient
 @SpringBootApplication

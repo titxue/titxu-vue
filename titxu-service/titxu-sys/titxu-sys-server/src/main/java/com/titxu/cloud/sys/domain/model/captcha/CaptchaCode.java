@@ -1,22 +1,18 @@
 package com.titxu.cloud.sys.domain.model.captcha;
 
 import com.titxu.cloud.common.core.domain.ValueObject;
-import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 
 import java.util.regex.Pattern;
 
 /**
  * 验证码
- *
-
- 
  **/
 public class CaptchaCode implements ValueObject<CaptchaCode> {
 
-    private String code;
-
     private static final Pattern VALID_PATTERN = Pattern.compile("^[A-Za-z0-9]+$");
+    private String code;
 
 
     public CaptchaCode(final String code) {

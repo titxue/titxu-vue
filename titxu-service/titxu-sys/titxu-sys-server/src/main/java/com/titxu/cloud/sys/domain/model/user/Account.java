@@ -4,9 +4,6 @@ import com.titxu.cloud.common.core.domain.Entity;
 
 /**
  * 账号
- *
-
- 
  **/
 public class Account implements Entity<Account> {
 
@@ -42,6 +39,7 @@ public class Account implements Entity<Account> {
         this.mobile = mobile;
         this.password = Password.create(password);
     }
+
     public Account(Mobile mobile, Email email) {
         this.mobile = mobile;
         this.email = email;
@@ -51,14 +49,6 @@ public class Account implements Entity<Account> {
         this.mobile = mobile;
         this.email = email;
         this.password = password;
-    }
-
-    public void setMobile(Mobile mobile) {
-        this.mobile = mobile;
-    }
-
-    public void setEmail(Email email) {
-        this.email = email;
     }
 
     @Override
@@ -77,6 +67,7 @@ public class Account implements Entity<Account> {
 
     /**
      * 修改密码
+     *
      * @param oldPasswordStr 旧
      * @param newPasswordStr 新
      */
@@ -95,8 +86,16 @@ public class Account implements Entity<Account> {
         return mobile;
     }
 
+    public void setMobile(Mobile mobile) {
+        this.mobile = mobile;
+    }
+
     public Email getEmail() {
         return email;
+    }
+
+    public void setEmail(Email email) {
+        this.email = email;
     }
 
     public Password getPassword() {

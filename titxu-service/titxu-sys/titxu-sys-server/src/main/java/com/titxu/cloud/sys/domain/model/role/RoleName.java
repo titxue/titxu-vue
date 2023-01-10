@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 角色名称
- *
-
- 
  **/
 public class RoleName implements ValueObject<RoleName> {
 

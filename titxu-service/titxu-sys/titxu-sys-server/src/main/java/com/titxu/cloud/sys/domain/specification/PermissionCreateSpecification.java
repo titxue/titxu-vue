@@ -1,16 +1,13 @@
 package com.titxu.cloud.sys.domain.specification;
 
+import com.titxu.cloud.common.core.domain.AbstractSpecification;
 import com.titxu.cloud.sys.domain.model.permission.Permission;
 import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
 import com.titxu.cloud.sys.domain.model.permission.PermissionTypeEnum;
-import com.titxu.cloud.common.core.domain.AbstractSpecification;
 import org.apache.commons.lang3.StringUtils;
 
 /**
  * 权限创建Specification
- *
-
- 
  **/
 public class PermissionCreateSpecification extends AbstractSpecification<Permission> {
 

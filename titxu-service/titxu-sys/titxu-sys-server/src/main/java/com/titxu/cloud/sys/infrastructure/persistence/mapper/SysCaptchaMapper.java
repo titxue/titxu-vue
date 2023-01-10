@@ -6,9 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 验证码Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysCaptchaMapper extends BaseMapper<SysCaptchaDO> {

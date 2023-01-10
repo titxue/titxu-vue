@@ -2,9 +2,6 @@ package com.titxu.cloud.sys.domain.model.log;
 
 /**
  * 日志-Repository接口
- *
-
-
  **/
 public interface LogRepository {
 

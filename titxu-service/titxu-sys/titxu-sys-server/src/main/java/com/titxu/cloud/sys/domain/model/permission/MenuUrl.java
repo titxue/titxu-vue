@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 菜单地址
- *
-
- 
  **/
 public class MenuUrl implements ValueObject<MenuUrl> {
 

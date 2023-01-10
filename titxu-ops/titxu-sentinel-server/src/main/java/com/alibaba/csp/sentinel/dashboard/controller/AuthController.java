@@ -30,10 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author cdfive
- * @since 1.6.0
- */
+
 @RestController
 @RequestMapping("/auth")
 public class AuthController {

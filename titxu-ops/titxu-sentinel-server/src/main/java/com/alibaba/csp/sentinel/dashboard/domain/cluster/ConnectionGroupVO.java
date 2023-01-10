@@ -17,10 +17,7 @@ package com.alibaba.csp.sentinel.dashboard.domain.cluster;
 
 import java.util.List;
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
+
 public class ConnectionGroupVO {
 
     private String namespace;
@@ -41,7 +38,7 @@ public class ConnectionGroupVO {
     }
 
     public ConnectionGroupVO setConnectionSet(
-        List<ConnectionDescriptorVO> connectionSet) {
+            List<ConnectionDescriptorVO> connectionSet) {
         this.connectionSet = connectionSet;
         return this;
     }
@@ -58,9 +55,9 @@ public class ConnectionGroupVO {
     @Override
     public String toString() {
         return "ConnectionGroupVO{" +
-            "namespace='" + namespace + '\'' +
-            ", connectionSet=" + connectionSet +
-            ", connectedCount=" + connectedCount +
-            '}';
+                "namespace='" + namespace + '\'' +
+                ", connectionSet=" + connectionSet +
+                ", connectedCount=" + connectedCount +
+                '}';
     }
 }

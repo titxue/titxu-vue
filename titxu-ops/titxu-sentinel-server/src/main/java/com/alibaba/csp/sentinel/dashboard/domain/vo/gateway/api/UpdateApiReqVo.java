@@ -19,9 +19,6 @@ import java.util.List;
 
 /**
  * Value Object for update gateway api.
- *
- * @author cdfive
- * @since 1.7.0
  */
 public class UpdateApiReqVo {
 

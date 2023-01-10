@@ -6,7 +6,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * 网关
- *
  **/
 @RestController
 public class IndexApi {

@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * 用户Command
- *
  **/
 @Data
 @ApiModel(value = "用户", description = "用户")

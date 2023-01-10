@@ -6,9 +6,6 @@ import java.io.Serializable;
 
 /**
  * 日志dto
- *
-
-
  **/
 @Data
 public class LogDTO implements Serializable {

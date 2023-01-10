@@ -20,10 +20,7 @@ import com.alibaba.csp.sentinel.util.AssertUtil;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-/**
- * @author Eric Zhao
- * @since 0.2.1
- */
+
 public class AuthorityRuleEntity extends AbstractRuleEntity<AuthorityRule> {
 
     public AuthorityRuleEntity() {

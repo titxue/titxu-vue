@@ -34,10 +34,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 @RestController
 @RequestMapping("/cluster/assign")
 public class ClusterAssignController {

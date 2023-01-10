@@ -17,9 +17,6 @@ package com.alibaba.csp.sentinel.dashboard.domain.vo.gateway.api;
 
 /**
  * Value Object for add or update gateway api.
- *
- * @author cdfive
- * @since 1.7.0
  */
 public class ApiPredicateItemVo {
 

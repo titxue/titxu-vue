@@ -7,9 +7,6 @@ import java.util.List;
 
 /**
  * 用户工厂
- *
-
- 
  **/
 public class UserFactory {
 

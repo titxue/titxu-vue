@@ -1,15 +1,14 @@
 package com.titxu.cloud.sys.domain.model.user;
 
-import com.titxu.cloud.sys.domain.model.tenant.TenantId;
 import com.titxu.cloud.common.core.domain.Entity;
 import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.role.RoleId;
+import com.titxu.cloud.sys.domain.model.tenant.TenantId;
 
 import java.util.List;
 
 /**
  * 用户
- *
  **/
 public class User implements Entity<User> {
 
@@ -17,7 +16,6 @@ public class User implements Entity<User> {
      * UserId
      */
     private UserId userId;
-
 
 
     /**
@@ -84,13 +82,6 @@ public class User implements Entity<User> {
     public void changePassword(String oldPasswordStr, String newPasswordStr) {
         account.changePassword(oldPasswordStr, newPasswordStr);
     }
-    public void setStatus(StatusEnum status) {
-        this.status = status;
-    }
-
-    public void setRoleIds(List<RoleId> roleIds) {
-        this.roleIds = roleIds;
-    }
 
     public UserId getUserId() {
         return userId;
@@ -104,6 +95,10 @@ public class User implements Entity<User> {
         return status;
     }
 
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
     public Account getAccount() {
         return account;
     }
@@ -114,5 +109,9 @@ public class User implements Entity<User> {
 
     public List<RoleId> getRoleIds() {
         return roleIds;
+    }
+
+    public void setRoleIds(List<RoleId> roleIds) {
+        this.roleIds = roleIds;
     }
 }

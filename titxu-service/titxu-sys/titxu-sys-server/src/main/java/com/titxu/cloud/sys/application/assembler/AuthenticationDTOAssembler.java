@@ -5,9 +5,6 @@ import com.titxu.cloud.sys.dto.AuthenticationDTO;
 
 /**
  * Assembler class for the AuthenticationDTOAssembler.
- *
-
- 
  **/
 public class AuthenticationDTOAssembler {
 

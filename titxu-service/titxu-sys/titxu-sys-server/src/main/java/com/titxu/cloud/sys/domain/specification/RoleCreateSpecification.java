@@ -1,14 +1,11 @@
 package com.titxu.cloud.sys.domain.specification;
 
+import com.titxu.cloud.common.core.domain.AbstractSpecification;
 import com.titxu.cloud.sys.domain.model.role.Role;
 import com.titxu.cloud.sys.domain.model.role.RoleRepository;
-import com.titxu.cloud.common.core.domain.AbstractSpecification;
 
 /**
  * 角色创建Specification
- *
-
- 
  **/
 public class RoleCreateSpecification extends AbstractSpecification<Role> {
 

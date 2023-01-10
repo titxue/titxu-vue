@@ -28,9 +28,6 @@ import java.util.Set;
 
 /**
  * Entity for {@link ApiDefinition}.
- *
- * @author cdfive
- * @since 1.7.0
  */
 public class ApiDefinitionEntity implements RuleEntity {
 

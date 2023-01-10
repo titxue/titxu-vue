@@ -4,9 +4,6 @@ import java.util.List;
 
 /**
  * 角色-Repository接口
- *
-
- 
  **/
 public interface RoleRepository {
 

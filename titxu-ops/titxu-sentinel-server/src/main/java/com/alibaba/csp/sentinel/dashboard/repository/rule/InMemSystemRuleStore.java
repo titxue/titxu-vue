@@ -15,15 +15,12 @@
  */
 package com.alibaba.csp.sentinel.dashboard.repository.rule;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.SystemRuleEntity;
-
 import org.springframework.stereotype.Component;
 
-/**
- * @author leyou
- */
+import java.util.concurrent.atomic.AtomicLong;
+
+
 @Component
 public class InMemSystemRuleStore extends InMemoryRuleRepositoryAdapter<SystemRuleEntity> {
 

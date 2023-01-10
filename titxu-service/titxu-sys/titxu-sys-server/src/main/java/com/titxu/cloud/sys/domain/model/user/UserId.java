@@ -6,9 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 用户ID
- *
-
-
  **/
 @Data
 public class UserId implements ValueObject<UserId> {

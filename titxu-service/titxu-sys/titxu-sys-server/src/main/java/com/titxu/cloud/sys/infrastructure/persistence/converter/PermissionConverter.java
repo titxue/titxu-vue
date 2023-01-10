@@ -1,6 +1,5 @@
 package com.titxu.cloud.sys.infrastructure.persistence.converter;
 
-import com.titxu.cloud.sys.domain.model.permission.*;
 import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.common.core.exception.BaseException;
 import com.titxu.cloud.sys.domain.model.permission.*;
@@ -11,9 +10,6 @@ import java.util.*;
 
 /**
  * 权限Converter
- *
-
- 
  **/
 public class PermissionConverter {
 

@@ -15,14 +15,11 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster;
 
-import java.util.Set;
-
 import com.alibaba.csp.sentinel.dashboard.domain.cluster.request.ClusterAppAssignMap;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+import java.util.Set;
+
+
 public class ClusterAppSingleServerAssignRequest {
 
     private ClusterAppAssignMap clusterMap;
@@ -49,8 +46,8 @@ public class ClusterAppSingleServerAssignRequest {
     @Override
     public String toString() {
         return "ClusterAppSingleServerAssignRequest{" +
-            "clusterMap=" + clusterMap +
-            ", remainingList=" + remainingList +
-            '}';
+                "clusterMap=" + clusterMap +
+                ", remainingList=" + remainingList +
+                '}';
     }
 }

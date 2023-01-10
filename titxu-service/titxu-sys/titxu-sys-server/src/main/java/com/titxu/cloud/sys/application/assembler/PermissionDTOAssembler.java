@@ -9,9 +9,6 @@ import java.util.*;
 
 /**
  * Assembler class for the Permission.
- *
-
- 
  **/
 public class PermissionDTOAssembler {
 

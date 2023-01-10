@@ -4,9 +4,6 @@ import java.awt.image.BufferedImage;
 
 /**
  * 验证码应用服务
- *
-
-
  **/
 public interface CaptchaApplicationService {
 

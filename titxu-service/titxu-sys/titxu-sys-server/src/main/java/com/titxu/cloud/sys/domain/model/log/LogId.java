@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 日志ID
- *
-
- 
  **/
 public class LogId implements ValueObject<LogId> {
 

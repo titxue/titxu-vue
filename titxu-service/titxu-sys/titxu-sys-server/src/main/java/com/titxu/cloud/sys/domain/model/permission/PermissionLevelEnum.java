@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 权限级别
- *
-
-
  **/
 public enum PermissionLevelEnum implements ValueObject<PermissionLevelEnum> {
 
@@ -29,14 +26,6 @@ public enum PermissionLevelEnum implements ValueObject<PermissionLevelEnum> {
     PermissionLevelEnum(String value, String label) {
         this.value = value;
         this.label = label;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public String getValue() {
-        return value;
     }
 
     /**
@@ -73,6 +62,14 @@ public enum PermissionLevelEnum implements ValueObject<PermissionLevelEnum> {
             }
         }
         return null;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     @Override

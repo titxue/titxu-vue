@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 角色权限关联DO
- *
-
- 
  **/
 @Data
 @TableName("sys_role_permission")

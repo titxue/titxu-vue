@@ -20,10 +20,7 @@ import java.util.Date;
 import com.alibaba.csp.sentinel.slots.block.AbstractRule;
 import com.alibaba.csp.sentinel.slots.block.Rule;
 
-/**
- * @author Eric Zhao
- * @since 0.2.1
- */
+
 public abstract class AbstractRuleEntity<T extends AbstractRule> implements RuleEntity {
 
     protected Long id;

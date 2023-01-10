@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 权限类型
- *
-
- 
  **/
 public enum PermissionTypeEnum implements ValueObject<PermissionTypeEnum> {
 
@@ -34,14 +31,6 @@ public enum PermissionTypeEnum implements ValueObject<PermissionTypeEnum> {
     PermissionTypeEnum(String value, String label) {
         this.value = value;
         this.label = label;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public String getValue() {
-        return value;
     }
 
     /**
@@ -78,6 +67,14 @@ public enum PermissionTypeEnum implements ValueObject<PermissionTypeEnum> {
             }
         }
         return null;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     @Override

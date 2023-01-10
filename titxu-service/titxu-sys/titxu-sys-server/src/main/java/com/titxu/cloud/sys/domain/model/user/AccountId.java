@@ -5,9 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 账号ID
- *
-
- 
  **/
 public class AccountId implements ValueObject<AccountId> {
 

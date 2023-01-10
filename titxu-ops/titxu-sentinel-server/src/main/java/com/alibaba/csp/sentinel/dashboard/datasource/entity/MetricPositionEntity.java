@@ -17,9 +17,7 @@ package com.alibaba.csp.sentinel.dashboard.datasource.entity;
 
 import java.util.Date;
 
-/**
- * @author leyou
- */
+
 public class MetricPositionEntity {
     private long id;
     private Date gmtCreate;
@@ -108,14 +106,14 @@ public class MetricPositionEntity {
     @Override
     public String toString() {
         return "MetricPositionEntity{" +
-            "id=" + id +
-            ", gmtCreate=" + gmtCreate +
-            ", gmtModified=" + gmtModified +
-            ", app='" + app + '\'' +
-            ", ip='" + ip + '\'' +
-            ", port=" + port +
-            ", hostname='" + hostname + '\'' +
-            ", lastFetch=" + lastFetch +
-            '}';
+                "id=" + id +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", app='" + app + '\'' +
+                ", ip='" + ip + '\'' +
+                ", port=" + port +
+                ", hostname='" + hostname + '\'' +
+                ", lastFetch=" + lastFetch +
+                '}';
     }
 }

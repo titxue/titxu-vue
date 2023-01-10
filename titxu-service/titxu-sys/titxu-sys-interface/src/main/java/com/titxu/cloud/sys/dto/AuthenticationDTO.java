@@ -7,9 +7,6 @@ import java.util.Set;
 
 /**
  * 认证信息DTO
- *
-
-
  **/
 @Data
 public class AuthenticationDTO implements Serializable {

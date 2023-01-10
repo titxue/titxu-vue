@@ -20,9 +20,6 @@ import com.alibaba.nacos.auth.model.User;
 
 /**
  * Nacos User.
- *
- * @author nkorange
- * @since 1.2.0
  */
 public class NacosUser extends User {
 

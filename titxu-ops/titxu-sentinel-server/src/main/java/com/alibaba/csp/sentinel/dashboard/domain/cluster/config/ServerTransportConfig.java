@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.config;
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
+
 public class ServerTransportConfig {
 
     public static final int DEFAULT_PORT = 18730;
@@ -57,8 +54,8 @@ public class ServerTransportConfig {
     @Override
     public String toString() {
         return "ServerTransportConfig{" +
-            "port=" + port +
-            ", idleSeconds=" + idleSeconds +
-            '}';
+                "port=" + port +
+                ", idleSeconds=" + idleSeconds +
+                '}';
     }
 }

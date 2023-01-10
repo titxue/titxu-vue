@@ -6,9 +6,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * 密码
- *
-
-
  **/
 public class Password implements ValueObject<Password> {
 

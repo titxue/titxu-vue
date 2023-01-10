@@ -44,9 +44,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Controller regarding APIs of degrade rules. Refactored since 1.8.0.
- *
- * @author Carpenter Lee
- * @author Eric Zhao
  */
 @RestController
 @RequestMapping("/degrade")

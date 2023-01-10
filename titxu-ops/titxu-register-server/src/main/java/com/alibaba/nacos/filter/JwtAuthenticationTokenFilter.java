@@ -32,8 +32,6 @@ import java.io.IOException;
 
 /**
  * jwt auth token filter.
- *
- * @author wfnuser
  */
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 

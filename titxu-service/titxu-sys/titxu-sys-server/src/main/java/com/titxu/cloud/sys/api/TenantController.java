@@ -16,7 +16,6 @@ import java.util.Map;
 
 /**
  * 租户Controller
- *
  **/
 @Api(tags = "租户管理")
 @RestController

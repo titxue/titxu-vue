@@ -17,9 +17,6 @@ package com.alibaba.csp.sentinel.dashboard.auth;
 
 /**
  * Interface for authentication and authorization.
- *
- * @author Carpenter Lee
- * @since 1.5.0
  */
 public interface AuthService<R> {
 

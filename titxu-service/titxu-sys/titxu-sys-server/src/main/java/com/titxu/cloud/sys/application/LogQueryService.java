@@ -6,9 +6,6 @@ import java.util.Map;
 
 /**
  * 系统日志查询服务接口
- *
-
-
  **/
 public interface LogQueryService {
 

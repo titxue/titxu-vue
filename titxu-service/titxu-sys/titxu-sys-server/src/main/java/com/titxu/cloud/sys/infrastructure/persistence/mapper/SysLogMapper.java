@@ -6,9 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 日志Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysLogMapper extends BaseMapper<SysLogDO> {

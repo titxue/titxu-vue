@@ -7,9 +7,6 @@ import lombok.Data;
 
 /**
  * 用户DO
- *
-
- 
  **/
 @Data
 @TableName("sys_user")

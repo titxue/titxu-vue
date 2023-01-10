@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * 用户Converter
- *
  **/
 public class UserConverter {
 

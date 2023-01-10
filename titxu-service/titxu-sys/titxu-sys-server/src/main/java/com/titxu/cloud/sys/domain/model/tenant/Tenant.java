@@ -6,9 +6,6 @@ import com.titxu.cloud.sys.domain.model.user.UserId;
 
 /**
  * 租户实体
- *
-
- 
  **/
 public class Tenant implements Entity<Tenant> {
 

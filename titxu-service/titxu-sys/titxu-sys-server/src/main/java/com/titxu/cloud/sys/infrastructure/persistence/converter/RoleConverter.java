@@ -15,9 +15,6 @@ import java.util.List;
 
 /**
  * 角色Converter
- *
-
- 
  **/
 public class RoleConverter {
 

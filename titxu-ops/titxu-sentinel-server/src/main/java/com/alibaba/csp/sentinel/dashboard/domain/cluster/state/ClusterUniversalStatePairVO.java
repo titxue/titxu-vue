@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.state;
 
-/**
- * @author Eric Zhao
- * @since 1.4.1
- */
+
 public class ClusterUniversalStatePairVO {
 
     private String ip;
@@ -26,7 +23,8 @@ public class ClusterUniversalStatePairVO {
 
     private ClusterUniversalStateVO state;
 
-    public ClusterUniversalStatePairVO() {}
+    public ClusterUniversalStatePairVO() {
+    }
 
     public ClusterUniversalStatePairVO(String ip, Integer commandPort, ClusterUniversalStateVO state) {
         this.ip = ip;
@@ -64,9 +62,9 @@ public class ClusterUniversalStatePairVO {
     @Override
     public String toString() {
         return "ClusterUniversalStatePairVO{" +
-            "ip='" + ip + '\'' +
-            ", commandPort=" + commandPort +
-            ", state=" + state +
-            '}';
+                "ip='" + ip + '\'' +
+                ", commandPort=" + commandPort +
+                ", state=" + state +
+                '}';
     }
 }

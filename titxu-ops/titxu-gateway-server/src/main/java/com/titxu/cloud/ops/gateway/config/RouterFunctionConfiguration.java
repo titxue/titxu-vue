@@ -17,8 +17,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * 路由配置信息
- *
- * @author Chill
  */
 @Slf4j
 @Configuration

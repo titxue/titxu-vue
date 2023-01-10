@@ -19,9 +19,6 @@ import java.util.List;
 
 /**
  * Value Object for add gateway api.
- *
- * @author cdfive
- * @since 1.7.0
  */
 public class AddApiReqVo {
 

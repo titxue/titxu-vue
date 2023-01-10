@@ -23,7 +23,6 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 
 /**
  * 安全配置
- *
  **/
 @Configuration
 @EnableWebSecurity

@@ -58,9 +58,6 @@ import java.util.List;
 
 /**
  * User related methods entry.
- *
- * @author wfnuser
- * @author nkorange
  */
 @RestController("user")
 @RequestMapping({ "/v1/auth", "/v1/auth/users" })

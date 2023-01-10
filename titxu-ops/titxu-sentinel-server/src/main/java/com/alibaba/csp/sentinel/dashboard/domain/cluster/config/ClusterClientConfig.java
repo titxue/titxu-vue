@@ -15,10 +15,7 @@
  */
 package com.alibaba.csp.sentinel.dashboard.domain.cluster.config;
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
+
 public class ClusterClientConfig {
 
     private String serverHost;
@@ -66,10 +63,10 @@ public class ClusterClientConfig {
     @Override
     public String toString() {
         return "ClusterClientConfig{" +
-            "serverHost='" + serverHost + '\'' +
-            ", serverPort=" + serverPort +
-            ", requestTimeout=" + requestTimeout +
-            ", connectTimeout=" + connectTimeout +
-            '}';
+                "serverHost='" + serverHost + '\'' +
+                ", serverPort=" + serverPort +
+                ", requestTimeout=" + requestTimeout +
+                ", connectTimeout=" + connectTimeout +
+                '}';
     }
 }

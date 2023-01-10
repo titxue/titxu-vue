@@ -1,16 +1,13 @@
 package com.titxu.cloud.sys.domain.model.role;
 
-import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 import com.titxu.cloud.common.core.domain.Entity;
 import com.titxu.cloud.common.core.domain.StatusEnum;
+import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 
 import java.util.List;
 
 /**
- * 角色
- *
-
- 
+ * 角色实体
  **/
 public class Role implements Entity<Role> {
 

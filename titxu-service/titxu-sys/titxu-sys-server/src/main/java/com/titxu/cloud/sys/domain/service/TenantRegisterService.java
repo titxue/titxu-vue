@@ -1,13 +1,10 @@
 package com.titxu.cloud.sys.domain.service;
 
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.permission.Permission;
 import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 import com.titxu.cloud.sys.domain.model.permission.PermissionLevelEnum;
 import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
-import com.titxu.cloud.sys.domain.model.role.*;
-import com.titxu.cloud.sys.domain.model.tenant.*;
-import com.titxu.cloud.sys.domain.model.user.*;
-import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.role.*;
 import com.titxu.cloud.sys.domain.model.tenant.*;
 import com.titxu.cloud.sys.domain.model.user.*;
@@ -20,9 +17,6 @@ import java.util.Map;
 
 /**
  * 租户注册服务
- *
-
- 
  **/
 public class TenantRegisterService {
 

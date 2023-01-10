@@ -6,9 +6,6 @@ import lombok.Data;
 
 /**
  * 用户Token DO
- *
-
- 
  **/
 @Data
 @TableName("sys_account")

@@ -22,9 +22,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * A fake AuthService implementation, which will pass all user auth checking.
- *
- * @author Carpenter Lee
- * @since 1.5.0
  */
 public class FakeAuthServiceImpl implements AuthService<HttpServletRequest> {
 

@@ -17,10 +17,7 @@ package com.alibaba.csp.sentinel.dashboard.domain.cluster.state;
 
 import com.alibaba.csp.sentinel.dashboard.domain.cluster.ClusterClientInfoVO;
 
-/**
- * @author Eric Zhao
- * @since 1.4.0
- */
+
 public class ClusterClientStateVO {
 
     /**
@@ -40,7 +37,7 @@ public class ClusterClientStateVO {
     @Override
     public String toString() {
         return "ClusterClientStateVO{" +
-            "clientConfig=" + clientConfig +
-            '}';
+                "clientConfig=" + clientConfig +
+                '}';
     }
 }
