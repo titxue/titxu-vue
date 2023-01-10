@@ -11,9 +11,6 @@ import java.util.Map;
 
 /**
  * 角色Mapper
- *
-
- 
  **/
 @Mapper
 public interface SysRoleMapper extends BaseMapper<SysRoleDO> {
@@ -41,5 +38,5 @@ public interface SysRoleMapper extends BaseMapper<SysRoleDO> {
      * @param userId
      * @return
      */
-    List<SysRoleDO> queryUserRole(String userId);
+    List<SysRoleDO> queryUserRole(@Param("userId") String userId);
 }

@@ -55,7 +55,7 @@ public class MybatisConfiguration {
                     @Override
                     public boolean ignoreTable(String tableName) {
                         return ignoreTables.stream().anyMatch(
-                                (t) -> t.equalsIgnoreCase(tableName)
+                                t -> t.equalsIgnoreCase(tableName)
                         );
                     }
 

@@ -15,7 +15,7 @@
     </modules>
 
     <name>titxu-cloud</name>
-    <description>titxu-cloud是一款基于DDD的微服务开发框架</description>
+    <description>后台</description>
 
 
     <properties>
@@ -28,7 +28,7 @@
         <spring-cloud.version>2021.0.5</spring-cloud.version>
         <com-alibaba-cloud.version>2.2.9.RELEASE</com-alibaba-cloud.version>
         <hutool.version>5.8.10</hutool.version>
-        <mybatis-plus.version>3.4.3</mybatis-plus.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <slf4j.version>2.0.5</slf4j.version>
     </properties>
 
