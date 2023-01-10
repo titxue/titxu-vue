@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { showMessage } from './status';
 import { IResponse } from './type';
-import { getToken, TokenPrefix } from '/@/utils/auth';
+import { getRefreshToken, getToken, TokenPrefix } from '/@/utils/auth';
 import { ElMessage, ElMessageBox } from 'element-plus';
 
 // 如果请求话费了超过 `timeout` 的时间，请求将被中断
@@ -13,8 +13,8 @@ axios.defaults.withCredentials = false;
 axios.defaults.headers.post['Access-Control-Allow-Origin-Type'] = '*';
 // 无需携带凭证url白名单
 // todo 白名单需要优化,后台动态返回
-const whiteList = ['/auth/account/password', '/auth/account/logout', '/auth/account/refresh'];
-// const refresh = ['/auth/account/refresh'];
+const whiteList = ['/auth/account/password', '/auth/account/logout'];
+const refresh_url = '/auth/account/refresh';
 // loadEnv(mode, process.cwd()).VITE_APP_NAME
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_BASEURL + '',
@@ -78,6 +78,10 @@ axiosInstance.interceptors.request.use(
     // 白名单不需要携带token
     if (token && !whiteList.includes(config.url as string)) {
       if (config && config.headers) {
+        if (refresh_url === config.url) {
+          config.headers['Authorization'] = `${TokenPrefix}${getRefreshToken()}`;
+          return config;
+        }
         // config.headers.Authorization = `${TokenPrefix}${token}`;
         config.headers['Authorization'] = `${TokenPrefix}${token}`;
       }

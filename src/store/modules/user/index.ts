@@ -11,6 +11,7 @@ import {
 } from '/@/api/user/index';
 import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
 import { PageUserInfoType, ReqListParams, UserInfoType } from '/@/api/user/types';
+import { refreshToken } from '/@/utils/token';
 
 export const useUserStore = defineStore('user', {
   state: (): UserInfoType => ({
@@ -51,6 +52,10 @@ export const useUserStore = defineStore('user', {
     // 重置用户信息
     resetInfo() {
       this.$reset();
+    },
+    // 刷新token
+    async refreshAccessToken() {
+      refreshToken();
     },
     // 修改用户状态
     async changeStatus(id: string) {

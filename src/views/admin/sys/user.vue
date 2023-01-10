@@ -2,10 +2,10 @@
   <div>
     <el-card>
       <template #header>
-        <ElButton type="success" @click="handleRefreshToken"> 新增用户 </ElButton>
-        <ElButton type="danger" @click="handleRefreshToken"> 删除删除 </ElButton>
+        <ElButton type="success" @click="refreshAccessToken"> 新增用户 </ElButton>
+        <ElButton type="danger" @click="refreshAccessToken"> 删除删除 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshTable" />
-        <ElButton type="info" :icon="Refresh" @click="handleRefreshToken" />
+        <ElButton type="info" :icon="Refresh" @click="refreshAccessToken" />
       </template>
       <Table
         :columns="tableColumn"
@@ -47,13 +47,12 @@
   // import { refreshToken } from '/@/utils/auth';
   import { exampleForm } from '/@/config/form';
   import { Refresh } from '@element-plus/icons-vue';
-  import { refreshToken } from '/@/utils/token';
   // const { proxy } = getCurrentInstance()
   const router = useRouter();
 
   const route = useRoute();
   const store = useUserStore();
-  const { list, changeStatus, updateUser, deleteUser } = store;
+  const { list, changeStatus, updateUser, deleteUser, refreshAccessToken } = store;
 
   const dialogVisible = ref(false);
   const fieldList: Form.FieldItem[] = exampleForm.editUser;
@@ -137,10 +136,6 @@
   // 监听子组件dialogVisible变化
   const recorddialogVisible = (n: any) => {
     dialogVisible.value = n;
-  };
-
-  const handleRefreshToken = () => {
-    refreshToken();
   };
 
   // 取消编辑

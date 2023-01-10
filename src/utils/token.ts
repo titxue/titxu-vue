@@ -12,7 +12,7 @@ import { refresh } from '/@/api/user';
 const refreshToken = async () => {
   const refreshTokenParam = getRefreshToken();
   if (refreshTokenParam) {
-    const { data: result } = await refresh(refreshTokenParam);
+    const { data: result } = await refresh();
     const { value, refreshToken } = result;
     setToken(value);
     setRefreshToken(refreshToken);
