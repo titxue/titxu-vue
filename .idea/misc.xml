@@ -18,7 +18,15 @@
         <option value="$PROJECT_DIR$/titxu-ops/titxu-monitor-server/pom.xml" />
         <option value="$PROJECT_DIR$/titxu-ops/titxu-register-server/pom.xml" />
         <option value="$PROJECT_DIR$/titxu-ops/titxu-sentinel-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-common/titxu-common-bom/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/titxu-management/titxu-monitor-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-management/titxu-register-server/pom.xml" />
+        <option value="$PROJECT_DIR$/titxu-management/titxu-sentinel-server/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">

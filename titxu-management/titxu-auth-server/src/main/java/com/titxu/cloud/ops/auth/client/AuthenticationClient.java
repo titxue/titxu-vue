@@ -13,17 +13,17 @@ public interface AuthenticationClient {
      * 验证验证码
      *
      * @param uuid
-     * @return
+     * @return success / fail
      */
     @PostMapping("validateCaptcha")
-    boolean validateCaptcha(@RequestParam String uuid, @RequestParam String captchaCode);
+    boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode);
 
     /**
      * 认证
      *
      * @param userName 用户名
-     * @return
+     * @return 认证信息
      */
     @PostMapping("loginByUserName")
-    AuthenticationDTO loginByUserName(@RequestParam String userName);
+    AuthenticationDTO loginByUserName(@RequestParam("userName") String userName);
 }

@@ -8,9 +8,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 /**
  * 拦截器配置
- *
-
-
  **/
 @Configuration
 public class WebConfigurer extends WebMvcConfigurerAdapter {

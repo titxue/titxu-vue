@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.titxu.cloud</groupId>
+    <artifactId>titxu-common-bom</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>titxu-common-bom</name>
+    <url>titxu cloud parent</url>
+    <description>titxu cloud parent</description>
+
+    <properties>
+        <!-- 项目模块本版本号 -->
+        <titxu.common.version>${project.version}</titxu.common.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- springboot版本号 -->
+        <spring-boot.version>2.7.6</spring-boot.version>
+        <!-- 用于JSON解析版本号 -->
+        <fastjson2.version>2.0.20</fastjson2.version>
+        <!-- 工具类集合版本号 -->
+        <hutool.version>5.8.11</hutool.version>
+        <!-- 数据库操作框架版本号 -->
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <aspectjrt.version>1.9.7</aspectjrt.version>
+        <gson.version>2.10</gson.version>
+        <joda-time.version>2.12.2</joda-time.version>
+    </properties>
+
+
+    <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-core</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-web</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-log</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-mybatis</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-redis</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-swagger</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-tenant</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
+            <!--orm 相关-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--hutool bom 工具类-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- JSON处理 -->
+            <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectjrt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+            <!--web 模块-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <!--排除tomcat依赖-->
+                    <exclusion>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                        <groupId>org.springframework.boot</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-bom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-bom/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/titxu-common/titxu-common-log/src/main/java" charset="UTF-8" />

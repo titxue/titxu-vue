@@ -18,13 +18,13 @@ public class AuthenticationApi {
     }
 
     @PostMapping("validateCaptcha")
-    public boolean validateCaptcha(@RequestParam String uuid, @RequestParam String captchaCode){
+    public boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode) {
         return authenticationService.validateCaptcha(uuid, captchaCode);
     }
 
 
     @PostMapping("loginByUserName")
-    public AuthenticationDTO loginByUserName(@RequestParam String userName){
+    public AuthenticationDTO loginByUserName(@RequestParam("userName") String userName) {
         return authenticationService.loginByUserName(userName);
     }
 }

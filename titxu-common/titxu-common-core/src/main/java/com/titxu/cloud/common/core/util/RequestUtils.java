@@ -11,30 +11,25 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 请求工具类
- *
  **/
 @Slf4j
 public class RequestUtils {
 
     public static HttpServletRequest getRequest() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        return request;
+        return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
     }
 
     public static JSONObject getJwtPayload() {
         String jwtPayload = getRequest().getHeader(CommonConstant.JWT_PAYLOAD_KEY);
-        JSONObject jsonObject = JSONUtil.parseObj(jwtPayload);
-        return jsonObject;
+        return JSONUtil.parseObj(jwtPayload);
     }
 
     public static String getUserId() {
-        String userId = getJwtPayload().getStr(CommonConstant.USER_ID);
-        return userId;
+        return getJwtPayload().getStr(CommonConstant.USER_ID);
     }
 
 
     public static String getUserName() {
-        String userName = getJwtPayload().getStr(CommonConstant.USER_NAME);
-        return userName;
+        return getJwtPayload().getStr(CommonConstant.USER_NAME);
     }
 }

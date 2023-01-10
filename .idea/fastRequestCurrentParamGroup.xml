@@ -13,7 +13,7 @@
         </entry>
       </map>
     </option>
-    <option name="tempId" value="" />
+    <option name="tempId" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
     <option name="url" value="/captcha" />
   </component>
 </project>

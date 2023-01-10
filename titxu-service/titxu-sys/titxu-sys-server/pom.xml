@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>titxu-sys</artifactId>
@@ -24,37 +24,30 @@
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-core</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-swagger</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-web</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-mybatis</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-tenant</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-log</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-sys-interface</artifactId>
-            <version>${titxu-cloud.version}</version>
         </dependency>
         <!--注册中心客户端-->
         <dependency>
@@ -91,21 +84,21 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-dubbo</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.dubbo</groupId>-->
-<!--            <artifactId>dubbo</artifactId>-->
-<!--            <version>2.7.8</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.0</version>
-            <scope>test</scope>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-dubbo</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.dubbo</groupId>-->
+        <!--            <artifactId>dubbo</artifactId>-->
+        <!--            <version>2.7.8</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.jupiter</groupId>-->
+        <!--            <artifactId>junit-jupiter-api</artifactId>-->
+        <!--            <version>5.9.0</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
 
         <!-- 仅为了提供：IOUtils -->

@@ -8,36 +8,29 @@
     <artifactId>titxu-cloud</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <modules>
-        <module>titxu-common</module>
-        <module>titxu-management</module>
-        <module>titxu-service</module>
-    </modules>
-
-    <name>titxu-cloud</name>
+    <name>${project.artifactId}</name>
     <description>后台</description>
 
 
     <properties>
+        <!-- 项目模块本版本号 -->
+        <titxu.cloud.version>1.0.0</titxu.cloud.version>
+        <!-- 项目jdk -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- 项目编码 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <titxu-cloud.version>1.0.0</titxu-cloud.version>
+        <!-- springboot版本号 -->
+        <spring-boot.version>2.7.6</spring-boot.version>
+        <!-- 监控客户端版本号 -->
+        <spring-boot-admin.version>2.4.1</spring-boot-admin.version>
+        <!-- spring-cloud版本号-->
         <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <!-- 阿里微服务框架版本号 -->
         <com-alibaba-cloud.version>2.2.9.RELEASE</com-alibaba-cloud.version>
-        <hutool.version>5.8.10</hutool.version>
-        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <slf4j.version>2.0.5</slf4j.version>
     </properties>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.6</version>
-        <relativePath/>
-    </parent>
 
     <dependencies>
         <!--bootstrap 启动器-->
@@ -45,66 +38,76 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
-        <!--整合springboot与junit测试依赖,此包自带junit包，无需重复导junit的包-->
+        <!--监控-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--监控客户端-->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>${spring-boot-admin.version}</version>
+        </dependency>
+        <!--测试依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.link-kou</groupId>
-            <artifactId>mybatis-plugin</artifactId>
-            <version>1.0.2</version>
-        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.link-kou</groupId>-->
+        <!--            <artifactId>mybatis-plugin</artifactId>-->
+        <!--            <version>1.0.2</version>-->
+        <!--        </dependency>-->
         <!--        <dependency>-->
         <!--            <groupId>org.slf4j</groupId>-->
         <!--            <artifactId>slf4j-api</artifactId>-->
-        <!--            <version>${slf4j.version}</version>-->
+        <!--            <version>1.7.33</version>-->
         <!--        </dependency>-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 &ndash;&gt;-->
         <!--        <dependency>-->
         <!--            <groupId>org.slf4j</groupId>-->
         <!--            <artifactId>slf4j-log4j12</artifactId>-->
-        <!--            <version>${slf4j.version}</version>-->
-        <!--            <type>pom</type>-->
-        <!--            <scope>test</scope>-->
+        <!--            <version>1.7.33</version>-->
         <!--        </dependency>-->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.33</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.33</version>
-        </dependency>
 
 
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>${hutool.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
-        <dependency>
-            <groupId>com.alibaba.fastjson2</groupId>
-            <artifactId>fastjson2</artifactId>
-            <version>2.0.20</version>
-        </dependency>
-
     </dependencies>
+
+    <modules>
+        <module>titxu-common</module>
+        <module>titxu-management</module>
+        <module>titxu-service</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
+            <!-- 公共依赖管理 -->
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-bom</artifactId>
+                <version>${titxu.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -119,21 +122,37 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-sys-interface</artifactId>
+                <version>${titxu.cloud.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <!--    <repositories>-->
+    <!--        <repository>-->
+    <!--            <id>nexus-aliyun</id>-->
+    <!--            <name>nexus-aliyun</name>-->
+    <!--            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>-->
+    <!--            <releases>-->
+    <!--                <enabled>true</enabled>-->
+    <!--            </releases>-->
+    <!--            <snapshots>-->
+    <!--                <enabled>false</enabled>-->
+    <!--            </snapshots>-->
+    <!--        </repository>-->
+    <!--    </repositories>-->
     <repositories>
         <repository>
-            <id>nexus-aliyun</id>
-            <name>nexus-aliyun</name>
-            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
+            <id>spring</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
-
 </project>

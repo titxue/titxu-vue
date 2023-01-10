@@ -1,5 +1,6 @@
 package com.titxu.cloud.ops.auth.controller;
 
+import com.titxu.cloud.common.core.util.TokenUtils;
 import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.ops.auth.application.LoginService;
 import com.titxu.cloud.ops.auth.application.command.LoginPasswordCommand;
@@ -7,10 +8,7 @@ import com.titxu.cloud.ops.auth.application.command.RefreshCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 登录Controller
@@ -21,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     private LoginService loginService;
-
 
 
     @Autowired
@@ -37,14 +34,17 @@ public class LoginController {
     public Result login(@RequestBody LoginPasswordCommand loginPasswordCommand) {
         return Result.ok().put("data", loginService.login(loginPasswordCommand));
     }
+
     /**
      * 刷新登陆
      */
     @ApiOperation("刷新登陆")
     @PostMapping("/refresh")
-    public Result refresh(@RequestBody RefreshCommand refreshCommand) {
-        return Result.ok().put("data", loginService.refresh(refreshCommand));
+    public Result refresh(@RequestHeader("Authorization") String authorization) {
+        String refreshToken = TokenUtils.removeTokenPrefix(authorization);
+        return Result.ok().put("data", loginService.refresh(new RefreshCommand(refreshToken)));
     }
+
     /**
      * 退出登陆
      */

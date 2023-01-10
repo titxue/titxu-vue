@@ -29,12 +29,9 @@ import java.io.IOException;
 public class CaptchaFilter extends OncePerRequestFilter {
 
 
+    @Autowired
     private AuthenticationClient authenticationClient;
 
-    @Autowired
-    public void setAuthenticationClient(AuthenticationClient authenticationClient) {
-        this.authenticationClient = authenticationClient;
-    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
