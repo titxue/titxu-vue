@@ -16,15 +16,14 @@
 
 package com.titxu.cloud.ops.auth.config;
 
-import com.titxu.cloud.ops.auth.client.AuthenticationClient;
 import com.titxu.cloud.ops.auth.domain.User;
+import com.titxu.cloud.ops.auth.feign.RemoteAuthentication;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
@@ -34,29 +33,29 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-	private AuthenticationClient authenticationClient;
+    private RemoteAuthentication remoteAuthentication;
 
-	@Autowired
-	public void setAuthenticationClient(AuthenticationClient authenticationClient) {
-		this.authenticationClient = authenticationClient;
-	}
+    @Autowired
+    public void setAuthenticationClient(RemoteAuthentication remoteAuthentication) {
+        this.remoteAuthentication = remoteAuthentication;
+    }
 
 
-	@Override
-	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-		String username = (String) authentication.getPrincipal();
-		AuthenticationDTO authenticationDTO = authenticationClient.loginByUserName(username);
+    @Override
+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        String username = (String) authentication.getPrincipal();
+        AuthenticationDTO authenticationDTO = remoteAuthentication.loginByUserName(username);
 
-		if (null != authenticationDTO) {
-			return new UsernamePasswordAuthenticationToken(new User(authenticationDTO), authentication.getCredentials(), authentication.getAuthorities());
-		}else {
-			throw new UsernameNotFoundException("用户不存在");
-		}
-	}
+        if (null != authenticationDTO) {
+            return new UsernamePasswordAuthenticationToken(new User(authenticationDTO), authentication.getCredentials(), authentication.getAuthorities());
+        } else {
+            throw new UsernameNotFoundException("用户不存在");
+        }
+    }
 
-	@Override
-	public boolean supports(Class<?> aClass) {
-		return aClass.equals(UsernamePasswordAuthenticationToken.class);
-	}
+    @Override
+    public boolean supports(Class<?> aClass) {
+        return aClass.equals(UsernamePasswordAuthenticationToken.class);
+    }
 
 }

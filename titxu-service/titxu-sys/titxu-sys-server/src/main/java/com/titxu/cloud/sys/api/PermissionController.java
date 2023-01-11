@@ -1,15 +1,15 @@
 package com.titxu.cloud.sys.api;
 
-import com.titxu.cloud.sys.application.PermissionApplicationService;
-import com.titxu.cloud.sys.application.PermissionQueryService;
-import com.titxu.cloud.sys.application.command.PermissionCommand;
-import com.titxu.cloud.sys.application.dto.PermissionDTO;
-import com.titxu.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.WebUtils;
 import com.titxu.cloud.common.log.SysLog;
 import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.common.web.util.validator.ValidatorUtils;
 import com.titxu.cloud.common.web.util.validator.group.AddGroup;
 import com.titxu.cloud.common.web.util.validator.group.UpdateGroup;
+import com.titxu.cloud.sys.application.PermissionApplicationService;
+import com.titxu.cloud.sys.application.PermissionQueryService;
+import com.titxu.cloud.sys.application.command.PermissionCommand;
+import com.titxu.cloud.sys.application.dto.PermissionDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +39,8 @@ public class PermissionController {
     @ApiOperation("导航菜单")
     @GetMapping("/nav")
     public Result nav() {
-        List<PermissionDTO> menuList = permissionQueryService.getUserMenuTree(RequestUtils.getUserId());
-        Set<String> permissions = permissionQueryService.getPermissionCodes(RequestUtils.getUserId());
+        List<PermissionDTO> menuList = permissionQueryService.getUserMenuTree(WebUtils.getUserId());
+        Set<String> permissions = permissionQueryService.getPermissionCodes(WebUtils.getUserId());
         return Result.ok().put("menuList", menuList).put("permissions", permissions);
     }
 

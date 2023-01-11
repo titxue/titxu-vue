@@ -1,10 +1,6 @@
 package com.titxu.cloud.sys.api;
 
-import com.titxu.cloud.sys.application.UserApplicationService;
-import com.titxu.cloud.sys.application.UserQueryService;
-import com.titxu.cloud.sys.application.command.PasswordCommand;
-import com.titxu.cloud.sys.application.command.UserCommand;
-import com.titxu.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.WebUtils;
 import com.titxu.cloud.common.log.SysLog;
 import com.titxu.cloud.common.mybatis.constant.PageConstant;
 import com.titxu.cloud.common.mybatis.util.Page;
@@ -12,6 +8,10 @@ import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.common.web.util.validator.ValidatorUtils;
 import com.titxu.cloud.common.web.util.validator.group.AddGroup;
 import com.titxu.cloud.common.web.util.validator.group.UpdateGroup;
+import com.titxu.cloud.sys.application.UserApplicationService;
+import com.titxu.cloud.sys.application.UserQueryService;
+import com.titxu.cloud.sys.application.command.PasswordCommand;
+import com.titxu.cloud.sys.application.command.UserCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,7 +62,7 @@ public class UserController {
     @ApiOperation("获取登录的用户信息")
     @GetMapping("/info")
     public Result info() {
-        return Result.ok().put("user", userQueryService.find(RequestUtils.getUserId()));
+        return Result.ok().put("user", userQueryService.find(WebUtils.getUserId()));
     }
 
     /**
@@ -73,7 +73,7 @@ public class UserController {
     @PostMapping("/password")
     public Result changePassword(@RequestBody PasswordCommand passwordCommand) {
         ValidatorUtils.validateEntity(passwordCommand);
-        passwordCommand.setUserId(RequestUtils.getUserId());
+        passwordCommand.setUserId(WebUtils.getUserId());
         userApplicationService.changePassword(passwordCommand);
         return Result.ok();
     }

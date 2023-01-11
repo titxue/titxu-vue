@@ -2,7 +2,6 @@ package com.titxu.cloud.common.core.constant;
 
 /**
  * 认证常量类
- *
  **/
 public interface AuthConstants {
 
@@ -117,6 +116,9 @@ public interface AuthConstants {
      * 验证码 key
      */
     String VALIDATE_CODE_KEY = "key";
-
+    /**
+     * 手机号登录
+     */
+    String MOBILE = "mobile";
 
 }

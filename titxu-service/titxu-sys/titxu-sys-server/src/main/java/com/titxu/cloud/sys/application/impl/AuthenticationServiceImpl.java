@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.application.impl;
 
+import com.titxu.cloud.sys.application.PermissionQueryService;
 import com.titxu.cloud.sys.application.assembler.AuthenticationDTOAssembler;
 import com.titxu.cloud.sys.domain.model.captcha.CaptchaCode;
 import com.titxu.cloud.sys.domain.model.captcha.CaptchaRepository;
@@ -8,7 +9,6 @@ import com.titxu.cloud.sys.domain.model.user.Mobile;
 import com.titxu.cloud.sys.domain.model.user.User;
 import com.titxu.cloud.sys.domain.model.user.UserId;
 import com.titxu.cloud.sys.domain.model.user.UserRepository;
-import com.titxu.cloud.sys.application.PermissionQueryService;
 import com.titxu.cloud.sys.domain.service.CaptchaValidateService;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.service.AuthenticationService;
@@ -21,7 +21,6 @@ import java.util.List;
 
 /**
  * 身份验证应用服务实现类
- *
  **/
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
@@ -35,10 +34,12 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     public void setCaptchaRepository(CaptchaRepository captchaRepository) {
         this.captchaRepository = captchaRepository;
     }
+
     @Autowired
     public void setUserRepository(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
     @Autowired
     public void setPermissionQueryService(PermissionQueryService permissionQueryService) {
         this.permissionQueryService = permissionQueryService;
@@ -56,10 +57,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public AuthenticationDTO loginByUserName(String userName) {
         List<User> users = new ArrayList<>();
-        if (userName.equals("超级管理员")){
+        if (userName.equals("超级管理员")) {
             User user = userRepository.find(new UserId("1"));
             users.add(user);
-        }else {
+        } else {
             users = userRepository.find(new Mobile(userName));
         }
 

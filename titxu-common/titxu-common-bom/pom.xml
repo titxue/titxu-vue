@@ -20,7 +20,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- springboot版本号 -->
-        <spring-boot.version>2.7.6</spring-boot.version>
+        <spring-boot.version>3.0.1</spring-boot.version>
         <!-- 用于JSON解析版本号 -->
         <fastjson2.version>2.0.20</fastjson2.version>
         <!-- 工具类集合版本号 -->

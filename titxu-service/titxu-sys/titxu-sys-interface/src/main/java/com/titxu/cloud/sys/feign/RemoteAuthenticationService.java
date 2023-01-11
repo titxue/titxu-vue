@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.auth.client;
+package com.titxu.cloud.sys.feign;
 
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient(name = "titxu-server-sys")
-public interface AuthenticationClient {
+@FeignClient(contextId = "remoteAuthenticationService", value = "titxu-server-sys")
+public interface RemoteAuthenticationService {
     /**
      * 验证验证码
      *
-     * @param uuid
+     * @param uuid uuid
      * @return success / fail
      */
     @PostMapping("validateCaptcha")

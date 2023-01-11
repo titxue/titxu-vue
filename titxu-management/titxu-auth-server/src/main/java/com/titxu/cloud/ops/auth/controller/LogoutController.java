@@ -2,7 +2,7 @@ package com.titxu.cloud.ops.auth.controller;
 
 import cn.hutool.json.JSONObject;
 import com.titxu.cloud.common.core.constant.AuthConstants;
-import com.titxu.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.WebUtils;
 import com.titxu.cloud.common.redis.util.RedisService;
 import com.titxu.cloud.common.web.util.Result;
 import io.swagger.annotations.Api;
@@ -24,7 +24,7 @@ public class LogoutController {
 
     @PostMapping("/logout")
     public Result logout() {
-        JSONObject jsonObject = RequestUtils.getJwtPayload();
+        JSONObject jsonObject = WebUtils.getJwtPayload();
         String jti = jsonObject.getStr(AuthConstants.JWT_JTI);
         long exp = jsonObject.getLong(AuthConstants.JWT_EXP);
 

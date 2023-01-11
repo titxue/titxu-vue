@@ -1,6 +1,6 @@
 package com.titxu.cloud.common.mybatis.util;
 
-import com.titxu.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.WebUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.executor.Executor;
@@ -14,9 +14,6 @@ import java.util.*;
 
 /**
  * mybatis拦截器，自动注入创建人、创建时间、修改人、修改时间
- *
-
-
  **/
 @Slf4j
 @Component
@@ -119,7 +116,7 @@ public class MybatisInterceptor implements Interceptor {
     private String getLoginUser() {
         String userId = null;
         try {
-            userId = RequestUtils.getUserId();
+            userId = WebUtils.getUserId();
         } catch (Exception e) {
             userId = null;
         }

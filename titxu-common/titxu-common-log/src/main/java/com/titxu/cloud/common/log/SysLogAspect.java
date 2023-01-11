@@ -3,9 +3,11 @@ package com.titxu.cloud.common.log;
 import com.google.gson.Gson;
 import com.titxu.cloud.common.core.util.HttpContextUtils;
 import com.titxu.cloud.common.core.util.IPUtils;
-import com.titxu.cloud.common.core.util.RequestUtils;
+import com.titxu.cloud.common.core.util.WebUtils;
 import com.titxu.cloud.sys.dto.LogDTO;
 import com.titxu.cloud.sys.service.LogSaveService;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,8 +17,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
 /**
@@ -61,7 +61,7 @@ public class SysLogAspect {
     private void saveSysLog(ProceedingJoinPoint joinPoint, long time) {
         LogDTO logDTO = new LogDTO();
         logDTO.setTime(time);
-        logDTO.setUserName(RequestUtils.getUserName());
+        logDTO.setUserName(WebUtils.getUserName());
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         SysLog syslog = method.getAnnotation(SysLog.class);

@@ -22,13 +22,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- springboot版本号 -->
-        <spring-boot.version>2.7.6</spring-boot.version>
+        <spring-boot.version>3.0.1</spring-boot.version>
         <!-- 监控客户端版本号 -->
-        <spring-boot-admin.version>2.4.1</spring-boot-admin.version>
+        <spring-boot-admin.version>3.0.0-M8</spring-boot-admin.version>
         <!-- spring-cloud版本号-->
-        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
         <!-- 阿里微服务框架版本号 -->
-        <com-alibaba-cloud.version>2.2.9.RELEASE</com-alibaba-cloud.version>
+        <com-alibaba-cloud.version>2022.0.0.0-RC1</com-alibaba-cloud.version>
         <slf4j.version>2.0.5</slf4j.version>
     </properties>
 
