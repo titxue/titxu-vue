@@ -1,7 +1,6 @@
 package com.titxu.cloud.ops.auth.application.command;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -10,14 +9,14 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-@ApiModel(value = "刷新登陆", description = "刷新登陆")
+@Schema(name = "刷新登陆", description = "刷新登陆")
 public class RefreshCommand {
 
 
     /**
      * 刷新token
      */
-    @ApiModelProperty(value = "刷新token")
+    @Schema(name = "刷新token")
     private String refreshToken;
 
 }

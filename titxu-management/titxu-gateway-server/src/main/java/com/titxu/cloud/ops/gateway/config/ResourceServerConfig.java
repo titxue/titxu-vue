@@ -57,11 +57,8 @@ public class ResourceServerConfig {
      */
     @Bean
     ServerAccessDeniedHandler accessDeniedHandler() {
-        return (exchange, denied) -> {
-            Mono<Void> mono = Mono.defer(() -> Mono.just(exchange.getResponse()))
-                    .flatMap(response -> WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode()));
-            return mono;
-        };
+        return (exchange, denied) -> Mono.defer(() -> Mono.just(exchange.getResponse()))
+                .flatMap(response -> WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode()));
     }
 
     /**

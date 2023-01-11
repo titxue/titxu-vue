@@ -14,6 +14,20 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class WebSecurityConfiguration {
 
+    /**
+     * 放行Swagger
+     */
+    public static final String[] URL_WHITELIST = {
+            "/swagger-ui.html",
+            "/swagger-ui/**",
+            "/swagger-resources/**",
+            "/v2/api-docs",
+            "/v3/api-docs",
+            "/v3/api-docs/swagger-config",
+            "/webjars/**",
+            "/doc.html",
+            "/actuator/**", "/css/**", "/error"
+    };
 
     /**
      * spring security 默认的安全策略
@@ -44,7 +58,8 @@ public class WebSecurityConfiguration {
     @Bean
     @Order(0)
     SecurityFilterChain resources(HttpSecurity http) throws Exception {
-        http.securityMatchers((matchers) -> matchers.requestMatchers("/actuator/**", "/css/**", "/error"))
+        // 放行SWAGGER_WHITELIST 配置的资源 不需要认证
+        http.securityMatchers((matchers) -> matchers.requestMatchers(URL_WHITELIST))
                 .authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll()).requestCache().disable()
                 .securityContext().disable()
                 .cors().disable();

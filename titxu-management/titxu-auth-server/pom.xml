@@ -27,6 +27,10 @@
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
+            <artifactId>titxu-common-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-redis</artifactId>
         </dependency>
         <dependency>
@@ -108,7 +112,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
             </plugin>
         </plugins>
     </build>

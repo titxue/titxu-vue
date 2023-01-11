@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -21,7 +23,14 @@ spring:
         password: admin
         instance:
           prefer-ip: true
-
+  freemarker:
+    cache: false
+    settings:
+      template_update_delay: 0
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+springdoc:
+  show-login-endpoint: false
 management:
   health:
     redis:

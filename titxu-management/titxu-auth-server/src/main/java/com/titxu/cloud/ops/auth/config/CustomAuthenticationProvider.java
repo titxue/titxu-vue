@@ -17,9 +17,9 @@
 package com.titxu.cloud.ops.auth.config;
 
 import com.titxu.cloud.ops.auth.domain.User;
-import com.titxu.cloud.ops.auth.feign.RemoteAuthentication;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.titxu.cloud.sys.feign.RemoteAuthenticationService;
+import jakarta.annotation.Resource;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -33,18 +33,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-    private RemoteAuthentication remoteAuthentication;
-
-    @Autowired
-    public void setAuthenticationClient(RemoteAuthentication remoteAuthentication) {
-        this.remoteAuthentication = remoteAuthentication;
-    }
+    @Resource
+    private RemoteAuthenticationService remoteAuthenticationService;
 
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String username = (String) authentication.getPrincipal();
-        AuthenticationDTO authenticationDTO = remoteAuthentication.loginByUserName(username);
+        AuthenticationDTO authenticationDTO = remoteAuthenticationService.loginByUserName(username);
 
         if (null != authenticationDTO) {
             return new UsernamePasswordAuthenticationToken(new User(authenticationDTO), authentication.getCredentials(), authentication.getAuthorities());

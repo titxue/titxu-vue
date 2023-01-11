@@ -2,8 +2,8 @@ package com.titxu.cloud.ops.auth.controller;
 
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
-import io.swagger.annotations.Api;
-import lombok.AllArgsConstructor;
+import com.titxu.cloud.ops.auth.jose.KeyGeneratorUtils;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,17 +16,15 @@ import java.util.Map;
 /**
  * 获取公钥接口
  **/
-@Api(tags = "获取公钥接口")
+@Tag(name = "获取公钥接口")
 @RestController
 @RequestMapping
-@AllArgsConstructor
 @Slf4j
 public class PublicKeyController {
 
-    private KeyPair keyPair;
-
     @GetMapping("/getPublicKey")
-    public Map<String, Object> loadPublicKey() {
+    public Map<String, Object> loadPublicKey() throws Exception {
+        KeyPair keyPair = KeyGeneratorUtils.loadRsaKey();
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAKey key = new RSAKey.Builder(publicKey).build();
         return new JWKSet(key).toJSONObject();

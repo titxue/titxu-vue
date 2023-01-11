@@ -29,7 +29,7 @@ import java.security.spec.EllipticCurve;
  * @author Joe Grandja
  * @since 0.1.0
  */
-final class KeyGeneratorUtils {
+public final class KeyGeneratorUtils {
 
     private KeyGeneratorUtils() {
     }
@@ -47,7 +47,7 @@ final class KeyGeneratorUtils {
     /**
      * 从classpath下的密钥库中获取密钥对(公钥+私钥)
      */
-    static KeyPair loadRsaKey() throws Exception {
+    public static KeyPair loadRsaKey() throws Exception {
         KeyStore keyStore = KeyStore.getInstance("JKS");
         keyStore.load(KeyGeneratorUtils.class.getResourceAsStream("/titxu.jks"), "lxue0422".toCharArray());
         Key key = keyStore.getKey("titxu", "lxue0422".toCharArray());
