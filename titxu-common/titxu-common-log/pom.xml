@@ -33,7 +33,11 @@
             <artifactId>aspectjrt</artifactId>
             <version>1.9.7</version>
         </dependency>
-
+        <!--安全依赖获取上下文信息-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
         <!-- openfeign 远程调用 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

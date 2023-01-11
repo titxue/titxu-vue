@@ -62,8 +62,18 @@ public interface AuthConstants {
      * 认证地址
      */
     String OAUTH_TOKEN = "/oauth/token";
-
-
+    /**
+     * 授权码模式confirm
+     */
+    String CUSTOM_CONSENT_PAGE_URI = "/token/confirm_access";
+    /**
+     * 项目的license
+     */
+    String PROJECT_LICENSE = "https://nas.titxu.com";
+    /**
+     * 协议字段
+     */
+    String DETAILS_LICENSE = "license";
     /**
      * 密码加密方式
      */
@@ -97,16 +107,26 @@ public interface AuthConstants {
     String CLIENT_SECRET_KEY = "client_secret";
 
     String SCOPE_KEY = "scope";
+    /**
+     * 客户端模式
+     */
+    String CLIENT_CREDENTIALS = "client_credentials";
 
 
     String REFRESH_TOKEN_KEY = "refresh_token";
     String REFRESH_TOKEN = "refresh_token";
-
+    /**
+     * 用户信息
+     */
+    String DETAILS_USER = "user_info";
     /**
      * 密码
      */
     String PASSWORD = "password";
-
+    /**
+     * 用户信息缓存
+     */
+    String USER_DETAILS = "user_details";
     /**
      * 验证码
      */
@@ -120,5 +140,8 @@ public interface AuthConstants {
      * 手机号登录
      */
     String MOBILE = "mobile";
-
+    /**
+     * 请求开始时间
+     */
+    String REQUEST_START_TIME = "REQUEST-START-TIME";
 }

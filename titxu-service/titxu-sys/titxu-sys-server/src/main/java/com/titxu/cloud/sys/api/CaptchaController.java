@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.sys.application.CaptchaApplicationService;
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * 验证码Controller
  **/
-@Api(tags = "验证码管理")
+@Tag(name = "验证码管理")
 @RestController
 public class CaptchaController {
 

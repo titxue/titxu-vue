@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.common.core.util.WebUtils;
-import com.titxu.cloud.common.log.SysLog;
+import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.common.web.util.validator.ValidatorUtils;
 import com.titxu.cloud.common.web.util.validator.group.AddGroup;
@@ -10,8 +10,8 @@ import com.titxu.cloud.sys.application.PermissionApplicationService;
 import com.titxu.cloud.sys.application.PermissionQueryService;
 import com.titxu.cloud.sys.application.command.PermissionCommand;
 import com.titxu.cloud.sys.application.dto.PermissionDTO;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +22,7 @@ import java.util.Set;
 /**
  * 权限Controller
  **/
-@Api(tags = "权限管理")
+@Tag(name = "权限管理")
 @RestController
 @RequestMapping("/permission")
 public class PermissionController {
@@ -36,7 +36,7 @@ public class PermissionController {
     /**
      * 导航菜单
      */
-    @ApiOperation("导航菜单")
+    @Operation(summary = "导航菜单")
     @GetMapping("/nav")
     public Result nav() {
         List<PermissionDTO> menuList = permissionQueryService.getUserMenuTree(WebUtils.getUserId());
@@ -47,7 +47,7 @@ public class PermissionController {
     /**
      * 所有权限列表
      */
-    @ApiOperation("所有权限列表")
+    @Operation(summary = "所有权限列表")
     @GetMapping("/list")
     public Result list() {
         List<PermissionDTO> permissionList = permissionQueryService.listAllPermission();
@@ -57,7 +57,7 @@ public class PermissionController {
     /**
      * 选择菜单
      */
-    @ApiOperation("选择菜单")
+    @Operation(summary = "选择菜单")
     @GetMapping("/selectMenu")
     public Result selectMenu() {
         List<PermissionDTO> menuList = permissionQueryService.listAllMenu();
@@ -67,7 +67,7 @@ public class PermissionController {
     /**
      * 权限信息
      */
-    @ApiOperation("权限信息")
+    @Operation(summary = "权限信息")
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sys:permission:info')")
     public Result info(@PathVariable("id") String id) {
@@ -78,7 +78,7 @@ public class PermissionController {
     /**
      * 保存权限
      */
-    @ApiOperation("保存权限")
+    @Operation(summary = "保存权限")
     @SysLog("保存权限")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('sys:permission:save')")
@@ -91,7 +91,7 @@ public class PermissionController {
     /**
      * 修改权限
      */
-    @ApiOperation("修改权限")
+    @Operation(summary = "修改权限")
     @SysLog("修改权限")
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('sys:permission:update')")
@@ -104,7 +104,7 @@ public class PermissionController {
     /**
      * 删除权限
      */
-    @ApiOperation("删除权限")
+    @Operation(summary = "删除权限")
     @SysLog("删除权限")
     @PostMapping("/delete/{id}")
     @PreAuthorize("hasAuthority('sys:permission:delete')")
@@ -116,7 +116,7 @@ public class PermissionController {
     /**
      * 禁用权限
      */
-    @ApiOperation("禁用权限")
+    @Operation(summary = "禁用权限")
     @SysLog("禁用权限")
     @PostMapping("/disable/{id}")
     @PreAuthorize("hasAuthority('sys:permission:disable')")

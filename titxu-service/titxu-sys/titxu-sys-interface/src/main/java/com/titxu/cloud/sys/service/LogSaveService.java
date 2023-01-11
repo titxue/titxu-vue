@@ -8,9 +8,9 @@ import com.titxu.cloud.sys.dto.LogDTO;
 public interface LogSaveService {
 
     /**
-     * 保存
+     * 保存日志
      *
-     * @param logDTO
+     * @param logDTO 日志
      */
     void save(LogDTO logDTO);
 }

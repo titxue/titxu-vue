@@ -33,6 +33,12 @@
     </properties>
 
     <dependencies>
+        <!--配置文件处理器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <!--bootstrap 启动器-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -61,23 +67,6 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-
-        <!--        <dependency>-->
-        <!--            <groupId>com.github.link-kou</groupId>-->
-        <!--            <artifactId>mybatis-plugin</artifactId>-->
-        <!--            <version>1.0.2</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.slf4j</groupId>-->
-        <!--            <artifactId>slf4j-api</artifactId>-->
-        <!--            <version>1.7.33</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.slf4j</groupId>-->
-        <!--            <artifactId>slf4j-log4j12</artifactId>-->
-        <!--            <version>1.7.33</version>-->
-        <!--        </dependency>-->
-
 
         <dependency>
             <groupId>org.apache.commons</groupId>

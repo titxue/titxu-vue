@@ -4,6 +4,367 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="titxu cloud gateway" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="titxu cloud gateway" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+          <option name="code" value="401" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="index" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="网关测试" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+              <option name="method" value="index" />
+              <option name="methodDescription" value="网关测试" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="null" />
+              <option name="url" value="/" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:10000/&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
+          <option name="url" value="/" />
+        </ResponseHistory>
+        <ResponseHistory>
           <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="dev" />
@@ -158,366 +519,6 @@
           <option name="requestInfo" value="Request Url: http://localhost:10000/auth/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
           <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-20T11:50:23.738+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/login/password&quot;}" />
           <option name="url" value="/auth/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="dev" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/auth/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2022-12-20T11:31:13.022+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/login/password&quot;}" />
-          <option name="url" value="/auth/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="dev" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/auth/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0,&quot;data&quot;:{&quot;expiresIn&quot;:43199,&quot;additionalInformation&quot;:{&quot;tenantId&quot;:&quot;1&quot;,&quot;userName&quot;:&quot;18666666666&quot;,&quot;userId&quot;:&quot;1408403800345300994&quot;,&quot;jti&quot;:&quot;hzRLw8ANjYUQrj0RGIdP2GU6d8A&quot;},&quot;expired&quot;:false,&quot;scope&quot;:[&quot;all&quot;],&quot;expiration&quot;:&quot;2022-12-20 06:53:31.608&quot;,&quot;tokenType&quot;:&quot;bearer&quot;,&quot;value&quot;:&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzE0OTA0MTIsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoiaHpSTHc4QU5qWVVRcmowUkdJZFAyR1U2ZDhBIiwiY2xpZW50X2lkIjoiY2xpZW50In0.gEJJ0a952jQxGcD10HDgImLLbr7OtIW5N3ijXYAWihVoUVzmbeLCc-4fpdD-mVfnZRMd6OZwq4MmGVt_jFlUKIt7RaFVSEgbcirJSXm2DKCRJ3WVYn0HP_6Zz3td_rsQB1nSYID3ftXsxO1O9bjOrdVc3xUly1JREo6Ec2VOpqp1WQGxSxRmHLIEmoDek5KexQfTW2IdyRvej2BOTsUKQbmyzj6k4rk2UcuWicB22bK09HLsRTdQJpp3Xcu7xd__jE34Kh-ukP69lY6CPBqgLXctyTsUYmdvYnOUEg1SWhxgcAG6ssuaBPpF8qkEfSegD9-0tPvBa96lyOV5fAsYHg&quot;,&quot;refreshToken&quot;:&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJhdGkiOiJoelJMdzhBTmpZVVFyajBSR0lkUDJHVTZkOEEiLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzQwMzkyMTIsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoiNDQwZ3dKRG1wejBmd1d3Unl0MzJSLUJPaGl3IiwiY2xpZW50X2lkIjoiY2xpZW50In0.X5aSDAEc5q58pLnCXwYwPgJoYTG1wIojrPLmMRkpTWRdU4PglAETPTHpiX86IxvapPw4J9pl2wQn6y2svuwSyjtCRIYxQ2CwOtYBW-mE6JySK6c6ZED1lSnkwDyCKBbrqFMB0opQ9vpoMq3W8NRQ5rJC5hBSIgVePVOsGchG_ZABv5ZKm3o05dFnl_GbhkKeUwbeZI2qCabQ7oGOmM2qId5jHEyW8xcMjd-hMf9mg0-DtMDuVWLrMm4c9OFjqiORyuv_spPnJNU24q9jLVSIb9iXwDVahAAISFoiMe8mlVL08TpdSFUcUXtz0_X_SUclZ862Owd7jem286hkckwVUw&quot;}}" />
-          <option name="url" value="/auth/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="dev" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/auth/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/auth/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0,&quot;data&quot;:{&quot;expiresIn&quot;:43198,&quot;additionalInformation&quot;:{&quot;tenantId&quot;:&quot;1&quot;,&quot;userName&quot;:&quot;18666666666&quot;,&quot;userId&quot;:&quot;1408403800345300994&quot;,&quot;jti&quot;:&quot;EGUxb7DpHvHamipwaOZhTGrEgEE&quot;},&quot;expired&quot;:false,&quot;scope&quot;:[&quot;all&quot;],&quot;expiration&quot;:&quot;2022-12-20 06:53:23.263&quot;,&quot;tokenType&quot;:&quot;bearer&quot;,&quot;value&quot;:&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzE0OTA0MDQsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoiRUdVeGI3RHBIdkhhbWlwd2FPWmhUR3JFZ0VFIiwiY2xpZW50X2lkIjoiY2xpZW50In0.UNdpw4I_uq5sX1GKtur7Hsaf9KjAyUXNag8GVnxwfIzLRQ6XOH-ad_83TBaHqsR91CJrJiDO8oWBxwZEVjd914EWwEuv4rMBgnxBVeotYrfE-H7vcXETccXISr5lcKzSW_eag6rn-T7yBqmKCRoR4lZdQ648YGzazvThjkQtnsJ8xZAS2LNv9cdLLxZgmSZJyUprfADlF50IlTp7Wq-ZCbakBpLuVZJfFAcABhCXO3tcT9WnFK_1Ao3IQbQfxJgmyO_qZdTlmpMQZ-0-BePrYnDCLH3Oz8O1Fuvy957XjN1YMJeqrkBcyZXA5kz8M0uYI-xbRZVd3JohIyRs6_QqBw&quot;,&quot;refreshToken&quot;:&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJhdGkiOiJFR1V4YjdEcEh2SGFtaXB3YU9aaFRHckVnRUUiLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzQwMzkyMDQsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoiMGlJWkNGQUNrY2dVaW1FQmZoWXlZN0lHSDFBIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Oi_ZUeGzttoiLJbuoulQAkrjeEtYwBDD-vHqrSz6Q7I1xCpFiFJ-2MwsClgt6qMQbhzOsMx7TbGi-PRmUu1dC8RIncTS1wIHLAotXgvVfyvJ8X7DpQJSpUmtmx0l4mrIBXL6AkUUKUXdd0waL-U4TWzGILEetvAEvpeOlV9wFlxO8vBL6vUl1O4WsROv0a20mUdjlfBtS0tyOI2AnPVR8-0aDcThkiZsL1gVwrUB8xidvkCdcWXfq4Vmo8lAJaqOQ0qaCtP7gD8JT9xM_ipHU7T8KIk4YBsLiWAfwUC3PLSda-7gJFOrKVS5SmQHD8eRWerILdiiY39J_RS8gQF0nQ&quot;}}" />
-          <option name="url" value="/auth/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0,&quot;data&quot;:{&quot;expiresIn&quot;:43198,&quot;additionalInformation&quot;:{&quot;tenantId&quot;:&quot;1&quot;,&quot;userName&quot;:&quot;18666666666&quot;,&quot;userId&quot;:&quot;1408403800345300994&quot;,&quot;jti&quot;:&quot;rw2aco6JNQB4gAXX1vfsgkGuqMY&quot;},&quot;expired&quot;:false,&quot;scope&quot;:[&quot;all&quot;],&quot;expiration&quot;:&quot;2022-12-20 06:52:02.388&quot;,&quot;tokenType&quot;:&quot;bearer&quot;,&quot;value&quot;:&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzE0OTAzMjMsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoicncyYWNvNkpOUUI0Z0FYWDF2ZnNna0d1cU1ZIiwiY2xpZW50X2lkIjoiY2xpZW50In0.grfDXT11-cw1Jsk6s9OW4AWf0g8sjRnyWFEbjbX3WAkbxuu3i7gllZw0A4CbLm-HEmGBuiq917RMW5A7LGqq4kv2HOGsXluOR6CAS5ZtlUuDo72w-mlgbxQWmQpZZxjRryiIDze3wnNo3PvqROLtVhrN4XE-Kx25x_9ZnmNBbydH72WUF6ouWWpauzCX-pl00j5XgppaPMl8WXKBhLqX_ocOeJp7WCIujp_4mIpEDWo9gMBLzkwNKM9ncvDn95-dbdIDexzx9PDv044d2UGJwlGKeLD3w3wPygxZsSujGL8xE8eN5zT_Rcm-2IFAQBL6qw8jHGPsh-00CoY9uUPgnA&quot;,&quot;refreshToken&quot;:&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODY2NjY2NjY2NiIsInNjb3BlIjpbImFsbCJdLCJhdGkiOiJydzJhY282Sk5RQjRnQVhYMXZmc2drR3VxTVkiLCJ0ZW5hbnRJZCI6IjEiLCJleHAiOjE2NzQwMzkxMjMsInVzZXJOYW1lIjoiMTg2NjY2NjY2NjYiLCJ1c2VySWQiOiIxNDA4NDAzODAwMzQ1MzAwOTk0IiwianRpIjoick5jNTJMUGFPTlNpb0VEMk1JREl0Zm9BUzZnIiwiY2xpZW50X2lkIjoiY2xpZW50In0.fFu_kdSxn5lXD8xkMoC52T-lG3bKjnKQhBOmnNu7dw5g7sT_c87MpVK6DhDusNum_y1LO0wGJcSr1Cd23_O6Iq2NWiGNcNhquHUGvB8ibO9b3fJzQdjfpk5pYi2_3SkMFgQ9BLK3YfrWmTjlCh48Yj29q5MWnLkRvaZ72gxaSPb35kR3lHqtlWUaLsVEDY_Xm_a6rgEfJA_5Zje44DFef0EGDN0218oufppQUnrJbB9ChwkCdifkqzCL0YDMnOjzfMefwHIGWPyECaMTQCR-P8k0eDpoSxED6n-Nvt3KKNk9lmoPOiqA1GLEwTaohD3t6QEbPri_l9hgDflTFFfPLA&quot;}}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 55&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;mobile&quot;: &quot;18666666666&quot;,&#10;  &quot;password&quot;:&quot;123456&quot;&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;success&quot;,&quot;code&quot;:0}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;mobile&quot;: &quot;&quot;,&#10;  &quot;password:&quot;&quot;&quot;&#10;}" />
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 6&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &#10;}&#13;&#10;" />
-          <option name="response" value="Read timed out" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
-          <option name="url" value="/login/password" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="postAccessToken" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-              <option name="method" value="postAccessToken" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/oauth/token" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/login/password" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/login/password&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
-          <option name="url" value="/login/password" />
         </ResponseHistory>
       </list>
     </option>

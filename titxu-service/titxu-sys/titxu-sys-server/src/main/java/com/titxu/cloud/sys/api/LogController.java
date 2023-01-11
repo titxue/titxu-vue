@@ -1,35 +1,55 @@
 package com.titxu.cloud.sys.api;
 
-import com.titxu.cloud.sys.application.LogQueryService;
 import com.titxu.cloud.common.mybatis.constant.PageConstant;
 import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.common.web.util.Result;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import com.titxu.cloud.sys.application.LogQueryService;
+import com.titxu.cloud.sys.dto.LogDTO;
+import com.titxu.cloud.sys.service.LogSaveService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 /**
  * 系统日志Controller
  **/
-@Api(tags = "日志管理")
+@Tag(name = "日志管理")
 @RestController
 @RequestMapping("/log")
 public class LogController {
 
-    @Autowired
+
     private LogQueryService logQueryService;
+
+    private LogSaveService logSaveService;
+
+    @Autowired
+    public void setLogQueryService(LogQueryService logQueryService) {
+        this.logQueryService = logQueryService;
+    }
+
+    @Autowired
+    public void setLogSaveService(LogSaveService logSaveService) {
+        this.logSaveService = logSaveService;
+    }
+
+    /**
+     * 保存日志
+     */
+    @Operation(summary = "保存日志")
+    @PostMapping("/saveLog")
+    public void saveLog(@RequestBody LogDTO logDTO) {
+        logSaveService.save(logDTO);
+    }
 
     /**
      * 列表
      */
-    @ApiOperation("分页查询日志")
+    @Operation(summary = "分页查询日志")
     @GetMapping("/list")
     @PreAuthorize("hasAuthority('sys:log:list')")
     public Result list(@RequestParam Map<String, Object> params) {

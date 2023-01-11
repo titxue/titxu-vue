@@ -1,11 +1,12 @@
-package com.titxu.cloud.common.log;
+package com.titxu.cloud.common.log.aspect;
 
 import com.google.gson.Gson;
 import com.titxu.cloud.common.core.util.HttpContextUtils;
 import com.titxu.cloud.common.core.util.IPUtils;
 import com.titxu.cloud.common.core.util.WebUtils;
+import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.sys.dto.LogDTO;
-import com.titxu.cloud.sys.service.LogSaveService;
+import com.titxu.cloud.sys.feign.RemoteLogSaveService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -28,15 +29,16 @@ public class SysLogAspect {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    private LogSaveService logSaveService;
+
+    private RemoteLogSaveService remoteLogSaveService;
 
     @Resource
-    public void setLogSaveService(LogSaveService logSaveService) {
-        this.logSaveService = logSaveService;
+    public void setRemoteLogSaveService(RemoteLogSaveService remoteLogSaveService) {
+        this.remoteLogSaveService = remoteLogSaveService;
     }
 
 
-    @Pointcut("@annotation(com.titxu.cloud.common.log.SysLog)")
+    @Pointcut("@annotation(com.titxu.cloud.common.log.annotation.SysLog)")
     public void logPointCut() {
 
     }
@@ -89,6 +91,6 @@ public class SysLogAspect {
         //设置IP地址
         String ip = IPUtils.getIpAddr(request);
         logDTO.setIp(ip);
-        logSaveService.save(logDTO);
+        remoteLogSaveService.saveLog(logDTO);
     }
 }

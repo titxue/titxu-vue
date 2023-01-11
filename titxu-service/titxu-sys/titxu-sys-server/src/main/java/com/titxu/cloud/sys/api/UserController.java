@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.common.core.util.WebUtils;
-import com.titxu.cloud.common.log.SysLog;
+import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.mybatis.constant.PageConstant;
 import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.common.web.util.Result;
@@ -12,8 +12,8 @@ import com.titxu.cloud.sys.application.UserApplicationService;
 import com.titxu.cloud.sys.application.UserQueryService;
 import com.titxu.cloud.sys.application.command.PasswordCommand;
 import com.titxu.cloud.sys.application.command.UserCommand;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 用户Controller
  **/
-@Api(tags = "用户管理")
+@Tag(name = "用户管理")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -48,7 +48,7 @@ public class UserController {
     /**
      * 用户分页查询
      */
-    @ApiOperation("用户分页查询")
+    @Operation(summary = "用户分页查询")
     @GetMapping("/list")
     @PreAuthorize("hasAuthority('sys:user:list')")
     public Result list(@RequestParam Map<String, Object> params) {
@@ -59,7 +59,7 @@ public class UserController {
     /**
      * 获取登录的用户信息
      */
-    @ApiOperation("获取登录的用户信息")
+    @Operation(summary = "获取登录的用户信息")
     @GetMapping("/info")
     public Result info() {
         return Result.ok().put("user", userQueryService.find(WebUtils.getUserId()));
@@ -68,7 +68,7 @@ public class UserController {
     /**
      * 修改登录用户密码
      */
-    @ApiOperation("修改密码")
+    @Operation(summary = "修改密码")
     @SysLog("修改密码")
     @PostMapping("/password")
     public Result changePassword(@RequestBody PasswordCommand passwordCommand) {
@@ -81,7 +81,7 @@ public class UserController {
     /**
      * 用户信息
      */
-    @ApiOperation("用户信息")
+    @Operation(summary = "用户信息")
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sys:user:info')")
     public Result info(@PathVariable("id") String id) {
@@ -91,7 +91,7 @@ public class UserController {
     /**
      * 保存用户
      */
-    @ApiOperation("保存用户")
+    @Operation(summary = "保存用户")
     @SysLog("保存用户")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('sys:user:save')")
@@ -104,7 +104,7 @@ public class UserController {
     /**
      * 修改用户
      */
-    @ApiOperation("修改用户")
+    @Operation(summary = "修改用户")
     @SysLog("修改用户")
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('sys:user:update')")
@@ -117,7 +117,7 @@ public class UserController {
     /**
      * 删除用户
      */
-    @ApiOperation("删除用户")
+    @Operation(summary = "删除用户")
     @SysLog("删除用户")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('sys:user:delete')")
@@ -129,7 +129,7 @@ public class UserController {
     /**
      * 禁用用户
      */
-    @ApiOperation("禁用用户")
+    @Operation(summary = "禁用用户")
     @SysLog("禁用用户")
     @PostMapping("/disable/{id}")
     @PreAuthorize("hasAuthority('sys:user:disable')")

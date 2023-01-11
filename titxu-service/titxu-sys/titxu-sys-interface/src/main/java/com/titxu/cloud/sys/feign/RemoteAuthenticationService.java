@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient(contextId = "remoteAuthenticationService", value = "titxu-server-sys")
+@FeignClient(name = "titxu-server-sys")
 public interface RemoteAuthenticationService {
     /**
      * 验证验证码

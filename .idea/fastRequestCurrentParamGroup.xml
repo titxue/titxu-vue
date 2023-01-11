@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="fastRequestCurrentParamGroup">
-    <option name="className" value="com.titxu.cloud.ops.auth.controller.AuthController" />
-    <option name="method" value="postAccessToken" />
-    <option name="originUrl" value="/oauth/token" />
-    <option name="requestParamMap">
-      <map>
-        <entry key="uuid">
-          <value>
-            <Object />
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="className" value="com.titxu.cloud.ops.gateway.controller.IndexApi" />
+    <option name="method" value="index" />
+    <option name="methodDescription" value="网关测试" />
+    <option name="module" value="titxu-gateway-server" />
+    <option name="originUrl" value="/" />
+    <option name="returnDocument" value="null" />
     <option name="tempId" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
-    <option name="url" value="/captcha" />
+    <option name="url" value="/" />
   </component>
 </project>

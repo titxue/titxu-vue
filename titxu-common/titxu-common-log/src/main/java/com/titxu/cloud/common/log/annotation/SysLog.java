@@ -1,12 +1,9 @@
-package com.titxu.cloud.common.log;
+package com.titxu.cloud.common.log.annotation;
 
 import java.lang.annotation.*;
 
 /**
  * 系统日志注解
- *
-
-
  **/
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
