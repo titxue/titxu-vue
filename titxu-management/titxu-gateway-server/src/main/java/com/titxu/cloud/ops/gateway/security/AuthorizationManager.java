@@ -22,11 +22,10 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
     @Override
     public Mono<AuthorizationDecision> check(Mono<Authentication> mono, AuthorizationContext authorizationContext) {
         ServerHttpRequest request = authorizationContext.getExchange().getRequest();
-        String restPath = request.getMethodValue() + "_" + request.getURI().getPath();
+        String restPath = request.getMethod() + "_" + request.getURI().getPath();
         log.info("请求路径：{}", restPath);
-//        PathMatcher pathMatcher = new AntPathMatcher();
         // 对应跨域的预检请求直接放行
-        if (request.getMethod() == HttpMethod.OPTIONS) {
+        if (request.getMethod() == HttpMethod.OPTIONS || request.getPath().value().contains("/")) {
             return Mono.just(new AuthorizationDecision(true));
         }
         return mono.map(auth -> new AuthorizationDecision(auth.isAuthenticated())).defaultIfEmpty(new AuthorizationDecision(false));
