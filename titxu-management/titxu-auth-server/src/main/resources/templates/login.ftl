@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pig 微服务统一认证</title>
+    <title>微服务统一认证</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/signin.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 <div class="container form-margin-top">
     <form class="form-signin" action="/token/form" method="post">
         <h2 class="form-signin-heading" align="center">统一认证系统</h2>
-        <input type="hidden" name="client_id" class="form-control" value="pig" placeholder="所属客户端">
+        <input type="hidden" name="client_id" class="form-control" value="messaging-client" placeholder="所属客户端">
         <input type="hidden" name="grant_type" class="form-control" value="password" placeholder="所属客户端">
         <input type="text" name="username" class="form-control form-margin-top" placeholder="账号" required autofocus>
         <input type="password" name="password" class="form-control" placeholder="密码" required>
@@ -29,8 +29,7 @@
     </form>
 </div>
 <footer>
-    <p>support by: pig4cloud</p>
-    <p>email: <a href="mailto:pig4cloud@qq.com">pig4cloud@qq.com</a>.</p>
+    <p>test</p>
 </footer>
 </body>
 </html>

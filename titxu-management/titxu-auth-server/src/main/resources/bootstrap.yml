@@ -25,10 +25,14 @@ spring:
           prefer-ip: true
   freemarker:
     cache: false
-    settings:
-      template_update_delay: 0
-    template-loader-path: classpath:/templates/
+    charset: utf-8
+    expose-request-attributes: true
+    expose-session-attributes: true
     suffix: .ftl
+    template-loader-path: classpath:/templates/
+    resources:
+      static-locations: classpath:/static/
+
 springdoc:
   show-login-endpoint: false
 management:

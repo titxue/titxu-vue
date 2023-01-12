@@ -16,16 +16,16 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements IUserDetailsService {
 
 
-    private RemoteAuthenticationService remoteAuthentication;
+    private RemoteAuthenticationService remoteAuthenticationService;
 
     @Autowired
-    public void setAuthenticationClient(RemoteAuthenticationService remoteAuthentication) {
-        this.remoteAuthentication = remoteAuthentication;
+    public void setRemoteAuthenticationService(RemoteAuthenticationService remoteAuthenticationService) {
+        this.remoteAuthenticationService = remoteAuthenticationService;
     }
 
     @Override
     public User loadUserByUsername(String username) throws UsernameNotFoundException {
-        AuthenticationDTO authenticationDTO = remoteAuthentication.loginByUserName(username);
+        AuthenticationDTO authenticationDTO = remoteAuthenticationService.loginByUserName(username);
         if (authenticationDTO != null) {
             return new User(authenticationDTO);
         } else {

@@ -52,8 +52,6 @@ public class ResourceServerConfig {
 
     /**
      * 未授权
-     *
-     * @return
      */
     @Bean
     ServerAccessDeniedHandler accessDeniedHandler() {

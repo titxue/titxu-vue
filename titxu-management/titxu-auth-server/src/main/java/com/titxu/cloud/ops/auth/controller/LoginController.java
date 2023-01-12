@@ -50,9 +50,9 @@ public class LoginController {
      * @param error        表单登录失败处理回调的错误信息
      * @return ModelAndView 模型视图
      */
-    @GetMapping("/login")
+    @RequestMapping("/login")
     public ModelAndView require(ModelAndView modelAndView, @RequestParam(required = false) String error) {
-        modelAndView.setViewName("ftl/login");
+        modelAndView.setViewName("login");
         modelAndView.addObject("error", error);
         return modelAndView;
     }

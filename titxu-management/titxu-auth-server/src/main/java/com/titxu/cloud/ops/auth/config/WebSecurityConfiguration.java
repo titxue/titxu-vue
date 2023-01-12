@@ -26,7 +26,7 @@ public class WebSecurityConfiguration {
             "/v3/api-docs/swagger-config",
             "/webjars/**",
             "/doc.html",
-            "/actuator/**", "/css/**", "/error"
+            "/actuator/**", "/css/**", "/error", "/getPublicKey"
     };
 
     /**
