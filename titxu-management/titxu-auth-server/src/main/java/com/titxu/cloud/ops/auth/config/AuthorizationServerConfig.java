@@ -94,7 +94,7 @@ public class AuthorizationServerConfig {
                 new OAuth2ClientCredentialsAuthenticationConverter(),
                 // 默认授权码身份验证转换器 -> 用于授权码模式获取token
                 new OAuth2AuthorizationCodeAuthenticationConverter(),
-                // 授权请求(或同意) 授权码授权转换器 -> 用于授权码模式获取code
+                // 默认授权请求(或同意) 授权码授权转换器 -> 用于授权码模式获取code
                 new OAuth2AuthorizationCodeRequestAuthenticationConverter()));
     }
 
