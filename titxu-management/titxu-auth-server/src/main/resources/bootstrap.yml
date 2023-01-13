@@ -7,6 +7,9 @@ spring:
   application:
     name: titxu-server-auth
   cloud:
+    openfeign:
+      oauth2:
+        enabled: true
     nacos:
       config:
         server-addr: nas.titxu.com:8848
@@ -46,3 +49,16 @@ management:
     web:
       exposure:
         include: "*"
+
+# 设置openfeign的超时时间
+feign:
+  hystrix:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+        loggerLevel: full
+  httpclient:
+    enabled: true

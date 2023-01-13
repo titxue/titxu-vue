@@ -24,6 +24,8 @@ spring:
         instance:
           prefer-ip: true
 
+
+
 management:
   health:
     redis:

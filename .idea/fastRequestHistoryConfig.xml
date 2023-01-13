@@ -4,504 +4,534 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:51:18.057+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:21:43.099+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:17:22.039+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:14:22.689+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:17:20.260+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:06:51.930+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:17:16.557+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:04:10.724+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:16:07.118+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:33:34.912+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:15:56.079+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:32:37.247+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:15:55.489+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:32:30.981+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:15:54.792+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:29:10.594+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:15:53.228+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:28:25.171+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:12:37.161+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:27:26.173+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:12:29.205+00:00&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:null,&quot;requestId&quot;:&quot;22b2477b-34&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:27:02.328+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="auth" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="403" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:10:04.139+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/token/ftl/login&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:26:24.007+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:08:58.189+00:00&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:null,&quot;requestId&quot;:&quot;51c007fb-33&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1001,&quot;msg&quot;:&quot;访问被拒绝&quot;,&quot;data&quot;:null}&#13;&#10;" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="302" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:08:12.033+00:00&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:null,&quot;requestId&quot;:&quot;54d06e7a-32&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="302" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:08:01.273+00:00&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:null,&quot;requestId&quot;:&quot;3b016b7d-31&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="302" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:07:44.252+00:00&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:null,&quot;requestId&quot;:&quot;5486afd3-30&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="404" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="302" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="validateCaptcha" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="validateCaptcha" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/validateCaptcha" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="&quot;No comment,Type =Boolean&quot;" />
+              <option name="url" value="/auth/validateCaptcha" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;uuid&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;uuid_l40f7&quot;},{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;captchaCode&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;captchaCode_cs011&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="uuid=uuid_l40f7&#10;&amp;captchaCode=captchaCode_cs011" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T15:07:39.162+00:00&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:null,&quot;requestId&quot;:&quot;758ddb09-29&quot;}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/validateCaptcha" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="401" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="302" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_yir8r&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_yir8r" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="401" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;&#10;    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;&#10;    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;&#10;    &lt;title&gt;Please sign in&lt;/title&gt;&#10;    &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M&quot; crossorigin=&quot;anonymous&quot;&gt;&#10;    &lt;link href=&quot;https://getbootstrap.com/docs/4.0/examples/signin/signin.css&quot; rel=&quot;stylesheet&quot; crossorigin=&quot;anonymous&quot;/&gt;&#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;     &lt;div class=&quot;container&quot;&gt;&#10;      &lt;form class=&quot;form-signin&quot; method=&quot;post&quot; action=&quot;/login&quot;&gt;&#10;        &lt;h2 class=&quot;form-signin-heading&quot;&gt;Please sign in&lt;/h2&gt;&#10;        &lt;p&gt;&#10;          &lt;label for=&quot;username&quot; class=&quot;sr-only&quot;&gt;Username&lt;/label&gt;&#10;          &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; required autofocus&gt;&#10;        &lt;/p&gt;&#10;        &lt;p&gt;&#10;          &lt;label for=&quot;password&quot; class=&quot;sr-only&quot;&gt;Password&lt;/label&gt;&#10;          &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; required&gt;&#10;        &lt;/p&gt;&#10;&lt;input name=&quot;_csrf&quot; type=&quot;hidden&quot; value=&quot;4ZfUHktISGOfaI6LaqavdOzxQjlol2nsRPonvPtBi97js_sAhPTkfXNxLlayCry5WIubTNvHb1hQol7BdJ8U2c93veyHi5kz&quot; /&gt;&#10;        &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; type=&quot;submit&quot;&gt;Sign in&lt;/button&gt;&#10;      &lt;/form&gt;&#10;&lt;/div&gt;&#10;&lt;/body&gt;&lt;/html&gt;" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="401" />
-          <option name="enableEnv" value="dev" />
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="code" value="302" />
+          <option name="enableEnv" value="sys" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="loginByUserName" />
+          <option name="methodType" value="POST" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+              <option name="method" value="loginByUserName" />
               <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/auth/loginByUserName" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
+              <option name="url" value="/auth/loginByUserName" />
+              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_268nu&quot;}]" />
+              <option name="urlEncodedKeyValueListText" value="userName=userName_268nu" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:10000/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;认证失败&quot;,&quot;code&quot;:401}" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/auth/loginByUserName" />
         </ResponseHistory>
       </list>
     </option>

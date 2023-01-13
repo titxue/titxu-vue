@@ -4,6 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.SpringContextHolder;
 import com.titxu.cloud.common.core.util.TokenUtils;
+import com.titxu.cloud.common.security.annotation.Inner;
 import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.ops.auth.application.LoginService;
 import com.titxu.cloud.ops.auth.application.command.LoginPasswordCommand;
@@ -108,6 +109,7 @@ public class LoginController {
      *
      * @param token token
      */
+    @Inner
     @DeleteMapping("/{token}")
     public Result removeToken(@PathVariable("token") String token) {
         OAuth2Authorization authorization = authorizationService.findByToken(token, OAuth2TokenType.ACCESS_TOKEN);

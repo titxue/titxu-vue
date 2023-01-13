@@ -1,7 +1,7 @@
 package com.titxu.cloud.ops.auth.support.core;
 
 import com.titxu.cloud.common.core.constant.AuthConstants;
-import com.titxu.cloud.ops.auth.domain.User;
+import com.titxu.cloud.common.security.domain.User;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenClaimsContext;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenClaimsSet;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;

@@ -2,18 +2,23 @@ package com.titxu.cloud.ops.auth.config;
 
 import com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider;
 import com.titxu.cloud.ops.auth.support.core.FormIdentityLoginConfigurer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.util.matcher.RequestMatcher;
+
+import static com.titxu.cloud.common.security.service.CsrfRequestMatcherImpl.CSRF_REQUEST_MATCHER_BEAN_NAME;
 
 /**
  * 安全配置
  **/
 @EnableWebSecurity
 public class WebSecurityConfiguration {
-
     /**
      * 放行Swagger
      */
@@ -26,34 +31,75 @@ public class WebSecurityConfiguration {
             "/v3/api-docs/swagger-config",
             "/webjars/**",
             "/doc.html",
-            "/actuator/**", "/css/**", "/error", "/getPublicKey"
+            "/css/**",
+            "/error",
+            "/favicon.ico",
     };
+    private AccessDeniedHandler accessDeniedHandler;
+    private RequestMatcher requestMatcher;
+
+    @Autowired
+    public void setAccessDeniedHandler(AccessDeniedHandler accessDeniedHandler) {
+        this.accessDeniedHandler = accessDeniedHandler;
+    }
+
+    @Autowired
+    @Qualifier(CSRF_REQUEST_MATCHER_BEAN_NAME)
+    public void setRequestMatcher(RequestMatcher requestMatcher) {
+        this.requestMatcher = requestMatcher;
+    }
 
     /**
      * spring security 默认的安全策略
      *
      * @param http security注入点
      * @return SecurityFilterChain
-     * @throws Exception
+     * @throws Exception 异常
      */
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(authorizeRequests -> authorizeRequests.requestMatchers("/token/*").permitAll()// 开放自定义的部分端点
-                        .anyRequest().authenticated()).headers().frameOptions().sameOrigin()// 避免iframe同源无法登录
-                .and().apply(new FormIdentityLoginConfigurer()); // 表单登录个性化
+
+        // 异常处理
+        http.exceptionHandling(exceptionHandlingCustomizer -> {
+            exceptionHandlingCustomizer
+                    // 访问被拒绝处理程序
+                    .accessDeniedHandler(accessDeniedHandler);
+        });
+
+        http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
+
+                        .requestMatchers("/token/*").permitAll()
+                        // 放行端点
+                        .requestMatchers("/actuator/**").permitAll()
+                        // 放行获取PublicKey请求
+                        .requestMatchers("/getPublicKey").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
+
+                        // 其他请求需要认证
+                        .anyRequest().authenticated())
+                .headers()
+                // 避免iframe同源无法登录
+                .frameOptions().sameOrigin()
+                // 表单登录个性化
+                .and().apply(new FormIdentityLoginConfigurer());
+
         // 处理 UsernamePasswordAuthenticationToken
         http.authenticationProvider(new DaoAuthenticationProvider());
+
+        // CSRF 配置
+        http.csrf().requireCsrfProtectionMatcher(requestMatcher);
+
         return http.build();
     }
 
     /**
      * 暴露静态资源
      * <p>
-     * https://github.com/spring-projects/spring-security/issues/10938
+     * <a href="https://github.com/spring-projects/spring-security/issues/10938">...</a>
      *
-     * @param http
-     * @return
-     * @throws Exception
+     * @param http security注入点
+     * @return SecurityFilterChain
+     * @throws Exception 异常
      */
     @Bean
     @Order(0)
@@ -61,53 +107,10 @@ public class WebSecurityConfiguration {
         // 放行SWAGGER_WHITELIST 配置的资源 不需要认证
         http.securityMatchers((matchers) -> matchers.requestMatchers(URL_WHITELIST))
                 .authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll()).requestCache().disable()
-                .securityContext().disable()
-                .cors().disable();
+                .securityContext().disable().sessionManagement().disable();
         return http.build();
     }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                .authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
-//                .and()
-//                .authorizeRequests().antMatchers("/getPublicKey", "/oauth/logout", "/account/**").permitAll()
-//                .antMatchers("/oauth/**", "/webjars/**", "/doc.html", "/swagger-resources/**", "/v2/api-docs").permitAll()
-//                .antMatchers("/error").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .csrf().disable();
-//    }
-//
-//    @Bean
-//    @Override
-//    public AuthenticationManager authenticationManagerBean() throws Exception {
-//        return super.authenticationManagerBean();
-//    }
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder());
-//    }
-
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-//    }
-
-    /**
-     * 自定义认证异常响应数据
-     */
-//    @Bean
-//    public AuthenticationEntryPoint authenticationEntryPoint() {
-//        return (request, response, e) -> {
-//            response.setStatus(HttpStatus.OK.value());
-//            response.setHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
-//            response.setHeader("Access-Control-Allow-Origin", "*");
-//            response.setHeader("Cache-Control", "no-cache");
-//            response.getWriter().print(new Gson().toJson(Result.error(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMsg())));
-//            response.getWriter().flush();
-//        };
-//    }
 }
 

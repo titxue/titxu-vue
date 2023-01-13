@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
  **/
 @EnableDiscoveryClient
 @SpringBootApplication
-@EnableFeignClients(basePackages = "com.titxu.cloud.sys.feign")
+@EnableFeignClients(basePackages = {"com.titxu.cloud.sys.api.feign"})
 public class CloudAuthApplication {
     public static void main(String[] args) {
         SpringApplication.run(CloudAuthApplication.class);

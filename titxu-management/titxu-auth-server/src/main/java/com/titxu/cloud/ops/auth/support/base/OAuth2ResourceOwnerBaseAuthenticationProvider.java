@@ -122,6 +122,7 @@ public abstract class OAuth2ResourceOwnerBaseAuthenticationProvider<T extends OA
         // Default to configured scopes
         if (!CollectionUtils.isEmpty(resouceOwnerBaseAuthentication.getScopes())) {
             for (String requestedScope : resouceOwnerBaseAuthentication.getScopes()) {
+                assert registeredClient != null;
                 if (!registeredClient.getScopes().contains(requestedScope)) {
                     throw new OAuth2AuthenticationException(OAuth2ErrorCodes.INVALID_SCOPE);
                 }
@@ -147,13 +148,14 @@ public abstract class OAuth2ResourceOwnerBaseAuthenticationProvider<T extends OA
                     .principal(usernamePasswordAuthentication)
                     .authorizationServerContext(AuthorizationServerContextHolder.getContext())
                     .authorizedScopes(authorizedScopes)
-                    .authorizationGrantType(AuthorizationGrantType.PASSWORD)
+                    .authorizationGrantType(CustomeAuthorizationGrantType.PASSWORD)
                     .authorizationGrant(resouceOwnerBaseAuthentication);
             // @formatter:on
 
+            assert registeredClient != null;
             OAuth2Authorization.Builder authorizationBuilder = OAuth2Authorization
                     .withRegisteredClient(registeredClient).principalName(usernamePasswordAuthentication.getName())
-                    .authorizationGrantType(AuthorizationGrantType.PASSWORD)
+                    .authorizationGrantType(CustomeAuthorizationGrantType.PASSWORD)
                     // 0.4.0 新增的方法
                     .authorizedScopes(authorizedScopes);
 

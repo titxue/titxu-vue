@@ -21,14 +21,17 @@ import com.titxu.cloud.common.core.util.IPUtils;
 import com.titxu.cloud.sys.dto.LogDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.experimental.UtilityClass;
+import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.Expression;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import java.lang.reflect.Method;
 import java.util.Objects;
 
 /**
@@ -77,4 +80,22 @@ public class SysLogUtils {
         return expression.getValue(context, clazz);
     }
 
+    /**
+     * 获取参数容器
+     *
+     * @param arguments       方法的参数列表
+     * @param signatureMethod 被执行的方法体
+     * @return 装载参数的容器
+     */
+    public EvaluationContext getContext(Object[] arguments, Method signatureMethod) {
+        String[] parameterNames = new LocalVariableTableParameterNameDiscoverer().getParameterNames(signatureMethod);
+        EvaluationContext context = new StandardEvaluationContext();
+        if (parameterNames == null) {
+            return context;
+        }
+        for (int i = 0; i < arguments.length; i++) {
+            context.setVariable(parameterNames[i], arguments[i]);
+        }
+        return context;
+    }
 }

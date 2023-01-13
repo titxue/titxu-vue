@@ -1,1 +1,2 @@
 com.titxu.cloud.common.log.aspect.SysLogAspect
+com.titxu.cloud.common.log.LogAutoConfiguration

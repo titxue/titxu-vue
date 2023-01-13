@@ -1,5 +1,7 @@
 package com.titxu.cloud.sys.application.impl;
 
+import com.titxu.cloud.common.core.util.TenantContext;
+import com.titxu.cloud.sys.application.UserApplicationService;
 import com.titxu.cloud.sys.application.assembler.UserDTOAssembler;
 import com.titxu.cloud.sys.application.command.PasswordCommand;
 import com.titxu.cloud.sys.application.command.UserCommand;
@@ -7,8 +9,6 @@ import com.titxu.cloud.sys.domain.model.role.RoleId;
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
 import com.titxu.cloud.sys.domain.model.tenant.TenantRepository;
 import com.titxu.cloud.sys.domain.model.user.*;
-import com.titxu.cloud.common.core.util.TenantContext;
-import com.titxu.cloud.sys.application.UserApplicationService;
 import com.titxu.cloud.sys.domain.specification.UserUpdateSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,9 +19,6 @@ import java.util.List;
 
 /**
  * 用户应用服务实现类
- *
-
- 
  **/
 @Service
 public class UserApplicationServiceImpl implements UserApplicationService {

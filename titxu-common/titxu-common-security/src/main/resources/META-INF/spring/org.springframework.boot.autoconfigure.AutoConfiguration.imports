@@ -1,0 +1,6 @@
+com.titxu.cloud.common.security.annotation.SecurityInnerAspect
+com.titxu.cloud.common.security.config.SecurityMessageSourceConfiguration
+com.titxu.cloud.common.security.service.UserDetailsServiceImpl
+com.titxu.cloud.common.security.service.CsrfRequestMatcherImpl
+com.titxu.cloud.common.security.handler.AccessDeniedHandlerImpl
+com.titxu.cloud.common.security.feign.FeignClientConfiguration

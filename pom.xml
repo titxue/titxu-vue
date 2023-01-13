@@ -29,6 +29,8 @@
         <spring-cloud.version>2022.0.0</spring-cloud.version>
         <!-- 阿里微服务框架版本号 -->
         <com-alibaba-cloud.version>2022.0.0.0-RC1</com-alibaba-cloud.version>
+        <!-- oauth2.1 版本号 -->
+        <spring-security-oauth2-authorization-server.version>1.0.0</spring-security-oauth2-authorization-server.version>
         <slf4j.version>2.0.5</slf4j.version>
     </properties>
 
@@ -113,8 +115,13 @@
             </dependency>
             <dependency>
                 <groupId>com.titxu.cloud</groupId>
-                <artifactId>titxu-sys-interface</artifactId>
+                <artifactId>titxu-sys-api</artifactId>
                 <version>${titxu.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-oauth2-authorization-server</artifactId>
+                <version>${spring-security-oauth2-authorization-server.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

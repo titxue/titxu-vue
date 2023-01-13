@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="fastRequestCurrentParamGroup">
-    <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-    <option name="method" value="loadPublicKey" />
-    <option name="module" value="titxu-auth-server" />
-    <option name="originUrl" value="/getPublicKey" />
-    <option name="returnDocument" value="null" />
+    <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+    <option name="method" value="loginByUserName" />
+    <option name="methodType" value="POST" />
+    <option name="module" value="titxu-sys-server" />
+    <option name="originUrl" value="/auth/loginByUserName" />
+    <option name="requestParamMap">
+      <map>
+        <entry key="userName">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
     <option name="tempId" value="id_com.titxu.cloud.ops.auth.controller.AuthController.postAccessToken" />
-    <option name="url" value="/getPublicKey" />
+    <option name="url" value="/auth/loginByUserName" />
   </component>
 </project>

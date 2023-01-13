@@ -1,12 +1,12 @@
 package com.titxu.cloud.ops.auth.support.password;
 
 
+import com.titxu.cloud.ops.auth.support.base.CustomeAuthorizationGrantType;
 import com.titxu.cloud.ops.auth.support.base.OAuth2ResourceOwnerBaseAuthenticationProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.OAuth2ErrorCodes;
 import org.springframework.security.oauth2.core.OAuth2Token;
@@ -25,11 +25,12 @@ public class OAuth2ResourceOwnerPasswordAuthenticationProvider
 
     private static final Logger LOGGER = LogManager.getLogger(OAuth2ResourceOwnerPasswordAuthenticationProvider.class);
 
+
     /**
      * Constructs an {@code OAuth2AuthorizationCodeAuthenticationProvider} using the
      * provided parameters.
      *
-     * @param authenticationManager
+     * @param authenticationManager the authentication manager
      * @param authorizationService  the authorization service
      * @param tokenGenerator        the token generator
      * @since 0.2.3
@@ -57,7 +58,7 @@ public class OAuth2ResourceOwnerPasswordAuthenticationProvider
     @Override
     public void checkClient(RegisteredClient registeredClient) {
         assert registeredClient != null;
-        if (!registeredClient.getAuthorizationGrantTypes().contains(AuthorizationGrantType.PASSWORD)) {
+        if (!registeredClient.getAuthorizationGrantTypes().contains(CustomeAuthorizationGrantType.PASSWORD)) {
             throw new OAuth2AuthenticationException(OAuth2ErrorCodes.UNAUTHORIZED_CLIENT);
         }
     }

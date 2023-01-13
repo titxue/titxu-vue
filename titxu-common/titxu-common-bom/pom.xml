@@ -71,6 +71,11 @@
                 <artifactId>titxu-common-tenant</artifactId>
                 <version>${titxu.common.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-common-security</artifactId>
+                <version>${titxu.common.version}</version>
+            </dependency>
             <!--orm 相关-->
             <dependency>
                 <groupId>com.baomidou</groupId>

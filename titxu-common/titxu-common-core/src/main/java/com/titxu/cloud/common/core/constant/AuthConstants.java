@@ -4,7 +4,20 @@ package com.titxu.cloud.common.core.constant;
  * 认证常量类
  **/
 public interface AuthConstants {
+    /**
+     * 内部
+     */
+    String FROM_IN = "Y";
 
+    /**
+     * 标志
+     */
+    String FROM = "from";
+
+    /**
+     * 请求header
+     */
+    String HEADER_FROM_IN = FROM + "=" + FROM_IN;
 
     /**
      * 认证请求头key

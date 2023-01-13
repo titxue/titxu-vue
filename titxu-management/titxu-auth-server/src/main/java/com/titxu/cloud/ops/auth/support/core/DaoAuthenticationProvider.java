@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.extra.spring.SpringUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.WebUtils;
-import com.titxu.cloud.ops.auth.service.IUserDetailsService;
+import com.titxu.cloud.common.security.service.IUserDetailsService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;
 import org.springframework.core.Ordered;
@@ -105,7 +105,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
                 .filter(service -> service.support(finalClientId, grantType))
                 .max(Comparator.comparingInt(Ordered::getOrder));
 
-        if (!optional.isPresent()) {
+        if (optional.isEmpty()) {
             throw new InternalAuthenticationServiceException("UserDetailsService error , not register");
         }
 

@@ -12,10 +12,9 @@
     <artifactId>titxu-auth-server</artifactId>
 
     <dependencies>
-        <!-- web环境 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.titxu.cloud</groupId>
+            <artifactId>titxu-common-security</artifactId>
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
@@ -43,7 +42,7 @@
         </dependency>
         <dependency>
             <groupId>com.titxu.cloud</groupId>
-            <artifactId>titxu-sys-interface</artifactId>
+            <artifactId>titxu-sys-api</artifactId>
         </dependency>
         <!--注册中心客户端-->
         <dependency>
@@ -66,26 +65,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
-
-        <!-- OAuth2 认证服务器-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.security.oauth.boot</groupId>-->
-        <!--            <artifactId>spring-security-oauth2-autoconfigure</artifactId>-->
-        <!--        </dependency>-->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-jose</artifactId>
-        </dependency>
-        <!-- OAuth 2.1 依赖 -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-authorization-server -->
-        <!-- https://oss.sonatype.org/content/repositories/public/org/springframework/security/spring-security-oauth2-authorization-server -->
-        <!-- https://repo.spring.io/ui/native/milestone/org/springframework/security/spring-security-oauth2-authorization-server -->
-        <!-- https://github.com/spring-projects/spring-authorization-server -->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-authorization-server</artifactId>
-            <version>1.0.0</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -104,9 +83,18 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <!-- OAuth 2.1 依赖 -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-authorization-server -->
+        <!-- https://oss.sonatype.org/content/repositories/public/org/springframework/security/spring-security-oauth2-authorization-server -->
+        <!-- https://repo.spring.io/ui/native/milestone/org/springframework/security/spring-security-oauth2-authorization-server -->
+        <!-- https://github.com/spring-projects/spring-authorization-server -->
         <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-extra</artifactId>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-authorization-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-client</artifactId>
         </dependency>
     </dependencies>
 

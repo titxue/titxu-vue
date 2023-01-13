@@ -13,12 +13,17 @@ public final class FormIdentityLoginConfigurer
     @Override
     public void init(HttpSecurity http) throws Exception {
         http.formLogin(formLogin -> {
-                    formLogin.loginPage("/token/login");
-                    formLogin.loginProcessingUrl("/token/form");
-                    formLogin.failureHandler(new FormAuthenticationFailureHandler());
+                    formLogin
+                            // 登录页面地址
+                            .loginPage("/token/login")
+                            // 登录请求地址
+                            .loginProcessingUrl("/token/form")
+                            // 身份验证失败处理程序
+                            .failureHandler(new FormAuthenticationFailureHandler());
 
-                }).logout() // SSO登出成功处理
-                .invalidateHttpSession(true).and().csrf().disable();
+                })
+                // 登出成功处理
+                .logout().and().csrf().disable();
     }
 
 }

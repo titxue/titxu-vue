@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="fastRequestCurrentProjectConfig">
-    <option name="domain" value="localhost:8000" />
-    <option name="enableEnv" value="auth" />
+    <option name="cookieList">
+      <list>
+        <DataMapping>
+          <option name="type" value="localhost:8001" />
+          <option name="value" value="JSESSIONID=YczR581u34y1yExDIhJEIFbEN-1ivEF_KB2hM3WZ; path" />
+        </DataMapping>
+      </list>
+    </option>
+    <option name="domain" value="localhost:8001" />
+    <option name="enableEnv" value="sys" />
     <option name="enableProject" value="admin" />
   </component>
 </project>

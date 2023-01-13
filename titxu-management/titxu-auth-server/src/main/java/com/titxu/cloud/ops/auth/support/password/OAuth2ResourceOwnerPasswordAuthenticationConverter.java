@@ -1,10 +1,10 @@
 package com.titxu.cloud.ops.auth.support.password;
 
+import com.titxu.cloud.ops.auth.support.base.CustomeAuthorizationGrantType;
 import com.titxu.cloud.ops.auth.support.base.OAuth2ResourceOwnerBaseAuthenticationConverter;
 import com.titxu.cloud.ops.auth.util.OAuth2EndpointUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.OAuth2ErrorCodes;
 import org.springframework.security.oauth2.core.endpoint.OAuth2ParameterNames;
 import org.springframework.util.MultiValueMap;
@@ -26,13 +26,13 @@ public class OAuth2ResourceOwnerPasswordAuthenticationConverter
      */
     @Override
     public boolean support(String grantType) {
-        return AuthorizationGrantType.PASSWORD.getValue().equals(grantType);
+        return CustomeAuthorizationGrantType.PASSWORD.getValue().equals(grantType);
     }
 
     @Override
     public OAuth2ResourceOwnerPasswordAuthenticationToken buildToken(Authentication clientPrincipal,
                                                                      Set requestedScopes, Map additionalParameters) {
-        return new OAuth2ResourceOwnerPasswordAuthenticationToken(AuthorizationGrantType.PASSWORD, clientPrincipal,
+        return new OAuth2ResourceOwnerPasswordAuthenticationToken(CustomeAuthorizationGrantType.PASSWORD, clientPrincipal,
                 requestedScopes, additionalParameters);
     }
 

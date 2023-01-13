@@ -20,6 +20,8 @@
             <groupId>com.titxu.cloud</groupId>
             <artifactId>titxu-common-core</artifactId>
         </dependency>
+
+
     </dependencies>
 
 

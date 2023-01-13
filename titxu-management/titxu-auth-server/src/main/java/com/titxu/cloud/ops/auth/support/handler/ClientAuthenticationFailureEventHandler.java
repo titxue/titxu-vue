@@ -40,8 +40,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import java.io.IOException;
 
 /**
- * @author lengleng
- * @date 2022-06-02
+ * 客户端登陆失败处理器
  */
 @Slf4j
 public class ClientAuthenticationFailureEventHandler implements AuthenticationFailureHandler {

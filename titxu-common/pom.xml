@@ -23,6 +23,7 @@
         <module>titxu-common-log</module>
         <module>titxu-common-swagger</module>
         <module>titxu-common-tenant</module>
+        <module>titxu-common-security</module>
     </modules>
 
 

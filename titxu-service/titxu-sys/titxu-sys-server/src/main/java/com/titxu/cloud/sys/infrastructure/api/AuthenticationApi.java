@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.infrastructure.api;
 
+import com.titxu.cloud.common.security.annotation.Inner;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,14 @@ public class AuthenticationApi {
         this.authenticationService = authenticationService;
     }
 
-    @PostMapping("validateCaptcha")
+    @PostMapping("/auth/validateCaptcha")
     public boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode) {
         return authenticationService.validateCaptcha(uuid, captchaCode);
     }
 
 
-    @PostMapping("loginByUserName")
+    @Inner(false)
+    @PostMapping("/auth/loginByUserName")
     public AuthenticationDTO loginByUserName(@RequestParam("userName") String userName) {
         return authenticationService.loginByUserName(userName);
     }

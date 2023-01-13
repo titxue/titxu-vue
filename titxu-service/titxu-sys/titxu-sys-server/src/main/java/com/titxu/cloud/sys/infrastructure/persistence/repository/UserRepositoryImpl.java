@@ -2,9 +2,9 @@ package com.titxu.cloud.sys.infrastructure.persistence.repository;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.common.core.util.TenantContext;
 import com.titxu.cloud.sys.domain.model.role.RoleId;
+import com.titxu.cloud.sys.domain.model.user.*;
 import com.titxu.cloud.sys.infrastructure.persistence.converter.UserConverter;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysAccountDO;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysRoleDO;
@@ -28,15 +28,30 @@ import java.util.Map;
 @Repository
 public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> implements UserRepository, IService<SysUserDO> {
 
-    @Autowired
+
     private SysUserRoleMapper sysUserRoleMapper;
 
-    @Autowired
+
     private SysRoleMapper sysRoleMapper;
 
-    @Autowired
+
     private SysAccountMapper sysAccountMapper;
 
+
+    @Autowired
+    public void setSysUserRoleMapper(SysUserRoleMapper sysUserRoleMapper) {
+        this.sysUserRoleMapper = sysUserRoleMapper;
+    }
+
+    @Autowired
+    public void setSysRoleMapper(SysRoleMapper sysRoleMapper) {
+        this.sysRoleMapper = sysRoleMapper;
+    }
+
+    @Autowired
+    public void setSysAccountMapper(SysAccountMapper sysAccountMapper) {
+        this.sysAccountMapper = sysAccountMapper;
+    }
 
     @Override
     public User find(UserId userId) {
@@ -111,16 +126,16 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
         User dataBaseUser = this.find(user.getUserId());
         Account dataBaseAccount = dataBaseUser.getAccount();
 
-        if (user.getStatus()!=null){
+        if (user.getStatus() != null) {
             dataBaseUser.setStatus(user.getStatus());
         }
-        if (user.getRoleIds()!=null){
+        if (user.getRoleIds() != null) {
             dataBaseUser.setRoleIds(user.getRoleIds());
         }
-        if (account.getEmail()!=null){
+        if (account.getEmail() != null) {
             dataBaseAccount.setEmail(account.getEmail());
         }
-        if (account.getMobile()!=null){
+        if (account.getMobile() != null) {
             dataBaseAccount.setMobile(account.getMobile());
         }
         return dataBaseUser;
@@ -136,6 +151,7 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
 
     /**
      * 添加账号
+     *
      * @param accountId 账号id
      */
     private Account getUserAccount(String accountId) {
@@ -148,6 +164,7 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
 
     /**
      * 获取管理角色Id
+     *
      * @param userId 用户id
      */
     private List<RoleId> getUserRoleIds(String userId) {

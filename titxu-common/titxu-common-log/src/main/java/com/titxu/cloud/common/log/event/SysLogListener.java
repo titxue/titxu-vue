@@ -16,9 +16,8 @@
 
 package com.titxu.cloud.common.log.event;
 
+import com.titxu.cloud.sys.api.feign.RemoteLogSaveService;
 import com.titxu.cloud.sys.dto.LogDTO;
-import com.titxu.cloud.sys.feign.RemoteLogSaveService;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
@@ -32,12 +31,8 @@ import org.springframework.scheduling.annotation.Async;
 @RequiredArgsConstructor
 public class SysLogListener {
 
-    private RemoteLogSaveService remoteLogSaveService;
+    private final RemoteLogSaveService remoteLogSaveService;
 
-    @Resource
-    public void setLogSaveService(RemoteLogSaveService remoteLogSaveService) {
-        this.remoteLogSaveService = remoteLogSaveService;
-    }
 
     @Async
     @Order
