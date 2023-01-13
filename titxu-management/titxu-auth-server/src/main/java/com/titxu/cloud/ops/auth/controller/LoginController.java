@@ -12,11 +12,11 @@ import com.titxu.cloud.ops.auth.application.command.RefreshCommand;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.event.LogoutSuccessEvent;
 import org.springframework.security.oauth2.core.OAuth2AccessToken;
+import org.springframework.security.oauth2.core.endpoint.OAuth2ParameterNames;
 import org.springframework.security.oauth2.server.authorization.OAuth2Authorization;
 import org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationService;
 import org.springframework.security.oauth2.server.authorization.OAuth2TokenType;
@@ -24,7 +24,9 @@ import org.springframework.security.web.authentication.preauth.PreAuthenticatedA
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.security.Principal;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * 认证
@@ -37,12 +39,7 @@ public class LoginController {
 
     private final OAuth2AuthorizationService authorizationService;
     private final CacheManager cacheManager;
-    private LoginService loginService;
-
-    @Autowired
-    public void setLoginService(LoginService loginService) {
-        this.loginService = loginService;
-    }
+    private final LoginService loginService;
 
     /**
      * 认证页面
@@ -53,11 +50,26 @@ public class LoginController {
      */
     @RequestMapping("/login")
     public ModelAndView require(ModelAndView modelAndView, @RequestParam(required = false) String error) {
-        modelAndView.setViewName("login");
+        modelAndView.setViewName("ftl/login");
         modelAndView.addObject("error", error);
         return modelAndView;
     }
 
+    @GetMapping("/confirm_access")
+    public ModelAndView confirm(Principal principal, ModelAndView modelAndView,
+                                @RequestParam(OAuth2ParameterNames.CLIENT_ID) String clientId,
+                                @RequestParam(OAuth2ParameterNames.SCOPE) String scope,
+                                @RequestParam(OAuth2ParameterNames.STATE) String state) {
+
+
+        Set<String> authorizedScopes = Set.of(scope.split(" "));
+        modelAndView.addObject("clientId", clientId);
+        modelAndView.addObject("state", state);
+        modelAndView.addObject("scopeList", authorizedScopes);
+        modelAndView.addObject("principalName", principal.getName());
+        modelAndView.setViewName("ftl/confirm");
+        return modelAndView;
+    }
 
     /**
      * 退出并删除token

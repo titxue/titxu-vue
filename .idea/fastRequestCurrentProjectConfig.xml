@@ -9,8 +9,8 @@
         </DataMapping>
       </list>
     </option>
-    <option name="domain" value="localhost:8001" />
-    <option name="enableEnv" value="sys" />
+    <option name="domain" value="localhost:8000" />
+    <option name="enableEnv" value="auth" />
     <option name="enableProject" value="admin" />
   </component>
 </project>

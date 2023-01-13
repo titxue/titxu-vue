@@ -67,6 +67,7 @@ public class WebSecurityConfiguration {
         });
 
         http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
+                        .requestMatchers("/oauth2/**").permitAll()
 
                         .requestMatchers("/token/*").permitAll()
                         // 放行端点

@@ -34,7 +34,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
 
     /**
      * The plaintext password used to perform PasswordEncoder#matches(CharSequence,
-     * String)} on when the user is not found to avoid SEC-2056.
+     * String) on when the user is not found to avoid SEC-2056.
      */
     private static final String USER_NOT_FOUND_PASSWORD = "userNotFoundPassword";
 
@@ -65,7 +65,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
                                                   UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
 
         // mobile 模式不用校验密码
-        String grantType = WebUtils.getRequest().get().getParameter(OAuth2ParameterNames.GRANT_TYPE);
+        String grantType = WebUtils.getRequest().map(r -> r.getParameter(OAuth2ParameterNames.GRANT_TYPE)).orElse(null);
         if (StrUtil.equals(AuthConstants.MOBILE, grantType)) {
             return;
         }
