@@ -5,9 +5,9 @@ import com.titxu.cloud.ops.auth.support.core.FormIdentityLoginConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.util.matcher.RequestMatcher;
@@ -31,7 +31,8 @@ public class WebSecurityConfiguration {
             "/v3/api-docs/swagger-config",
             "/webjars/**",
             "/doc.html",
-            "/css/**",
+            "/*/*.css",
+            "/*/*.js",
             "/error",
             "/favicon.ico",
     };
@@ -50,6 +51,18 @@ public class WebSecurityConfiguration {
     }
 
     /**
+     * 暴露静态资源
+     *
+     * @return WebSecurityCustomizer
+     */
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        return (web) -> {
+            web.ignoring().requestMatchers(URL_WHITELIST);
+        };
+    }
+
+    /**
      * spring security 默认的安全策略
      *
      * @param http security注入点
@@ -63,7 +76,13 @@ public class WebSecurityConfiguration {
         http.exceptionHandling(exceptionHandlingCustomizer -> {
             exceptionHandlingCustomizer
                     // 访问被拒绝处理程序
-                    .accessDeniedHandler(accessDeniedHandler);
+                    .accessDeniedHandler(accessDeniedHandler)
+                    // 身份验证入口点
+                    .authenticationEntryPoint((request, response, authException) -> {
+                        response.setStatus(401);
+                        response.setContentType("application/json;charset=utf-8");
+                        response.getWriter().write("未登录或登录已过期");
+                    });
         });
 
         http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
@@ -102,15 +121,15 @@ public class WebSecurityConfiguration {
      * @return SecurityFilterChain
      * @throws Exception 异常
      */
-    @Bean
-    @Order(0)
-    SecurityFilterChain resources(HttpSecurity http) throws Exception {
-        // 放行SWAGGER_WHITELIST 配置的资源 不需要认证
-        http.securityMatchers((matchers) -> matchers.requestMatchers(URL_WHITELIST))
-                .authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll()).requestCache().disable()
-                .securityContext().disable().sessionManagement().disable();
-        return http.build();
-    }
+//    @Bean
+//    @Order(0)
+//    SecurityFilterChain resources(HttpSecurity http) throws Exception {
+//        // 放行SWAGGER_WHITELIST 配置的资源 不需要认证
+//        http.securityMatchers((matchers) -> matchers.requestMatchers(URL_WHITELIST))
+//                .authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll()).requestCache().disable()
+//                .securityContext().disable().sessionManagement().disable();
+//        return http.build();
+//    }
 
 
 }

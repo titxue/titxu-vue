@@ -51,14 +51,14 @@ management:
         include: "*"
 
 # 设置openfeign的超时时间
-feign:
-  hystrix:
-    enabled: false
-  client:
-    config:
-      default:
-        connectTimeout: 10000
-        readTimeout: 10000
-        loggerLevel: full
-  httpclient:
-    enabled: true
+#feign:
+#  hystrix:
+#    enabled: false
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 100000
+#        readTimeout: 100000
+#        loggerLevel: full
+#  httpclient:
+#    enabled: true

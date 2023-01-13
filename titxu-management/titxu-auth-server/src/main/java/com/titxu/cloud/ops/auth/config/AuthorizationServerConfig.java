@@ -63,8 +63,8 @@ public class AuthorizationServerConfig {
                             .errorResponseHandler(new AuthenticationFailureEventHandler());// 登录失败处理器
                 }).clientAuthentication(oAuth2ClientAuthenticationConfigurer -> // 个性化客户端认证
                         oAuth2ClientAuthenticationConfigurer.errorResponseHandler(new ClientAuthenticationFailureEventHandler()))// 处理客户端认证异常
-                .authorizationEndpoint(authorizationEndpointCustomizer -> authorizationEndpointCustomizer
-                        .consentPage("/login")));
+                .authorizationEndpoint(authorizationEndpoint -> authorizationEndpoint
+                        .consentPage("/token/confirm_access")));
 
         DefaultSecurityFilterChain securityFilterChain = http.authorizeHttpRequests(authorizeRequests -> {
                     // 自定义接口、端点暴露
@@ -80,16 +80,21 @@ public class AuthorizationServerConfig {
     }
 
     /**
-     * request -> xToken 注入请求转换器
+     * 自定义的授权认证Converter
      *
      * @return DelegatingAuthenticationConverter
      */
     private AuthenticationConverter accessTokenRequestConverter() {
         return new DelegatingAuthenticationConverter(Arrays.asList(
+                // 自定义密码模式认证转换器
                 new OAuth2ResourceOwnerPasswordAuthenticationConverter(),
+                // 默认刷新令牌认证转换器
                 new OAuth2RefreshTokenAuthenticationConverter(),
+                // 默认客户端凭据身份验证转换器
                 new OAuth2ClientCredentialsAuthenticationConverter(),
+                // 默认授权码身份验证转换器 -> 用于授权码模式获取token
                 new OAuth2AuthorizationCodeAuthenticationConverter(),
+                // 授权请求(或同意) 授权码授权转换器 -> 用于授权码模式获取code
                 new OAuth2AuthorizationCodeRequestAuthenticationConverter()));
     }
 

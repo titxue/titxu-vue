@@ -6408,3 +6408,253 @@ org.springframework.beans.factory.BeanCreationNotAllowedException: Error creatin
 2023-01-13 15:28:14,194 [RMI TCP Connection(4)-10.0.0.16] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
 2023-01-13 15:28:14,493 [RMI TCP Connection(4)-10.0.0.16] INFO  [com.zaxxer.hikari.pool.HikariPool] HikariPool.java:565 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48fba60b
 2023-01-13 15:28:14,497 [RMI TCP Connection(4)-10.0.0.16] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
+2023-01-13 17:35:54,857 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-01-13 17:35:54,863 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 17:35:54,867 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 17:35:54,879 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 8.0.0.Final
+2023-01-13 17:35:55,411 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 17:35:55,412 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-01-13 17:35:55,414 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-01-13 17:35:55,414 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-01-13 17:35:55,416 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-01-13 17:35:55,498 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-01-13 17:35:55,499 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-01-13 17:35:55,537 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-01-13 17:35:55,778 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 17:35:55,778 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 17:35:55,810 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-01-13 17:35:55,815 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0
+2023-01-13 17:35:55,836 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$576/0x0000000800fafb10
+2023-01-13 17:35:55,837 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$577/0x0000000800fb0000
+2023-01-13 17:35:55,837 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-01-13 17:35:55,838 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-01-13 17:35:55,847 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-01-13 17:35:57,480 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1673602558919_10.0.0.10_50107
+2023-01-13 17:35:57,483 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Notify connected event to listeners.
+2023-01-13 17:35:57,483 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Connected,notify listen context...
+2023-01-13 17:35:57,483 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-01-13 17:35:57,484 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [cf4ab8f0-2a14-4038-a445-3e838708c9f9_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$593/0x00000008010deff0
+2023-01-13 17:35:57,599 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-01-13 17:35:57,633 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-01-13 17:35:57,663 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-server-sys.yaml] & group[DEFAULT_GROUP]
+2023-01-13 17:35:57,666 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-server-sys.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-server-sys,DEFAULT_GROUP'}]
+2023-01-13 17:35:57,682 [main] INFO  [com.titxu.cloud.sys.CloudSysApplication] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-01-13 17:36:00,094 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=dd3d7ad2-2437-3369-8479-1563c40cd410
+2023-01-13 17:36:00,383 [main] WARN  [o.s.core.LocalVariableTableParameterNameDiscoverer] LocalVariableTableParameterNameDiscoverer.java:123 - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.titxu.cloud.common.security.annotation.SecurityInnerAspect
+2023-01-13 17:36:01,233 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-13 17:36:01,254 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:372 - Initializing Spring embedded WebApplicationContext
+2023-01-13 17:36:01,255 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:291 - Root WebApplicationContext: initialization completed in 3527 ms
+2023-01-13 17:36:03,933 [main] INFO  [o.s.cloud.openfeign.FeignClientFactoryBean] FeignClientFactoryBean.java:437 - For 'titxu-server-sys' URL not provided. Will try picking an instance via load-balancing.
+2023-01-13 17:36:05,298 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 18 endpoint(s) beneath base path '/actuator'
+2023-01-13 17:36:05,479 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:54 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e733bb5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@669e730d, org.springframework.security.web.context.SecurityContextHolderFilter@6b3da23f, org.springframework.security.web.header.HeaderWriterFilter@df34b01, org.springframework.security.web.authentication.logout.LogoutFilter@5b5f61cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f207142, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@742aa00a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b3e4253, org.springframework.security.web.access.ExceptionTranslationFilter@f9979cf, org.springframework.security.web.access.intercept.AuthorizationFilter@1a67bde5]
+2023-01-13 17:36:05,835 [main] INFO  [o.s.cloud.openfeign.FeignClientFactoryBean] FeignClientFactoryBean.java:437 - For 'titxu-server-sys' URL not provided. Will try picking an instance via load-balancing.
+2023-01-13 17:36:06,731 [main] WARN  [o.s.s.config.annotation.web.builders.WebSecurity] WebSecurity.java:287 - You are asking Spring Security to ignore Mvc [pattern='/favicon.ico']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-13 17:36:06,731 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:51 - Will not secure Mvc [pattern='/favicon.ico']
+2023-01-13 17:36:06,825 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-01-13 17:36:06,986 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.3.2.Final
+2023-01-13 17:36:06,997 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.8.Final
+2023-01-13 17:36:07,010 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.8.Final
+2023-01-13 17:36:07,044 [main] INFO  [org.jboss.threads] Version.java:55 - JBoss Threads version 3.5.0.Final
+2023-01-13 17:36:07,096 [main] INFO  [io.undertow] Undertow.java:259 - stopping server: Undertow - 2.3.2.Final
+2023-01-13 17:36:07,098 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:592 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-01-13 17:36:07,112 [main] WARN  [o.s.c.a.AnnotationConfigApplicationContext] AbstractApplicationContext.java:1037 - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'registrationListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:370)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:335)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:228)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:413)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:419)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1034)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1001)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1082)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.titxu.cloud.sys.CloudSysApplication.main(CloudSysApplication.java:18)
+2023-01-13 17:36:07,120 [main] WARN  [o.s.c.a.AnnotationConfigApplicationContext] AbstractApplicationContext.java:1037 - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'registrationListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:370)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:335)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:228)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:413)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:419)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1034)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1001)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1082)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.titxu.cloud.sys.CloudSysApplication.main(CloudSysApplication.java:18)
+2023-01-13 17:36:07,178 [main] INFO  [o.s.b.a.logging.ConditionEvaluationReportLogger] ConditionEvaluationReportLogger.java:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-13 17:36:07,238 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+2023-01-13 17:36:07,242 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-13 17:36:07,242 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-01-13 17:36:07,243 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-01-13 17:36:07,243 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-01-13 18:35:58,749 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-01-13 18:35:58,751 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:35:58,753 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:35:58,764 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 8.0.0.Final
+2023-01-13 18:35:59,407 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:35:59,408 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-01-13 18:35:59,410 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-01-13 18:35:59,410 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-01-13 18:35:59,411 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-01-13 18:35:59,444 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-01-13 18:35:59,444 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-01-13 18:35:59,473 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-01-13 18:35:59,685 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:35:59,686 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:35:59,740 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-01-13 18:35:59,750 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 3f30ecff-1ddb-4808-b704-931596418ca0_config-0
+2023-01-13 18:35:59,778 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$570/0x0000000800f4a5b0
+2023-01-13 18:35:59,779 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$571/0x0000000800f4a9e0
+2023-01-13 18:35:59,779 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-01-13 18:35:59,780 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-01-13 18:35:59,790 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-01-13 18:36:01,062 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1673606162522_10.0.0.10_53767
+2023-01-13 18:36:01,064 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-01-13 18:36:01,063 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Notify connected event to listeners.
+2023-01-13 18:36:01,064 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$587/0x0000000801078fe8
+2023-01-13 18:36:01,064 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [3f30ecff-1ddb-4808-b704-931596418ca0_config-0] Connected,notify listen context...
+2023-01-13 18:36:01,136 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-01-13 18:36:01,166 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-01-13 18:36:01,199 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-server-sys.yaml] & group[DEFAULT_GROUP]
+2023-01-13 18:36:01,201 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-server-sys.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-server-sys,DEFAULT_GROUP'}]
+2023-01-13 18:36:01,216 [main] INFO  [com.titxu.cloud.sys.CloudSysApplication] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-01-13 18:36:03,472 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=a3342577-715e-37b6-86db-0b44eee0f9ee
+2023-01-13 18:36:03,815 [main] WARN  [o.s.core.LocalVariableTableParameterNameDiscoverer] LocalVariableTableParameterNameDiscoverer.java:123 - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.titxu.cloud.common.security.annotation.SecurityInnerAspect
+2023-01-13 18:36:04,324 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:592 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-01-13 18:36:04,377 [main] INFO  [o.s.b.a.logging.ConditionEvaluationReportLogger] ConditionEvaluationReportLogger.java:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-13 18:36:04,438 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web application could not be started as there was no org.springframework.boot.web.servlet.server.ServletWebServerFactory bean defined in the context.
+
+Action:
+
+Check your application's dependencies for a supported servlet web server.
+Check the configured web application type.
+
+2023-01-13 18:36:04,442 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-01-13 18:36:04,442 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-13 18:36:04,442 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-01-13 18:36:04,443 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-01-13 18:39:47,369 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-01-13 18:39:47,375 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:39:47,379 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:39:47,394 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 8.0.0.Final
+2023-01-13 18:39:47,993 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:39:47,993 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-01-13 18:39:47,995 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-01-13 18:39:47,996 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-01-13 18:39:47,997 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-01-13 18:39:48,035 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-01-13 18:39:48,035 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-01-13 18:39:48,075 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-01-13 18:39:48,222 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:39:48,222 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-01-13 18:39:48,252 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-01-13 18:39:48,262 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 1f7e272f-39c2-4133-92b6-53bbb201b287_config-0
+2023-01-13 18:39:48,313 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$570/0x0000000800f2b828
+2023-01-13 18:39:48,314 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$571/0x0000000800f2bc58
+2023-01-13 18:39:48,316 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-01-13 18:39:48,317 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-01-13 18:39:48,339 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-01-13 18:39:49,738 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1673606391212_10.0.0.10_55068
+2023-01-13 18:39:49,739 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-01-13 18:39:49,739 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Notify connected event to listeners.
+2023-01-13 18:39:49,740 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$587/0x000000080106a180
+2023-01-13 18:39:49,740 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [1f7e272f-39c2-4133-92b6-53bbb201b287_config-0] Connected,notify listen context...
+2023-01-13 18:39:49,794 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-01-13 18:39:49,814 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-01-13 18:39:49,830 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-server-sys.yaml] & group[DEFAULT_GROUP]
+2023-01-13 18:39:49,832 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-server-sys.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-server-sys,DEFAULT_GROUP'}]
+2023-01-13 18:39:49,839 [main] INFO  [com.titxu.cloud.sys.CloudSysApplication] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-01-13 18:39:51,759 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=a3342577-715e-37b6-86db-0b44eee0f9ee
+2023-01-13 18:39:52,048 [main] WARN  [o.s.core.LocalVariableTableParameterNameDiscoverer] LocalVariableTableParameterNameDiscoverer.java:123 - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.titxu.cloud.common.security.annotation.SecurityInnerAspect
+2023-01-13 18:39:52,626 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:592 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-01-13 18:39:52,647 [main] INFO  [o.s.b.a.logging.ConditionEvaluationReportLogger] ConditionEvaluationReportLogger.java:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-13 18:39:52,673 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web application could not be started as there was no org.springframework.boot.web.servlet.server.ServletWebServerFactory bean defined in the context.
+
+Action:
+
+Check your application's dependencies for a supported servlet web server.
+Check the configured web application type.
+
+2023-01-13 18:39:52,674 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-01-13 18:39:52,675 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-01-13 18:39:52,675 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-13 18:39:52,676 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
