@@ -41,3 +41,4 @@ build/
 ### Mac OS ###
 .DS_Store
 /fast-vue3/.vite/deps_temp/package.json
+/logs/
