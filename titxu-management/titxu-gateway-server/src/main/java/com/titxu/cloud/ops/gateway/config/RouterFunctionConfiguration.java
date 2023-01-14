@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.gateway.config;
+package com.titxu.cloud.management.gateway.config;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

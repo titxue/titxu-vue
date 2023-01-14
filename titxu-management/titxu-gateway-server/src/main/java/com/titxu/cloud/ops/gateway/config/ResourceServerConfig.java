@@ -1,10 +1,10 @@
-package com.titxu.cloud.ops.gateway.config;
+package com.titxu.cloud.management.gateway.config;
 
 import cn.hutool.core.util.ArrayUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.web.constant.ResultCode;
-import com.titxu.cloud.ops.gateway.security.AuthorizationManager;
-import com.titxu.cloud.ops.gateway.util.WebUtils;
+import com.titxu.cloud.management.gateway.security.AuthorizationManager;
+import com.titxu.cloud.management.gateway.util.WebUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

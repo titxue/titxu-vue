@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.gateway.controller;
+package com.titxu.cloud.management.gateway.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.gateway.config;
+package com.titxu.cloud.management.gateway.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

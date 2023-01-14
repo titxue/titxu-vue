@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.gateway.filter;
+package com.titxu.cloud.management.gateway.filter;
 
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSONObject;
@@ -6,7 +6,7 @@ import com.nimbusds.jose.JWSObject;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.redis.util.RedisService;
 import com.titxu.cloud.common.web.constant.ResultCode;
-import com.titxu.cloud.ops.gateway.util.WebUtils;
+import com.titxu.cloud.management.gateway.util.WebUtils;
 import lombok.SneakyThrows;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;

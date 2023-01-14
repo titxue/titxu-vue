@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.gateway.filter;
+package com.titxu.cloud.management.gateway.filter;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

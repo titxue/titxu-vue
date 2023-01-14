@@ -1,4 +1,4 @@
-package com.titxu.cloud.ops.gateway.util;
+package com.titxu.cloud.management.gateway.util;
 
 import com.google.gson.Gson;
 import com.titxu.cloud.common.web.constant.ResultCode;
