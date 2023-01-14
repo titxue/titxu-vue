@@ -25,6 +25,18 @@ public class BaseExceptionHandler {
         return r;
     }
 
+    /**
+     * 处理参数异常
+     */
+    @ExceptionHandler(IllegalArgumentException.class)
+    public Result handlerIllegalArgumentException(IllegalArgumentException e) {
+        Result r = new Result();
+        r.put("code", ResultCode.PARAM_ERROR.getCode());
+        r.put("msg", e.getMessage());
+        log.error(e.getMessage(), e);
+        return r;
+    }
+
     @ExceptionHandler(RuntimeException.class)
     public Result handlerRuntimeException(RuntimeException e) {
         Result r = new Result();
