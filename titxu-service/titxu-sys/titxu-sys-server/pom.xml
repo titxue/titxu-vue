@@ -79,7 +79,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
         <!-- 仅为了提供：IOUtils -->
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
