@@ -22,7 +22,7 @@ import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.SpringContextHolder;
 import com.titxu.cloud.common.log.event.SysLogEvent;
 import com.titxu.cloud.common.log.util.SysLogUtils;
-import com.titxu.cloud.common.security.domain.User;
+import com.titxu.cloud.common.security.domain.AuthUser;
 import com.titxu.cloud.sys.dto.LogDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -68,8 +68,8 @@ public class AuthenticationSuccessEventHandler implements AuthenticationSuccessH
         Map<String, Object> map = accessTokenAuthentication.getAdditionalParameters();
         if (MapUtil.isNotEmpty(map)) {
             // 发送异步日志事件
-            User userInfo = (User) map.get(AuthConstants.DETAILS_USER);
-            log.info("用户：{} 登录成功", userInfo.getUsername());
+            AuthUser authUserInfo = (AuthUser) map.get(AuthConstants.DETAILS_USER);
+            log.info("用户：{} 登录成功", authUserInfo.getUsername());
             SecurityContextHolder.getContext().setAuthentication(accessTokenAuthentication);
             LogDTO logDTO = SysLogUtils.getSysLog();
             logDTO.setOperation("登录成功");
@@ -79,8 +79,8 @@ public class AuthenticationSuccessEventHandler implements AuthenticationSuccessH
                 Long endTime = System.currentTimeMillis();
                 logDTO.setTime(endTime - startTime);
             }
-            logDTO.setUserName(userInfo.getUsername());
-            logDTO.setTenantId(userInfo.getTenantId());
+            logDTO.setUserName(authUserInfo.getUsername());
+            logDTO.setTenantId(authUserInfo.getTenantId());
             SpringContextHolder.publishEvent(new SysLogEvent(logDTO));
         }
 

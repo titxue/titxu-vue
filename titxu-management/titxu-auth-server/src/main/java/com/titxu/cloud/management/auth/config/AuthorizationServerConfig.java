@@ -1,9 +1,13 @@
 package com.titxu.cloud.management.auth.config;
 
+import com.fasterxml.jackson.databind.Module;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
+import com.titxu.cloud.common.security.domain.AuthUser;
+import com.titxu.cloud.common.security.domain.AuthUserMixin;
 import com.titxu.cloud.management.auth.support.core.CustomeOAuth2TokenCustomizer;
 import com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider;
 import com.titxu.cloud.management.auth.support.core.FormIdentityLoginConfigurer;
@@ -18,8 +22,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.lob.DefaultLobHandler;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.jackson2.SecurityJackson2Modules;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.server.authorization.JdbcOAuth2AuthorizationConsentService;
 import org.springframework.security.oauth2.server.authorization.JdbcOAuth2AuthorizationService;
@@ -29,6 +35,7 @@ import org.springframework.security.oauth2.server.authorization.client.JdbcRegis
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
+import org.springframework.security.oauth2.server.authorization.jackson2.OAuth2AuthorizationServerJackson2Module;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.token.DelegatingOAuth2TokenGenerator;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2RefreshTokenGenerator;
@@ -39,6 +46,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationConverter;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static com.titxu.cloud.management.auth.jose.Jwks.generateLoadRsa;
 
@@ -136,7 +144,7 @@ public class AuthorizationServerConfig {
 
     @Bean
     public RegisteredClientRepository registeredClientRepository(JdbcTemplate jdbcTemplate) {
-        // http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=https://www.titxu.com
+        // http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=http://127.0.0.1:8000/token/login
 //        RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
 //                .clientId("messaging-client")
 //                .clientSecret("{noop}secret")
@@ -154,54 +162,35 @@ public class AuthorizationServerConfig {
 //                .build();
 
         // Save registered client in db as if in-memory
-        JdbcRegisteredClientRepository registeredClientRepository = new JdbcRegisteredClientRepository(jdbcTemplate);
-//        registeredClientRepository.save(registeredClient);
+        //        registeredClientRepository.save(registeredClient);
 
-        return registeredClientRepository;
+        return new JdbcRegisteredClientRepository(jdbcTemplate);
     }
 
     @Bean
-    public OAuth2AuthorizationService authorizationService(JdbcTemplate jdbcTemplate, RegisteredClientRepository registeredClientRepository) {
-        return new JdbcOAuth2AuthorizationService(jdbcTemplate, registeredClientRepository);
+    public OAuth2AuthorizationService authorizationService(JdbcTemplate jdbcTemplate,
+                                                           RegisteredClientRepository registeredClientRepository) {
+        JdbcOAuth2AuthorizationService service = new JdbcOAuth2AuthorizationService(jdbcTemplate,
+                registeredClientRepository);
+        JdbcOAuth2AuthorizationService.OAuth2AuthorizationRowMapper authorizationRowMapper = new JdbcOAuth2AuthorizationService.OAuth2AuthorizationRowMapper(
+                registeredClientRepository);
+        authorizationRowMapper.setLobHandler(new DefaultLobHandler());
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        ClassLoader classLoader = JdbcOAuth2AuthorizationService.class.getClassLoader();
+        List<Module> securityModules = SecurityJackson2Modules.getModules(classLoader);
+        objectMapper.registerModules(securityModules);
+        objectMapper.registerModule(new OAuth2AuthorizationServerJackson2Module());
+        objectMapper.addMixIn(AuthUser.class, AuthUserMixin.class);
+        authorizationRowMapper.setObjectMapper(objectMapper);
+        service.setAuthorizationRowMapper(authorizationRowMapper);
+        return service;
     }
 
     @Bean
     public OAuth2AuthorizationConsentService authorizationConsentService(JdbcTemplate jdbcTemplate, RegisteredClientRepository registeredClientRepository) {
         return new JdbcOAuth2AuthorizationConsentService(jdbcTemplate, registeredClientRepository);
     }
-    /**
-     * 配置客户端详情(数据库)
-     */
-//    @Override
-//    @SneakyThrows
-//    public void configure(ClientDetailsServiceConfigurer clients) {
-//        JdbcClientDetailsServiceImpl jdbcClientDetailsService = new JdbcClientDetailsServiceImpl(dataSource);
-//        jdbcClientDetailsService.setFindClientDetailsSql(AuthConstants.FIND_CLIENT_DETAILS_SQL);
-//        jdbcClientDetailsService.setSelectClientDetailsSql(AuthConstants.SELECT_CLIENT_DETAILS_SQL);
-//        clients.withClientDetails(jdbcClientDetailsService);
-//    }
-
-
-    /**
-     * 配置授权（authorization）以及令牌（token）的访问端点和令牌服务(token services)
-     */
-//    @Override
-//    public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-//        TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
-//        List<TokenEnhancer> tokenEnhancers = new ArrayList<>();
-//        tokenEnhancers.add(tokenEnhancer());
-//        tokenEnhancers.add(jwtAccessTokenConverter());
-//        tokenEnhancerChain.setTokenEnhancers(tokenEnhancers);
-//        endpoints
-//                .authenticationManager(authenticationManager)
-//                .accessTokenConverter(jwtAccessTokenConverter())
-//                .tokenEnhancer(tokenEnhancerChain)
-//                .userDetailsService(userDetailsService)
-//                // refresh token有两种使用方式：重复使用(true)、非重复使用(false)，默认为true
-//                //      1 重复使用：access token过期刷新时， refresh token过期时间未改变，仍以初次生成的时间为准
-//                //      2 非重复使用：access token过期刷新时， refresh token过期时间延续，在refresh token有效期内刷新便永不失效达到无需再次登录的目的
-//                .reuseRefreshTokens(true);
-//    }
 
 
     /**

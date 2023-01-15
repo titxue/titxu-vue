@@ -1,7 +1,7 @@
 package com.titxu.cloud.management.auth.support.core;
 
 import com.titxu.cloud.common.core.constant.AuthConstants;
-import com.titxu.cloud.common.security.domain.User;
+import com.titxu.cloud.common.security.domain.AuthUser;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenClaimsContext;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenClaimsSet;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
@@ -27,8 +27,8 @@ public class CustomeOAuth2TokenCustomizer implements OAuth2TokenCustomizer<OAuth
             return;
         }
 
-        User user = (User) context.getPrincipal().getPrincipal();
-        claims.claim(AuthConstants.DETAILS_USER, user);
+        AuthUser authUser = (AuthUser) context.getPrincipal().getPrincipal();
+        claims.claim(AuthConstants.DETAILS_USER, authUser);
     }
 
 }

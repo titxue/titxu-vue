@@ -392,7 +392,7 @@ INSERT INTO `sys_permission`
 VALUES ('1362320253140361218', '0', '系统管理', '0', '1', NULL, 'system', 0, NULL, '0', NULL, '0', 'system',
         '2021-02-18 16:37:14', NULL, NULL);
 INSERT INTO `sys_permission`
-VALUES ('1362320893308592129', '1362320253140361218', '用户管理', '1', '1', NULL, 'admin', 0, 'sys/user', '0', NULL,
+VALUES ('1362320893308592129', '1362320253140361218', '用户管理', '1', '1', NULL, 'admin', 0, 'sys/authUser', '0', NULL,
         '0', 'system', '2021-02-18 16:39:46', 'system', '2021-02-18 17:07:47');
 INSERT INTO `sys_permission`
 VALUES ('1362321213669531650', '1362320253140361218', '角色管理', '1', '1', '', 'role', 1, 'sys/role', '0', NULL, '0',
@@ -452,22 +452,25 @@ INSERT INTO `sys_permission`
 VALUES ('1364445600617373697', '1362323350755500033', '分页查询日志', '2', '1', 'sys:log:list', NULL, 0, NULL, '0',
         NULL, '0', '超级管理员', '2021-02-24 13:22:36', NULL, NULL);
 INSERT INTO `sys_permission`
-VALUES ('1364445923025133570', '1362320893308592129', '用户分页查询', '2', '1', 'sys:user:list', NULL, 0, NULL, '0',
+VALUES ('1364445923025133570', '1362320893308592129', '用户分页查询', '2', '1', 'sys:authUser:list', NULL, 0, NULL, '0',
         NULL, '0', '超级管理员', '2021-02-24 13:23:53', NULL, NULL);
 INSERT INTO `sys_permission`
-VALUES ('1364446030516756481', '1362320893308592129', '用户信息', '2', '1', 'sys:user:info', NULL, 1, NULL, '0', NULL,
+VALUES ('1364446030516756481', '1362320893308592129', '用户信息', '2', '1', 'sys:authUser:info', NULL, 1, NULL, '0',
+        NULL,
         '0', '超级管理员', '2021-02-24 13:24:19', NULL, NULL);
 INSERT INTO `sys_permission`
-VALUES ('1364446380040691714', '1362320893308592129', '修改用户', '2', '1', 'sys:user:update', NULL, 2, NULL, '0', NULL,
+VALUES ('1364446380040691714', '1362320893308592129', '修改用户', '2', '1', 'sys:authUser:update', NULL, 2, NULL, '0',
+        NULL,
         '0', '超级管理员', '2021-02-24 13:25:42', '超级管理员', '2021-02-24 13:31:17');
 INSERT INTO `sys_permission`
-VALUES ('1364446467147997186', '1362320893308592129', '删除用户', '2', '1', 'sys:user:delete', NULL, 4, NULL, '0', NULL,
+VALUES ('1364446467147997186', '1362320893308592129', '删除用户', '2', '1', 'sys:authUser:delete', NULL, 4, NULL, '0',
+        NULL,
         '0', '超级管理员', '2021-02-24 13:26:03', NULL, NULL);
 INSERT INTO `sys_permission`
-VALUES ('1364446617924837377', '1362320893308592129', '禁用用户', '2', '1', 'sys:user:disable', NULL, 5, NULL, '0',
+VALUES ('1364446617924837377', '1362320893308592129', '禁用用户', '2', '1', 'sys:authUser:disable', NULL, 5, NULL, '0',
         NULL, '0', '超级管理员', '2021-02-24 13:26:39', NULL, NULL);
 INSERT INTO `sys_permission`
-VALUES ('1365315749635231746', '1362320893308592129', '用户保存', '2', '1', 'sys:user:save', '', 0, NULL, '0', NULL,
+VALUES ('1365315749635231746', '1362320893308592129', '用户保存', '2', '1', 'sys:authUser:save', '', 0, NULL, '0', NULL,
         '0', '超级管理员', '2021-02-26 23:00:16', '超级管理员', '2021-02-26 23:01:07');
 INSERT INTO `sys_permission`
 VALUES ('1365562507946668034', '1362321865267240961', '租户分页查询', '2', '0', 'sys:tenant:list', '', 0, NULL, '0',
