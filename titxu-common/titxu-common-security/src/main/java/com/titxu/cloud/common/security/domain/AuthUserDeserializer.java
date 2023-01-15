@@ -15,9 +15,12 @@ import org.springframework.security.core.userdetails.User;
 import java.io.IOException;
 import java.util.Set;
 
+/**
+ * 修复AuthUser类不受信任，详见 <a href="https://github.com/spring-projects/spring-security/issues/4370">issues</a>
+ */
 public class AuthUserDeserializer extends JsonDeserializer<User> {
 
-    private static final TypeReference<Set<SimpleGrantedAuthority>> SIMPLE_GRANTED_AUTHORITY_SET = new TypeReference<Set<SimpleGrantedAuthority>>() {
+    private static final TypeReference<Set<SimpleGrantedAuthority>> SIMPLE_GRANTED_AUTHORITY_SET = new TypeReference<>() {
     };
 
     /**
@@ -34,7 +37,7 @@ public class AuthUserDeserializer extends JsonDeserializer<User> {
      * @throws JsonProcessingException if an error during JSON processing occurs
      */
     @Override
-    public User deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+    public User deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException {
         ObjectMapper mapper = (ObjectMapper) jp.getCodec();
         JsonNode jsonNode = mapper.readTree(jp);
         Set<? extends GrantedAuthority> authorities = mapper.convertValue(jsonNode.get("authorities"),

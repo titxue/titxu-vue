@@ -130,21 +130,51 @@ public class AuthorizationServerConfig {
      */
     @SuppressWarnings("unchecked")
     private void addCustomOAuth2GrantAuthenticationProvider(HttpSecurity http) {
+
+        /*
+        AuthenticationManager 是用于安全认证的核心接口，它可以帮助应用程序提供安全认证服务，如身份认证和授权。
+        它可以通过支持不同类型的认证模式，如基于凭据的认证和基于角色的认证来实现安全认证和授权。
+         */
         AuthenticationManager authenticationManager = http.getSharedObject(AuthenticationManager.class);
+
+        /*
+        OAuth2AuthorizationService是一个专门用于授权的服务，它使用OAuth 2.0协议来向用户提供访问特定资源的权限。
+        它包含一系列API，用于从资源所有者（例如用户）那里请求和管理访问令牌。
+         */
+
         OAuth2AuthorizationService authorizationService = http.getSharedObject(OAuth2AuthorizationService.class);
 
+        // 密码模式 -> 个性化实现
         OAuth2ResourceOwnerPasswordAuthenticationProvider resourceOwnerPasswordAuthenticationProvider = new OAuth2ResourceOwnerPasswordAuthenticationProvider(
                 authenticationManager, authorizationService, oAuth2TokenGenerator());
 
         // 处理 UsernamePasswordAuthenticationToken
+        /*
+          UsernamePasswordAuthenticationToken是Spring Security提供的一种安全认证方式，它将用户名和密码封装为一个令牌，以便在系统中进行认证。
+         */
         http.authenticationProvider(new DaoAuthenticationProvider());
         // 处理 OAuth2ResourceOwnerPasswordAuthenticationToken
         http.authenticationProvider(resourceOwnerPasswordAuthenticationProvider);
     }
 
+
+    /**
+     * 客户端信息存储
+     * RegisteredClientRepository是一个存储已注册客户端(客户端证书)的仓库。
+     * 它可以用来存储和检索客户端的信息，以便在客户端请求服务器资源时进行验证。
+     *
+     * @param jdbcTemplate 数据源
+     * @return RegisteredClientRepository
+     */
     @Bean
     public RegisteredClientRepository registeredClientRepository(JdbcTemplate jdbcTemplate) {
-        // http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=http://127.0.0.1:8000/token/login
+
+        /*
+          重定向地址
+          http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=http://127.0.0.1:8000/token/login
+          http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=https://www.baidu.com
+         */
+
 //        RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
 //                .clientId("messaging-client")
 //                .clientSecret("{noop}secret")
@@ -167,6 +197,15 @@ public class AuthorizationServerConfig {
         return new JdbcRegisteredClientRepository(jdbcTemplate);
     }
 
+    /**
+     * 授权信息存储
+     * OAuth2AuthorizationService 是一个用于授权访问OAuth2资源的服务。它允许用户授权应用程序以访问特定资源，同时保护资源所有者的隐私。
+     * 通过使用该服务，用户可以授权应用程序访问他们的资源，而不会暴露自己的凭据给应用程序。
+     *
+     * @param jdbcTemplate               数据源
+     * @param registeredClientRepository 客户端信息存储
+     * @return OAuth2AuthorizationService 授权信息存储
+     */
     @Bean
     public OAuth2AuthorizationService authorizationService(JdbcTemplate jdbcTemplate,
                                                            RegisteredClientRepository registeredClientRepository) {
@@ -187,6 +226,16 @@ public class AuthorizationServerConfig {
         return service;
     }
 
+    /**
+     * 授权同意服务
+     * <p>
+     * OAuth2AuthorizationConsentService是一种授权同意服务，
+     * 它让客户端应用程序能够与OAuth2.0协议兼容的资源服务器进行交互，以获得用户的授权，从而允许客户端应用程序访问保护资源。
+     *
+     * @param jdbcTemplate               数据源
+     * @param registeredClientRepository 客户端信息存储
+     * @return OAuth2AuthorizationConsentService 授权同意服务
+     */
     @Bean
     public OAuth2AuthorizationConsentService authorizationConsentService(JdbcTemplate jdbcTemplate, RegisteredClientRepository registeredClientRepository) {
         return new JdbcOAuth2AuthorizationConsentService(jdbcTemplate, registeredClientRepository);
@@ -194,7 +243,12 @@ public class AuthorizationServerConfig {
 
 
     /**
-     * 使用非对称加密算法对token签名
+     * JWKSource 是一种用于存储JSON Web 密钥（JWK）的抽象源的接口。
+     * 它被用于从一个安全的源获取JWK。
+     * JWKSource有助于在应用程序中实现安全的密钥管理，以确保应用程序的安全性。
+     *
+     * @return JwtEncoder
+     * @throws Exception Exception
      */
     @Bean
     public JWKSource<SecurityContext> jwkSource() throws Exception {
@@ -203,11 +257,31 @@ public class AuthorizationServerConfig {
         return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
     }
 
+    /**
+     * 对JWKSource 进行解码验证
+     * JwtDecoder是一个用于解码JSON Web Token（JWT）的库，它支持多种编码方案，可以处理多种JWT类型，并提供灵活的API。
+     * 它可以帮助用户解码和验证JWT令牌，以便在应用程序中正确使用它们。
+     *
+     * @param jwkSource JWKSource
+     * @return JwtDecoder
+     */
     @Bean
     public JwtDecoder jwtDecoder(JWKSource<SecurityContext> jwkSource) {
         return OAuth2AuthorizationServerConfiguration.jwtDecoder(jwkSource);
     }
 
+    /**
+     * AuthorizationServerSettings 授权服务器设置
+     * OAuth 2.0 的 AuthorizationServerSettings 是一组设置，用于控制 OAuth 2.0 认证服务器的行为。
+     * 这些设置可以帮助认证服务器管理用户的访问权限，以及如何验证客户端的凭证。
+     * 它还可以控制服务器如何保护访问令牌，令牌的有效期限制，以及认证过程中允许的客户端类型。
+     *
+     * @return AuthorizationServerSettings
+     */
+    @Bean
+    public AuthorizationServerSettings authorizationServerSettings() {
+        return AuthorizationServerSettings.builder().build();
+    }
 
     //    /**
 //     * JWT内容增强
@@ -226,8 +300,6 @@ public class AuthorizationServerConfig {
 //            return accessToken;
 //        };
 //    }
-    @Bean
-    public AuthorizationServerSettings authorizationServerSettings() {
-        return AuthorizationServerSettings.builder().build();
-    }
+
+
 }
