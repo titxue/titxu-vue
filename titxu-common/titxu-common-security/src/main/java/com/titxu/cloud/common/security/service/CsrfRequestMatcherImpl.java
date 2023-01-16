@@ -38,7 +38,6 @@ public class CsrfRequestMatcherImpl implements RequestMatcher {
 
     @Override
     public boolean matches(HttpServletRequest request) {
-        csrfDisableUrl.put("/token/form", List.of(HttpMethod.POST));
 
         // "GET", "HEAD", "TRACE", "OPTIONS" 是否验证
         boolean defaultValid = CsrfFilter.DEFAULT_CSRF_MATCHER.matches(request);

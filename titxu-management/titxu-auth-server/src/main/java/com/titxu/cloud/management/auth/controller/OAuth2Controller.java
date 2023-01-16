@@ -29,13 +29,13 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * 认证
+ * 认证中心
  */
-@Tag(name = "登陆")
+@Tag(name = "认证中心")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/token")
-public class LoginController {
+public class OAuth2Controller {
 
     private final OAuth2AuthorizationService authorizationService;
     private final CacheManager cacheManager;
@@ -49,7 +49,7 @@ public class LoginController {
      * @return ModelAndView 模型视图
      */
     @RequestMapping("/login")
-    public ModelAndView require(ModelAndView modelAndView, @RequestParam(required = false) String error) {
+    public ModelAndView require(ModelAndView modelAndView, @RequestParam(value = "error", required = false) String error) {
         modelAndView.setViewName("ftl/login");
         modelAndView.addObject("error", error);
         return modelAndView;

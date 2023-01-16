@@ -5,6 +5,7 @@ import com.titxu.cloud.management.auth.support.core.FormIdentityLoginConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
@@ -17,6 +18,7 @@ import static com.titxu.cloud.common.security.service.CsrfRequestMatcherImpl.CSR
 /**
  * 安全配置
  **/
+@Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration {
     /**
@@ -35,6 +37,7 @@ public class WebSecurityConfiguration {
             "/*/*.js",
             "/error",
             "/favicon.ico",
+            "/auth/**"
     };
     private AccessDeniedHandler accessDeniedHandler;
     private RequestMatcher requestMatcher;
@@ -86,18 +89,17 @@ public class WebSecurityConfiguration {
         });
 
         http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
-                        .requestMatchers("/oauth2/**").permitAll()
-
-                        .requestMatchers("/token/*").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
+                        // 授权请求
+                        .requestMatchers("/token/**").permitAll()
                         // 放行端点
                         .requestMatchers("/actuator/**").permitAll()
                         // 放行获取PublicKey请求
                         .requestMatchers("/getPublicKey").permitAll()
-                        .requestMatchers("/auth/**").permitAll()
 
                         // 其他请求需要认证
                         .anyRequest().authenticated())
-                .headers()
+                .headers().cacheControl().disable()
                 // 避免iframe同源无法登录
                 .frameOptions().sameOrigin()
                 // 表单登录个性化
@@ -106,9 +108,8 @@ public class WebSecurityConfiguration {
         // 处理 UsernamePasswordAuthenticationToken
         http.authenticationProvider(new DaoAuthenticationProvider());
 
-        // CSRF 配置
-        http.csrf().requireCsrfProtectionMatcher(requestMatcher);
-
+        // csrf
+        http.csrf().disable();
         return http.build();
     }
 
