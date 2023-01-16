@@ -29,7 +29,7 @@ import reactor.core.publisher.Mono;
 @EnableWebFluxSecurity
 public class ResourceServerConfig {
 
-    private WhiteListConfig whiteListConfig;
+    private com.titxu.cloud.management.gateway.config.WhiteListConfig whiteListConfig;
 
     private AuthorizationManager authorizationManager;
 
