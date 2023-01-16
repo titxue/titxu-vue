@@ -37,7 +37,8 @@ public class WebSecurityConfiguration {
             "/*/*.js",
             "/error",
             "/favicon.ico",
-            "/auth/**"
+            "/auth/**",
+            "/getPublicKey"
     };
     private AccessDeniedHandler accessDeniedHandler;
     private RequestMatcher requestMatcher;
@@ -55,6 +56,7 @@ public class WebSecurityConfiguration {
 
     /**
      * 暴露静态资源
+     * 在 WebSecurity 暴露
      *
      * @return WebSecurityCustomizer
      */
