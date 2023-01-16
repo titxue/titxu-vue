@@ -32,7 +32,7 @@ public class CustomeOAuth2AccessTokenGenerator implements OAuth2TokenGenerator<O
                 .equals(context.getRegisteredClient().getTokenSettings().getAccessTokenFormat())) {
             return null;
         }
-
+//        self-contained
         String issuer = null;
         if (context.getAuthorizationServerContext() != null) {
             issuer = context.getAuthorizationServerContext().getIssuer();

@@ -9,6 +9,15 @@
 | Mybatis Plus                | 3.5.3.1        |
 | hutool                      | 5.8.10         |
 
+```shell
+# 测试接口
+curl --location --request POST 'http://127.0.0.1:8001/auth/loginByUserName' -d 'userName=18555555555'
+
+# 测试授权接口
+curl --location --request GET \
+'http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=https://www.baidu.com'
+```
+
 ```mysql
 INSERT INTO `nft`.`notice` (`id`, `class_id`, `class_name`, `cover_img`, `time`, `title`, `url`)
 VALUES (1, 1, '1', '

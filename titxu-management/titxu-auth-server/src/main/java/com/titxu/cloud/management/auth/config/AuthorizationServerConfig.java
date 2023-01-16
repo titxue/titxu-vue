@@ -8,6 +8,7 @@ import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
 import com.titxu.cloud.common.security.domain.AuthUser;
 import com.titxu.cloud.common.security.domain.AuthUserMixin;
+import com.titxu.cloud.management.auth.support.base.CustomeAuthorizationGrantType;
 import com.titxu.cloud.management.auth.support.core.CustomeOAuth2TokenCustomizer;
 import com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider;
 import com.titxu.cloud.management.auth.support.core.FormIdentityLoginConfigurer;
@@ -26,17 +27,25 @@ import org.springframework.jdbc.support.lob.DefaultLobHandler;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.jackson2.SecurityJackson2Modules;
+import org.springframework.security.oauth2.core.AuthorizationGrantType;
+import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
+import org.springframework.security.oauth2.core.oidc.OidcScopes;
+import org.springframework.security.oauth2.jose.jws.SignatureAlgorithm;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.server.authorization.JdbcOAuth2AuthorizationConsentService;
 import org.springframework.security.oauth2.server.authorization.JdbcOAuth2AuthorizationService;
 import org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationConsentService;
 import org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationService;
 import org.springframework.security.oauth2.server.authorization.client.JdbcRegisteredClientRepository;
+import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.jackson2.OAuth2AuthorizationServerJackson2Module;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
+import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
+import org.springframework.security.oauth2.server.authorization.settings.OAuth2TokenFormat;
+import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.oauth2.server.authorization.token.DelegatingOAuth2TokenGenerator;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2RefreshTokenGenerator;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenGenerator;
@@ -45,8 +54,10 @@ import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationConverter;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 import static com.titxu.cloud.management.auth.jose.Jwks.generateLoadRsa;
 
@@ -175,26 +186,45 @@ public class AuthorizationServerConfig {
           http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=https://www.baidu.com
          */
 
-//        RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
-//                .clientId("messaging-client")
-//                .clientSecret("{noop}secret")
-//                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
-//                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-//                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-//                .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
-//                .redirectUri("http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc")
-//                .redirectUri("http://127.0.0.1:8080/oauth2/authorized")
-//                .scope(OidcScopes.OPENID)
-//                .scope(OidcScopes.PROFILE)
-//                .scope("message.read")
-//                .scope("message.write")
-//                .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
-//                .build();
-
+        RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
+                .clientId("messaging-client")
+                .clientSecret("{noop}secret")
+                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+                .authorizationGrantType(CustomeAuthorizationGrantType.PASSWORD)
+                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
+                .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+                .redirectUri("http://127.0.0.1:8080/token/login")
+                .redirectUri("https://www.baidu.com")
+                .scope(OidcScopes.OPENID)
+                .scope(OidcScopes.PROFILE)
+                .scope("message.read")
+                .scope("message.write")
+                // client 设置
+                .clientSettings(ClientSettings.builder()
+                        // 是否手动授权
+                        .requireAuthorizationConsent(false)
+                        .build())
+                // token 设置
+                .tokenSettings(TokenSettings.builder()
+                        // 访问令牌格式，支持OAuth2TokenFormat.SELF_CONTAINED（自包含的令牌使用受保护的、有时间限制的数据结构，例如JWT）；OAuth2TokenFormat.REFERENCE（不透明令牌）
+                        .accessTokenFormat(OAuth2TokenFormat.REFERENCE)
+                        // token 签名算法
+                        .idTokenSignatureAlgorithm(SignatureAlgorithm.RS256)
+                        // 授权token过期时间
+                        .accessTokenTimeToLive(Duration.ofSeconds(30 * 60))
+                        // 刷新token过期时间
+                        .refreshTokenTimeToLive(Duration.ofSeconds(60 * 60))
+                        // 刷新token是否可重复使用
+                        .reuseRefreshTokens(false)
+                        .build())
+                .build();
+        JdbcRegisteredClientRepository jdbcRegisteredClientRepository = new JdbcRegisteredClientRepository(jdbcTemplate);
         // Save registered client in db as if in-memory
-        //        registeredClientRepository.save(registeredClient);
+        // 保存一次就行了
+//        jdbcRegisteredClientRepository.save(registeredClient);
 
-        return new JdbcRegisteredClientRepository(jdbcTemplate);
+        return jdbcRegisteredClientRepository;
     }
 
     /**

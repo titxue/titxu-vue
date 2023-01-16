@@ -40,7 +40,7 @@ public class AuthController {
             for (String service : services) {
                 List<ServiceInstance> instances = discoveryClient.getInstances(service);
                 log.info("********{}-{}", service, instances);
-                instances.stream().forEach(instance -> log.info("{}", instance));
+                instances.forEach(instance -> log.info("{}", instance));
             }
         }
         return "ok";
