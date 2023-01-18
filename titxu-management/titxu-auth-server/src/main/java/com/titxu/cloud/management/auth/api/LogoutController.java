@@ -1,4 +1,4 @@
-package com.titxu.cloud.management.auth.controller;
+package com.titxu.cloud.management.auth.api;
 
 import cn.hutool.json.JSONObject;
 import com.titxu.cloud.common.core.constant.AuthConstants;

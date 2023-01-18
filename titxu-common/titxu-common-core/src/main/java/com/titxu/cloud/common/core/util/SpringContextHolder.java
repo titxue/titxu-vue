@@ -78,7 +78,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     /**
      * 发布事件
      *
-     * @param event
+     * @param event 事件
      */
     public static void publishEvent(ApplicationEvent event) {
         if (applicationContext == null) {
@@ -86,6 +86,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
         }
         applicationContext.publishEvent(event);
     }
+
 
     /**
      * 实现DisposableBean接口, 在Context关闭时清理静态变量.

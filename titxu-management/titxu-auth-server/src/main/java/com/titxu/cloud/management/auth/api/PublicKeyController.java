@@ -1,4 +1,4 @@
-package com.titxu.cloud.management.auth.controller;
+package com.titxu.cloud.management.auth.api;
 
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;

@@ -37,7 +37,7 @@ public class WebSecurityConfiguration {
             "/*/*.js",
             "/error",
             "/favicon.ico",
-            "/auth/**",
+            "/account/**",
             "/getPublicKey"
     };
     private AccessDeniedHandler accessDeniedHandler;
@@ -91,7 +91,7 @@ public class WebSecurityConfiguration {
         });
 
         http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
-                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/account/**").permitAll()
                         // 授权请求
                         .requestMatchers("/token/**").permitAll()
                         // 放行端点

@@ -222,7 +222,7 @@ public class AuthorizationServerConfig {
         JdbcRegisteredClientRepository jdbcRegisteredClientRepository = new JdbcRegisteredClientRepository(jdbcTemplate);
         // Save registered client in db as if in-memory
         // 保存一次就行了
-//        jdbcRegisteredClientRepository.save(registeredClient);
+        // jdbcRegisteredClientRepository.save(registeredClient);
 
         return jdbcRegisteredClientRepository;
     }

@@ -43,9 +43,18 @@ public class Result<T> implements Serializable {
     }
 
 
-    public Result<?> put(T data) {
-        setData(data);
-        return this;
+    public static Result<?> ok() {
+        return new Result<>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMsg());
+    }
+
+    public static Result<?> ok(String msg) {
+        return new Result<>(ResultCode.SUCCESS.getCode(), msg);
+    }
+
+    public static <T> Result<T> ok(T data) {
+        Result<T> result = new Result<>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMsg());
+        result.setData(data);
+        return result;
     }
 
 

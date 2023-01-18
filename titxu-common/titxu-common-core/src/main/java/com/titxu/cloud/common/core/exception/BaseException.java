@@ -2,9 +2,6 @@ package com.titxu.cloud.common.core.exception;
 
 /**
  * 公用的自定义异常
- *
-
-
  **/
 public class BaseException extends RuntimeException {
 
