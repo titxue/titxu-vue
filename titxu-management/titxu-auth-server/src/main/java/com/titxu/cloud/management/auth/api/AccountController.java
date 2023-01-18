@@ -6,6 +6,7 @@ import com.titxu.cloud.common.core.util.BasicAuth;
 import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;
 import com.titxu.cloud.management.auth.infrastructure.client.RemoteAuthService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,6 +36,7 @@ public class AccountController {
     /**
      * 获取微服务 服务列表
      */
+    @Operation(summary = "登陆接口")
     @PostMapping("/login")
     public Result<Map<String, Object>> loginByMobile(@RequestBody LoginPasswordCommand command) {
         // 封装 basic auth 认证信息
