@@ -24,6 +24,8 @@ public interface AuthConstants {
      */
     String AUTHORIZATION_KEY = "Authorization";
 
+    String AUTHORIZATION_BASIC = "Basic ";
+
     /**
      * JWT令牌前缀
      */
@@ -95,6 +97,7 @@ public interface AuthConstants {
     String USER_ID_KEY = "userId";
 
     String USER_NAME_KEY = "userName";
+    String USERNAME_KEY = "username";
 
     String USER_NAME_TOKEN_KEY = "username";
 

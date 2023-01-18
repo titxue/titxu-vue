@@ -39,12 +39,7 @@ public class AccountController {
     public Result<Map<String, Object>> loginByMobile(@RequestBody LoginPasswordCommand command) {
         // 封装 basic auth 认证信息
         String basicAuth = BasicAuth.generateBasicAuth(AuthConstants.ADMIN_CLIENT_ID, AuthConstants.ADMIN_CLIENT_SECRET);
-        Map<String, Object> res = remoteAuthService.login(
-                AuthConstants.GRANT_TYPE_PASSWORD,
-                AuthConstants.ADMIN_SCOPE,
-                command.getMobile(),
-                command.getPassword(),
-                basicAuth);
+        Map<String, Object> res = remoteAuthService.login(AuthConstants.GRANT_TYPE_PASSWORD, AuthConstants.ADMIN_SCOPE, command.getMobile(), command.getPassword(), basicAuth);
         return Result.ok(res);
 
     }

@@ -13,6 +13,6 @@ public class BasicAuth {
         byte[] plainCertificateBytes = plainCertificate.getBytes();
         byte[] base64CertificateBytes = Base64.getEncoder().encode(plainCertificateBytes);
         String base64Certificate = new String(base64CertificateBytes);
-        return AuthConstants.AUTHORIZATION_PREFIX + base64Certificate;
+        return AuthConstants.AUTHORIZATION_BASIC + base64Certificate;
     }
 }

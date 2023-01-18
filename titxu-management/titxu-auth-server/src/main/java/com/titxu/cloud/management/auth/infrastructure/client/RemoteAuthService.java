@@ -1,5 +1,6 @@
 package com.titxu.cloud.management.auth.infrastructure.client;
 
+import com.titxu.cloud.common.core.constant.AuthConstants;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.service.annotation.HttpExchange;
@@ -12,9 +13,9 @@ import java.util.Map;
 public interface RemoteAuthService {
 
     @PostExchange("/oauth2/token")
-    Map<String, Object> login(@RequestParam("grant_type") String grantType,
-                              @RequestParam("scope") String scope,
-                              @RequestParam("username") String username,
-                              @RequestParam("password") String password,
-                              @RequestHeader("Authorization") String authorization);
+    Map<String, Object> login(@RequestParam(AuthConstants.GRANT_TYPE_KEY) String grantType,
+                              @RequestParam(AuthConstants.SCOPE_KEY) String scope,
+                              @RequestParam(AuthConstants.USERNAME_KEY) String username,
+                              @RequestParam(AuthConstants.PASSWORD) String password,
+                              @RequestHeader(AuthConstants.AUTHORIZATION_KEY) String authorization);
 }
