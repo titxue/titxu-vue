@@ -1,5 +1,6 @@
 package com.titxu.cloud.common.security.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
@@ -29,6 +30,7 @@ public class AuthUser extends User implements OAuth2AuthenticatedPrincipal {
 
     @Setter
     @Getter
+    @JsonIgnore
     private String password;
 
     @Setter
