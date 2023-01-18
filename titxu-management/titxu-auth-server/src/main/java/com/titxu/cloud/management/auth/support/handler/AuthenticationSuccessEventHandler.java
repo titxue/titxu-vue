@@ -42,6 +42,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
 import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -95,7 +96,28 @@ public class AuthenticationSuccessEventHandler implements AuthenticationSuccessH
 
         OAuth2AccessToken accessToken = accessTokenAuthentication.getAccessToken();
         OAuth2RefreshToken refreshToken = accessTokenAuthentication.getRefreshToken();
-        Map<String, Object> additionalParameters = accessTokenAuthentication.getAdditionalParameters();
+        Map<String, Object> additionalParameters = new HashMap<>(accessTokenAuthentication.getAdditionalParameters());
+        /*
+         * aud：audience，表示接收token的一方；
+         * nbf：not before，表示token有效期开始时间；
+         * sub：subject，表示token的主题，可以用来标识token的用户；
+         * iss：issuer，表示token的签发者；
+         * jti：jti，表示token的唯一标识，避免重放攻击；
+         * iat：issued at，表示token的签发时间；
+         * exp：expires，表示token的过期时间；
+         * expires_in：表示token的有效期；
+         * scope：表示权限范围。
+         */
+        // 删除敏感的参数
+        additionalParameters.remove("aud");
+        additionalParameters.remove("nbf");
+        additionalParameters.remove("sub");
+        additionalParameters.remove("iss");
+        additionalParameters.remove("jti");
+        additionalParameters.remove("iat");
+        additionalParameters.remove("exp");
+        additionalParameters.remove("scope");
+
 
         OAuth2AccessTokenResponse.Builder builder = OAuth2AccessTokenResponse.withToken(accessToken.getTokenValue())
                 .tokenType(accessToken.getTokenType()).scopes(accessToken.getScopes());
@@ -115,5 +137,6 @@ public class AuthenticationSuccessEventHandler implements AuthenticationSuccessH
         SecurityContextHolder.clearContext();
         this.accessTokenHttpResponseConverter.write(accessTokenResponse, null, httpResponse);
     }
+
 
 }
