@@ -1,5 +1,6 @@
 package com.titxu.cloud.common.core.util;
 
+import com.titxu.cloud.common.core.constant.AuthConstants;
 import lombok.experimental.UtilityClass;
 
 import java.util.Base64;
@@ -12,6 +13,6 @@ public class BasicAuth {
         byte[] plainCertificateBytes = plainCertificate.getBytes();
         byte[] base64CertificateBytes = Base64.getEncoder().encode(plainCertificateBytes);
         String base64Certificate = new String(base64CertificateBytes);
-        return "Basic " + base64Certificate;
+        return AuthConstants.AUTHORIZATION_PREFIX + base64Certificate;
     }
 }

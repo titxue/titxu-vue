@@ -1,6 +1,7 @@
 package com.titxu.cloud.management.auth.api;
 
 
+import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.BasicAuth;
 import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;
@@ -35,11 +36,15 @@ public class AccountController {
      * 获取微服务 服务列表
      */
     @PostMapping("/login")
-    public Result<Map<String, Object>> loginByMobile(@RequestBody LoginPasswordCommand loginPasswordCommand) {
+    public Result<Map<String, Object>> loginByMobile(@RequestBody LoginPasswordCommand command) {
         // 封装 basic auth 认证信息
-        String basicAuth = BasicAuth.generateBasicAuth("messaging-client", "secret");
-        Map<String, Object> res = remoteAuthService.login("password", "message.read", "18555555555", "123456", basicAuth);
-        log.info("res:{}", res);
+        String basicAuth = BasicAuth.generateBasicAuth(AuthConstants.ADMIN_CLIENT_ID, AuthConstants.ADMIN_CLIENT_SECRET);
+        Map<String, Object> res = remoteAuthService.login(
+                AuthConstants.GRANT_TYPE_PASSWORD,
+                AuthConstants.ADMIN_SCOPE,
+                command.getMobile(),
+                command.getPassword(),
+                basicAuth);
         return Result.ok(res);
 
     }

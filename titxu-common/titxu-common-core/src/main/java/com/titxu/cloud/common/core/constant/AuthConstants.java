@@ -157,4 +157,11 @@ public interface AuthConstants {
      * 请求开始时间
      */
     String REQUEST_START_TIME = "REQUEST-START-TIME";
+
+
+    String ADMIN_CLIENT_ID = "messaging-client";
+
+    String ADMIN_CLIENT_SECRET = "secret";
+
+    String ADMIN_SCOPE = "message.read";
 }
