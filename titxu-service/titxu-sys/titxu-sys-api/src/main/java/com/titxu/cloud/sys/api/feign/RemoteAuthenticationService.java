@@ -14,7 +14,7 @@ public interface RemoteAuthenticationService {
      * @param uuid uuid
      * @return success / fail
      */
-    @PostMapping(value = "/auth/validateCaptcha", headers = AuthConstants.HEADER_FROM_IN)
+    @PostMapping(value = "/remote/auth/validateCaptcha", headers = AuthConstants.HEADER_FROM_IN)
     boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode);
 
     /**
@@ -23,6 +23,6 @@ public interface RemoteAuthenticationService {
      * @param userName 用户名
      * @return 认证信息
      */
-    @PostMapping(value = "/auth/loginByUserName", headers = AuthConstants.HEADER_FROM_IN)
+    @PostMapping(value = "/remote/auth/loginByUserName", headers = AuthConstants.HEADER_FROM_IN)
     AuthenticationDTO loginByUserName(@RequestParam("userName") String userName);
 }

@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.infrastructure.api;
 
+import com.titxu.cloud.common.security.annotation.Inner;
 import com.titxu.cloud.sys.domain.model.captcha.Captcha;
 import com.titxu.cloud.sys.domain.model.captcha.CaptchaRepository;
 import com.titxu.cloud.sys.domain.model.captcha.Uuid;
@@ -7,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/captcha")
+@RequestMapping("/remote/captcha")
 public class CaptchaApi {
     private CaptchaRepository captchaRepository;
 
@@ -22,6 +23,7 @@ public class CaptchaApi {
      * @param uuid
      * @return
      */
+    @Inner
     @GetMapping("find")
     public Captcha find(@RequestParam Uuid uuid) {
         return captchaRepository.find(uuid);
@@ -32,6 +34,7 @@ public class CaptchaApi {
      *
      * @param captcha
      */
+    @Inner
     @PostMapping("store")
     public void store(@RequestBody Captcha captcha) {
         captchaRepository.store(captcha);
@@ -42,6 +45,7 @@ public class CaptchaApi {
      *
      * @param uuid
      */
+    @Inner
     @GetMapping("remove")
     public void remove(@RequestParam Uuid uuid) {
         captchaRepository.remove(uuid);

@@ -13,6 +13,6 @@ public interface RemoteLogSaveService {
      *
      * @param logDTO 日志实体
      */
-    @PostMapping(value = "saveLog", headers = AuthConstants.HEADER_FROM_IN)
+    @PostMapping(value = "/remote/log/saveLog", headers = AuthConstants.HEADER_FROM_IN)
     void saveLog(@RequestBody LogDTO logDTO);
 }

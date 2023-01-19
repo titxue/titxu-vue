@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/remote/auth")
 public class AuthenticationApi {
 
     private AuthenticationService authenticationService;
@@ -20,13 +20,14 @@ public class AuthenticationApi {
         this.authenticationService = authenticationService;
     }
 
+    @Inner
     @PostMapping("/validateCaptcha")
     public boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode) {
         return authenticationService.validateCaptcha(uuid, captchaCode);
     }
 
 
-    @Inner(false)
+    @Inner
     @PostMapping("/loginByUserName")
     public AuthenticationDTO loginByUserName(@RequestParam("userName") String userName) {
         return authenticationService.loginByUserName(userName);

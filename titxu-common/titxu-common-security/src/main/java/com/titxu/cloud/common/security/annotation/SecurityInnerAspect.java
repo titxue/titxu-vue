@@ -2,6 +2,7 @@ package com.titxu.cloud.common.security.annotation;
 
 import cn.hutool.core.util.StrUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
+import com.titxu.cloud.common.core.exception.BaseException;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -11,7 +12,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.AnnotationUtils;
-import org.springframework.security.access.AccessDeniedException;
 
 
 /**
@@ -40,7 +40,7 @@ public class SecurityInnerAspect implements Ordered {
         String header = request.getHeader(AuthConstants.FROM);
         if (inner.value() && !StrUtil.equals(AuthConstants.FROM_IN, header)) {
             log.warn("访问接口 {} 没有权限", inner.value());
-            throw new AccessDeniedException("Access is denied");
+            throw new BaseException("微服务内部接口，禁止访问", 5000);
         }
         return point.proceed();
     }

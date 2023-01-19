@@ -60,8 +60,8 @@ public class ResourceServerConfiguration {
                     .requestMatchers("/actuator/**").permitAll()
                     // 放行错误地址
                     .requestMatchers("/error").permitAll()
-                    // 放行微服务接口
-                    .requestMatchers("/auth/**").permitAll()
+                    // 放行登陆微服务接口
+                    .requestMatchers("/remote/**").permitAll()
                     // 其他路径均需要授权
                     .anyRequest().authenticated();
         });
