@@ -5,10 +5,12 @@ import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/auth")
 public class AuthenticationApi {
 
     private AuthenticationService authenticationService;
@@ -18,14 +20,14 @@ public class AuthenticationApi {
         this.authenticationService = authenticationService;
     }
 
-    @PostMapping("/auth/validateCaptcha")
+    @PostMapping("/validateCaptcha")
     public boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode) {
         return authenticationService.validateCaptcha(uuid, captchaCode);
     }
 
 
     @Inner(false)
-    @PostMapping("/auth/loginByUserName")
+    @PostMapping("/loginByUserName")
     public AuthenticationDTO loginByUserName(@RequestParam("userName") String userName) {
         return authenticationService.loginByUserName(userName);
     }
