@@ -4,6 +4,7 @@ import cn.hutool.core.util.ArrayUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.PublicKeyUtils;
 import com.titxu.cloud.common.web.constant.ResultCode;
+import com.titxu.cloud.management.gateway.converter.OAuth2AuthorizationServiceReactiveJwtAuthenticationConverter;
 import com.titxu.cloud.management.gateway.security.AuthorizationManager;
 import com.titxu.cloud.management.gateway.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,9 @@ public class ResourceServerConfig {
 
     private AuthorizationManager authorizationManager;
 
+    private OAuth2AuthorizationServiceReactiveJwtAuthenticationConverter jwtAuthenticationConverter;
+
+
     @Autowired
     public void setWhiteListConfig(WhiteListConfig whiteListConfig) {
         this.whiteListConfig = whiteListConfig;
@@ -45,6 +49,12 @@ public class ResourceServerConfig {
         this.authorizationManager = authorizationManager;
     }
 
+    @Autowired
+    public void setJwtAuthenticationConverter(
+            OAuth2AuthorizationServiceReactiveJwtAuthenticationConverter jwtAuthenticationConverter) {
+        this.jwtAuthenticationConverter = jwtAuthenticationConverter;
+    }
+
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
 
@@ -52,12 +62,19 @@ public class ResourceServerConfig {
         // 待转化为配置文件
         http.csrf().disable();
 
+        // 禁用 form 登录
+        http.formLogin().disable();
+
         http.oauth2ResourceServer(oAuth2ResourceServerSpec -> {
             // 资源服务配置秘钥
             // 启用 OAuth2 JWT 资源服务器支持
             RSAPublicKey rsaPublicKey = PublicKeyUtils.loadPublicKey();
             oAuth2ResourceServerSpec.jwt().publicKey(rsaPublicKey);
 
+
+            // 检查数据库中是否存在Token
+            // 该功能仅在网关中使用，否则会造成数据库压力较大
+            oAuth2ResourceServerSpec.jwt().jwtAuthenticationConverter(jwtAuthenticationConverter);
 
             // 资源服务异常切入点（验证Token异常）
             oAuth2ResourceServerSpec.authenticationEntryPoint(authenticationEntryPoint());
@@ -79,15 +96,12 @@ public class ResourceServerConfig {
     /**
      * 未授权
      *
-     * @return
+     * @return ServerAuthenticationEntryPoint
      */
     @Bean
     ServerAccessDeniedHandler accessDeniedHandler() {
-        return (exchange, denied) -> {
-            Mono<Void> mono = Mono.defer(() -> Mono.just(exchange.getResponse()))
-                    .flatMap(response -> WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode()));
-            return mono;
-        };
+        return (exchange, denied) -> Mono.defer(() -> Mono.just(exchange.getResponse()))
+                .flatMap(response -> WebUtils.getAuthFailResult(response, ResultCode.UNAUTHORIZED.getCode()));
     }
 
     /**
