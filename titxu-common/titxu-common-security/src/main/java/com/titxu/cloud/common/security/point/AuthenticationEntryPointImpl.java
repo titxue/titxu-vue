@@ -25,7 +25,6 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
         log.error("身份验证入口点", authException);
-
         Result<?> error = Result.error(1000, "身份未认证");
         ResponseUtils.response(response, error);
     }
