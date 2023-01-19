@@ -20,6 +20,13 @@ public class AuthenticationApi {
         this.authenticationService = authenticationService;
     }
 
+    /**
+     * 校验验证码 1. 校验验证码是否正确 2. 校验验证码是否过期
+     *
+     * @param uuid        uuid
+     * @param captchaCode 验证码
+     * @return 是否正确
+     */
     @Inner
     @PostMapping("/validateCaptcha")
     public boolean validateCaptcha(@RequestParam("uuid") String uuid, @RequestParam("captchaCode") String captchaCode) {
@@ -27,6 +34,12 @@ public class AuthenticationApi {
     }
 
 
+    /**
+     * 根据用户名获取用户信息
+     *
+     * @param userName 用户名
+     * @return 用户信息
+     */
     @Inner
     @PostMapping("/loginByUserName")
     public AuthenticationDTO loginByUserName(@RequestParam("userName") String userName) {

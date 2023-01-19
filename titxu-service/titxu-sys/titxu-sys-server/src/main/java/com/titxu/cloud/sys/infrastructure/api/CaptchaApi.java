@@ -20,8 +20,8 @@ public class CaptchaApi {
     /**
      * 获取编码
      *
-     * @param uuid
-     * @return
+     * @param uuid uuid
+     * @return 编码
      */
     @Inner
     @GetMapping("find")
@@ -32,7 +32,7 @@ public class CaptchaApi {
     /**
      * 保存
      *
-     * @param captcha
+     * @param captcha 验证码
      */
     @Inner
     @PostMapping("store")
@@ -43,7 +43,7 @@ public class CaptchaApi {
     /**
      * 删除
      *
-     * @param uuid
+     * @param uuid uuid
      */
     @Inner
     @GetMapping("remove")
