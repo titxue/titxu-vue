@@ -4,6 +4,143 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="saveLog" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="保存日志" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
+              <option name="method" value="saveLog" />
+              <option name="methodDescription" value="保存日志" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/remote/log/saveLog" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;微服务内部接口，禁止访问&quot;,&quot;code&quot;:500}" />
+          <option name="url" value="/remote/log/saveLog" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="saveLog" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="保存日志" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
+              <option name="method" value="saveLog" />
+              <option name="methodDescription" value="保存日志" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/remote/log/saveLog" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/remote/log/saveLog" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="saveLog" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="保存日志" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
+              <option name="method" value="saveLog" />
+              <option name="methodDescription" value="保存日志" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/remote/log/saveLog" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
+          <option name="url" value="/remote/log/saveLog" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="saveLog" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="保存日志" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
+              <option name="method" value="saveLog" />
+              <option name="methodDescription" value="保存日志" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/remote/log/saveLog" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
+          <option name="url" value="/remote/log/saveLog" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="saveLog" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="保存日志" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
+              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
+              <option name="method" value="saveLog" />
+              <option name="methodDescription" value="保存日志" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/remote/log/saveLog" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
+          <option name="url" value="/remote/log/saveLog" />
+        </ResponseHistory>
+        <ResponseHistory>
           <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="auth" />
@@ -403,137 +540,6 @@
           <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
           <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:26:24.007+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
           <option name="url" value="/auth/loginByUserName" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="sys" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
-          <option name="methodType" value="POST" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:1001,&quot;msg&quot;:&quot;访问被拒绝&quot;,&quot;data&quot;:null}&#13;&#10;" />
-          <option name="url" value="/auth/loginByUserName" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="302" />
-          <option name="enableEnv" value="sys" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
-          <option name="methodType" value="POST" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="url" value="/auth/loginByUserName" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="302" />
-          <option name="enableEnv" value="sys" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
-          <option name="methodType" value="POST" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="url" value="/auth/loginByUserName" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="302" />
-          <option name="enableEnv" value="sys" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
-          <option name="methodType" value="POST" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="url" value="/auth/loginByUserName" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="302" />
-          <option name="enableEnv" value="sys" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="validateCaptcha" />
-          <option name="methodType" value="POST" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="validateCaptcha" />
-              <option name="methodDescription" value="New Request" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/validateCaptcha" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="&quot;No comment,Type =Boolean&quot;" />
-              <option name="url" value="/auth/validateCaptcha" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;uuid&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;uuid_l40f7&quot;},{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;captchaCode&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;captchaCode_cs011&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="uuid=uuid_l40f7&#10;&amp;captchaCode=captchaCode_cs011" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="url" value="/auth/validateCaptcha" />
         </ResponseHistory>
       </list>
     </option>
