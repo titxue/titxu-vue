@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
 
@@ -46,6 +48,10 @@ public class WebUtils {
 
     public JSONObject getJwtPayload() {
         String jwtPayload = getRequest().orElseThrow().getHeader(CommonConstant.JWT_PAYLOAD_KEY);
+        // 避免userInfo信息有中文，继续URLEncoder转码
+        if (jwtPayload != null) {
+            jwtPayload = URLDecoder.decode(jwtPayload, StandardCharsets.UTF_8);
+        }
         return JSONUtil.parseObj(jwtPayload);
     }
 

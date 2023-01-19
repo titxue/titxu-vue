@@ -19,6 +19,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
 /**
  * 全局过滤器
  **/
@@ -66,8 +69,10 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         }
 
         // 存在token且不是黑名单，request写入JWT的载体信息
+        // 避免userInfo信息有中文，继续URLEncoder转码
+        String encodeUserInfo = URLEncoder.encode(userInfo, StandardCharsets.UTF_8);
         request = exchange.getRequest().mutate()
-                .header(AuthConstants.JWT_PAYLOAD_KEY, userInfo)
+                .header(AuthConstants.JWT_PAYLOAD_KEY, encodeUserInfo)
                 .build();
         exchange = exchange.mutate().request(request).build();
         return chain.filter(exchange);
