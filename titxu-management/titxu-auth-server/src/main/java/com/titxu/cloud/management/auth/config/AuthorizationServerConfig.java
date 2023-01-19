@@ -61,7 +61,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
-import static com.titxu.cloud.management.auth.jose.Jwks.generateLoadRsa;
+import static com.titxu.cloud.common.core.util.jose.Jwks.generateLoadRsa;
+
 
 /**
  * 授权服务配置

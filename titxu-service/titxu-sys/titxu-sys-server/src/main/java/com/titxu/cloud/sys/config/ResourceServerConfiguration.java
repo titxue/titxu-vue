@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys.config;
 
-import com.titxu.cloud.common.security.util.PublicKeyUtils;
+import com.titxu.cloud.common.core.util.PublicKeyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -60,7 +60,8 @@ public class ResourceServerConfiguration {
                     .requestMatchers("/actuator/**").permitAll()
                     // 放行错误地址
                     .requestMatchers("/error").permitAll()
-//                    .requestMatchers("/auth/**").permitAll()
+                    // 放行微服务接口
+                    .requestMatchers("/auth/**").permitAll()
                     // 其他路径均需要授权
                     .anyRequest().authenticated();
         });

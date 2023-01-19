@@ -2,7 +2,7 @@ package com.titxu.cloud.management.auth.api;
 
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
-import com.titxu.cloud.management.auth.jose.KeyGeneratorUtils;
+import com.titxu.cloud.common.core.util.jose.KeyGeneratorUtils;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

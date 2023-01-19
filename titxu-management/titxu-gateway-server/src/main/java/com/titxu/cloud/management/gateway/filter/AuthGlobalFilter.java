@@ -57,6 +57,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         JWSObject jwsObject = JWSObject.parse(token);
         String payload = jwsObject.getPayload().toString();
         JSONObject jsonObject = JSONObject.parseObject(payload);
+        String userInfo = jsonObject.getString("user_info");
         String jti = jsonObject.getString(AuthConstants.JWT_JTI);
         Boolean isBlack = redisService.hasKey(AuthConstants.TOKEN_BLACKLIST_PREFIX + jti);
         if (isBlack) {
@@ -66,7 +67,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
         // 存在token且不是黑名单，request写入JWT的载体信息
         request = exchange.getRequest().mutate()
-                .header(AuthConstants.JWT_PAYLOAD_KEY, payload)
+                .header(AuthConstants.JWT_PAYLOAD_KEY, userInfo)
                 .build();
         exchange = exchange.mutate().request(request).build();
         return chain.filter(exchange);

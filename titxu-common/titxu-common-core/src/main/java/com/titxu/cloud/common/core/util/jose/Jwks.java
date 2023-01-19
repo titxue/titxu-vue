@@ -1,4 +1,4 @@
-package com.titxu.cloud.common.security.util.jose;
+package com.titxu.cloud.common.core.util.jose;
 
 import com.nimbusds.jose.jwk.Curve;
 import com.nimbusds.jose.jwk.ECKey;

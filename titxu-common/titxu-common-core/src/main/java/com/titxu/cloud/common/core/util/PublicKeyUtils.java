@@ -1,6 +1,7 @@
-package com.titxu.cloud.common.security.util;
+package com.titxu.cloud.common.core.util;
 
-import com.titxu.cloud.common.security.util.jose.KeyGeneratorUtils;
+
+import com.titxu.cloud.common.core.util.jose.KeyGeneratorUtils;
 import lombok.experimental.UtilityClass;
 
 import java.security.KeyPair;

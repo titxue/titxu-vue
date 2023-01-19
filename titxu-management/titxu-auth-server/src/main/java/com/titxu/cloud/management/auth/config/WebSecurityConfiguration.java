@@ -1,5 +1,7 @@
 package com.titxu.cloud.management.auth.config;
 
+
+import com.titxu.cloud.common.core.util.PublicKeyUtils;
 import com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider;
 import com.titxu.cloud.management.auth.support.core.FormIdentityLoginConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +11,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.util.matcher.RequestMatcher;
+
+import java.security.interfaces.RSAPublicKey;
 
 import static com.titxu.cloud.common.security.service.CsrfRequestMatcherImpl.CSRF_REQUEST_MATCHER_BEAN_NAME;
 
@@ -42,6 +48,12 @@ public class WebSecurityConfiguration {
     };
     private AccessDeniedHandler accessDeniedHandler;
     private RequestMatcher requestMatcher;
+    private AuthenticationEntryPoint authenticationEntryPoint;
+
+    @Autowired
+    public void setAuthenticationEntryPoint(AuthenticationEntryPoint authenticationEntryPoint) {
+        this.authenticationEntryPoint = authenticationEntryPoint;
+    }
 
     @Autowired
     public void setAccessDeniedHandler(AccessDeniedHandler accessDeniedHandler) {
@@ -77,18 +89,6 @@ public class WebSecurityConfiguration {
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        // 异常处理
-        http.exceptionHandling(exceptionHandlingCustomizer -> {
-            exceptionHandlingCustomizer
-                    // 访问被拒绝处理程序
-                    .accessDeniedHandler(accessDeniedHandler)
-                    // 身份验证入口点
-                    .authenticationEntryPoint((request, response, authException) -> {
-                        response.setStatus(401);
-                        response.setContentType("application/json;charset=utf-8");
-                        response.getWriter().write("未登录或登录已过期");
-                    });
-        });
 
         http.authorizeHttpRequests((authorizeRequests) -> authorizeRequests
                         .requestMatchers("/account/**").permitAll()
@@ -110,29 +110,28 @@ public class WebSecurityConfiguration {
         // 处理 UsernamePasswordAuthenticationToken
         http.authenticationProvider(new DaoAuthenticationProvider());
 
+        // 资源服务配置秘钥
+        http.oauth2ResourceServer().jwt(oauth2ResourceServer -> {
+            RSAPublicKey rsaPublicKey = PublicKeyUtils.loadPublicKey();
+            NimbusJwtDecoder.PublicKeyJwtDecoderBuilder publicKeyJwtDecoderBuilder = NimbusJwtDecoder
+                    .withPublicKey(rsaPublicKey);
+            NimbusJwtDecoder nimbusJwtDecoder = publicKeyJwtDecoderBuilder.build();
+            oauth2ResourceServer.decoder(nimbusJwtDecoder);
+        });
+
+        // 异常处理
+        http.exceptionHandling(exceptionHandlingCustomizer -> {
+            exceptionHandlingCustomizer
+                    // 访问被拒绝处理程序
+                    .accessDeniedHandler(accessDeniedHandler)
+                    // 身份验证入口点
+                    .authenticationEntryPoint(authenticationEntryPoint);
+        });
+
         // csrf
         http.csrf().disable();
         return http.build();
     }
-
-    /**
-     * 暴露静态资源
-     * <p>
-     * <a href="https://github.com/spring-projects/spring-security/issues/10938">...</a>
-     *
-     * @param http security注入点
-     * @return SecurityFilterChain
-     * @throws Exception 异常
-     */
-//    @Bean
-//    @Order(0)
-//    SecurityFilterChain resources(HttpSecurity http) throws Exception {
-//        // 放行SWAGGER_WHITELIST 配置的资源 不需要认证
-//        http.securityMatchers((matchers) -> matchers.requestMatchers(URL_WHITELIST))
-//                .authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll()).requestCache().disable()
-//                .securityContext().disable().sessionManagement().disable();
-//        return http.build();
-//    }
 
 
 }
