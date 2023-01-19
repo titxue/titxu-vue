@@ -1,7 +1,5 @@
 package com.titxu.cloud.common.security.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import lombok.Getter;
@@ -28,10 +26,10 @@ public class AuthUser extends User implements OAuth2AuthenticatedPrincipal {
     @Getter
     private String id;
 
-    @Setter
-    @Getter
-    @JsonIgnore
-    private String password;
+//    @Setter
+//    @Getter
+//    @JsonIgnore
+//    private String password;
 
     @Setter
     @Getter
@@ -42,8 +40,8 @@ public class AuthUser extends User implements OAuth2AuthenticatedPrincipal {
                 true, true, true, AuthorityUtils.commaSeparatedStringToAuthorityList(StringUtils.join(authenticationDTO.getPermissionCodes(), ",")));
         this.setId(authenticationDTO.getUserId());
 //        this.setUsername(authenticationDTO.getUserName());
-        this.setPassword(AuthConstants.BCRYPT + authenticationDTO.getPassword());
-//        this.setEnabled(StatusEnum.ENABLE、.getValue().equals(authenticationDTO.getStatus()));
+//        this.setPassword(AuthConstants.BCRYPT + authenticationDTO.getPassword());
+//        this.setEnabled(St、atusEnum.ENABLE、.getValue().equals(authenticationDTO.getStatus()));
         this.setTenantId(authenticationDTO.getTenantId());
 //        this.authorities = AuthorityUtils.commaSeparatedStringToAuthorityList(StringUtils.join(authenticationDTO.getPermissionCodes(), ","));
     }

@@ -12,6 +12,7 @@ import com.titxu.cloud.management.auth.support.base.CustomeAuthorizationGrantTyp
 import com.titxu.cloud.management.auth.support.core.CustomeOAuth2TokenCustomizer;
 import com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider;
 import com.titxu.cloud.management.auth.support.core.FormIdentityLoginConfigurer;
+import com.titxu.cloud.management.auth.support.core.JwtCustomeOAuth2TokenCustomizer;
 import com.titxu.cloud.management.auth.support.generator.CustomeOAuth2AccessTokenGenerator;
 import com.titxu.cloud.management.auth.support.handler.AuthenticationFailureEventHandler;
 import com.titxu.cloud.management.auth.support.handler.AuthenticationSuccessEventHandler;
@@ -29,9 +30,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.jackson2.SecurityJackson2Modules;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
-import org.springframework.security.oauth2.core.oidc.OidcScopes;
 import org.springframework.security.oauth2.jose.jws.SignatureAlgorithm;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 import org.springframework.security.oauth2.server.authorization.JdbcOAuth2AuthorizationConsentService;
 import org.springframework.security.oauth2.server.authorization.JdbcOAuth2AuthorizationService;
 import org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationConsentService;
@@ -47,6 +48,7 @@ import org.springframework.security.oauth2.server.authorization.settings.ClientS
 import org.springframework.security.oauth2.server.authorization.settings.OAuth2TokenFormat;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.oauth2.server.authorization.token.DelegatingOAuth2TokenGenerator;
+import org.springframework.security.oauth2.server.authorization.token.JwtGenerator;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2RefreshTokenGenerator;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenGenerator;
 import org.springframework.security.oauth2.server.authorization.web.authentication.*;
@@ -77,16 +79,16 @@ public class AuthorizationServerConfig {
         OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = new OAuth2AuthorizationServerConfigurer();
 
         http.apply(authorizationServerConfigurer.tokenEndpoint((tokenEndpoint) -> {// 个性化认证授权端点
-                    tokenEndpoint
-                            .accessTokenRequestConverter(accessTokenRequestConverter()) // 注入自定义的授权认证Converter
-                            .accessTokenResponseHandler(new AuthenticationSuccessEventHandler()) // 登录成功处理器
-                            .errorResponseHandler(new AuthenticationFailureEventHandler());// 登录失败处理器
-                }).clientAuthentication(oAuth2ClientAuthenticationConfigurer -> // 个性化客户端认证
-                        oAuth2ClientAuthenticationConfigurer
-                                .errorResponseHandler(new ClientAuthenticationFailureEventHandler()))// 处理客户端认证异常
-                .authorizationEndpoint(authorizationEndpoint -> authorizationEndpoint
-                        .consentPage("/token/confirm_access")));
-
+                            tokenEndpoint
+                                    .accessTokenRequestConverter(accessTokenRequestConverter()) // 注入自定义的授权认证Converter
+                                    .accessTokenResponseHandler(new AuthenticationSuccessEventHandler()) // 登录成功处理器
+                                    .errorResponseHandler(new AuthenticationFailureEventHandler());// 登录失败处理器
+                        }).clientAuthentication(oAuth2ClientAuthenticationConfigurer -> // 个性化客户端认证
+                                oAuth2ClientAuthenticationConfigurer
+                                        .errorResponseHandler(new ClientAuthenticationFailureEventHandler()))// 处理客户端认证异常
+                        .authorizationEndpoint(authorizationEndpoint -> authorizationEndpoint
+                                .consentPage("/token/confirm_access"))
+        );
         DefaultSecurityFilterChain securityFilterChain = http.authorizeHttpRequests(authorizeRequests -> {
                     // 自定义接口、端点暴露
                     authorizeRequests.requestMatchers("/token/**", "/actuator/**", "/css/**", "/error").permitAll();
@@ -128,9 +130,12 @@ public class AuthorizationServerConfig {
     @Bean
     public OAuth2TokenGenerator oAuth2TokenGenerator() {
         CustomeOAuth2AccessTokenGenerator accessTokenGenerator = new CustomeOAuth2AccessTokenGenerator();
-        // 注入Token 增加关联用户信息
+        JwtGenerator jwtGenerator = new JwtGenerator(new NimbusJwtEncoder(jwkSource()));
+        // Base64 96位 注入Token 增加关联用户信息
         accessTokenGenerator.setAccessTokenCustomizer(new CustomeOAuth2TokenCustomizer());
-        return new DelegatingOAuth2TokenGenerator(accessTokenGenerator, new OAuth2RefreshTokenGenerator());
+        // JWT注入Token 增加关联用户信息
+        jwtGenerator.setJwtCustomizer(new JwtCustomeOAuth2TokenCustomizer());
+        return new DelegatingOAuth2TokenGenerator(accessTokenGenerator, jwtGenerator, new OAuth2RefreshTokenGenerator());
     }
 
     /**
@@ -183,23 +188,21 @@ public class AuthorizationServerConfig {
         /*
           重定向地址
           http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=http://127.0.0.1:8000/token/login
-          http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read&redirect_uri=https://www.baidu.com
+          http://127.0.0.1:8000/oauth2/authorize?response_type=code&client_id=admin&scope=server&redirect_uri=https://www.baidu.com
          */
 
         RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("messaging-client")
-                .clientSecret("{noop}secret")
+                .clientId("admin")
+                .clientSecret("{noop}admin")
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+                .clientAuthenticationMethod(ClientAuthenticationMethod.PRIVATE_KEY_JWT)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(CustomeAuthorizationGrantType.PASSWORD)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
                 .redirectUri("http://127.0.0.1:8080/token/login")
                 .redirectUri("https://www.baidu.com")
-                .scope(OidcScopes.OPENID)
-                .scope(OidcScopes.PROFILE)
-                .scope("message.read")
-                .scope("message.write")
+                .scope("server")
                 // client 设置
                 .clientSettings(ClientSettings.builder()
                         // 是否手动授权
@@ -208,7 +211,7 @@ public class AuthorizationServerConfig {
                 // token 设置
                 .tokenSettings(TokenSettings.builder()
                         // 访问令牌格式，支持OAuth2TokenFormat.SELF_CONTAINED（自包含的令牌使用受保护的、有时间限制的数据结构，例如JWT）；OAuth2TokenFormat.REFERENCE（不透明令牌）
-                        .accessTokenFormat(OAuth2TokenFormat.REFERENCE)
+                        .accessTokenFormat(OAuth2TokenFormat.SELF_CONTAINED)
                         // token 签名算法
                         .idTokenSignatureAlgorithm(SignatureAlgorithm.RS256)
                         // 授权token过期时间
@@ -281,8 +284,14 @@ public class AuthorizationServerConfig {
      * @throws Exception Exception
      */
     @Bean
-    public JWKSource<SecurityContext> jwkSource() throws Exception {
-        RSAKey rsaKey = generateLoadRsa();
+    public JWKSource<SecurityContext> jwkSource() {
+        RSAKey rsaKey;
+        try {
+            rsaKey = generateLoadRsa();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         JWKSet jwkSet = new JWKSet(rsaKey);
         return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
     }
@@ -312,6 +321,7 @@ public class AuthorizationServerConfig {
     public AuthorizationServerSettings authorizationServerSettings() {
         return AuthorizationServerSettings.builder().build();
     }
+
 
     //    /**
 //     * JWT内容增强

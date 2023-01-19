@@ -18,6 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsPasswordService;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.endpoint.OAuth2ParameterNames;
@@ -40,7 +41,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
 
     private final static BasicAuthenticationConverter basicConvert = new BasicAuthenticationConverter();
 
-    private PasswordEncoder passwordEncoder;
+    private BCryptPasswordEncoder passwordEncoder;
 
     /**
      * The password used to perform {@link PasswordEncoder#matches(CharSequence, String)}
@@ -56,7 +57,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
 
     public DaoAuthenticationProvider() {
         setMessageSource(SpringUtil.getBean("securityMessageSource"));
-        setPasswordEncoder(PasswordEncoderFactories.createDelegatingPasswordEncoder());
+        setPasswordEncoder(new BCryptPasswordEncoder());
     }
 
     @Override
@@ -152,7 +153,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
         }
     }
 
-    protected PasswordEncoder getPasswordEncoder() {
+    protected BCryptPasswordEncoder getPasswordEncoder() {
         return this.passwordEncoder;
     }
 
@@ -164,7 +165,7 @@ public class DaoAuthenticationProvider extends AbstractUserDetailsAuthentication
      * @param passwordEncoder must be an instance of one of the {@code PasswordEncoder}
      *                        types.
      */
-    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
+    public void setPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
         Assert.notNull(passwordEncoder, "passwordEncoder cannot be null");
         this.passwordEncoder = passwordEncoder;
         this.userNotFoundEncodedPassword = null;
