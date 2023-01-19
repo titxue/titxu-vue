@@ -28,7 +28,7 @@ public class TenantQueryServiceImpl implements TenantQueryService {
 
     @Override
     public Page queryPage(Map<String, Object> params) {
-        IPage<SysTenantDO> page = sysTenantMapper.queryPage(new Query().getPage(params), params);
+        IPage<SysTenantDO> page = sysTenantMapper.queryPage(new Query<SysTenantDO>().getPage(params), params);
         return PageAssembler.toPage(page);
     }
 }

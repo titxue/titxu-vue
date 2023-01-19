@@ -81,7 +81,7 @@ public class WebFluxUtils {
     }
 
     public static boolean isJsonMediaType(String contentType) {
-        return MediaType.APPLICATION_JSON_VALUE.equalsIgnoreCase(contentType) || MediaType.APPLICATION_JSON_UTF8_VALUE.equalsIgnoreCase(contentType);
+        return MediaType.APPLICATION_JSON_VALUE.equalsIgnoreCase(contentType);
     }
 
     /**
@@ -94,7 +94,7 @@ public class WebFluxUtils {
         Flux<DataBuffer> body = serverHttpRequest.getBody();
         AtomicReference<String> bodyReference = new AtomicReference<>();
         body.subscribe(buffer -> {
-            CharBuffer charBuffer = StandardCharsets.UTF_8.decode(buffer.asByteBuffer());
+            CharBuffer charBuffer = StandardCharsets.UTF_8.decode(buffer.toByteBuffer());
             DataBufferUtils.release(buffer);
             bodyReference.set(charBuffer.toString());
         });
