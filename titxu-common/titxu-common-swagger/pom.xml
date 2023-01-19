@@ -29,7 +29,6 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-            <version>2.0.2</version>
         </dependency>
         <!--webflux 相关包-->
         <dependency>

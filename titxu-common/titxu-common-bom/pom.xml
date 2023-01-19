@@ -30,6 +30,12 @@
         <aspectjrt.version>1.9.7</aspectjrt.version>
         <gson.version>2.10</gson.version>
         <joda-time.version>2.12.2</joda-time.version>
+        <!--JSON序列化-->
+        <jackson-databind.version>2.14.1</jackson-databind.version>
+        <!--接口文档-->
+        <springdoc-openapi-api.version>2.0.2</springdoc-openapi-api.version>
+        <!--JavaBean验证框架-->
+        <hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
     </properties>
 
 
@@ -122,6 +128,23 @@
                 <artifactId>joda-time</artifactId>
                 <version>${joda-time.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+                <version>${springdoc-openapi-api.version}</version>
+            </dependency>
+
+            <!--            <dependency>-->
+            <!--                <groupId>org.hibernate.validator</groupId>-->
+            <!--                <artifactId>hibernate-validator</artifactId>-->
+            <!--                <version>${hibernate-validator.version}</version>-->
+            <!--            </dependency>-->
             <!--web 模块-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
