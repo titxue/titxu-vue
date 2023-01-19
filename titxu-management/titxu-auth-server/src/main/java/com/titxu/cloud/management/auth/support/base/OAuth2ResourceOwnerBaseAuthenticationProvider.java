@@ -171,7 +171,8 @@ public abstract class OAuth2ResourceOwnerBaseAuthenticationProvider<T extends OA
                     generatedAccessToken.getTokenValue(), generatedAccessToken.getIssuedAt(),
                     generatedAccessToken.getExpiresAt(), tokenContext.getAuthorizedScopes());
             if (generatedAccessToken instanceof ClaimAccessor) {
-                authorizationBuilder.id(accessToken.getTokenValue())
+                authorizationBuilder
+//                        .id(accessToken.getTokenValue())
                         .token(accessToken,
                                 (metadata) -> metadata.put(OAuth2Authorization.Token.CLAIMS_METADATA_NAME,
                                         ((ClaimAccessor) generatedAccessToken).getClaims()))
