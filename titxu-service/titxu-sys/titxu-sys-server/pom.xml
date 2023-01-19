@@ -59,6 +59,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <!--配置中心客户端-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

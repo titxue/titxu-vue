@@ -45,7 +45,7 @@ public class WebUtils {
 
 
     public JSONObject getJwtPayload() {
-        String jwtPayload = getRequest().get().getHeader(CommonConstant.JWT_PAYLOAD_KEY);
+        String jwtPayload = getRequest().orElseThrow().getHeader(CommonConstant.JWT_PAYLOAD_KEY);
         return JSONUtil.parseObj(jwtPayload);
     }
 

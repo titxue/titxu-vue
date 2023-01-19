@@ -2,14 +2,13 @@ package com.titxu.cloud.common.core.constant;
 
 /**
  * 通用常量类
- *
  **/
 public interface CommonConstant {
 
     /**
      * 用户ID
      */
-    String USER_ID = "userId";
+    String USER_ID = "id";
 
     /**
      * 用户名

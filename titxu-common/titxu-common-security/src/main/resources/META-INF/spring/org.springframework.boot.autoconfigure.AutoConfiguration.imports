@@ -4,3 +4,4 @@ com.titxu.cloud.common.security.service.UserDetailsServiceImpl
 com.titxu.cloud.common.security.service.CsrfRequestMatcherImpl
 com.titxu.cloud.common.security.handler.AccessDeniedHandlerImpl
 com.titxu.cloud.common.security.feign.FeignClientConfiguration
+com.titxu.cloud.common.security.point.AuthenticationEntryPointImpl

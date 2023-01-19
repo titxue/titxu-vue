@@ -1,12 +1,17 @@
 package com.titxu.cloud.sys.config;
 
+import com.titxu.cloud.common.security.util.PublicKeyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
+
+import java.security.interfaces.RSAPublicKey;
 
 
 /**
@@ -22,11 +27,16 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 public class ResourceServerConfiguration {
 
     private AccessDeniedHandler accessDeniedHandler;
-
+    private AuthenticationEntryPoint authenticationEntryPoint;
 
     @Autowired
     public void setAccessDeniedHandler(AccessDeniedHandler accessDeniedHandler) {
         this.accessDeniedHandler = accessDeniedHandler;
+    }
+
+    @Autowired
+    public void setAuthenticationEntryPoint(AuthenticationEntryPoint authenticationEntryPoint) {
+        this.authenticationEntryPoint = authenticationEntryPoint;
     }
 
 
@@ -50,8 +60,7 @@ public class ResourceServerConfiguration {
                     .requestMatchers("/actuator/**").permitAll()
                     // 放行错误地址
                     .requestMatchers("/error").permitAll()
-                    // 图片验证码
-                    .requestMatchers("/auth/**").permitAll()
+//                    .requestMatchers("/auth/**").permitAll()
                     // 其他路径均需要授权
                     .anyRequest().authenticated();
         });
@@ -59,12 +68,22 @@ public class ResourceServerConfiguration {
         // 禁用 form 登录
         http.formLogin().disable();
 
+        // 资源服务配置秘钥
+        http.oauth2ResourceServer().jwt(oauth2ResourceServer -> {
+            RSAPublicKey rsaPublicKey = PublicKeyUtils.loadPublicKey();
+            NimbusJwtDecoder.PublicKeyJwtDecoderBuilder publicKeyJwtDecoderBuilder = NimbusJwtDecoder
+                    .withPublicKey(rsaPublicKey);
+            NimbusJwtDecoder nimbusJwtDecoder = publicKeyJwtDecoderBuilder.build();
+            oauth2ResourceServer.decoder(nimbusJwtDecoder);
+        });
 
         // 异常处理
         http.exceptionHandling(exceptionHandlingCustomizer -> {
             exceptionHandlingCustomizer
                     // 访问被拒绝处理程序
-                    .accessDeniedHandler(accessDeniedHandler);
+                    .accessDeniedHandler(accessDeniedHandler)
+                    // 身份验证入口点
+                    .authenticationEntryPoint(authenticationEntryPoint);
         });
 
         // CSRF 配置
