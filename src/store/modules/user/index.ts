@@ -106,8 +106,8 @@ export const useUserStore = defineStore('user', {
     async login(loginForm: LoginData) {
       const { data: result } = await userLogin(loginForm);
       console.log('result', result);
-      const token = result?.value;
-      const refreshToken = result?.refreshToken;
+      const token = result?.access_token;
+      const refreshToken = result?.refresh_token;
       if (token) {
         setToken(token);
         setRefreshToken(refreshToken);

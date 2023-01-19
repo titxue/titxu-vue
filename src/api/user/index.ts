@@ -4,7 +4,7 @@ import { UserState } from '/@/store/modules/user/types';
 import { ReqListParams, ReqUserUpdateParams, ResultListType, ResultOkType } from './types';
 // import axios from 'axios';
 enum URL {
-  login = '/auth/account/password',
+  login = '/auth/account/login',
   refresh = '/auth/account/refresh',
   logout = '/auth/account/logout',
   profile = '/auth/account/profile',
