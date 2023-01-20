@@ -36,6 +36,7 @@
         <springdoc-openapi-api.version>2.0.2</springdoc-openapi-api.version>
         <!--JavaBean验证框架-->
         <hibernate-validator.version>8.0.0.Final</hibernate-validator.version>
+
     </properties>
 
 

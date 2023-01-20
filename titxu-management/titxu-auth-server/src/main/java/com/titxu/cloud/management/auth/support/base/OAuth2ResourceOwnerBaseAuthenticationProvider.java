@@ -47,7 +47,7 @@ public abstract class OAuth2ResourceOwnerBaseAuthenticationProvider<T extends OA
 
     private final MessageSourceAccessor messages;
 
-    @Deprecated
+
     private Supplier<String> refreshTokenGenerator;
 
     /**

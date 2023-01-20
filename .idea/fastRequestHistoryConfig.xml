@@ -4,542 +4,544 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="saveLog" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
-          <option name="name" value="保存日志" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
-              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
-              <option name="method" value="saveLog" />
-              <option name="methodDescription" value="保存日志" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/remote/log/saveLog" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;微服务内部接口，禁止访问&quot;,&quot;code&quot;:500}" />
-          <option name="url" value="/remote/log/saveLog" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="saveLog" />
-          <option name="methodType" value="POST" />
-          <option name="name" value="保存日志" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
-              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
-              <option name="method" value="saveLog" />
-              <option name="methodDescription" value="保存日志" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/remote/log/saveLog" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/remote/log/saveLog" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer MPxkClIocXjR3RD5fmCX-q4vRNQTJy77gJkg07a4fe7rNAH4ZzeqaI1mrkF0vey2XvFVRtZY0MYLB9223g49S5ppbQbpHBop5uTtxMM6zFhIMe8H09xYC0Ske9nwxB6t&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
           <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
-          <option name="url" value="/remote/log/saveLog" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="saveLog" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
-          <option name="name" value="保存日志" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
-              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
-              <option name="method" value="saveLog" />
-              <option name="methodDescription" value="保存日志" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/remote/log/saveLog" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
-          <option name="url" value="/remote/log/saveLog" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer MPxkClIocXjR3RD5fmCX-q4vRNQTJy77gJkg07a4fe7rNAH4ZzeqaI1mrkF0vey2XvFVRtZY0MYLB9223g49S5ppbQbpHBop5uTtxMM6zFhIMe8H09xYC0Ske9nwxB6t&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="saveLog" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
-          <option name="name" value="保存日志" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
-              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
-              <option name="method" value="saveLog" />
-              <option name="methodDescription" value="保存日志" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/remote/log/saveLog" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
-          <option name="url" value="/remote/log/saveLog" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer -RaeLgJ-UIoae7wr2fbjQvcVTUTC9cO2W_pBJRAqBbwdoDBLPejil6vanh_Mmf0bo1Sedyo-7f0eybIIMrFkBXveleF3pg7YvIOiOMNLUEocS3CqW9IrAJe2IntAa0Kk&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="saveLog" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
-          <option name="name" value="保存日志" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}" />
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.LogApi" />
-              <option name="jsonDocument" value="{&#10;  &quot;userName&quot;: &quot;用户名&quot;,&#10;  &quot;operation&quot;: &quot;用户操作&quot;,&#10;  &quot;method&quot;: &quot;请求方法&quot;,&#10;  &quot;params&quot;: &quot;请求参数&quot;,&#10;  &quot;time&quot;: &quot;执行时长(毫秒)&quot;,&#10;  &quot;ip&quot;: &quot;IP地址&quot;,&#10;  &quot;tenantId&quot;: &quot;租户ID&quot;&#10;}" />
-              <option name="method" value="saveLog" />
-              <option name="methodDescription" value="保存日志" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/remote/log/saveLog" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="url" value="/remote/log/saveLog" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/remote/log/saveLog&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 189&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;userName&quot;: &quot;userName_v7x8o&quot;,&#10;  &quot;operation&quot;: &quot;operation_9fvnf&quot;,&#10;  &quot;method&quot;: &quot;method_teou1&quot;,&#10;  &quot;params&quot;: &quot;params_laajn&quot;,&#10;  &quot;time&quot;: 1,&#10;  &quot;ip&quot;: &quot;ip_mnfvf&quot;,&#10;  &quot;tenantId&quot;: &quot;tenantId_avzqz&quot;&#10;}&#13;&#10;" />
-          <option name="url" value="/remote/log/saveLog" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer -RaeLgJ-UIoae7wr2fbjQvcVTUTC9cO2W_pBJRAqBbwdoDBLPejil6vanh_Mmf0bo1Sedyo-7f0eybIIMrFkBXveleF3pg7YvIOiOMNLUEocS3CqW9IrAJe2IntAa0Kk&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0,&quot;msg&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;access_token&quot;:&quot;eyJraWQiOiI5ZDhmMjA4NC01MmU0LTQwYmMtOGE0MS05ZDk1NzNlNGMzMWUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiLotoXnuqfnrqHnkIblkZgiLCJhdWQiOiJhZG1pbiIsImxpY2Vuc2UiOiJodHRwczovL25hcy50aXR4dS5jb20iLCJuYmYiOjE2NzQyMDUzNjEsInVzZXJfaW5mbyI6eyJwYXNzd29yZCI6bnVsbCwidXNlcm5hbWUiOiLotoXnuqfnrqHnkIblkZgiLCJhdXRob3JpdGllcyI6W3sicm9sZSI6InN5czpsb2c6bGlzdCJ9LHsicm9sZSI6InN5czpwZXJtaXNzaW9uOmRlbGV0ZSJ9LHsicm9sZSI6InN5czpwZXJtaXNzaW9uOmRpc2FibGUifSx7InJvbGUiOiJzeXM6cGVybWlzc2lvbjppbmZvIn0seyJyb2xlIjoic3lzOnBlcm1pc3Npb246bGlzdCJ9LHsicm9sZSI6InN5czpwZXJtaXNzaW9uOnNhdmUifSx7InJvbGUiOiJzeXM6cGVybWlzc2lvbjpzZWxlY3QifSx7InJvbGUiOiJzeXM6cGVybWlzc2lvbjp1cGRhdGUifSx7InJvbGUiOiJzeXM6cm9sZTpkZWxldGUifSx7InJvbGUiOiJzeXM6cm9sZTpkaXNhYmxlIn0seyJyb2xlIjoic3lzOnJvbGU6aW5mbyJ9LHsicm9sZSI6InN5czpyb2xlOmxpc3QifSx7InJvbGUiOiJzeXM6cm9sZTpzYXZlIn0seyJyb2xlIjoic3lzOnJvbGU6c2VsZWN0In0seyJyb2xlIjoic3lzOnJvbGU6dXBkYXRlIn0seyJyb2xlIjoic3lzOnRlbmFudDpkaXNhYmxlIn0seyJyb2xlIjoic3lzOnRlbmFudDpsaXN0In0seyJyb2xlIjoic3lzOnVzZXI6ZGVsZXRlIn0seyJyb2xlIjoic3lzOnVzZXI6ZGlzYWJsZSJ9LHsicm9sZSI6InN5czp1c2VyOmluZm8ifSx7InJvbGUiOiJzeXM6dXNlcjpsaXN0In0seyJyb2xlIjoic3lzOnVzZXI6c2F2ZSJ9LHsicm9sZSI6InN5czp1c2VyOnVwZGF0ZSJ9XSwiYWNjb3VudE5vbkV4cGlyZWQiOnRydWUsImFjY291bnROb25Mb2NrZWQiOnRydWUsImNyZWRlbnRpYWxzTm9uRXhwaXJlZCI6dHJ1ZSwiZW5hYmxlZCI6dHJ1ZX0sInNjb3BlIjpbInNlcnZlciJdLCJpc3MiOiJodHRwOi8vMTAuMC4wLjI3OjgwMDAiLCJleHAiOjE2NzQyMDcxNjEsImlhdCI6MTY3NDIwNTM2MX0.Ah3O_I9HTtITK_40YVqad3kw8zrAMnrsqf-zFOafmTVijIY9aEcDN98Zwo7nZsZ4TLs60zAryzxSq0s2pjSsNxNEJT1cOQCiiQuSc_qjKMPg-88iPMpPYE_gS_bHQq_ObZIdPYOGBbySSh1gF8H7oiRYamexingFUAcCkoUDXVA8JTFKv8IGxWYpTNyla9QAnNDyXF66bQr7WfdtFkbKnifvMLBWHtEzrJlga3QVVM8KIQy5-hn1qe-d7oCbhuuY9mwQHR1ohG35JBA_RsAhIOR0q4TuM-lJBQ4UnxGVmZ6QotNLp-5Wu4Ni3e4me3QIGGrYzE8CKODZ4pPU-1c0Qg&quot;,&quot;refresh_token&quot;:&quot;fJznMh0CH2mI7PSnmwxVpzGB4OTA4b42zvh1YoLDqlSOhFfC3l4cu4l1qfbp1GcqBp54FOn77AJi_WtFeTuDG89N-7dec8l04LkjDyJ9naBOfLJ8GDZN3JofT96bzGaz&quot;,&quot;scope&quot;:&quot;server&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:1799}}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
+          <option name="method" value="refresh" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
+              <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/token/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#10;    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;&#10;    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;&#10;&#10;    &lt;title&gt;微服务统一认证&lt;/title&gt;&#10;&#10;    &lt;link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;&#10;    &lt;link href=&quot;/css/signin.css&quot; rel=&quot;stylesheet&quot;&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body class=&quot;sign_body&quot;&gt;&#10;&lt;div class=&quot;container form-margin-top&quot;&gt;&#10;    &lt;form class=&quot;form-signin&quot; action=&quot;/token/form&quot; method=&quot;post&quot;&gt;&#10;        &lt;h2 class=&quot;form-signin-heading&quot; align=&quot;center&quot;&gt;统一认证系统&lt;/h2&gt;&#10;        &lt;input type=&quot;hidden&quot; name=&quot;client_id&quot; class=&quot;form-control&quot; value=&quot;messaging-client&quot; placeholder=&quot;所属客户端&quot;&gt;&#10;        &lt;input type=&quot;hidden&quot; name=&quot;grant_type&quot; class=&quot;form-control&quot; value=&quot;password&quot; placeholder=&quot;所属客户端&quot;&gt;&#10;        &lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;form-control form-margin-top&quot; placeholder=&quot;账号&quot; required autofocus&gt;&#10;        &lt;input type=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;密码&quot; required&gt;&#10;        &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; type=&quot;submit&quot;&gt;sign in&lt;/button&gt;&#10;            &lt;/form&gt;&#10;&lt;/div&gt;&#10;&lt;footer&gt;&#10;    &lt;p&gt;你瞅啥&lt;/p&gt;&#10;&lt;/footer&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
-          <option name="url" value="/getPublicKey" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer Lm4m2wYW5Mjdgfad5Kux9AY0vXvbgdUFFpL_2eUcom8tzDzf618W_zcI5k2FxV96fsLob-PQZzoP31vi7zAiFX2z1L35lyXKstKAXMqlKA-HvrzXrrsbU_DVhqUg8XQl&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="loadPublicKey" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.ops.auth.controller.PublicKeyController" />
-              <option name="method" value="loadPublicKey" />
-              <option name="methodDescription" value="New Request" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/getPublicKey" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="null" />
-              <option name="url" value="/getPublicKey" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/getPublicKey&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T09:13:54.347+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/getPublicKey&quot;}" />
-          <option name="url" value="/getPublicKey" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
           <option name="code" value="200" />
-          <option name="enableEnv" value="sys" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;userId&quot;:&quot;1&quot;,&quot;userName&quot;:&quot;超级管理员&quot;,&quot;password&quot;:&quot;$2a$10$aMPvVwFvA/Y0K4/DJ8cznOSUjBtgyNqCqxaPSkbZxJjGvnPPK/jkK&quot;,&quot;status&quot;:&quot;0&quot;,&quot;tenantId&quot;:&quot;1&quot;,&quot;permissionCodes&quot;:[&quot;&quot;,&quot;sys:user:list&quot;,&quot;sys:role:save&quot;,&quot;sys:permission:info&quot;,&quot;sys:role:info&quot;,&quot;sys:user:disable&quot;,&quot;sys:permission:update&quot;,&quot;sys:role:update&quot;,&quot;sys:permission:select&quot;,&quot;sys:user:info&quot;,&quot;sys:permission:save&quot;,&quot;sys:user:delete&quot;,&quot;sys:tenant:disable&quot;,&quot;sys:role:delete&quot;,&quot;sys:permission:delete&quot;,&quot;sys:role:list&quot;,&quot;sys:user:update&quot;,&quot;sys:permission:list&quot;,&quot;sys:tenant:list&quot;,&quot;sys:user:save&quot;,&quot;sys:role:select&quot;,&quot;sys:role:disable&quot;,&quot;sys:permission:disable&quot;,&quot;sys:log:list&quot;]}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer Lm4m2wYW5Mjdgfad5Kux9AY0vXvbgdUFFpL_2eUcom8tzDzf618W_zcI5k2FxV96fsLob-PQZzoP31vi7zAiFX2z1L35lyXKstKAXMqlKA-HvrzXrrsbU_DVhqUg8XQl&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0,&quot;msg&quot;:&quot;token&quot;,&quot;data&quot;:null}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="500" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:21:43.099+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer Y4CsBVInniOYKYnZhv0p5l3ilFjyoQfbUbVDOrL8ipj5CKsV9elDyZVJnU7n_TauLcNXq73YB2-L5ze31YA7RMVHfTOwwlJxP4v8q7WupFnDEFeoz7S4pCtTP70ik05Y&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="500" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:14:22.689+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer Y4CsBVInniOYKYnZhv0p5l3ilFjyoQfbUbVDOrL8ipj5CKsV9elDyZVJnU7n_TauLcNXq73YB2-L5ze31YA7RMVHfTOwwlJxP4v8q7WupFnDEFeoz7S4pCtTP70ik05Y&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0,&quot;msg&quot;:&quot;token&quot;,&quot;data&quot;:null}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="500" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:06:51.930+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: Basic YWRtaW46YWRtaW4=&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="500" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;18555555555&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=18555555555" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T07:04:10.724+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="500" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:33:34.912+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:32:37.247+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:32:30.981+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:29:10.594+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:28:25.171+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:27:26.173+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:27:02.328+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-          <option name="code" value="403" />
-          <option name="enableEnv" value="sys" />
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
           <option name="enableProject" value="admin" />
-          <option name="method" value="loginByUserName" />
+          <option name="method" value="refresh" />
           <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
           <option name="paramGroup">
             <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.sys.infrastructure.api.AuthenticationApi" />
-              <option name="method" value="loginByUserName" />
-              <option name="methodDescription" value="New Request" />
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
               <option name="methodType" value="POST" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/auth/loginByUserName" />
+              <option name="originUrl" value="/account/refresh" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;userName&quot;:&quot;用户名&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
-              <option name="url" value="/auth/loginByUserName" />
-              <option name="urlEncodedKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;userName_5vf46&quot;}]" />
-              <option name="urlEncodedKeyValueListText" value="userName=userName_5vf46" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8001/auth/loginByUserName&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-13T06:26:24.007+00:00&quot;,&quot;status&quot;:403,&quot;error&quot;:&quot;Forbidden&quot;,&quot;path&quot;:&quot;/auth/loginByUserName&quot;}" />
-          <option name="url" value="/auth/loginByUserName" />
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="refresh" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/account/refresh" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="refresh" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/account/refresh" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
+          <option name="url" value="/account/refresh" />
         </ResponseHistory>
       </list>
     </option>

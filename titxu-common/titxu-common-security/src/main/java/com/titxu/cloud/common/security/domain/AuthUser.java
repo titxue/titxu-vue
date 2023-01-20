@@ -5,12 +5,10 @@ import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.security.core.SpringSecurityCoreVersion;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal;
 
-import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,8 +17,8 @@ import java.util.Map;
  * 登录用户信息
  */
 public class AuthUser extends User implements OAuth2AuthenticatedPrincipal {
-    @Serial
-    private static final long serialVersionUID = SpringSecurityCoreVersion.SERIAL_VERSION_UID;
+
+    private static final long serialVersionUID = -6558907039263261134L;
 
     @Setter
     @Getter

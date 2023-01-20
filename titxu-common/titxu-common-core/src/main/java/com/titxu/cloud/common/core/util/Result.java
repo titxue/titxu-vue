@@ -3,8 +3,8 @@ package com.titxu.cloud.common.core.util;
 
 import com.titxu.cloud.common.core.constant.ResultCode;
 
-import java.io.Serial;
 import java.io.Serializable;
+
 
 /**
  * 返回数据
@@ -13,8 +13,8 @@ import java.io.Serializable;
  */
 public class Result<T> implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = -7707422634279737658L;
 
     private int code;
 

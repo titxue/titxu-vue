@@ -37,7 +37,7 @@ public class FeignConfiguration implements RequestInterceptor {
             return;
         }
         // 非web 请求直接跳过
-        if (WebUtils.getRequest().isEmpty()) {
+        if (WebUtils.getRequest().isPresent()) {
             return;
         }
         HttpServletRequest request = WebUtils.getRequest().orElse(null);

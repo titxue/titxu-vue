@@ -32,6 +32,7 @@
         <!-- oauth2.1 版本号 -->
         <spring-security-oauth2-authorization-server.version>1.0.0</spring-security-oauth2-authorization-server.version>
         <slf4j.version>2.0.5</slf4j.version>
+        
     </properties>
 
     <dependencies>
@@ -69,7 +70,6 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -151,4 +151,6 @@
             </snapshots>
         </repository>
     </repositories>
+
+
 </project>

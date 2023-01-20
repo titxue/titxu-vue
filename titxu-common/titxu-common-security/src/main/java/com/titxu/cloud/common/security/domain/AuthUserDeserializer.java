@@ -20,7 +20,7 @@ import java.util.Set;
  */
 public class AuthUserDeserializer extends JsonDeserializer<User> {
 
-    private static final TypeReference<Set<SimpleGrantedAuthority>> SIMPLE_GRANTED_AUTHORITY_SET = new TypeReference<>() {
+    private static final TypeReference<Set<SimpleGrantedAuthority>> SIMPLE_GRANTED_AUTHORITY_SET = new TypeReference<Set<SimpleGrantedAuthority>>() {
     };
 
     /**
