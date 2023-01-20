@@ -63,7 +63,7 @@ public class SysLogAspect {
     private void saveSysLog(ProceedingJoinPoint joinPoint, long time) {
         LogDTO logDTO = new LogDTO();
         logDTO.setTime(time);
-        logDTO.setUserName(WebUtils.getUserName());
+        logDTO.setMobile(WebUtils.getUserName());
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         SysLog syslog = method.getAnnotation(SysLog.class);

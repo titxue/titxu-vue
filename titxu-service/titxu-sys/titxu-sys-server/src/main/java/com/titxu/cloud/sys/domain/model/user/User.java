@@ -21,7 +21,7 @@ public class User implements Entity<User> {
     /**
      * 用户名
      */
-    private UserName userName;
+    private UserNick userNick;
 
     /**
      * 状态
@@ -44,17 +44,17 @@ public class User implements Entity<User> {
     private List<RoleId> roleIds;
 
 
-    public User(UserId userId, UserName userName, StatusEnum status, Account account, TenantId tenantId, List<RoleId> roleIds) {
+    public User(UserId userId, UserNick userNick, StatusEnum status, Account account, TenantId tenantId, List<RoleId> roleIds) {
         this.userId = userId;
-        this.userName = userName;
+        this.userNick = userNick;
         this.status = status;
         this.account = account;
         this.tenantId = tenantId;
         this.roleIds = roleIds;
     }
 
-    public User(UserName userName, Account account, List<RoleId> roleIds) {
-        this.userName = userName;
+    public User(UserNick userNick, Account account, List<RoleId> roleIds) {
+        this.userNick = userNick;
         this.account = account;
         this.roleIds = roleIds;
         this.status = StatusEnum.ENABLE;
@@ -87,8 +87,8 @@ public class User implements Entity<User> {
         return userId;
     }
 
-    public UserName getUserName() {
-        return userName;
+    public UserNick getuserNick() {
+        return userNick;
     }
 
     public StatusEnum getStatus() {

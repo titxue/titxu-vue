@@ -6,14 +6,14 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 用户名
  **/
-public class UserName implements ValueObject<UserName> {
+public class UserNick implements ValueObject<UserNick> {
 
     /**
      * 用户名
      */
     private String name;
 
-    public UserName(String name) {
+    public UserNick(String name) {
         if (StringUtils.isEmpty(name)) {
             throw new IllegalArgumentException("用户名不能为空");
         }
@@ -25,7 +25,7 @@ public class UserName implements ValueObject<UserName> {
     }
 
     @Override
-    public boolean sameValueAs(UserName other) {
+    public boolean sameValueAs(UserNick other) {
         return other != null && this.name.equals(other.name);
     }
 

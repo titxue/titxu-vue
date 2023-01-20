@@ -14,7 +14,12 @@ public class SysLogDO extends BaseDO {
     /**
      * 用户名
      */
-    private String userName;
+    private String userNick;
+
+    /**
+     * 用户名
+     */
+    private String mobile;
 
     /**
      * 用户操作

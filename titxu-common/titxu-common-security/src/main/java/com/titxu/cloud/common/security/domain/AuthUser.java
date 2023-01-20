@@ -34,7 +34,7 @@ public class AuthUser extends User implements OAuth2AuthenticatedPrincipal {
     private String tenantId;
 
     public AuthUser(AuthenticationDTO authenticationDTO) {
-        super(authenticationDTO.getUserName(), authenticationDTO.getPassword(), StatusEnum.ENABLE.getValue().equals(authenticationDTO.getStatus()),
+        super(authenticationDTO.getMobile(), authenticationDTO.getPassword(), StatusEnum.ENABLE.getValue().equals(authenticationDTO.getStatus()),
                 true, true, true, AuthorityUtils.commaSeparatedStringToAuthorityList(StringUtils.join(authenticationDTO.getPermissionCodes(), ",")));
         this.setId(authenticationDTO.getUserId());
 //        this.setUsername(authenticationDTO.getUserName());

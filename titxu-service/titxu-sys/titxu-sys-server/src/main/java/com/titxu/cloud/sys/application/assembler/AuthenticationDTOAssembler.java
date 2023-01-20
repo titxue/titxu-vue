@@ -11,7 +11,7 @@ public class AuthenticationDTOAssembler {
     public static AuthenticationDTO fromUser(final User user) {
         AuthenticationDTO authenticationDTO = new AuthenticationDTO();
         authenticationDTO.setUserId(user.getUserId().getId());
-        authenticationDTO.setUserName(user.getUserName().getName());
+        authenticationDTO.setMobile(user.getAccount().getMobile().getMobile());
         authenticationDTO.setPassword(user.getAccount().getPassword().getPassword());
         authenticationDTO.setTenantId(user.getTenantId().getId());
         authenticationDTO.setStatus(user.getStatus().getValue());

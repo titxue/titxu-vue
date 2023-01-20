@@ -20,7 +20,8 @@ public interface RemoteAuthService {
                               @RequestHeader(AuthConstants.AUTHORIZATION_KEY) String authorization);
 
     @PostExchange("/oauth2/token")
-    Map<String, Object> token(@RequestParam Map<String, Object> params,
-                              @RequestHeader(AuthConstants.AUTHORIZATION_KEY) String authorization);
+    Map<String, Object> refreshToken(@RequestParam(AuthConstants.GRANT_TYPE_KEY) String grantType,
+                                     @RequestParam(AuthConstants.REFRESH_TOKEN) String refreshToken,
+                                     @RequestHeader(AuthConstants.AUTHORIZATION_KEY) String authorization);
 
 }

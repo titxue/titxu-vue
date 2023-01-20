@@ -55,13 +55,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public AuthenticationDTO loginByUserName(String userName) {
+    public AuthenticationDTO loginByUserName(String uerName) {
         List<User> users = new ArrayList<>();
-        if (userName.equals("超级管理员")) {
+        if (uerName.equals("超级管理员")) {
             User user = userRepository.find(new UserId("1"));
             users.add(user);
         } else {
-            users = userRepository.find(new Mobile(userName));
+            users = userRepository.find(new Mobile(uerName));
         }
 
         if (users == null || users.isEmpty()) {

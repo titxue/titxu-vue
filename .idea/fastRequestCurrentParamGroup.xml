@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="fastRequestCurrentParamGroup">
-    <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
-    <option name="method" value="refresh" />
-    <option name="methodDescription" value="刷新token" />
+    <option name="className" value="com.titxu.cloud.sys.api.feign.RemoteAuthenticationService" />
+    <option name="method" value="loginByUserName" />
+    <option name="methodDescription" value="认证" />
     <option name="methodType" value="POST" />
-    <option name="module" value="titxu-auth-server" />
-    <option name="originUrl" value="/account/refresh" />
-    <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+    <option name="module" value="titxu-sys-api" />
+    <option name="originUrl" value="/remote/auth/loginByUserName" />
+    <option name="requestParamMap">
+      <map>
+        <entry key="userName">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="returnDocument" value="{&#10;&#9;&quot;userId&quot;:&quot;用户ID&quot;,&#10;&#9;&quot;mobile&quot;:&quot;手机号&quot;,&#10;&#9;&quot;password&quot;:&quot;password&quot;,&#10;&#9;&quot;status&quot;:&quot;status&quot;,&#10;&#9;&quot;tenantId&quot;:&quot;租户ID&quot;,&#10;&#9;&quot;permissionCodes&quot;:[&#10;&#9;&#9;&quot;权限编码&quot;&#10;&#9;]&#10;}" />
     <option name="tempId" value="" />
-    <option name="url" value="/account/refresh" />
+    <option name="url" value="/remote/auth/loginByUserName" />
   </component>
 </project>

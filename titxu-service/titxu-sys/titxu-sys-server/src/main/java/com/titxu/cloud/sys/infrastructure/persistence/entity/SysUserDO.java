@@ -15,7 +15,7 @@ public class SysUserDO extends BaseDO {
     /**
      * 用户名
      */
-    private String userName;
+    private String userNick;
 
     /**
      * 帐户

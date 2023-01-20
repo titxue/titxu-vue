@@ -20,7 +20,7 @@ public class UserDTO implements Serializable {
     /**
      * 用户名
      */
-    private String userName;
+    private String userNick;
 
     /**
      * email
@@ -65,9 +65,9 @@ public class UserDTO implements Serializable {
     public UserDTO() {
     }
 
-    public UserDTO(String id, String userName, String email, String mobile, String status, List<String> roleIdList) {
+    public UserDTO(String id, String userNick, String email, String mobile, String status, List<String> roleIdList) {
         this.id = id;
-        this.userName = userName;
+        this.userNick = userNick;
         this.email = email;
         this.mobile = mobile;
         this.status = status;

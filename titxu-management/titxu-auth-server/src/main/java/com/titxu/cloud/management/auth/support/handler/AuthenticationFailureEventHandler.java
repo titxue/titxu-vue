@@ -71,7 +71,7 @@ public class AuthenticationFailureEventHandler implements AuthenticationFailureH
             Long endTime = System.currentTimeMillis();
             logDTO.setTime(endTime - startTime);
         }
-        logDTO.setUserName(username);
+        logDTO.setMobile(username);
         logDTO.setTenantId(TenantContext.getTenantId());
         SpringContextHolder.publishEvent(new SysLogEvent(logDTO));
         // 写出错误信息

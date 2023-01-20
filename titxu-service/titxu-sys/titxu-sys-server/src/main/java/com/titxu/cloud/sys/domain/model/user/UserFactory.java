@@ -16,7 +16,7 @@ public class UserFactory {
         this.userRepository = userRepository;
     }
 
-    public User createUser(Mobile mobile, Email email, Password password, UserName userName, List<RoleId> roleIdList, TenantId currentTenantId) {
+    public User createUser(Mobile mobile, Email email, Password password, UserNick userNick, List<RoleId> roleIdList, TenantId currentTenantId) {
         List<User> users = userRepository.find(mobile);
         Account account;
         if (users != null && !users.isEmpty()) {
@@ -32,7 +32,7 @@ public class UserFactory {
         if (roleIdList == null || roleIdList.isEmpty()) {
             throw new RuntimeException("角色未分配");
         }
-        return new User(userName, account, roleIdList);
+        return new User(userNick, account, roleIdList);
     }
 
 }

@@ -13,7 +13,12 @@ public class LogDTO implements Serializable {
     /**
      * 用户名
      */
-    private String userName;
+    private String userNick;
+
+    /**
+     * 手机号
+     */
+    private String mobile;
 
     /**
      * 用户操作

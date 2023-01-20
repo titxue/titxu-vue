@@ -17,9 +17,9 @@ public class AuthenticationDTO implements Serializable {
     private String userId;
 
     /**
-     * 用户名
+     * 手机号
      */
-    private String userName;
+    private String mobile;
 
     /**
      * password

@@ -22,16 +22,16 @@ public class UserDTOAssembler {
                 roleIdList.add(new RoleId(roleId));
             }
         }
-        UserName userName = null;
-        if (userCommand.getUserName() != null) {
-            userName = new UserName(userCommand.getUserName());
+        UserNick userNick = null;
+        if (userCommand.getUserNick() != null) {
+            userNick = new UserNick(userCommand.getUserNick());
         }
         Email email = null;
         if (userCommand.getEmail() != null) {
             email = new Email(userCommand.getEmail());
         }
         Account account = new Account(new Mobile(userCommand.getMobile()), email);
-        return new User(new UserId(userCommand.getId()), userName, null, account, null, roleIdList);
+        return new User(new UserId(userCommand.getId()), userNick, null, account, null, roleIdList);
     }
 
     public static UserDTO fromUser(final User user) {
@@ -41,7 +41,7 @@ public class UserDTOAssembler {
         }
         UserDTO userDTO = new UserDTO();
         userDTO.setId(user.getUserId() == null ? null : user.getUserId().getId());
-        userDTO.setUserName(user.getUserName() == null ? null : user.getUserName().getName());
+        userDTO.setUserNick(user.getuserNick() == null ? null : user.getuserNick().getName());
         userDTO.setEmail(user.getAccount().getEmail() == null ? null : user.getAccount().getEmail().getEmail());
         userDTO.setMobile(user.getAccount().getMobile() == null ? null : user.getAccount().getMobile().getMobile());
         userDTO.setRoleIdList(roleIdList);

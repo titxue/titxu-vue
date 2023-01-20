@@ -80,7 +80,7 @@ public class AuthenticationSuccessEventHandler implements AuthenticationSuccessH
                 Long endTime = System.currentTimeMillis();
                 logDTO.setTime(endTime - startTime);
             }
-            logDTO.setUserName(authUserInfo.getUsername());
+            logDTO.setMobile(authUserInfo.getUsername());
             logDTO.setTenantId(authUserInfo.getTenantId());
             SpringContextHolder.publishEvent(new SysLogEvent(logDTO));
         }

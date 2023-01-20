@@ -35,7 +35,7 @@ public class TenantRegisterService {
         this.userRepository = userRepository;
     }
 
-    public void registerTenant(TenantName tenantName, TenantCode tenantCode, Mobile mobile, Password password, UserName userName) {
+    public void registerTenant(TenantName tenantName, TenantCode tenantCode, Mobile mobile, Password password, UserNick userNick) {
         Tenant tenant = new Tenant(tenantCode, tenantName);
         TenantCreateSpecification roleCreateSpecification = new TenantCreateSpecification(tenantRepository);
         roleCreateSpecification.isSatisfiedBy(tenant);
@@ -55,7 +55,7 @@ public class TenantRegisterService {
         List<RoleId> roleIdList = new ArrayList<>();
         roleIdList.add(adminRoleId);
         UserFactory userFactory = new UserFactory(userRepository);
-        User user = userFactory.createUser(mobile, null, password, userName, roleIdList, new TenantId(tenantId.getId()));
+        User user = userFactory.createUser(mobile, null, password, userNick, roleIdList, new TenantId(tenantId.getId()));
         UserId userId = userRepository.store(user);
         tenant = new Tenant(tenantId, tenantCode, tenantName, StatusEnum.ENABLE, userId);
         tenantRepository.store(tenant);

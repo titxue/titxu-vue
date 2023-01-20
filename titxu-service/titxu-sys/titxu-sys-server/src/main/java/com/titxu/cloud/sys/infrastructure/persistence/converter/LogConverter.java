@@ -10,7 +10,8 @@ public class LogConverter {
 
     public static SysLogDO fromLog(Log log) {
         SysLogDO sysLogDO = new SysLogDO();
-        sysLogDO.setUserName(log.getUserName() == null ? null : log.getUserName().getName());
+        sysLogDO.setUserNick(log.getUserNick() == null ? null : log.getUserNick().getName());
+        sysLogDO.setMobile(log.getMobile() == null ? null : log.getMobile().getMobile());
         sysLogDO.setIp(log.getIp());
         sysLogDO.setMethod(log.getMethod());
         sysLogDO.setOperation(log.getOperation());

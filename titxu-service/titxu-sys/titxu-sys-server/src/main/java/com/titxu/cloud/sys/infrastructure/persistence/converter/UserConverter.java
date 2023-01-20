@@ -18,13 +18,13 @@ public class UserConverter {
         if (sysUserDO == null) {
             return null;
         }
-        return new User(new UserId(sysUserDO.getId()), new UserName(sysUserDO.getUserName()), StatusEnum.getStatusEnum(sysUserDO.getStatus()), account, new TenantId(sysUserDO.getTenantId()), roleIdList);
+        return new User(new UserId(sysUserDO.getId()), new UserNick(sysUserDO.getUserNick()), StatusEnum.getStatusEnum(sysUserDO.getStatus()), account, new TenantId(sysUserDO.getTenantId()), roleIdList);
     }
 
     public static SysUserDO fromUser(User user, String accountId) {
         SysUserDO sysUserDO = new SysUserDO();
         sysUserDO.setId(user.getUserId() == null ? null : user.getUserId().getId());
-        sysUserDO.setUserName(user.getUserName() == null ? null : user.getUserName().getName());
+        sysUserDO.setUserNick(user.getuserNick() == null ? null : user.getuserNick().getName());
         sysUserDO.setStatus(user.getStatus() == null ? null : user.getStatus().getValue());
         sysUserDO.setAccountId(accountId);
         return sysUserDO;

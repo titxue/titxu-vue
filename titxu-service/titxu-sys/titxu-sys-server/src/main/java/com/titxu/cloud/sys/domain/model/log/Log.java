@@ -2,7 +2,8 @@ package com.titxu.cloud.sys.domain.model.log;
 
 import com.titxu.cloud.common.core.domain.Entity;
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
-import com.titxu.cloud.sys.domain.model.user.UserName;
+import com.titxu.cloud.sys.domain.model.user.Mobile;
+import com.titxu.cloud.sys.domain.model.user.UserNick;
 
 /**
  * 日志实体
@@ -17,7 +18,12 @@ public class Log implements Entity<Log> {
     /**
      * 用户名
      */
-    private UserName userName;
+    private UserNick userNick;
+
+    /**
+     * 手机号
+     */
+    private Mobile mobile;
 
     /**
      * 用户操作
@@ -49,9 +55,20 @@ public class Log implements Entity<Log> {
      */
     private TenantId tenantId;
 
-    public Log(LogId logId, UserName userName, String operation, String method, String params, Long time, String ip) {
+    public Log(LogId logId, UserNick userNick, String operation, String method, String params, Long time, String ip) {
         this.logId = logId;
-        this.userName = userName;
+        this.userNick = userNick;
+        this.operation = operation;
+        this.method = method;
+        this.params = params;
+        this.time = time;
+        this.ip = ip;
+    }
+
+    public Log(LogId logId, UserNick userNick, Mobile mobile, String operation, String method, String params, Long time, String ip) {
+        this.logId = logId;
+        this.userNick = userNick;
+        this.mobile = mobile;
         this.operation = operation;
         this.method = method;
         this.params = params;
@@ -89,8 +106,12 @@ public class Log implements Entity<Log> {
         return ip;
     }
 
-    public UserName getUserName() {
-        return userName;
+    public UserNick getUserNick() {
+        return userNick;
+    }
+
+    public Mobile getMobile() {
+        return mobile;
     }
 
     public TenantId getTenantId() {
