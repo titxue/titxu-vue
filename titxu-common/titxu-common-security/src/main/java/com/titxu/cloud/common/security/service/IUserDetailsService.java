@@ -3,6 +3,7 @@ package com.titxu.cloud.common.security.service;
 import com.titxu.cloud.common.security.domain.AuthUser;
 import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import org.springframework.core.Ordered;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -45,8 +46,8 @@ public interface IUserDetailsService extends UserDetailsService, Ordered {
     /**
      * 通过用户实体查询
      */
-    default UserDetails loadUserByUser(AuthUser authUser) {
-        return this.loadUserByUsername(authUser.getUsername());
+    default UserDetails loadUserByUser(User user) {
+        return this.loadUserByUsername(user.getUsername());
     }
 
 }

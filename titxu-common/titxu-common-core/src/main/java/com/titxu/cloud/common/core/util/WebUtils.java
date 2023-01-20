@@ -12,6 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 import java.util.Optional;
 
 
@@ -21,10 +22,7 @@ import java.util.Optional;
 @Slf4j
 @UtilityClass
 public class WebUtils {
-
-//    public  HttpServletRequest getRequest() {
-//        return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-//    }
+    
 
     /**
      * 获取 HttpServletRequest
@@ -33,7 +31,7 @@ public class WebUtils {
      */
     public Optional<HttpServletRequest> getRequest() {
         return Optional
-                .ofNullable(((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest());
+                .of(((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest());
     }
 
     /**
@@ -42,7 +40,7 @@ public class WebUtils {
      * @return {HttpServletResponse}
      */
     public HttpServletResponse getResponse() {
-        return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        return ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getResponse();
     }
 
 
