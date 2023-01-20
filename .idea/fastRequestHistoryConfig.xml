@@ -26,6 +26,33 @@
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer o_nznqzU-4DLfryYu3wANrTSPVd39SDqvjUvs1h7al1ljxnC6-ARlTwfaLYHIIvzU5ZNGDXgWd1HfOTTrYNbP2gkkZCvIlCAzonOIwfO4D6VD6c1mGWyvlyK-BUgaoKr&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0,&quot;msg&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;access_token&quot;:&quot;eyJraWQiOiJhMjk5MWYxNi05NjQxLTRlMTEtYmIwOS01MWFhNDFlNzE1OWIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiLotoXnuqfnrqHnkIblkZgiLCJhdWQiOiJhZG1pbiIsImxpY2Vuc2UiOiJodHRwczovL25hcy50aXR4dS5jb20iLCJuYmYiOjE2NzQyMDY3NzUsInVzZXJfaW5mbyI6eyJwYXNzd29yZCI6bnVsbCwidXNlcm5hbWUiOiLotoXnuqfnrqHnkIblkZgiLCJhdXRob3JpdGllcyI6W3sicm9sZSI6InN5czpsb2c6bGlzdCJ9LHsicm9sZSI6InN5czpwZXJtaXNzaW9uOmRlbGV0ZSJ9LHsicm9sZSI6InN5czpwZXJtaXNzaW9uOmRpc2FibGUifSx7InJvbGUiOiJzeXM6cGVybWlzc2lvbjppbmZvIn0seyJyb2xlIjoic3lzOnBlcm1pc3Npb246bGlzdCJ9LHsicm9sZSI6InN5czpwZXJtaXNzaW9uOnNhdmUifSx7InJvbGUiOiJzeXM6cGVybWlzc2lvbjpzZWxlY3QifSx7InJvbGUiOiJzeXM6cGVybWlzc2lvbjp1cGRhdGUifSx7InJvbGUiOiJzeXM6cm9sZTpkZWxldGUifSx7InJvbGUiOiJzeXM6cm9sZTpkaXNhYmxlIn0seyJyb2xlIjoic3lzOnJvbGU6aW5mbyJ9LHsicm9sZSI6InN5czpyb2xlOmxpc3QifSx7InJvbGUiOiJzeXM6cm9sZTpzYXZlIn0seyJyb2xlIjoic3lzOnJvbGU6c2VsZWN0In0seyJyb2xlIjoic3lzOnJvbGU6dXBkYXRlIn0seyJyb2xlIjoic3lzOnRlbmFudDpkaXNhYmxlIn0seyJyb2xlIjoic3lzOnRlbmFudDpsaXN0In0seyJyb2xlIjoic3lzOnVzZXI6ZGVsZXRlIn0seyJyb2xlIjoic3lzOnVzZXI6ZGlzYWJsZSJ9LHsicm9sZSI6InN5czp1c2VyOmluZm8ifSx7InJvbGUiOiJzeXM6dXNlcjpsaXN0In0seyJyb2xlIjoic3lzOnVzZXI6c2F2ZSJ9LHsicm9sZSI6InN5czp1c2VyOnVwZGF0ZSJ9XSwiYWNjb3VudE5vbkV4cGlyZWQiOnRydWUsImFjY291bnROb25Mb2NrZWQiOnRydWUsImNyZWRlbnRpYWxzTm9uRXhwaXJlZCI6dHJ1ZSwiZW5hYmxlZCI6dHJ1ZX0sInNjb3BlIjpbInNlcnZlciJdLCJpc3MiOiJodHRwOi8vMTAuMC4wLjI3OjgwMDAiLCJleHAiOjE2NzQyMDg1NzUsImlhdCI6MTY3NDIwNjc3NX0.FX5lbrgYbYqxD0lSRJNdO_LXc4tMyURB6ygumFTO14I-wRgIG-RkXGy208GehmWE7leTIhVNRHKw0uRAazWxo3SjLPtSEN4HsTukalA1xtSTVMi2wss6jHdcDoBUZdsgTe1OnK-jpDBh0CF1ZGEIgWMHdjakPyVrmUCJ-EmONKzn9AGZvHHi9k-nyzx2pZh5zW7LkjjpQm0867yqVrdzmdm8b1hWfDmnbMK5TrXD3yOTRNnm-SHgCwQ3E_uINgXZSVapEXYDpgl3sqVMqu4M1NsLeKBkfgf2DG7D1LJxNER-8-Sje2KvK8YrFrDj3Nb3I6P5GSUvidof4E-k_EOGTg&quot;,&quot;refresh_token&quot;:&quot;0elSoOUzf7YHnIDCzmUZEiMeS-v3ZMZMThr01qD6yS69Ewe64eypVizj1mLMOQFtfvMu9dYNEa7OB5K3D5GNREXGwOGEuvubXqUMQ4iS91HumqafYHiJS9OGy3CR-Pti&quot;,&quot;scope&quot;:&quot;server&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:1799}}" />
+          <option name="url" value="/account/refresh" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="auth" />
+          <option name="enableProject" value="admin" />
+          <option name="method" value="refresh" />
+          <option name="methodType" value="POST" />
+          <option name="name" value="刷新token" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
+              <option name="method" value="refresh" />
+              <option name="methodDescription" value="刷新token" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/account/refresh" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/account/refresh" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
           <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer MPxkClIocXjR3RD5fmCX-q4vRNQTJy77gJkg07a4fe7rNAH4ZzeqaI1mrkF0vey2XvFVRtZY0MYLB9223g49S5ppbQbpHBop5uTtxMM6zFhIMe8H09xYC0Ske9nwxB6t&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
           <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
           <option name="url" value="/account/refresh" />
@@ -271,33 +298,6 @@
           </option>
           <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
           <option name="response" value="{&quot;msg&quot;:&quot;系统异常&quot;,&quot;code&quot;:500}" />
-          <option name="url" value="/account/refresh" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="auth" />
-          <option name="enableProject" value="admin" />
-          <option name="method" value="refresh" />
-          <option name="methodType" value="POST" />
-          <option name="name" value="刷新token" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.titxu.cloud.management.auth.api.AccountController" />
-              <option name="method" value="refresh" />
-              <option name="methodDescription" value="刷新token" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/account/refresh" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/account/refresh" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8000/account/refresh&#13;&#10;Request Headers: &#13;&#10;    Authorization: bearer 2gFa-CGhUuxbXpGDv37rspGjLAHhVJGSSq62sfYGvQZzr-tj4hvEwqoOV7dGjT7dUsaFTCaSGHKJObYm2rAbaLGhIaBdBvkm4SfUw2LRMk4Up7W4zJs2rrbIl34y5vxe&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;msg&quot;:&quot;禁止删除系统管理员&quot;,&quot;code&quot;:2000}" />
           <option name="url" value="/account/refresh" />
         </ResponseHistory>
         <ResponseHistory>
