@@ -1,6 +1,7 @@
 package com.titxu.cloud.management.auth.infrastructure.client;
 
 import com.titxu.cloud.common.core.constant.AuthConstants;
+import com.titxu.cloud.management.auth.application.dto.OAuth2Dto;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.service.annotation.HttpExchange;
@@ -18,4 +19,9 @@ public interface RemoteAuthService {
                               @RequestParam(AuthConstants.USERNAME_KEY) String username,
                               @RequestParam(AuthConstants.PASSWORD) String password,
                               @RequestHeader(AuthConstants.AUTHORIZATION_KEY) String authorization);
+
+    @PostExchange("/oauth2/token")
+    Map<String, Object> token(OAuth2Dto dto,
+                              @RequestHeader(AuthConstants.AUTHORIZATION_KEY) String authorization);
+
 }

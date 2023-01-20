@@ -144,24 +144,8 @@ public class OAuth2Controller {
     }
 
 
-    /**
-     * 密码登陆
-     */
-    @Operation(summary = "密码登陆")
-    @PostMapping("/password")
-    public Result login(@RequestBody LoginPasswordCommand loginPasswordCommand) {
-        return Result.ok().put("data", loginService.login(loginPasswordCommand));
-    }
 
-    /**
-     * 刷新登陆
-     */
-    @Operation(summary = "刷新登陆")
-    @PostMapping("/refresh")
-    public Result refresh(@RequestHeader("Authorization") String authorization) {
-        String refreshToken = TokenUtils.removeTokenPrefix(authorization);
-        return Result.ok().put("data", loginService.refresh(new RefreshCommand(refreshToken)));
-    }
+
 
     /**
      * 退出登陆

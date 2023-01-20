@@ -30,7 +30,7 @@ public interface AuthConstants {
      * JWT令牌前缀
      */
     String AUTHORIZATION_PREFIX = "bearer ";
-
+    String REDIRECT_URI = "https://www.baidu.com";
 
     /**
      * Basic认证前缀
