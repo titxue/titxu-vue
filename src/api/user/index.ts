@@ -1,7 +1,7 @@
 // 权限问题后期增加
 import { del, get, post } from '/@/utils/http/axios';
 import { UserState } from '/@/store/modules/user/types';
-import { LoginDataType, ReqListParams, ReqUserUpdateParams, ResultListType, ResultOkType, ResultType } from './types';
+import { LoginDataType, PagingArgumentsType, ReqUserUpdateParams, ResultListType, ResultOkType, ResultType } from './types';
 // import axios from 'axios';
 enum URL {
   login = '/auth/account/login',
@@ -32,7 +32,7 @@ const disableUser = async (id: string) => post<ResultOkType>({ url: URL.disable 
 const getUserProfile = async () => get<UserState>({ url: URL.profile });
 
 // 获取用户列表
-const getUserList = async (params?: ReqListParams) => get<ResultListType>({ url: URL.list, params });
+const getUserList = async (params?: PagingArgumentsType) => get<ResultListType>({ url: URL.list, params });
 const login = async (data: LoginData) => post<ResultType<LoginDataType>>({ url: URL.login, data });
 // 刷新token 用于token过期后刷新token
 const refresh = async (params: string) => post<any>({ url: URL.refresh, params: { refreshToken: params } });

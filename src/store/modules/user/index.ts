@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { login as userLogin, logout as userLogout, LoginData, getUserList, updateUser, deleteUser, disableUser } from '/@/api/user/index';
 import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
-import { LoginUserType, PageUserInfoType, ReqListParams, ToeknType, UserInfoType, UserStoreType } from '/@/api/user/types';
+import { LoginUserType, PageUserInfoType, PagingArgumentsType, ToeknType, UserInfoType, UserStoreType } from '/@/api/user/types';
 import { refreshToken } from '/@/utils/token';
 import { ElMessage } from 'element-plus';
 
@@ -9,18 +9,38 @@ export const useUserStore = defineStore('user', {
   state: (): UserStoreType => ({
     userInfo: {} as UserInfoType,
     loginUser: {} as LoginUserType,
+    userInfoList: {} as PageUserInfoType,
     accessToken: '',
     refreshToken: '',
+    pagingArguments: {
+      page: 1,
+      limit: 10,
+    },
   }),
   getters: {
+    // 获取用户信息
     getUserInfo(state: UserStoreType): UserInfoType {
       return { ...state.userInfo };
     },
+
+    // 获取用户信息列表
+    getUserInfoList(state: UserStoreType): PageUserInfoType {
+      return state.userInfoList;
+    },
+
+    // 获取登陆信息列表
     getLoginUser(state: UserStoreType): LoginUserType {
       return { ...state.loginUser };
     },
+
+    // 获取token
     getToken(state: UserStoreType): ToeknType {
       return { access_token: state.accessToken, refresh_token: state.refreshToken };
+    },
+
+    // 获取分页参数
+    getPagingArguments(state: UserStoreType): PagingArgumentsType {
+      return state.pagingArguments;
     },
   },
   actions: {
@@ -30,15 +50,27 @@ export const useUserStore = defineStore('user', {
     //     resolve(this.role);
     //   });
     // },
+    // 刷新表格数据
+    async refreshTable() {
+      const result = await this.list(this.pagingArguments);
+      if (result) {
+        this.$patch({ userInfoList: result });
+      }
+    },
+    // 设置用户信息列表
+    setUserInfoList(partial: Partial<PageUserInfoType>) {
+      this.$patch({ userInfoList: partial });
+    },
+
     // 设置用户的信息
     setUserInfo(partial: Partial<UserInfoType>) {
       this.$patch({ userInfo: partial });
     },
-    // 设置用户的信息
+    // 设置登陆的信息
     setLoginUser(partial: Partial<LoginUserType>) {
       this.$patch({ loginUser: partial });
     },
-    // 设置用户的信息
+    // 设置token
     setToken(partial: Partial<ToeknType>) {
       this.$patch({ accessToken: partial.access_token, refreshToken: partial.refresh_token });
     },
@@ -46,6 +78,11 @@ export const useUserStore = defineStore('user', {
     resetInfo() {
       this.$reset();
     },
+    // 设置分页参数
+    setPagingArguments(partial: Partial<PagingArgumentsType>) {
+      this.$patch({ pagingArguments: partial });
+    },
+
     // 刷新token
     async refreshAccessToken() {
       const code = await refreshToken();
@@ -81,12 +118,26 @@ export const useUserStore = defineStore('user', {
         return Promise.reject('修改用户信息失败');
       }
     },
+
+    // 修改用户信息
+    async editUserInfo(row: UserInfoType, currentStatus: string) {
+      console.log(row);
+      const { id, status: newStatus } = row;
+      if (currentStatus === newStatus) return;
+      if (newStatus === '0') {
+        await this.changeStatus(id);
+      }
+      if (newStatus === '1') {
+        await this.changeStatus(id);
+      }
+    },
     // 获取用户列表
-    async list(params?: ReqListParams): Promise<PageUserInfoType> {
+    async list(params?: PagingArgumentsType): Promise<PageUserInfoType> {
       const { code, page } = await getUserList(params);
       if (code !== 0) {
         return Promise.reject('获取用户列表失败');
       }
+      this.$patch({ userInfoList: page });
       return page;
     },
     // 获取用户信息

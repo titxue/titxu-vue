@@ -69,6 +69,8 @@ export interface UserStoreType {
   loginUser: LoginUserType;
   accessToken: string;
   refreshToken: string;
+  userInfoList: PageUserInfoType;
+  pagingArguments: PagingArgumentsType;
 }
 export interface UserInfoType {
   id: string;
@@ -121,4 +123,16 @@ interface AttributesType {
 export interface ToeknType {
   access_token: string;
   refresh_token: string;
+}
+
+export interface PagingArgumentsType {
+  userName?: string;
+  userType?: string;
+  email?: string;
+  mobile?: string;
+  page?: number;
+  limit?: number;
+  sidx?: string;
+  order?: string;
+  asc?: string;
 }

@@ -68,7 +68,7 @@ export const exampleForm = {
     { label: '留言板', field: 'summary', type: 'textarea', placeholder: '留言板' },
   ],
   editUser: [
-    { label: '用户名', field: 'userName', rules: [{ required: true, message: '用户名不能为空' }] },
+    { label: '用户名', field: 'userNick', rules: [{ required: true, message: '用户名不能为空' }] },
     { label: '手机号', field: 'mobile', rules: [{ required: false, validator: checkMobile }] },
     { label: '邮箱', field: 'email', rules: [{ required: false, validator: checkEmail }] },
     {

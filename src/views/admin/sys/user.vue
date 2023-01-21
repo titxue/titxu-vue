@@ -9,7 +9,7 @@
       </template>
       <Table
         :columns="tableColumn"
-        :table-data="tableDataList"
+        :table-data="getUserInfoList.list"
         :options="options"
         @pagination-change="handlePaginationChange"
         @selection-change="handleSelection"
@@ -43,7 +43,7 @@
   import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
   import dayjs from 'dayjs';
   import { useUserStore } from '/@/store';
-  import { ReqListParams, UserInfoType } from '/@/api/user/types';
+  import { UserInfoType } from '/@/api/user/types';
   // import { refreshToken } from '/@/utils/auth';
   import { exampleForm } from '/@/config/form';
   import { Refresh } from '@element-plus/icons-vue';
@@ -52,7 +52,17 @@
 
   const route = useRoute();
   const store = useUserStore();
-  const { list, changeStatus, updateUser, deleteUser, refreshAccessToken } = store;
+  const {
+    list,
+    editUserInfo,
+    updateUser,
+    deleteUser,
+    refreshAccessToken,
+    getPagingArguments,
+    setPagingArguments,
+    refreshTable,
+    getUserInfoList,
+  } = store;
 
   const dialogVisible = ref(false);
   const fieldList: Form.FieldItem[] = exampleForm.editUser;
@@ -62,20 +72,14 @@
   // import Table from '@/components/Table/index.vue'
   // 本项目Table组件自动引入，如复制此代码，需根据路径引入Table组件后使用
   interface State {
-    tableDataList: UserInfoType[];
     options: Table.Options;
     optionsDialog: Form.Options;
   }
 
   const state = reactive<State>({
-    tableDataList: [],
     options: { showPagination: true, height: 600 },
     optionsDialog: { showCancelButton: true },
   });
-  const params: ReqListParams = {
-    page: 1,
-    limit: 10,
-  };
 
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },
@@ -143,17 +147,7 @@
     dialogVisible.value = false;
     ElMessage.warning('取消编辑');
   };
-  // 修改用户状态
-  const handleStatusChange = async (row: UserInfoType, currentStatus: string) => {
-    const { id, status: newStatus } = row;
-    if (currentStatus === newStatus) return;
-    if (newStatus === '0') {
-      await changeStatus(id);
-    }
-    if (newStatus === '1') {
-      await changeStatus(id);
-    }
-  };
+
   /**
    * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
    *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
@@ -164,9 +158,9 @@
     if (userInfo.id) {
       await updateUser(model as unknown as UserInfoType);
       // 修改用户状态
-      const currentStatus: string | undefined = state.tableDataList.find((item) => item.id === userInfo.id)?.status;
+      const currentStatus: string | undefined = getUserInfoList.list?.find((item) => item.id === userInfo.id)?.status;
       if (!currentStatus) return;
-      await handleStatusChange(model as unknown as UserInfoType, currentStatus);
+      await editUserInfo(model as unknown as UserInfoType, currentStatus);
       ElMessage.success(`编辑${model.userName}用户成功`);
     } else {
       // 新增用户
@@ -181,6 +175,7 @@
     const data = JSON.parse(JSON.stringify(row));
     formData.value = data;
   };
+
   const handleRenderDelete = (row: UserInfoType) => {
     ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
       confirmButtonText: '确定',
@@ -204,13 +199,11 @@
     () => route.query,
     async (newval) => {
       const { page, pageSize } = newval;
-      params.page = Number(page) || params.page;
-      params.limit = Number(pageSize) || params.limit;
-      const result = await list(params);
-      const { list: UserList } = result;
-      if (UserList) {
-        state.tableDataList = UserList;
-      }
+      setPagingArguments({
+        page: Number(page) || getPagingArguments.page,
+        limit: Number(pageSize) || getPagingArguments.limit,
+      });
+      const result = await list(getPagingArguments);
       state.options.paginationConfig = {
         currentPage: result.currPage,
         pageSize: result.pageSize,
@@ -219,14 +212,6 @@
     },
     { immediate: true },
   );
-  // 刷新表格数据
-  const refreshTable = async () => {
-    const result = await list(params);
-    const { list: UserList } = result;
-    if (UserList) {
-      state.tableDataList = UserList;
-    }
-  };
 
   // pageSize或者currentPage改变触发
   const handlePaginationChange = (page: number, pageSize: number) => {
@@ -238,7 +223,7 @@
       },
     });
   };
-  const { tableDataList, options, optionsDialog } = toRefs(state);
+  const { options, optionsDialog } = toRefs(state);
 </script>
 
 <style lang="less" scoped></style>
