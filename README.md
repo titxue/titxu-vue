@@ -34,3 +34,15 @@ VALUES ('2866656a-514d-4f02-88f0-1e31f45d25a6', 'messaging-client', '2023-01-15 
         '{\"@class\":\"java.util.Collections$UnmodifiableMap\",\"settings.client.require-proof-key\":false,\"settings.client.require-authorization-consent\":true}',
         '{\"@class\":\"java.util.Collections$UnmodifiableMap\",\"settings.token.reuse-refresh-tokens\":true,\"settings.token.id-token-signature-algorithm\":[\"org.springframework.security.oauth2.jose.jws.SignatureAlgorithm\",\"RS256\"],\"settings.token.access-token-time-to-live\":[\"java.time.Duration\",300.000000000],\"settings.token.access-token-format\":{\"@class\":\"org.springframework.security.oauth2.server.authorization.settings.OAuth2TokenFormat\",\"value\":\"self-contained\"},\"settings.token.refresh-token-time-to-live\":[\"java.time.Duration\",3600.000000000],\"settings.token.authorization-code-time-to-live\":[\"java.time.Duration\",300.000000000]}');
 ```
+
+```shell
+# 修改为统一推送
+vim .git/config
+# 远程url添加到 [remote "origin"] 下 url 
+# 删除旧url
+
+# 提交代码流程
+git add .
+git commit -m "提交信息"
+git push origin main
+```
