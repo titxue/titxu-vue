@@ -1,18 +1,31 @@
 package com.titxu.cloud.management.auth.api;
 
 
+import cn.hutool.core.util.StrUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.BasicAuth;
 import com.titxu.cloud.common.core.util.Result;
+import com.titxu.cloud.common.core.util.SpringContextHolder;
+import com.titxu.cloud.common.security.annotation.Inner;
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;
 import com.titxu.cloud.management.auth.application.dto.OAuth2Dto;
 import com.titxu.cloud.management.auth.infrastructure.client.RemoteAuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
+import org.springframework.http.HttpHeaders;
+import org.springframework.security.authentication.event.LogoutSuccessEvent;
+import org.springframework.security.oauth2.core.OAuth2AccessToken;
+import org.springframework.security.oauth2.server.authorization.OAuth2Authorization;
+import org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationService;
+import org.springframework.security.oauth2.server.authorization.OAuth2TokenType;
+import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 用户登陆
@@ -24,11 +37,24 @@ import java.util.Map;
 public class AccountController {
     // 封装 basic auth 认证信息
     private final String basicAuth = BasicAuth.generateBasicAuth(AuthConstants.ADMIN_CLIENT_ID, AuthConstants.ADMIN_CLIENT_SECRET);
-    private final RemoteAuthService remoteAuthService;
+    private RemoteAuthService remoteAuthService;
+    private OAuth2AuthorizationService authorizationService;
 
+    private CacheManager cacheManager;
 
-    public AccountController(RemoteAuthService remoteAuthService) {
+    @Autowired
+    public void setRemoteAuthService(RemoteAuthService remoteAuthService) {
         this.remoteAuthService = remoteAuthService;
+    }
+
+    @Autowired
+    public void setAuthorizationService(OAuth2AuthorizationService authorizationService) {
+        this.authorizationService = authorizationService;
+    }
+
+    @Autowired
+    public void setCacheManager(CacheManager cacheManager) {
+        this.cacheManager = cacheManager;
     }
 
     /**
@@ -63,5 +89,49 @@ public class AccountController {
           5.后期优化为重写自定义参数解析器
          */
         return Result.ok(remoteAuthService.refreshToken(dto.getGrant_type(), dto.getRefresh_token(), basicAuth));
+    }
+
+
+    /**
+     * 退出并删除token
+     *
+     * @param authHeader Authorization
+     */
+    @DeleteMapping("/logout")
+    public Result<?> logout(@RequestHeader(value = HttpHeaders.AUTHORIZATION, required = false) String authHeader) {
+        if (StrUtil.isBlank(authHeader)) {
+            return Result.ok();
+        }
+
+        String tokenValue = authHeader.replace(AuthConstants.AUTHORIZATION_PREFIX, StrUtil.EMPTY).trim();
+        return removeToken(tokenValue);
+    }
+
+
+    /**
+     * 令牌管理调用
+     *
+     * @param token token
+     */
+    @Inner
+    @DeleteMapping("/{token}")
+    public Result<?> removeToken(@PathVariable("token") String token) {
+        OAuth2Authorization authorization = authorizationService.findByToken(token, OAuth2TokenType.ACCESS_TOKEN);
+        if (authorization == null) {
+            return Result.ok();
+        }
+
+        OAuth2Authorization.Token<OAuth2AccessToken> accessToken = authorization.getAccessToken();
+        if (accessToken == null || StrUtil.isBlank(accessToken.getToken().getTokenValue())) {
+            return Result.ok();
+        }
+        // 清空用户信息
+        Objects.requireNonNull(cacheManager.getCache(AuthConstants.USER_DETAILS)).evict(authorization.getPrincipalName());
+        // 清空access token
+        authorizationService.remove(authorization);
+        // 处理自定义退出事件，保存相关日志
+        SpringContextHolder.publishEvent(new LogoutSuccessEvent(new PreAuthenticatedAuthenticationToken(
+                authorization.getPrincipalName(), authorization.getRegisteredClientId())));
+        return Result.ok();
     }
 }
