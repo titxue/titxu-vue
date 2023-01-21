@@ -99,6 +99,7 @@ export interface LoginUserType {
   id: string;
   tenantId: string;
   name: string;
+  userNick: string;
   attributes: AttributesType;
 }
 export interface LoginDataType {

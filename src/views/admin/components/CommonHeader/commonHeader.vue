@@ -9,7 +9,7 @@
       <el-dropdown>
         <span class="user-info">
           <img class="user" :src="getImgSrc()" alt="头像" />
-          <span class="user-name">用户名</span>
+          <span class="user-name">{{ getLoginUser.userNick === undefined || '' ? '错误' : getLoginUser.userNick }}</span>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -29,7 +29,7 @@
   const router = useRouter();
   const userStore = useUserStore();
 
-  const {} = userStore;
+  const { getLoginUser } = userStore;
 
   // 激活标签页
   const activeTab = ref('');

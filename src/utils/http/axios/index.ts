@@ -13,7 +13,7 @@ axios.defaults.withCredentials = false;
 axios.defaults.headers.post['Access-Control-Allow-Origin-Type'] = '*';
 // 无需携带凭证url白名单
 // todo 白名单需要优化,后台动态返回
-const whiteList = ['/auth/account/password', '/auth/account/logout', '/auth/account/refresh'];
+const whiteList = ['/auth/account/password', '/auth/account/refresh'];
 // loadEnv(mode, process.cwd()).VITE_APP_NAME
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_BASEURL + '',
@@ -129,6 +129,9 @@ export function get<T = any>(config: AxiosRequestConfig): Promise<T> {
 
 export function post<T = any>(config: AxiosRequestConfig): Promise<T> {
   return request({ ...config, method: 'POST' });
+}
+export function del<T = any>(config: AxiosRequestConfig): Promise<T> {
+  return request({ ...config, method: 'DELETE' });
 }
 
 export default request;

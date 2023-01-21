@@ -1,5 +1,5 @@
 // 权限问题后期增加
-import { get, post } from '/@/utils/http/axios';
+import { del, get, post } from '/@/utils/http/axios';
 import { UserState } from '/@/store/modules/user/types';
 import { LoginDataType, ReqListParams, ReqUserUpdateParams, ResultListType, ResultOkType, ResultType } from './types';
 // import axios from 'axios';
@@ -36,5 +36,5 @@ const getUserList = async (params?: ReqListParams) => get<ResultListType>({ url:
 const login = async (data: LoginData) => post<ResultType<LoginDataType>>({ url: URL.login, data });
 // 刷新token 用于token过期后刷新token
 const refresh = async (params: string) => post<any>({ url: URL.refresh, params: { refreshToken: params } });
-const logout = async () => post<LoginRes>({ url: URL.logout });
+const logout = async () => del<LoginRes>({ url: URL.logout });
 export { getUserProfile, logout, login, getUserList, refresh, deleteUser, updateUser, disableUser };
