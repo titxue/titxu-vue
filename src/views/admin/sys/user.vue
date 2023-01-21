@@ -2,14 +2,14 @@
   <div>
     <el-card>
       <template #header>
-        <ElButton type="success" @click="refreshAccessToken"> 新增用户 </ElButton>
+        <ElButton type="success"> 新增用户 </ElButton>
         <ElButton type="danger" @click="refreshAccessToken"> 删除删除 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshTable" />
         <ElButton type="info" :icon="Refresh" @click="refreshAccessToken" />
       </template>
       <Table
         :columns="tableColumn"
-        :table-data="getUserInfoList.list"
+        :table-data="getUserInfoList.list || []"
         :options="options"
         @pagination-change="handlePaginationChange"
         @selection-change="handleSelection"
@@ -42,16 +42,14 @@
 <script setup name="ViewsAdminUserUserList" lang="ts">
   import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
   import dayjs from 'dayjs';
-  import { useUserStore } from '/@/store';
+  import { useUserStore, useRoleStore } from '/@/store';
   import { UserInfoType } from '/@/api/user/types';
-  // import { refreshToken } from '/@/utils/auth';
   import { exampleForm } from '/@/config/form';
   import { Refresh } from '@element-plus/icons-vue';
-  // const { proxy } = getCurrentInstance()
   const router = useRouter();
 
   const route = useRoute();
-  const store = useUserStore();
+  const userStore = useUserStore();
   const {
     list,
     editUserInfo,
@@ -62,7 +60,15 @@
     setPagingArguments,
     refreshTable,
     getUserInfoList,
-  } = store;
+  } = userStore;
+
+  const roleStore = useRoleStore();
+  const {
+    // getRoleInfo,
+    // getRoleAll,
+    setRoleAll,
+    setRoleInfo,
+  } = roleStore;
 
   const dialogVisible = ref(false);
   const fieldList: Form.FieldItem[] = exampleForm.editUser;
@@ -194,6 +200,11 @@
   const handleSelection = (val: UserInfoType[]) => {
     console.log('父组件接收的多选数据', val);
   };
+
+  onMounted(() => {
+    setRoleAll();
+    setRoleInfo('1');
+  });
 
   watch(
     () => route.query,
