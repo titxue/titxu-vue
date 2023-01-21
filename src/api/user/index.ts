@@ -34,7 +34,7 @@ const getUserProfile = async () => get<UserState>({ url: URL.profile });
 // 获取用户列表
 const getUserList = async (params?: ReqListParams) => get<ResultListType>({ url: URL.list, params });
 const login = async (data: LoginData) => post<any>({ url: URL.login, data });
-// 刷新token token采用header传递
-const refresh = async () => post<any>({ url: URL.refresh });
+// 刷新token 用于token过期后刷新token
+const refresh = async (params: string) => post<any>({ url: URL.refresh, params: { refreshToken: params } });
 const logout = async () => post<LoginRes>({ url: URL.logout });
 export { getUserProfile, logout, login, getUserList, refresh, deleteUser, updateUser, disableUser };

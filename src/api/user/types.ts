@@ -40,7 +40,7 @@ export interface UserInfoType {
   createdTime: string;
   updatedBy: string;
   updatedTime: string;
-  userName: string;
+  userNick: string;
   accountId: string;
   userType?: string;
   linkId?: string;
@@ -55,7 +55,7 @@ export interface UserInfoType {
 
 export interface ReqUserUpdateParams {
   id: string;
-  userName: string;
+  userNick: string;
   mobile: string;
   email?: string;
   roleIdList?: string[];

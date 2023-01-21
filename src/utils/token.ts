@@ -12,11 +12,12 @@ import { refresh } from '/@/api/user';
 const refreshToken = async () => {
   const refreshTokenParam = getRefreshToken();
   if (refreshTokenParam) {
-    const { data: result } = await refresh();
-    const { value, refreshToken } = result;
-    setToken(value);
-    setRefreshToken(refreshToken);
-    if (value === '' || refreshToken === '') {
+    const { data: result } = await refresh(refreshTokenParam);
+    console.log('result', result);
+    const { access_token, refresh_token } = result;
+    setToken(access_token);
+    setRefreshToken(refresh_token);
+    if (access_token === '' || refresh_token === '') {
       Promise.resolve<number>(1);
     }
     return Promise.resolve<number>(0);

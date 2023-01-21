@@ -87,7 +87,7 @@
         return h('span', row.id);
       },
     },
-    { prop: 'userName', label: '名字' },
+    { prop: 'userNick', label: '名字' },
     // 日期使用render函数格式化
     {
       prop: 'createdTime',
@@ -189,7 +189,7 @@
     })
       .then(async () => {
         await deleteUser(new Array(row.id));
-        ElMessage.success(`删除${row.userName}用户成功`);
+        ElMessage.success(`删除${row.userNick}用户成功`);
         refreshTable();
       })
       .catch((err) => {

@@ -22,7 +22,7 @@ export const useUserStore = defineStore('user', {
     createdTime: '',
     updatedBy: '',
     updatedTime: '',
-    userName: '',
+    userNick: '',
     accountId: '',
     userType: '',
     linkId: '',
@@ -81,7 +81,7 @@ export const useUserStore = defineStore('user', {
     async updateUser(data: UserInfoType) {
       const { code } = await updateUser({
         id: data.id,
-        userName: data.userName,
+        userNick: data.userNick,
         mobile: data.mobile,
         email: data.email,
       });
