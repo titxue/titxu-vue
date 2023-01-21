@@ -24,8 +24,8 @@
 </template>
 
 <script setup lang="ts">
+  import { Menu } from '/@/api/permission/types';
   import { usePermissionStore } from '/@/store';
-  import { Menu } from '/@/store/modules/permission/types';
 
   const router = useRouter();
   const route = useRoute();
@@ -77,19 +77,19 @@
 
   // 返回没有子菜单的菜单项
   const noChildern = () => {
-    const menu: Array<Menu> | undefined = permissionStore.permissionsProfile.menuList;
+    const menu: Array<Menu> | undefined = permissionStore.menuList;
     return menu?.filter((item) => !item.subList);
   };
 
   // 返回有子菜单的菜单项
   const hasChildern = () => {
-    const menu: Array<Menu> | undefined = permissionStore.permissionsProfile.menuList;
+    const menu: Array<Menu> | undefined = permissionStore.menuList;
     return menu?.filter((item) => item.subList);
   };
   // 获取权限菜单
   const initPermission = async () => {
-    await permissionStore.info();
-    console.log('permissionStore', permissionStore.permissionsProfile.menuList);
+    await permissionStore.setPermissions();
+    // console.log('permissionStore', permissionStore.menuList);
   };
   // vue3 生命周期
   onMounted(() => {

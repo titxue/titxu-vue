@@ -5,13 +5,13 @@ import { RoleType } from '/@/api/role/types';
 
 export const useRoleStore = defineStore('role', {
   state: (): RoleStoreType => ({
-    roleTypeList: [],
+    roleList: [],
     roleInfo: {} as RoleType,
   }),
   getters: {
     // 获取角色信息列表
-    getUserInfo(state: RoleStoreType): RoleType[] {
-      return { ...state.roleTypeList };
+    getRoleList(state: RoleStoreType): RoleType[] {
+      return { ...state.roleList };
     },
     // 获取角色信息
     getRoleInfo(state: RoleStoreType): RoleType {
@@ -24,13 +24,13 @@ export const useRoleStore = defineStore('role', {
       const { code, data } = await getRoleAll();
       if (code !== 0) return [];
       if (!data) return [];
-      this.$patch({ roleTypeList: data });
+      this.$patch({ roleList: data });
     },
     // 获取角色信息
     async setRoleInfo(userId: string) {
       const { code, data } = await getRoleInfoById(userId);
-      if (code !== 0) return {} as RoleType;
-      if (!data) return {} as RoleType;
+      if (code !== 0) return;
+      if (!data) return;
       this.$patch({ roleInfo: data });
     },
     // 设置权限的信息

@@ -2,9 +2,9 @@
   <div>
     <el-card>
       <template #header>
-        <ElButton type="success"> 新增用户 </ElButton>
+        <ElButton type="success" @click="handleRenderAdd"> 新增用户 </ElButton>
         <ElButton type="danger" @click="refreshAccessToken"> 删除删除 </ElButton>
-        <ElButton type="info" :icon="Refresh" @click="refreshTable" />
+        <ElButton type="info" :icon="Refresh" @click="refreshTable"> 刷新表格 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshAccessToken" />
       </template>
       <Table
@@ -22,7 +22,7 @@
     </el-card>
 
     <easy-dialog
-      title="编辑用户"
+      :title="dialogTitle"
       :fieldList="fieldList"
       :model="formData"
       @submit="handleUserSubmit"
@@ -42,13 +42,14 @@
 <script setup name="ViewsAdminUserUserList" lang="ts">
   import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
   import dayjs from 'dayjs';
-  import { useUserStore, useRoleStore } from '/@/store';
+  import { useUserStore, useRoleStore, usePermissionStore } from '/@/store';
   import { UserInfoType } from '/@/api/user/types';
-  import { exampleForm } from '/@/config/form';
+  import { userDialog } from '/@/config/dialog';
   import { Refresh } from '@element-plus/icons-vue';
   const router = useRouter();
-
   const route = useRoute();
+
+  // user状态管理
   const userStore = useUserStore();
   const {
     list,
@@ -56,25 +57,86 @@
     updateUser,
     deleteUser,
     refreshAccessToken,
-    getPagingArguments,
     setPagingArguments,
     refreshTable,
+    getPagingArguments,
     getUserInfoList,
   } = userStore;
 
   const roleStore = useRoleStore();
+  const { setRoleAll } = roleStore;
+
+  const permissionStore = usePermissionStore();
   const {
-    // getRoleInfo,
-    // getRoleAll,
-    setRoleAll,
-    setRoleInfo,
-  } = roleStore;
+    setPermissions,
+    // getPermissions,
+    // getMenuList
+  } = permissionStore;
 
+  // 用于dialog配置
+  const dialogTitle = ref('');
   const dialogVisible = ref(false);
-  const fieldList: Form.FieldItem[] = exampleForm.editUser;
+  const fieldList: Form.FieldItem[] = userDialog.editUser;
   const formData = ref<Record<string, any>>();
+  // 监听子组件dialogVisible变化
+  const recorddialogVisible = (n: any) => {
+    dialogVisible.value = n;
+  };
+  // 设置dialog的options
+  const setOptions = () => {
+    dialogVisible.value = true;
+    fieldList.forEach((item) => {
+      if (item.field === 'roleIdList') {
+        item.options = {
+          data: roleStore.roleList.map((item) => {
+            return {
+              label: item.roleName,
+              value: item.roleCode,
+            };
+          }),
+        };
+      }
+    });
+  };
+  /**
+   * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
+   *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
+   */
+  const handleUserSubmit = async (model: Record<string, UserInfoType>) => {
+    const userInfo = model as unknown as UserInfoType;
+    // 编辑用户
+    if (userInfo.id) {
+      await updateUser(model as unknown as UserInfoType);
+      // 修改用户状态
+      const currentStatus: string | undefined = getUserInfoList.list?.find((item) => item.id === userInfo.id)?.status;
+      if (!currentStatus) return;
+      await editUserInfo(model as unknown as UserInfoType, currentStatus);
+      ElMessage.success(`编辑${model.userNick}用户成功`);
+    }
+    refreshTable();
+  };
 
-  // import { h } from 'vue'
+  // 编辑用户
+  const handleRenderEdit = async (row: UserInfoType) => {
+    setOptions();
+    dialogTitle.value = '编辑用户';
+    console.log('编辑', row);
+    // json数据深拷贝
+    const data = JSON.parse(JSON.stringify(row));
+    formData.value = data;
+  };
+  // 编辑用户
+  const handleRenderAdd = () => {
+    dialogVisible.value = true;
+    dialogTitle.value = '新增用户';
+  };
+  // 取消编辑
+  const cancelEdit = () => {
+    dialogVisible.value = false;
+    ElMessage.warning('取消编辑');
+  };
+
+  // ---------------------------------------表格相关---------------------------------------
   // import Table from '@/components/Table/index.vue'
   // 本项目Table组件自动引入，如复制此代码，需根据路径引入Table组件后使用
   interface State {
@@ -143,45 +205,6 @@
     },
   ];
 
-  // 监听子组件dialogVisible变化
-  const recorddialogVisible = (n: any) => {
-    dialogVisible.value = n;
-  };
-
-  // 取消编辑
-  const cancelEdit = () => {
-    dialogVisible.value = false;
-    ElMessage.warning('取消编辑');
-  };
-
-  /**
-   * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
-   *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
-   */
-  const handleUserSubmit = async (model: Record<string, UserInfoType>) => {
-    const userInfo = model as unknown as UserInfoType;
-    // 编辑用户
-    if (userInfo.id) {
-      await updateUser(model as unknown as UserInfoType);
-      // 修改用户状态
-      const currentStatus: string | undefined = getUserInfoList.list?.find((item) => item.id === userInfo.id)?.status;
-      if (!currentStatus) return;
-      await editUserInfo(model as unknown as UserInfoType, currentStatus);
-      ElMessage.success(`编辑${model.userName}用户成功`);
-    } else {
-      // 新增用户
-      ElMessage.success('新增用户成功');
-    }
-    refreshTable();
-  };
-  // 编辑用户
-  const handleRenderEdit = (row: UserInfoType) => {
-    dialogVisible.value = true;
-    // json数据深拷贝
-    const data = JSON.parse(JSON.stringify(row));
-    formData.value = data;
-  };
-
   const handleRenderDelete = (row: UserInfoType) => {
     ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
       confirmButtonText: '确定',
@@ -203,7 +226,7 @@
 
   onMounted(() => {
     setRoleAll();
-    setRoleInfo('1');
+    setPermissions();
   });
 
   watch(

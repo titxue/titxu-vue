@@ -6,6 +6,7 @@ declare namespace Form {
     valueKey?: string;
     placeholder?: string;
     data: Recode<string, any>[];
+    multiple?: boolean; // 是否多选
   }
   interface Options {
     labelWidth?: string | number;

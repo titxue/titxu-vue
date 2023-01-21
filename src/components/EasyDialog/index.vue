@@ -51,7 +51,12 @@
                   :label-key="item.options?.labelkey"
                   :value-key="item.options?.valueKey"
                   :select-data="item.options?.data" /> -->
-          <el-select v-model="form[item.field]" :placeholder="item.options?.placeholder || '请选择'" :clearable="item.clearable">
+          <el-select
+            v-model="form[item.field]"
+            :multiple="item.options?.multiple === undefined ? true : item.options?.multiple"
+            :placeholder="item.options?.placeholder || '请选择'"
+            :clearable="item.clearable"
+          >
             <el-option
               v-for="s in item.options?.data"
               :key="s[item.options?.valueKey || 'value']"

@@ -1,6 +1,6 @@
 import { RoleType } from '/@/api/role/types';
 
 export interface RoleStoreType {
-  roleTypeList: RoleType[];
+  roleList: RoleType[];
   roleInfo: RoleType;
 }

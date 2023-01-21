@@ -47,7 +47,6 @@
 
   // 点击标签跳转路由
   const tabChange = (tab: TabPaneName) => {
-    console.log(tab);
     router.push(tab as string);
     activeTab.value = tab as string;
   };
@@ -102,7 +101,6 @@
   //获取路由跳转后的tab数据
   onBeforeRouteUpdate((p) => {
     activeTab.value = p.path;
-    console.log('p', p);
     addTab({
       title: p.meta.title as string,
       path: p.path,
