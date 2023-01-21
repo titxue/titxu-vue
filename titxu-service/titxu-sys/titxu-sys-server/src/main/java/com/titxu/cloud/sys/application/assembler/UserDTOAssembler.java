@@ -41,7 +41,7 @@ public class UserDTOAssembler {
         }
         UserDTO userDTO = new UserDTO();
         userDTO.setId(user.getUserId() == null ? null : user.getUserId().getId());
-        userDTO.setUserNick(user.getuserNick() == null ? null : user.getuserNick().getName());
+        userDTO.setUserNick(user.getUserNick() == null ? null : user.getUserNick().getName());
         userDTO.setEmail(user.getAccount().getEmail() == null ? null : user.getAccount().getEmail().getEmail());
         userDTO.setMobile(user.getAccount().getMobile() == null ? null : user.getAccount().getMobile().getMobile());
         userDTO.setRoleIdList(roleIdList);

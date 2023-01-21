@@ -87,8 +87,12 @@ public class User implements Entity<User> {
         return userId;
     }
 
-    public UserNick getuserNick() {
+    public UserNick getUserNick() {
         return userNick;
+    }
+
+    public void setUserNick(UserNick userNick) {
+        this.userNick = userNick;
     }
 
     public StatusEnum getStatus() {

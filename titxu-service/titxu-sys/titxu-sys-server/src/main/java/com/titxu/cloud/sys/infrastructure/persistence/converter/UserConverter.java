@@ -24,7 +24,7 @@ public class UserConverter {
     public static SysUserDO fromUser(User user, String accountId) {
         SysUserDO sysUserDO = new SysUserDO();
         sysUserDO.setId(user.getUserId() == null ? null : user.getUserId().getId());
-        sysUserDO.setUserNick(user.getuserNick() == null ? null : user.getuserNick().getName());
+        sysUserDO.setUserNick(user.getUserNick() == null ? null : user.getUserNick().getName());
         sysUserDO.setStatus(user.getStatus() == null ? null : user.getStatus().getValue());
         sysUserDO.setAccountId(accountId);
         return sysUserDO;

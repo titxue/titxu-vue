@@ -138,6 +138,9 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
         if (account.getMobile() != null) {
             dataBaseAccount.setMobile(account.getMobile());
         }
+        if (user.getUserNick() != null) {
+            dataBaseUser.setUserNick(user.getUserNick());
+        }
         return dataBaseUser;
     }
 
