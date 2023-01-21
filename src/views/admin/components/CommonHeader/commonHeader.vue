@@ -29,6 +29,8 @@
   const router = useRouter();
   const userStore = useUserStore();
 
+  const {} = userStore;
+
   // 激活标签页
   const activeTab = ref('');
 
@@ -133,7 +135,7 @@
 
     .nav-menus {
       background-color: #ffffff;
-      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -155,7 +157,7 @@
         /** 文本1 */
         font-size: 14px;
         font-weight: 400;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         line-height: 22px;
         color: rgba(0, 0, 0, 0.65);
         text-align: left;

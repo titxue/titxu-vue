@@ -67,7 +67,7 @@ export interface ResultType<T> {
 export interface UserStoreType {
   userInfo: UserInfoType;
   loginUser: LoginUserType;
-  accesstoken: string;
+  accessToken: string;
   refreshToken: string;
 }
 export interface UserInfoType {

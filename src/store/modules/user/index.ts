@@ -9,7 +9,7 @@ export const useUserStore = defineStore('user', {
   state: (): UserStoreType => ({
     userInfo: {} as UserInfoType,
     loginUser: {} as LoginUserType,
-    accesstoken: '',
+    accessToken: '',
     refreshToken: '',
   }),
   getters: {
@@ -20,7 +20,7 @@ export const useUserStore = defineStore('user', {
       return { ...state.loginUser };
     },
     getToken(state: UserStoreType): ToeknType {
-      return { access_token: state.accesstoken, refresh_token: state.refreshToken };
+      return { access_token: state.accessToken, refresh_token: state.refreshToken };
     },
   },
   actions: {
@@ -40,7 +40,7 @@ export const useUserStore = defineStore('user', {
     },
     // 设置用户的信息
     setToken(partial: Partial<ToeknType>) {
-      this.$patch({ accesstoken: partial.access_token, refreshToken: partial.refresh_token });
+      this.$patch({ accessToken: partial.access_token, refreshToken: partial.refresh_token });
     },
     // 重置用户信息
     resetInfo() {
@@ -102,11 +102,11 @@ export const useUserStore = defineStore('user', {
         return Promise.reject(result.msg);
       }
       console.log('result', data);
-      const accesstoken = data?.access_token;
+      const accessToken = data?.access_token;
       const refreshToken = data?.refresh_token;
-      if (accesstoken) {
-        this.setToken({ access_token: accesstoken, refresh_token: refreshToken });
-        setToken(accesstoken);
+      if (accessToken) {
+        this.setToken({ access_token: accessToken, refresh_token: refreshToken });
+        setToken(accessToken);
         setRefreshToken(refreshToken);
       }
 
