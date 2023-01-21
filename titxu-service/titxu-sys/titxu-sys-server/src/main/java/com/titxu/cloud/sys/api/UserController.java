@@ -12,6 +12,7 @@ import com.titxu.cloud.sys.application.UserApplicationService;
 import com.titxu.cloud.sys.application.UserQueryService;
 import com.titxu.cloud.sys.application.command.PasswordCommand;
 import com.titxu.cloud.sys.application.command.UserCommand;
+import com.titxu.cloud.sys.application.dto.UserDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,8 +85,8 @@ public class UserController {
     @Operation(summary = "用户信息")
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sys:user:info')")
-    public Result info(@PathVariable("id") String id) {
-        return Result.ok().put("user", userQueryService.find(id));
+    public com.titxu.cloud.common.core.util.Result<UserDTO> info(@PathVariable("id") String id) {
+        return com.titxu.cloud.common.core.util.Result.ok(userQueryService.find(id));
     }
 
     /**
