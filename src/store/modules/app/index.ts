@@ -7,7 +7,7 @@ export const useAppStore = defineStore(
   'app',
   {
     state: () => ({
-      title: 'admin',
+      title: '管理',
       h1: '主页',
       theme: '',
     }),
