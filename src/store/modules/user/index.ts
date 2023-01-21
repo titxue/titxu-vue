@@ -1,42 +1,26 @@
 import { defineStore } from 'pinia';
-import {
-  login as userLogin,
-  logout as userLogout,
-  getUserProfile,
-  LoginData,
-  getUserList,
-  updateUser,
-  deleteUser,
-  disableUser,
-} from '/@/api/user/index';
+import { login as userLogin, logout as userLogout, LoginData, getUserList, updateUser, deleteUser, disableUser } from '/@/api/user/index';
 import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
-import { PageUserInfoType, ReqListParams, UserInfoType } from '/@/api/user/types';
+import { LoginUserType, PageUserInfoType, ReqListParams, ToeknType, UserInfoType, UserStoreType } from '/@/api/user/types';
 import { refreshToken } from '/@/utils/token';
 import { ElMessage } from 'element-plus';
 
 export const useUserStore = defineStore('user', {
-  state: (): UserInfoType => ({
-    id: '',
-    delFlag: '',
-    createdBy: '',
-    createdTime: '',
-    updatedBy: '',
-    updatedTime: '',
-    userNick: '',
-    accountId: '',
-    userType: '',
-    linkId: '',
-    status: '',
-    remarks: '',
-    tenantId: '',
-    tenantCode: '',
-    tenantName: '',
-    mobile: '',
-    email: '',
+  state: (): UserStoreType => ({
+    userInfo: {} as UserInfoType,
+    loginUser: {} as LoginUserType,
+    accesstoken: '',
+    refreshToken: '',
   }),
   getters: {
-    userProfile(state: UserInfoType): UserInfoType {
-      return { ...state };
+    getUserInfo(state: UserStoreType): UserInfoType {
+      return { ...state.userInfo };
+    },
+    getLoginUser(state: UserStoreType): LoginUserType {
+      return { ...state.loginUser };
+    },
+    getToken(state: UserStoreType): ToeknType {
+      return { access_token: state.accesstoken, refresh_token: state.refreshToken };
     },
   },
   actions: {
@@ -47,8 +31,16 @@ export const useUserStore = defineStore('user', {
     //   });
     // },
     // 设置用户的信息
-    setInfo(partial: Partial<UserInfoType>) {
-      this.$patch(partial);
+    setUserInfo(partial: Partial<UserInfoType>) {
+      this.$patch({ userInfo: partial });
+    },
+    // 设置用户的信息
+    setLoginUser(partial: Partial<LoginUserType>) {
+      this.$patch({ loginUser: partial });
+    },
+    // 设置用户的信息
+    setToken(partial: Partial<ToeknType>) {
+      this.$patch({ accesstoken: partial.access_token, refreshToken: partial.refresh_token });
     },
     // 重置用户信息
     resetInfo() {
@@ -98,20 +90,27 @@ export const useUserStore = defineStore('user', {
       return page;
     },
     // 获取用户信息
-    async info() {
-      const result = await getUserProfile();
-      this.setInfo(result);
-    },
+    // async info() {
+    //   const result = await getUserProfile();
+    //   this.setInfo(result);
+    // },
     // 异步登录并存储token
     async login(loginForm: LoginData) {
-      const { data: result } = await userLogin(loginForm);
-      console.log('result', result);
-      const token = result?.access_token;
-      const refreshToken = result?.refresh_token;
-      if (token) {
-        setToken(token);
+      const result = await userLogin(loginForm);
+      const { data, code } = result;
+      if (code !== 0) {
+        return Promise.reject(result.msg);
+      }
+      console.log('result', data);
+      const accesstoken = data?.access_token;
+      const refreshToken = data?.refresh_token;
+      if (accesstoken) {
+        this.setToken({ access_token: accesstoken, refresh_token: refreshToken });
+        setToken(accesstoken);
         setRefreshToken(refreshToken);
       }
+
+      this.setLoginUser(data.user_info);
       return result;
     },
     // Logout

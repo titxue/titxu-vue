@@ -33,26 +33,6 @@ export interface ResResultData {
   status: string;
 }
 
-export interface UserInfoType {
-  id: string;
-  delFlag: string;
-  createdBy: string;
-  createdTime: string;
-  updatedBy: string;
-  updatedTime: string;
-  userNick: string;
-  accountId: string;
-  userType?: string;
-  linkId?: string;
-  status: string;
-  remarks?: string;
-  tenantId: string;
-  tenantCode?: string;
-  tenantName?: string;
-  mobile: string;
-  email?: string;
-}
-
 export interface ReqUserUpdateParams {
   id: string;
   userNick: string;
@@ -78,4 +58,66 @@ export interface ResultListType {
 export interface ResultOkType {
   msg: string;
   code: number;
+}
+export interface ResultType<T> {
+  msg: string;
+  code: number;
+  data: T;
+}
+export interface UserStoreType {
+  userInfo: UserInfoType;
+  loginUser: LoginUserType;
+  accesstoken: string;
+  refreshToken: string;
+}
+export interface UserInfoType {
+  id: string;
+  delFlag: string;
+  createdBy: string;
+  createdTime: string;
+  updatedBy: string;
+  updatedTime: string;
+  userNick: string;
+  accountId: string;
+  userType?: string;
+  linkId?: string;
+  status: string;
+  remarks?: string;
+  tenantId: string;
+  tenantCode?: string;
+  tenantName?: string;
+  mobile: string;
+  email?: string;
+}
+export interface LoginUserType {
+  username: string;
+  authorities: Array<AuthoritiesType>;
+  accountNonExpired: boolean;
+  accountNonLocked: boolean;
+  credentialsNonExpired: boolean;
+  enabled: boolean;
+  id: string;
+  tenantId: string;
+  name: string;
+  attributes: AttributesType;
+}
+export interface LoginDataType {
+  access_token: string;
+  refresh_token: string;
+  license: string;
+  user_info: LoginUserType;
+  scope: string;
+  token_type: string;
+  expires_in: number;
+}
+export interface AuthoritiesType {
+  authority: string;
+}
+interface AttributesType {
+  id: string;
+}
+
+export interface ToeknType {
+  access_token: string;
+  refresh_token: string;
 }
