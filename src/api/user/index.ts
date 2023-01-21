@@ -1,25 +1,14 @@
 // 权限问题后期增加
-import { del, get, post } from '/@/utils/http/axios';
-import { UserState } from '/@/store/modules/user/types';
-import { LoginDataType, PagingArgumentsType, ReqUserUpdateParams, ResultListType, ResultOkType, ResultType } from './types';
+import { get, post } from '/@/utils/http/axios';
+import { ReqUserUpdateParams, ResultListType, ResultOkType } from './types';
+import { PagingArgumentsType } from '../types';
 // import axios from 'axios';
 enum URL {
-  login = '/auth/account/login',
-  refresh = '/auth/account/refresh',
-  logout = '/auth/account/logout',
-  profile = '/auth/account/profile',
   list = '/sys/user/list',
   update = '/sys/user/update',
   delete = '/sys/user/delete',
   disable = '/sys/user/disable/',
-}
-interface LoginRes {
-  token: string;
-}
-
-export interface LoginData {
-  mobile: string;
-  password: string;
+  info = '/sys/user/info/',
 }
 
 // 修改用户信息
@@ -29,12 +18,9 @@ const deleteUser = async (id: string[]) => post<ResultOkType>({ url: URL.delete,
 // 修改用户状态
 const disableUser = async (id: string) => post<ResultOkType>({ url: URL.disable + id });
 
-const getUserProfile = async () => get<UserState>({ url: URL.profile });
+const getUserInfoById = async (id: string) => get<any>({ url: URL.info + id });
 
 // 获取用户列表
 const getUserList = async (params?: PagingArgumentsType) => get<ResultListType>({ url: URL.list, params });
-const login = async (data: LoginData) => post<ResultType<LoginDataType>>({ url: URL.login, data });
-// 刷新token 用于token过期后刷新token
-const refresh = async (params: string) => post<any>({ url: URL.refresh, params: { refreshToken: params } });
-const logout = async () => del<LoginRes>({ url: URL.logout });
-export { getUserProfile, logout, login, getUserList, refresh, deleteUser, updateUser, disableUser };
+
+export { getUserInfoById, getUserList, deleteUser, updateUser, disableUser };

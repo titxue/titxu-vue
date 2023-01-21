@@ -1,5 +1,5 @@
+import { refresh } from '../api/auth';
 import { getRefreshToken, setRefreshToken, setToken } from './auth';
-import { refresh } from '/@/api/user';
 
 /**
  * 单独处理token 刷新 避免循环引用

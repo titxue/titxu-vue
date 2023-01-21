@@ -1,17 +1,15 @@
 import { defineStore } from 'pinia';
-import { login as userLogin, logout as userLogout, LoginData, getUserList, updateUser, deleteUser, disableUser } from '/@/api/user/index';
-import { setToken, clearToken, setRefreshToken, clearRefreshToken } from '/@/utils/auth';
-import { LoginUserType, PageUserInfoType, PagingArgumentsType, ToeknType, UserInfoType, UserStoreType } from '/@/api/user/types';
-import { refreshToken } from '/@/utils/token';
-import { ElMessage } from 'element-plus';
+import { getUserList, updateUser, deleteUser, disableUser } from '/@/api/user/index';
+import { PageUserInfoType, UserInfoType } from '/@/api/user/types';
+import { UserStoreType } from './types';
+import { PagingArgumentsType } from '/@/api/types';
 
 export const useUserStore = defineStore('user', {
   state: (): UserStoreType => ({
     userInfo: {} as UserInfoType,
-    loginUser: {} as LoginUserType,
+
     userInfoList: {} as PageUserInfoType,
-    accessToken: '',
-    refreshToken: '',
+
     pagingArguments: {
       page: 1,
       limit: 10,
@@ -26,16 +24,6 @@ export const useUserStore = defineStore('user', {
     // 获取用户信息列表
     getUserInfoList(state: UserStoreType): PageUserInfoType {
       return state.userInfoList;
-    },
-
-    // 获取登陆信息列表
-    getLoginUser(state: UserStoreType): LoginUserType {
-      return { ...state.loginUser };
-    },
-
-    // 获取token
-    getToken(state: UserStoreType): ToeknType {
-      return { access_token: state.accessToken, refresh_token: state.refreshToken };
     },
 
     // 获取分页参数
@@ -66,14 +54,7 @@ export const useUserStore = defineStore('user', {
     setUserInfo(partial: Partial<UserInfoType>) {
       this.$patch({ userInfo: partial });
     },
-    // 设置登陆的信息
-    setLoginUser(partial: Partial<LoginUserType>) {
-      this.$patch({ loginUser: partial });
-    },
-    // 设置token
-    setToken(partial: Partial<ToeknType>) {
-      this.$patch({ accessToken: partial.access_token, refreshToken: partial.refresh_token });
-    },
+
     // 重置用户信息
     resetInfo() {
       this.$reset();
@@ -81,16 +62,6 @@ export const useUserStore = defineStore('user', {
     // 设置分页参数
     setPagingArguments(partial: Partial<PagingArgumentsType>) {
       this.$patch({ pagingArguments: partial });
-    },
-
-    // 刷新token
-    async refreshAccessToken() {
-      const code = await refreshToken();
-      if (code !== 0) {
-        ElMessage.error('刷新token失败');
-        return;
-      }
-      ElMessage.success('刷新token成功');
     },
     // 修改用户状态
     async changeStatus(id: string) {
@@ -139,39 +110,6 @@ export const useUserStore = defineStore('user', {
       }
       this.$patch({ userInfoList: page });
       return page;
-    },
-    // 获取用户信息
-    // async info() {
-    //   const result = await getUserProfile();
-    //   this.setInfo(result);
-    // },
-    // 异步登录并存储token
-    async login(loginForm: LoginData) {
-      const result = await userLogin(loginForm);
-      const { data, code } = result;
-      if (code !== 0) {
-        return Promise.reject(result.msg);
-      }
-      console.log('result', data);
-      const accessToken = data?.access_token;
-      const refreshToken = data?.refresh_token;
-      if (accessToken) {
-        this.setToken({ access_token: accessToken, refresh_token: refreshToken });
-        setToken(accessToken);
-        setRefreshToken(refreshToken);
-      }
-
-      this.setLoginUser(data.user_info);
-      return result;
-    },
-    // Logout
-    async logout() {
-      await userLogout();
-      this.resetInfo();
-      clearToken();
-      clearRefreshToken();
-      // 路由表重置
-      location.reload();
     },
   },
 });

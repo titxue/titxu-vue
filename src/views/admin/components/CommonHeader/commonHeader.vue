@@ -24,12 +24,12 @@
 
 <script setup lang="ts">
   import { ElMessage, TabPaneName } from 'element-plus';
-  import { useUserStore } from '/@/store';
+  import { useAuthStore } from '/@/store';
 
   const router = useRouter();
-  const userStore = useUserStore();
+  const authStore = useAuthStore();
 
-  const { getLoginUser } = userStore;
+  const { getLoginUser, userLogout } = authStore;
 
   // 激活标签页
   const activeTab = ref('');
@@ -79,7 +79,7 @@
   };
 
   const logout = async () => {
-    await userStore.logout();
+    await userLogout();
     router.push('/login');
     ElMessage.success('退出登陆成功');
   };

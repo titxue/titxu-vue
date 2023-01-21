@@ -42,26 +42,20 @@
 <script setup name="ViewsAdminUserUserList" lang="ts">
   import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
   import dayjs from 'dayjs';
-  import { useUserStore, useRoleStore, usePermissionStore } from '/@/store';
+  import { useUserStore, useRoleStore, usePermissionStore, useAuthStore } from '/@/store';
   import { UserInfoType } from '/@/api/user/types';
   import { userDialog } from '/@/config/dialog';
   import { Refresh } from '@element-plus/icons-vue';
   const router = useRouter();
   const route = useRoute();
 
+  // auth状态管理
+  const authStore = useAuthStore();
+  const { refreshAccessToken } = authStore;
+
   // user状态管理
   const userStore = useUserStore();
-  const {
-    list,
-    editUserInfo,
-    updateUser,
-    deleteUser,
-    refreshAccessToken,
-    setPagingArguments,
-    refreshTable,
-    getPagingArguments,
-    getUserInfoList,
-  } = userStore;
+  const { list, editUserInfo, updateUser, deleteUser, setPagingArguments, refreshTable, getPagingArguments, getUserInfoList } = userStore;
 
   const roleStore = useRoleStore();
   const { setRoleAll } = roleStore;

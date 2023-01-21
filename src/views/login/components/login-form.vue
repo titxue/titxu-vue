@@ -30,11 +30,11 @@
 
 <script lang="ts" setup>
   import { ElMessage, FormInstance, FormRules } from 'element-plus';
-  import { useUserStore } from '/@/store';
+  import { useAuthStore } from '/@/store';
 
   const router = useRouter();
   const errorMessage = ref('');
-  const userStore = useUserStore();
+  const authStore = useAuthStore();
   const userFormData = reactive({
     mobile: '18555555555',
     password: '123456',
@@ -61,7 +61,7 @@
     await formEl.validate(async (valid) => {
       if (valid) {
         ElMessage.success('欢迎使用');
-        await userStore.login(userFormData);
+        await authStore.login(userFormData);
         router.push('/admin');
       } else {
         ElMessage.error('错误信息');

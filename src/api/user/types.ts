@@ -21,18 +21,6 @@ export interface ReqAuth {
   is_admin?: 0 | 1;
 }
 
-export interface ResResult {
-  data?: ResResultData;
-  status: string | '';
-  headers: object;
-}
-export interface ResResultData {
-  code?: number;
-  result?: any;
-  message: string;
-  status: string;
-}
-
 export interface ReqUserUpdateParams {
   id: string;
   userNick: string;
@@ -59,19 +47,7 @@ export interface ResultOkType {
   msg: string;
   code: number;
 }
-export interface ResultType<T> {
-  msg: string;
-  code: number;
-  data: T;
-}
-export interface UserStoreType {
-  userInfo: UserInfoType;
-  loginUser: LoginUserType;
-  accessToken: string;
-  refreshToken: string;
-  userInfoList: PageUserInfoType;
-  pagingArguments: PagingArgumentsType;
-}
+
 export interface UserInfoType {
   id: string;
   delFlag: string;
@@ -90,49 +66,4 @@ export interface UserInfoType {
   tenantName?: string;
   mobile: string;
   email?: string;
-}
-export interface LoginUserType {
-  username: string;
-  authorities: Array<AuthoritiesType>;
-  accountNonExpired: boolean;
-  accountNonLocked: boolean;
-  credentialsNonExpired: boolean;
-  enabled: boolean;
-  id: string;
-  tenantId: string;
-  name: string;
-  userNick: string;
-  attributes: AttributesType;
-}
-export interface LoginDataType {
-  access_token: string;
-  refresh_token: string;
-  license: string;
-  user_info: LoginUserType;
-  scope: string;
-  token_type: string;
-  expires_in: number;
-}
-export interface AuthoritiesType {
-  authority: string;
-}
-interface AttributesType {
-  id: string;
-}
-
-export interface ToeknType {
-  access_token: string;
-  refresh_token: string;
-}
-
-export interface PagingArgumentsType {
-  userName?: string;
-  userType?: string;
-  email?: string;
-  mobile?: string;
-  page?: number;
-  limit?: number;
-  sidx?: string;
-  order?: string;
-  asc?: string;
 }
