@@ -1,7 +1,7 @@
 package com.titxu.cloud.common.security.domain;
 
 import com.titxu.cloud.common.core.domain.StatusEnum;
-import com.titxu.cloud.sys.dto.AuthenticationDTO;
+import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
@@ -33,10 +33,15 @@ public class AuthUser extends User implements OAuth2AuthenticatedPrincipal {
     @Getter
     private String tenantId;
 
+    @Setter
+    @Getter
+    private String userNick;
+
     public AuthUser(AuthenticationDTO authenticationDTO) {
         super(authenticationDTO.getMobile(), authenticationDTO.getPassword(), StatusEnum.ENABLE.getValue().equals(authenticationDTO.getStatus()),
                 true, true, true, AuthorityUtils.commaSeparatedStringToAuthorityList(StringUtils.join(authenticationDTO.getPermissionCodes(), ",")));
         this.setId(authenticationDTO.getUserId());
+        this.setUserNick(authenticationDTO.getUserNick());
 //        this.setUsername(authenticationDTO.getUserName());
 //        this.setPassword(AuthConstants.BCRYPT + authenticationDTO.getPassword());
 //        this.setEnabled(St、atusEnum.ENABLE、.getValue().equals(authenticationDTO.getStatus()));

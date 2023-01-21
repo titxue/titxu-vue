@@ -1,7 +1,7 @@
 package com.titxu.cloud.common.security.service;
 
 import com.titxu.cloud.common.security.domain.AuthUser;
-import com.titxu.cloud.sys.dto.AuthenticationDTO;
+import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
 import org.springframework.core.Ordered;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

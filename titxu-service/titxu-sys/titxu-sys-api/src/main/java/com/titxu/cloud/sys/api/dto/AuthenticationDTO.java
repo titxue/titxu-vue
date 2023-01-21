@@ -1,4 +1,4 @@
-package com.titxu.cloud.sys.dto;
+package com.titxu.cloud.sys.api.dto;
 
 import lombok.Data;
 
@@ -20,6 +20,10 @@ public class AuthenticationDTO implements Serializable {
      * 手机号
      */
     private String mobile;
+    /**
+     * 用户名
+     */
+    private String userNick;
 
     /**
      * password

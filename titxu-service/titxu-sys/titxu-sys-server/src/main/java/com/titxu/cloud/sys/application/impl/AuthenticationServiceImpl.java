@@ -1,5 +1,7 @@
 package com.titxu.cloud.sys.application.impl;
 
+import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
+import com.titxu.cloud.sys.api.service.AuthenticationService;
 import com.titxu.cloud.sys.application.PermissionQueryService;
 import com.titxu.cloud.sys.application.assembler.AuthenticationDTOAssembler;
 import com.titxu.cloud.sys.domain.model.captcha.CaptchaCode;
@@ -10,8 +12,6 @@ import com.titxu.cloud.sys.domain.model.user.User;
 import com.titxu.cloud.sys.domain.model.user.UserId;
 import com.titxu.cloud.sys.domain.model.user.UserRepository;
 import com.titxu.cloud.sys.domain.service.CaptchaValidateService;
-import com.titxu.cloud.sys.dto.AuthenticationDTO;
-import com.titxu.cloud.sys.service.AuthenticationService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

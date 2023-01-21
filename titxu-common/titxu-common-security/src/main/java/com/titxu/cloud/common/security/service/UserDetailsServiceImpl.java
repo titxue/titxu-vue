@@ -1,7 +1,7 @@
 package com.titxu.cloud.common.security.service;
 
+import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.api.feign.RemoteAuthenticationService;
-import com.titxu.cloud.sys.dto.AuthenticationDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;

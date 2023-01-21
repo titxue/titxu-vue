@@ -1,8 +1,8 @@
 package com.titxu.cloud.sys.infrastructure.api;
 
 import com.titxu.cloud.common.security.annotation.Inner;
-import com.titxu.cloud.sys.dto.AuthenticationDTO;
-import com.titxu.cloud.sys.service.AuthenticationService;
+import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
+import com.titxu.cloud.sys.api.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

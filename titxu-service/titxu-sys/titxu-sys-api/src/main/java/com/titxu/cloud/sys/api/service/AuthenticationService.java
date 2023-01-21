@@ -1,6 +1,7 @@
-package com.titxu.cloud.sys.service;
+package com.titxu.cloud.sys.api.service;
 
-import com.titxu.cloud.sys.dto.AuthenticationDTO;
+
+import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
 
 /**
  * 认证服务接口
