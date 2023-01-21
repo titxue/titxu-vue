@@ -51,14 +51,25 @@
 
   // auth状态管理
   const authStore = useAuthStore();
-  const { refreshAccessToken } = authStore;
-
   // user状态管理
   const userStore = useUserStore();
-  const { list, editUserInfo, updateUser, deleteUser, setPagingArguments, refreshTable, getPagingArguments, getUserInfoList } = userStore;
-
+  //角色状态管理
   const roleStore = useRoleStore();
-  const { setRoleAll } = roleStore;
+
+  const { refreshAccessToken } = authStore;
+  const {
+    setUserInfoById,
+    userInfoById,
+    list,
+    editUserInfo,
+    updateUser,
+    deleteUser,
+    setPagingArguments,
+    refreshTable,
+    getPagingArguments,
+    getUserInfoList,
+  } = userStore;
+  const { setRoleAll, roleList } = roleStore;
 
   const permissionStore = usePermissionStore();
   const {
@@ -82,10 +93,10 @@
     fieldList.forEach((item) => {
       if (item.field === 'roleIdList') {
         item.options = {
-          data: roleStore.roleList.map((item) => {
+          data: roleList.map((item) => {
             return {
               label: item.roleName,
-              value: item.roleCode,
+              value: item.id,
             };
           }),
         };
@@ -114,9 +125,14 @@
   const handleRenderEdit = async (row: UserInfoType) => {
     setOptions();
     dialogTitle.value = '编辑用户';
-    console.log('编辑', row);
+
     // json数据深拷贝
     const data = JSON.parse(JSON.stringify(row));
+
+    // 获取用户信息
+    await setUserInfoById(row.id);
+
+    data.roleIdList = userInfoById.roleIdList;
     formData.value = data;
   };
   // 编辑用户

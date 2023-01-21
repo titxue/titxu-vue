@@ -27,7 +27,7 @@ export const useRoleStore = defineStore('role', {
       this.$patch({ roleList: data });
     },
     // 获取角色信息
-    async setRoleInfo(userId: string) {
+    async setRoleInfoById(userId: string) {
       const { code, data } = await getRoleInfoById(userId);
       if (code !== 0) return;
       if (!data) return;

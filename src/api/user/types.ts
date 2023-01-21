@@ -66,4 +66,7 @@ export interface UserInfoType {
   tenantName?: string;
   mobile: string;
   email?: string;
+  permissionCodes: string[];
+  permissionIds: string[];
+  roleIdList: string[];
 }

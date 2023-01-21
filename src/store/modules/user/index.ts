@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { getUserList, updateUser, deleteUser, disableUser } from '/@/api/user/index';
+import { getUserList, updateUser, deleteUser, disableUser, getUserInfoById } from '/@/api/user/index';
 import { PageUserInfoType, UserInfoType } from '/@/api/user/types';
 import { UserStoreType } from './types';
 import { PagingArgumentsType } from '/@/api/types';
@@ -7,9 +7,8 @@ import { PagingArgumentsType } from '/@/api/types';
 export const useUserStore = defineStore('user', {
   state: (): UserStoreType => ({
     userInfo: {} as UserInfoType,
-
     userInfoList: {} as PageUserInfoType,
-
+    userInfoById: {} as UserInfoType,
     pagingArguments: {
       page: 1,
       limit: 10,
@@ -25,13 +24,25 @@ export const useUserStore = defineStore('user', {
     getUserInfoList(state: UserStoreType): PageUserInfoType {
       return state.userInfoList;
     },
-
+    // 获取用户信息
+    getUserInfoById(state: UserStoreType): UserInfoType {
+      return state.userInfoById;
+    },
     // 获取分页参数
     getPagingArguments(state: UserStoreType): PagingArgumentsType {
       return state.pagingArguments;
     },
   },
   actions: {
+    // 设置用户信息列表
+    setUserInfoList(partial: Partial<PageUserInfoType>) {
+      this.$patch({ userInfoList: partial });
+    },
+
+    // 设置用户的信息
+    setUserInfo(partial: Partial<UserInfoType>) {
+      this.$patch({ userInfo: partial });
+    },
     // switchRoles() {
     //   return new Promise((resolve) => {
     //     this.role = this.role === 'user' ? 'user' : 'admin';
@@ -45,14 +56,13 @@ export const useUserStore = defineStore('user', {
         this.$patch({ userInfoList: result });
       }
     },
-    // 设置用户信息列表
-    setUserInfoList(partial: Partial<PageUserInfoType>) {
-      this.$patch({ userInfoList: partial });
-    },
 
-    // 设置用户的信息
-    setUserInfo(partial: Partial<UserInfoType>) {
-      this.$patch({ userInfo: partial });
+    // 根据id获取用户信息
+    async setUserInfoById(id: string) {
+      const { code, data } = await getUserInfoById(id);
+      if (code === 0) {
+        this.$patch({ userInfoById: data });
+      }
     },
 
     // 重置用户信息
