@@ -1,9 +1,8 @@
 package com.titxu.cloud.sys.api;
 
+import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.common.log.annotation.SysLog;
-import com.titxu.cloud.common.mybatis.constant.PageConstant;
 import com.titxu.cloud.common.mybatis.util.Page;
-import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.common.web.util.validator.ValidatorUtils;
 import com.titxu.cloud.sys.application.RoleApplicationService;
 import com.titxu.cloud.sys.application.RoleQueryService;
@@ -27,11 +26,20 @@ import java.util.Map;
 @RequestMapping("/role")
 public class RoleController {
 
-    @Autowired
+
     private RoleQueryService roleQueryService;
 
-    @Autowired
     private RoleApplicationService roleApplicationService;
+
+    @Autowired
+    public void setRoleQueryService(RoleQueryService roleQueryService) {
+        this.roleQueryService = roleQueryService;
+    }
+
+    @Autowired
+    public void setRoleApplicationService(RoleApplicationService roleApplicationService) {
+        this.roleApplicationService = roleApplicationService;
+    }
 
     /**
      * 角色分页查询
@@ -39,9 +47,9 @@ public class RoleController {
     @Operation(summary = "角色分页查询")
     @GetMapping("/list")
     @PreAuthorize("hasAuthority('sys:role:list')")
-    public Result list(@RequestParam Map<String, Object> params) {
+    public Result<Page> list(@RequestParam Map<String, Object> params) {
         Page page = roleQueryService.queryPage(params);
-        return Result.ok().put(PageConstant.PAGE, page);
+        return Result.ok(page);
     }
 
     /**
@@ -50,9 +58,9 @@ public class RoleController {
     @Operation(summary = "角色列表")
     @GetMapping("/select")
     @PreAuthorize("hasAuthority('sys:role:select')")
-    public Result select() {
+    public Result<List<RoleDTO>> select() {
         List<RoleDTO> list = roleQueryService.listAll();
-        return Result.ok().put("list", list);
+        return Result.ok(list);
     }
 
     /**
@@ -61,9 +69,9 @@ public class RoleController {
     @Operation(summary = "角色信息")
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sys:role:info')")
-    public Result info(@PathVariable("id") String id) {
+    public Result<RoleDTO> info(@PathVariable("id") String id) {
         RoleDTO role = roleQueryService.getById(id);
-        return Result.ok().put("role", role);
+        return Result.ok(role);
     }
 
     /**
@@ -73,7 +81,7 @@ public class RoleController {
     @SysLog("保存角色")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('sys:role:save')")
-    public Result save(@RequestBody RoleCommand roleCommand) {
+    public Result<?> save(@RequestBody RoleCommand roleCommand) {
         ValidatorUtils.validateEntity(roleCommand);
         roleApplicationService.saveOrUpdate(roleCommand);
         return Result.ok();
@@ -86,7 +94,7 @@ public class RoleController {
     @SysLog("修改角色")
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('sys:role:update')")
-    public Result update(@RequestBody RoleCommand roleCommand) {
+    public Result<?> update(@RequestBody RoleCommand roleCommand) {
         ValidatorUtils.validateEntity(roleCommand);
         roleApplicationService.saveOrUpdate(roleCommand);
         return Result.ok();
@@ -99,7 +107,7 @@ public class RoleController {
     @SysLog("删除角色")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('sys:role:delete')")
-    public Result delete(@RequestBody String[] roleIds) {
+    public Result<?> delete(@RequestBody String[] roleIds) {
         roleApplicationService.deleteBatch(Arrays.asList(roleIds));
         return Result.ok();
     }
@@ -111,7 +119,7 @@ public class RoleController {
     @SysLog("禁用角色")
     @PostMapping("/disable/{id}")
     @PreAuthorize("hasAuthority('sys:role:disable')")
-    public Result disable(@PathVariable("id") String id) {
+    public Result<?> disable(@PathVariable("id") String id) {
         roleApplicationService.disable(id);
         return Result.ok();
     }

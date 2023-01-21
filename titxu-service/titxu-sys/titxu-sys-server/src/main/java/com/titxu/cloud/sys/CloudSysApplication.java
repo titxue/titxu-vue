@@ -12,7 +12,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableFeignClients(defaultConfiguration = FeignConfiguration.class)
-//@DubboComponentScan(basePackages = "com.titxu.cloud.sys")
 public class CloudSysApplication {
     public static void main(String[] args) {
         SpringApplication.run(CloudSysApplication.class);
