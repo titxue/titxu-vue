@@ -1,8 +1,6 @@
-export interface NavResultData {
-  code: number;
+export interface NavList {
   permissions: string[];
   menuList: Menu[];
-  msg: string;
 }
 
 export type Menu = {

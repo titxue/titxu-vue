@@ -1,5 +1,6 @@
 // 权限问题后期增加
-import { NavResultData } from './types';
+import { ResResultData } from '../types';
+import { NavList } from './types';
 import { get } from '/@/utils/http/axios';
 // import axios from 'axios';
 enum URL {
@@ -7,5 +8,5 @@ enum URL {
 }
 
 // 获取导航菜单
-const getNav = async () => get<NavResultData>({ url: URL.nav });
+const getNav = async () => get<ResResultData<NavList>>({ url: URL.nav });
 export { getNav };

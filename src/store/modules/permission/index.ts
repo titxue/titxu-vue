@@ -27,12 +27,16 @@ export const usePermissionStore = defineStore('permission', {
     resetInfo() {
       this.$reset();
     },
-    // 获取权限信息
+    // 获取导航信息信息
     async setPermissions() {
-      const { code, menuList, permissions } = await getNav();
+      const { code, data } = await getNav();
       if (code !== 0) return;
+      if (data === undefined) return;
+
+      const { menuList, permissions } = data;
       if (!menuList) return;
       if (!permissions) return;
+
       this.$patch({ menuList: menuList, permissions: permissions });
     },
   },
