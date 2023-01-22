@@ -22,7 +22,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class PermissionApplicationServiceImpl implements PermissionApplicationService {
 
-    @Autowired
     private PermissionRepository permissionRepository;
 
     @Override
@@ -49,5 +48,10 @@ public class PermissionApplicationServiceImpl implements PermissionApplicationSe
     public void disable(String id) {
         PermissionDisableService permissionDisableService = new PermissionDisableService(permissionRepository);
         permissionDisableService.disable(new PermissionId(id));
+    }
+
+    @Autowired
+    public void setPermissionRepository(PermissionRepository permissionRepository) {
+        this.permissionRepository = permissionRepository;
     }
 }

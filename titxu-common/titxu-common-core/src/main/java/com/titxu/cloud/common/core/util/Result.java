@@ -2,6 +2,8 @@ package com.titxu.cloud.common.core.util;
 
 
 import com.titxu.cloud.common.core.constant.ResultCode;
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -9,9 +11,9 @@ import java.io.Serializable;
 
 /**
  * 返回数据
- * <p>
- * titxu
  */
+@Data
+@Accessors(chain = true)
 public class Result<T> implements Serializable {
 
 
@@ -60,27 +62,5 @@ public class Result<T> implements Serializable {
     }
 
 
-    public int getCode() {
-        return code;
-    }
 
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 }
