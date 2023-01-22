@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { getUserList, updateUser, deleteUser, disableUser, getUserInfoById } from '/@/api/user/index';
+import { getUserList, updateUser, deleteUser, disableUser, getUserInfoById, getUserInfo } from '/@/api/user/index';
 import { PageUserInfoType, UserInfoType } from '/@/api/user/types';
 import { UserStoreType } from './types';
 import { PagingArgumentsType } from '/@/api/types';
@@ -40,8 +40,11 @@ export const useUserStore = defineStore('user', {
     },
 
     // 设置用户的信息
-    setUserInfo(partial: Partial<UserInfoType>) {
-      this.$patch({ userInfo: partial });
+    async setUserInfo() {
+      const { code, data } = await getUserInfo();
+      if (code === 0) {
+        this.$patch({ userInfo: data });
+      }
     },
     // switchRoles() {
     //   return new Promise((resolve) => {

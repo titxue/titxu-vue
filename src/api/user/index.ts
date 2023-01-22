@@ -23,7 +23,10 @@ const disableUser = async (id: string) => post<ResultOkType>({ url: URL.disable 
 // 根据id获取用户信息
 const getUserInfoById = async (id: string) => get<ResResultData<UserInfoType>>({ url: URL.info + id });
 
+// 获取用户信息
+const getUserInfo = async () => get<ResResultData<UserInfoType>>({ url: URL.info });
+
 // 获取用户列表
 const getUserList = async (params?: PagingArgumentsType) => get<ResultListType>({ url: URL.list, params });
 
-export { getUserInfoById, getUserList, deleteUser, updateUser, disableUser };
+export { getUserInfoById, getUserInfo, getUserList, deleteUser, updateUser, disableUser };

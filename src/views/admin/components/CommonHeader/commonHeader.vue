@@ -9,7 +9,7 @@
       <el-dropdown>
         <span class="user-info">
           <img class="user" :src="getImgSrc()" alt="头像" />
-          <span class="user-name">{{ getLoginUser.userNick === undefined || '' ? '错误' : getLoginUser.userNick }}</span>
+          <span class="user-name">{{ userInfo.userNick === undefined || '' ? '' : userInfo.userNick }}</span>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -24,13 +24,15 @@
 
 <script setup lang="ts">
   import { ElMessage, TabPaneName } from 'element-plus';
-  import { useAuthStore } from '/@/store';
+  import { useUserStore, useAuthStore } from '/@/store';
 
   const router = useRouter();
   const authStore = useAuthStore();
+  const userStore = useUserStore();
 
-  const { getLoginUser, userLogout } = authStore;
-
+  const { userLogout } = authStore;
+  const { setUserInfo } = userStore;
+  const { userInfo } = toRefs(userStore);
   // 激活标签页
   const activeTab = ref('');
 
@@ -105,6 +107,10 @@
       title: p.meta.title as string,
       path: p.path,
     });
+  });
+
+  onMounted(async () => {
+    await setUserInfo();
   });
 </script>
 
