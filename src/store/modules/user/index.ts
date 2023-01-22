@@ -84,11 +84,9 @@ export const useUserStore = defineStore('user', {
       }
     },
     // 删除用户
-    async deleteUser(id: string[]) {
-      const { code, msg } = await deleteUser(id);
-      if (code !== 0) {
-        return Promise.reject(msg);
-      }
+    async deleteUser(id: string[]): Promise<number> {
+      const { code } = await deleteUser(id);
+      return code;
     },
     // 修改用户信息
     async updateUser(data: UserInfoType) {

@@ -3,9 +3,9 @@
     <el-card>
       <template #header>
         <ElButton type="success" @click="handleRenderAdd"> 新增用户 </ElButton>
-        <ElButton type="danger" @click="refreshAccessToken"> 删除删除 </ElButton>
+        <ElButton type="danger" @click="deleteUserList(deleteUserIdList)"> 删除用户 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshTable"> 刷新表格 </ElButton>
-        <ElButton type="info" :icon="Refresh" @click="refreshAccessToken" />
+        <ElButton type="info" :icon="Refresh" @click="refreshAccessToken"> 刷新Token </ElButton>
       </template>
       <Table
         :columns="tableColumn"
@@ -67,6 +67,9 @@
   const { roleList } = toRefs(roleStore);
   const { userInfoList, userInfoById, pagingArguments } = toRefs(userStore);
 
+  // 删除用户id列表
+  const deleteUserIdList = ref<string[]>([]);
+
   // 用于dialog配置
   const dialogTitle = ref('');
   const dialogVisible = ref(false);
@@ -109,6 +112,7 @@
     } else {
       // 新增用户
       await createUser(model as unknown as UserInfoType);
+      formData.value = {};
       ElMessage.success(`新增${model.userNick}用户成功`);
     }
     refreshTable();
@@ -213,6 +217,7 @@
     },
   ];
 
+  // 删除用户
   const handleRenderDelete = (row: UserInfoType) => {
     ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
       confirmButtonText: '确定',
@@ -229,7 +234,16 @@
       });
   };
   const handleSelection = (val: UserInfoType[]) => {
-    console.log('父组件接收的多选数据', val);
+    // console.log('父组件接收的多选数据', val);
+    // 返回id列表
+    deleteUserIdList.value = val.map((item) => item.id);
+  };
+
+  // 删除多选
+  const deleteUserList = async (ids: string[]) => {
+    const code = await deleteUser(ids);
+    if (code != 0) return;
+    refreshTable();
   };
 
   watch(
