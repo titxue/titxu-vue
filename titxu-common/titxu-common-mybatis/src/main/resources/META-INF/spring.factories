@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.titxu.cloud.common.mybatis.MybatisConfiguration,\
-    com.titxu.cloud.common.mybatis.util.MybatisInterceptor

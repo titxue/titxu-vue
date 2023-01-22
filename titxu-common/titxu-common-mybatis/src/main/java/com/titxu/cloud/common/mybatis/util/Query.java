@@ -10,9 +10,6 @@ import java.util.Map;
 
 /**
  * 查询参数
- *
-
-
  **/
 public class Query<T> {
 

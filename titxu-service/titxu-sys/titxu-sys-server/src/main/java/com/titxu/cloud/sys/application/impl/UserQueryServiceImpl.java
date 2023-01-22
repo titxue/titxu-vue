@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.application.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.common.mybatis.util.PageAssembler;
@@ -64,7 +65,14 @@ public class UserQueryServiceImpl implements UserQueryService {
 
     @Override
     public Page queryPage(Map<String, Object> params) {
-        IPage<SysUserDO> page = sysUserMapper.queryPage(new Query<SysUserDO>().getPage(params), params);
+        LambdaQueryWrapper<SysUserDO> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+
+        lambdaQueryWrapper
+                .eq(false,SysUserDO::getUserNick, params.get("userId"))
+                .eq(false,SysUserDO::getUserType, params.get("userType"))
+                .eq(false,SysUserDO::getEmail, params.get("email"))
+                .eq(false,SysUserDO::getMobile, params.get("mobile"));
+        IPage<SysUserDO> page = sysUserMapper.selectPage(new Query<SysUserDO>().getPage(params),lambdaQueryWrapper);
         return PageAssembler.toPage(page);
     }
 

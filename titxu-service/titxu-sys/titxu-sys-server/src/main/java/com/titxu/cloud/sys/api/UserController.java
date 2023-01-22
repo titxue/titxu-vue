@@ -1,10 +1,9 @@
 package com.titxu.cloud.sys.api;
 
+import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.common.core.util.WebUtils;
 import com.titxu.cloud.common.log.annotation.SysLog;
-import com.titxu.cloud.common.mybatis.constant.PageConstant;
 import com.titxu.cloud.common.mybatis.util.Page;
-import com.titxu.cloud.common.web.util.Result;
 import com.titxu.cloud.common.web.util.validator.ValidatorUtils;
 import com.titxu.cloud.common.web.util.validator.group.AddGroup;
 import com.titxu.cloud.common.web.util.validator.group.UpdateGroup;
@@ -52,9 +51,9 @@ public class UserController {
     @Operation(summary = "用户分页查询")
     @GetMapping("/list")
     @PreAuthorize("hasAuthority('sys:user:list')")
-    public Result list(@RequestParam Map<String, Object> params) {
+    public Result<Page> list(@RequestParam Map<String, Object> params) {
         Page page = userQueryService.queryPage(params);
-        return Result.ok().put(PageConstant.PAGE, page);
+        return Result.ok(page);
     }
 
     /**
@@ -62,8 +61,8 @@ public class UserController {
      */
     @Operation(summary = "获取登录的用户信息")
     @GetMapping("/info")
-    public com.titxu.cloud.common.core.util.Result<UserDTO> info() {
-        return com.titxu.cloud.common.core.util.Result.ok(userQueryService.find(WebUtils.getUserId()));
+    public Result<UserDTO> info() {
+        return Result.ok(userQueryService.find(WebUtils.getUserId()));
     }
 
     /**
@@ -72,7 +71,7 @@ public class UserController {
     @Operation(summary = "修改密码")
     @SysLog("修改密码")
     @PostMapping("/password")
-    public Result changePassword(@RequestBody PasswordCommand passwordCommand) {
+    public Result<?> changePassword(@RequestBody PasswordCommand passwordCommand) {
         ValidatorUtils.validateEntity(passwordCommand);
         passwordCommand.setUserId(WebUtils.getUserId());
         userApplicationService.changePassword(passwordCommand);
@@ -85,7 +84,7 @@ public class UserController {
     @Operation(summary = "用户信息")
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sys:user:info')")
-    public com.titxu.cloud.common.core.util.Result<UserDTO> info(@PathVariable("id") String id) {
+    public Result<UserDTO> info(@PathVariable("id") String id) {
         return com.titxu.cloud.common.core.util.Result.ok(userQueryService.find(id));
     }
 
@@ -96,7 +95,7 @@ public class UserController {
     @SysLog("保存用户")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('sys:user:save')")
-    public Result save(@RequestBody UserCommand userCommand) {
+    public Result<?> save(@RequestBody UserCommand userCommand) {
         ValidatorUtils.validateEntity(userCommand, AddGroup.class);
         userApplicationService.save(userCommand);
         return Result.ok();
@@ -109,7 +108,7 @@ public class UserController {
     @SysLog("修改用户")
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('sys:user:update')")
-    public Result update(@RequestBody UserCommand userCommand) {
+    public Result<?> update(@RequestBody UserCommand userCommand) {
         ValidatorUtils.validateEntity(userCommand, UpdateGroup.class);
         userApplicationService.update(userCommand);
         return Result.ok();
@@ -122,7 +121,7 @@ public class UserController {
     @SysLog("删除用户")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('sys:user:delete')")
-    public Result delete(@RequestBody String[] userIds) {
+    public Result<?> delete(@RequestBody String[] userIds) {
         userApplicationService.deleteBatch(Arrays.asList(userIds));
         return Result.ok();
     }
@@ -134,7 +133,7 @@ public class UserController {
     @SysLog("禁用用户")
     @PostMapping("/disable/{id}")
     @PreAuthorize("hasAuthority('sys:user:disable')")
-    public Result disable(@PathVariable("id") String id) {
+    public Result<?> disable(@PathVariable("id") String id) {
         userApplicationService.disable(id);
         return Result.ok();
     }
