@@ -45,5 +45,18 @@ export const userDialog = {
       },
     },
   ],
-  addUser: [],
+  addUser: [
+    { label: '用户名', field: 'userNick', rules: [{ required: true, message: '用户名不能为空' }] },
+    { label: '手机号', field: 'mobile', rules: [{ required: false, validator: checkMobile }] },
+    { label: '邮箱', field: 'email', rules: [{ required: false, validator: checkEmail }] },
+    {
+      label: '角色列表',
+      field: 'roleIdList',
+      type: 'select',
+      options: {
+        data: [],
+        multiple: true,
+      },
+    },
+  ],
 } as Record<string, Form.FieldItem[]>;

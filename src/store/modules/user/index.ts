@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { getUserList, updateUser, deleteUser, disableUser, getUserInfoById, getUserInfo } from '/@/api/user/index';
+import { getUserList, updateUser, deleteUser, disableUser, getUserInfoById, getUserInfo, saveUserInfo } from '/@/api/user/index';
 import { PageUserInfoType, UserInfoType } from '/@/api/user/types';
 import { UserStoreType } from './types';
 import { PagingArgumentsType } from '/@/api/types';
@@ -97,9 +97,22 @@ export const useUserStore = defineStore('user', {
         userNick: data.userNick,
         mobile: data.mobile,
         email: data.email,
+        roleIdList: data.roleIdList,
       });
       if (code !== 0) {
         return Promise.reject('修改用户信息失败');
+      }
+    },
+    // 创建用户
+    async createUser(data: UserInfoType) {
+      const { code } = await saveUserInfo({
+        userNick: data.userNick,
+        mobile: data.mobile,
+        email: data.email,
+        roleIdList: data.roleIdList,
+      });
+      if (code !== 0) {
+        return Promise.reject('创建用户失败');
       }
     },
 

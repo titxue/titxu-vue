@@ -55,11 +55,12 @@
   const userStore = useUserStore();
   //角色状态管理
   const roleStore = useRoleStore();
+  // 权限状态管理
+  const permissionStore = usePermissionStore();
 
   const { setRoleAll } = roleStore;
   const { refreshAccessToken } = authStore;
-  const { setUserInfoById, list, editUserInfo, updateUser, deleteUser, setPagingArguments, refreshTable } = userStore;
-  const permissionStore = usePermissionStore();
+  const { setUserInfoById, list, editUserInfo, createUser, updateUser, deleteUser, setPagingArguments, refreshTable } = userStore;
   const { setPermissions } = permissionStore;
 
   // 响应式数据
@@ -69,15 +70,15 @@
   // 用于dialog配置
   const dialogTitle = ref('');
   const dialogVisible = ref(false);
-  const fieldList: Form.FieldItem[] = userDialog.editUser;
+  const fieldList = ref(userDialog.editUser);
   const formData = ref<Record<string, any>>();
   // 监听子组件dialogVisible变化
   const recorddialogVisible = (n: any) => {
     dialogVisible.value = n;
   };
   // 设置dialog的options
-  const setOptions = () => {
-    fieldList.forEach((item) => {
+  const setOptions = (field: Form.FieldItem[]) => {
+    field.forEach((item) => {
       if (item.field === 'roleIdList') {
         item.options = {
           data: roleList.value.map((item) => {
@@ -97,36 +98,45 @@
   const handleUserSubmit = async (model: Record<string, UserInfoType>) => {
     const userInfo = model as unknown as UserInfoType;
     // 编辑用户
-    if (userInfo.id) {
+    // id不为空则是编辑用户
+    if (userInfo.id !== undefined && userInfo.id !== null) {
       await updateUser(model as unknown as UserInfoType);
       // 修改用户状态
       const currentStatus: string | undefined = userInfoList.value.list?.find((item) => item.id === userInfo.id)?.status;
       if (!currentStatus) return;
       await editUserInfo(model as unknown as UserInfoType, currentStatus);
       ElMessage.success(`编辑${model.userNick}用户成功`);
+    } else {
+      // 新增用户
+      await createUser(model as unknown as UserInfoType);
+      ElMessage.success(`新增${model.userNick}用户成功`);
     }
     refreshTable();
   };
 
   // 编辑用户
   const handleRenderEdit = async (row: UserInfoType) => {
-    dialogVisible.value = true;
-
+    // 设置编辑用户的fieldList
+    fieldList.value = userDialog.editUser;
+    // 设置编辑用户的options
+    setOptions(fieldList.value);
     dialogTitle.value = '编辑用户';
-
     // json数据深拷贝
     const data = JSON.parse(JSON.stringify(row));
-
     // 获取用户信息
     await setUserInfoById(row.id);
-
     data.roleIdList = userInfoById.value.roleIdList;
     formData.value = data;
-  };
-  // 编辑用户
-  const handleRenderAdd = () => {
     dialogVisible.value = true;
+  };
+  // 新增用户
+  const handleRenderAdd = () => {
+    // 设置新增用户的fieldList
+    fieldList.value = userDialog.addUser;
+    // 设置新增用户的options
+    setOptions(fieldList.value);
     dialogTitle.value = '新增用户';
+    dialogVisible.value = true;
   };
   // 取消编辑
   const cancelEdit = () => {
@@ -162,7 +172,7 @@
     {
       prop: 'createdTime',
       label: '创建日期',
-      headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}(渲染函数自定义表头)`),
+      headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}`),
       render: ({ row }: Record<string, UserInfoType>) => h('span', dayjs(row.createdTime).format('YYYY-MM-DD HH:mm')),
     },
     { prop: 'mobile', label: '手机号' },
@@ -254,7 +264,6 @@
   onMounted(async () => {
     await setRoleAll();
     await setPermissions();
-    setOptions();
   });
   const { options, optionsDialog } = toRefs(state);
 </script>

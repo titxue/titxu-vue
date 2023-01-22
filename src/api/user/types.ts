@@ -29,18 +29,20 @@ export interface ReqUserUpdateParams {
   roleIdList?: string[];
 }
 
+export interface ReqUserCreateParams {
+  id?: string;
+  userNick: string;
+  mobile: string;
+  email?: string;
+  roleIdList?: string[];
+}
+
 export interface PageUserInfoType {
   totalCount: number;
   pageSize: number;
   totalPage: number;
   currPage: number;
   list?: UserInfoType[];
-}
-
-export interface ResultListType {
-  msg: string;
-  code: number;
-  page: PageUserInfoType;
 }
 
 export interface ResultOkType {
