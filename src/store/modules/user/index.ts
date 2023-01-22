@@ -117,12 +117,12 @@ export const useUserStore = defineStore('user', {
     },
     // 获取用户列表
     async list(params?: PagingArgumentsType): Promise<PageUserInfoType> {
-      const { code, page } = await getUserList(params);
-      if (code !== 0) {
+      const { code, data } = await getUserList(params);
+      if (code !== 0 || !data) {
         return Promise.reject('获取用户列表失败');
       }
-      this.$patch({ userInfoList: page });
-      return page;
+      this.$patch({ userInfoList: data });
+      return data;
     },
   },
 });

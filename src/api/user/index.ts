@@ -1,6 +1,6 @@
 // 权限问题后期增加
 import { get, post } from '/@/utils/http/axios';
-import { ReqUserUpdateParams, ResultListType, ResultOkType, UserInfoType } from './types';
+import { PageUserInfoType, ReqUserUpdateParams, ResultOkType, UserInfoType } from './types';
 import { PagingArgumentsType, ResResultData } from '../types';
 // import axios from 'axios';
 enum URL {
@@ -27,6 +27,6 @@ const getUserInfoById = async (id: string) => get<ResResultData<UserInfoType>>({
 const getUserInfo = async () => get<ResResultData<UserInfoType>>({ url: URL.info });
 
 // 获取用户列表
-const getUserList = async (params?: PagingArgumentsType) => get<ResultListType>({ url: URL.list, params });
+const getUserList = async (params?: PagingArgumentsType) => get<ResResultData<PageUserInfoType>>({ url: URL.list, params });
 
 export { getUserInfoById, getUserInfo, getUserList, deleteUser, updateUser, disableUser };
