@@ -241,9 +241,19 @@
 
   // 删除多选
   const deleteUserList = async (ids: string[]) => {
-    const code = await deleteUser(ids);
-    if (code != 0) return;
-    refreshTable();
+    ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning',
+    })
+      .then(async () => {
+        await deleteUser(ids);
+        ElMessage.success(`删除${ids.length}个用户成功`);
+        refreshTable();
+      })
+      .catch((err) => {
+        ElMessage.error(err);
+      });
   };
 
   watch(
