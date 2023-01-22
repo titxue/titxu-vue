@@ -2,7 +2,6 @@
 import { ResResultData } from '../types';
 import { NavList } from './types';
 import { get, post } from '/@/utils/http/axios';
-// import axios from 'axios';
 enum URL {
   nav = '/sys/permission/nav',
   list = '/sys/permission/list',

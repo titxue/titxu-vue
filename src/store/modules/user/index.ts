@@ -116,7 +116,6 @@ export const useUserStore = defineStore('user', {
 
     // 修改用户信息
     async editUserInfo(row: UserInfoType, currentStatus: string) {
-      console.log(row);
       const { id, status: newStatus } = row;
       if (currentStatus === newStatus) return;
       if (newStatus === '0') {

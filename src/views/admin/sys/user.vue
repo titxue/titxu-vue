@@ -161,16 +161,18 @@
     optionsDialog: { showCancelButton: true },
   });
 
+  const { options, optionsDialog } = toRefs(state);
+
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },
-    {
-      type: 'index',
-      width: '50',
-      label: 'No.',
-      render: ({ row }: Record<string, UserInfoType>) => {
-        return h('span', row.id);
-      },
-    },
+    // {
+    //   type: 'index',
+    //   width: '50',
+    //   label: 'No.',
+    //   render: ({ row }: Record<string, UserInfoType>) => {
+    //     return h('span', row.id);
+    //   },
+    // },
     { prop: 'userNick', label: '名字' },
     // 日期使用render函数格式化
     {
@@ -289,7 +291,6 @@
     await setRoleAll();
     await setPermissions();
   });
-  const { options, optionsDialog } = toRefs(state);
 </script>
 
 <style lang="less" scoped></style>

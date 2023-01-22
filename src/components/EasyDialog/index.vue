@@ -164,7 +164,6 @@
   watch(
     () => props.model,
     (n, _o) => {
-      console.log('fieldList', n);
       resetForm(formRef.value);
       if (n) {
         form.value = reactive(n);
