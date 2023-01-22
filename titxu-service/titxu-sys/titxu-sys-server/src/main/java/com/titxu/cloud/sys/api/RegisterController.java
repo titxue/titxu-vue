@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/register")
 public class RegisterController {
 
-    @Autowired
     private RegisterApplicationService registerApplicationService;
 
     /**
@@ -35,5 +34,10 @@ public class RegisterController {
         ValidatorUtils.validateEntity(registerTenantCommand, AddGroup.class);
         registerApplicationService.registerTenant(registerTenantCommand);
         return Result.ok();
+    }
+
+    @Autowired
+    public void setRegisterApplicationService(RegisterApplicationService registerApplicationService) {
+        this.registerApplicationService = registerApplicationService;
     }
 }

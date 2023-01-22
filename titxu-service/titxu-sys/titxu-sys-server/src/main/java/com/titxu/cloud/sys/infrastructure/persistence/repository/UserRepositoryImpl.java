@@ -125,6 +125,10 @@ public class UserRepositoryImpl extends ServiceImpl<SysUserMapper, SysUserDO> im
     }
 
     private User dataBaseToUser(User user) {
+        // 如果userId为空，说明是新增用户，直接返回
+        if (user.getUserId() == null) {
+            return user;
+        }
         Account account = user.getAccount();
         User dataBaseUser = this.find(user.getUserId());
         Account dataBaseAccount = dataBaseUser.getAccount();
