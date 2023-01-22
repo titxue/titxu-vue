@@ -62,8 +62,8 @@ public class UserController {
      */
     @Operation(summary = "获取登录的用户信息")
     @GetMapping("/info")
-    public Result info() {
-        return Result.ok().put("user", userQueryService.find(WebUtils.getUserId()));
+    public com.titxu.cloud.common.core.util.Result<UserDTO> info() {
+        return com.titxu.cloud.common.core.util.Result.ok(userQueryService.find(WebUtils.getUserId()));
     }
 
     /**
