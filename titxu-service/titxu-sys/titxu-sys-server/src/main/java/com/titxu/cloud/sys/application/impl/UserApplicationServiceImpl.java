@@ -23,10 +23,8 @@ import java.util.List;
 @Service
 public class UserApplicationServiceImpl implements UserApplicationService {
 
-    @Autowired
-    private UserRepository userRepository;
 
-    @Autowired
+    private UserRepository userRepository;
     private TenantRepository tenantRepository;
 
     @Override
@@ -78,5 +76,16 @@ public class UserApplicationServiceImpl implements UserApplicationService {
         User user = userRepository.find(new UserId(passwordCommand.getUserId()));
         user.changePassword(passwordCommand.getPassword(), passwordCommand.getNewPassword());
         userRepository.store(user);
+    }
+
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Autowired
+    public void setTenantRepository(TenantRepository tenantRepository) {
+        this.tenantRepository = tenantRepository;
     }
 }

@@ -13,6 +13,8 @@ import java.util.List;
  **/
 public class UserDTOAssembler {
 
+
+
     public static User toUser(final UserCommand userCommand) {
         List<String> roleIds = userCommand.getRoleIdList();
         List<RoleId> roleIdList = null;

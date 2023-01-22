@@ -17,6 +17,7 @@ import com.titxu.cloud.sys.infrastructure.persistence.entity.SysTenantDO;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysUserDO;
 import com.titxu.cloud.sys.infrastructure.persistence.mapper.SysTenantMapper;
 import com.titxu.cloud.sys.infrastructure.persistence.mapper.SysUserMapper;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,37 +44,35 @@ public class UserQueryServiceImpl implements UserQueryService {
 
     private PermissionQueryService permissionQueryService;
 
-    @Autowired
-    public void setSysUserMapper(SysUserMapper sysUserMapper) {
-        this.sysUserMapper = sysUserMapper;
-    }
-
-    @Autowired
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
-    @Autowired
-    public void setSysTenantMapper(SysTenantMapper sysTenantMapper) {
-        this.sysTenantMapper = sysTenantMapper;
-    }
-
-    @Autowired
-    public void setPermissionQueryService(PermissionQueryService permissionQueryService) {
-        this.permissionQueryService = permissionQueryService;
-    }
 
     @Override
     public Page queryPage(Map<String, Object> params) {
         LambdaQueryWrapper<SysUserDO> lambdaQueryWrapper = new LambdaQueryWrapper<>();
 
         lambdaQueryWrapper
-                .eq(false,SysUserDO::getUserNick, params.get("userId"))
-                .eq(false,SysUserDO::getUserType, params.get("userType"))
-                .eq(false,SysUserDO::getEmail, params.get("email"))
-                .eq(false,SysUserDO::getMobile, params.get("mobile"));
-        IPage<SysUserDO> page = sysUserMapper.selectPage(new Query<SysUserDO>().getPage(params),lambdaQueryWrapper);
-        return PageAssembler.toPage(page);
+                .eq(false, SysUserDO::getUserNick, params.get("userId"))
+                .eq(false, SysUserDO::getUserType, params.get("userType"))
+                .eq(false, SysUserDO::getEmail, params.get("email"))
+                .eq(false, SysUserDO::getMobile, params.get("mobile"));
+        IPage<SysUserDO> page = sysUserMapper.selectPage(new Query<SysUserDO>().getPage(params), lambdaQueryWrapper);
+        IPage<SysUserDO> convertPage = page.convert(sysUserDO -> {
+            UserDTO userDTO = this.find(sysUserDO.getId());
+            List<TenantDTO> userTenants = this.getUserTenants(sysUserDO.getId());
+            if (userTenants.size() > 0) {
+                List<String> tenantName = new ArrayList<>();
+                List<String> tenantCode = new ArrayList<>();
+                userTenants.forEach(tenantDTO -> {
+                    tenantName.add(tenantDTO.getTenantName());
+                    tenantCode.add(tenantDTO.getTenantCode());
+                });
+                sysUserDO.setTenantName(StringUtils.join(tenantName, ","));
+                sysUserDO.setTenantCode(StringUtils.join(tenantCode, ","));
+            }
+            sysUserDO.setMobile(userDTO.getMobile());
+            sysUserDO.setEmail(userDTO.getEmail());
+            return sysUserDO;
+        });
+        return PageAssembler.toPage(convertPage);
     }
 
     @Override
@@ -107,5 +106,26 @@ public class UserQueryServiceImpl implements UserQueryService {
             tenants.add(tenantDTO);
         }
         return tenants;
+    }
+
+
+    @Autowired
+    public void setSysUserMapper(SysUserMapper sysUserMapper) {
+        this.sysUserMapper = sysUserMapper;
+    }
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Autowired
+    public void setSysTenantMapper(SysTenantMapper sysTenantMapper) {
+        this.sysTenantMapper = sysTenantMapper;
+    }
+
+    @Autowired
+    public void setPermissionQueryService(PermissionQueryService permissionQueryService) {
+        this.permissionQueryService = permissionQueryService;
     }
 }

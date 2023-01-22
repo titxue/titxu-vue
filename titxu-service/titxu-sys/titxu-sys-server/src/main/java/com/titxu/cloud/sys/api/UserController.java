@@ -28,22 +28,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
-
     private UserApplicationService userApplicationService;
-
-
     private UserQueryService userQueryService;
 
-    @Autowired
-    public void setUserApplicationService(UserApplicationService userApplicationService) {
-        this.userApplicationService = userApplicationService;
-    }
 
-    @Autowired
-    public void setUserQueryService(UserQueryService userQueryService) {
-        this.userQueryService = userQueryService;
-    }
 
     /**
      * 用户分页查询
@@ -85,7 +73,7 @@ public class UserController {
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sys:user:info')")
     public Result<UserDTO> info(@PathVariable("id") String id) {
-        return com.titxu.cloud.common.core.util.Result.ok(userQueryService.find(id));
+        return Result.ok(userQueryService.find(id));
     }
 
     /**
@@ -136,5 +124,17 @@ public class UserController {
     public Result<?> disable(@PathVariable("id") String id) {
         userApplicationService.disable(id);
         return Result.ok();
+    }
+
+
+
+
+    @Autowired
+    public void setUserApplicationService(UserApplicationService userApplicationService) {
+        this.userApplicationService = userApplicationService;
+    }
+    @Autowired
+    public void setUserQueryService(UserQueryService userQueryService) {
+        this.userQueryService = userQueryService;
     }
 }
