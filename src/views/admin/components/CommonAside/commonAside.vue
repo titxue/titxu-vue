@@ -24,43 +24,15 @@
 </template>
 
 <script setup lang="ts">
-  import { Menu } from '/@/api/permission/types';
   import { usePermissionStore } from '/@/store';
 
   const router = useRouter();
   const route = useRoute();
   const permissionStore = usePermissionStore();
-  // const list = [
-  //   {
-  //     path: '/home',
-  //     name: 'home',
-  //     label: '首页',
-  //     icon: 'house',
-  //     url: '/home'
-  //   },
-  //   {
-  //     label: '系统管理',
-  //     name: 'system',
-  //     icon: 'menu',
-  //     path: '/sys',
-  //     children: [
-  //       {
-  //         path: '/sys/user',
-  //         name: 'user',
-  //         label: '用户管理',
-  //         icon: 'user',
-  //         url: '/sys/user'
-  //       },
-  //       {
-  //         path: '/sys/role',
-  //         name: 'role',
-  //         label: '角色管理',
-  //         icon: 'UserFilled',
-  //         url: '/sys/role'
-  //       },
-  //     ]
-  //   },
-  // ];
+
+  const { setPermissions } = permissionStore;
+  const { menuList } = toRefs(permissionStore);
+
   const handleOpen = (key: string, keyPath: string[]) => {
     console.log(key, keyPath);
   };
@@ -77,18 +49,16 @@
 
   // 返回没有子菜单的菜单项
   const noChildern = () => {
-    const menu: Array<Menu> | undefined = permissionStore.menuList;
-    return menu?.filter((item) => !item.subList);
+    return menuList.value.filter((item) => !item.subList);
   };
 
   // 返回有子菜单的菜单项
   const hasChildern = () => {
-    const menu: Array<Menu> | undefined = permissionStore.menuList;
-    return menu?.filter((item) => item.subList);
+    return menuList.value.filter((item) => item.subList);
   };
   // 获取权限菜单
   const initPermission = async () => {
-    await permissionStore.setPermissions();
+    await setPermissions();
     // console.log('permissionStore', permissionStore.menuList);
   };
   // vue3 生命周期

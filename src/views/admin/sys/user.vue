@@ -9,7 +9,7 @@
       </template>
       <Table
         :columns="tableColumn"
-        :table-data="getUserInfoList.list || []"
+        :table-data="userInfoList.list || []"
         :options="options"
         @pagination-change="handlePaginationChange"
         @selection-change="handleSelection"
@@ -56,27 +56,15 @@
   //角色状态管理
   const roleStore = useRoleStore();
 
+  const { setRoleAll } = roleStore;
   const { refreshAccessToken } = authStore;
-  const {
-    setUserInfoById,
-    userInfoById,
-    list,
-    editUserInfo,
-    updateUser,
-    deleteUser,
-    setPagingArguments,
-    refreshTable,
-    getPagingArguments,
-    getUserInfoList,
-  } = userStore;
-  const { setRoleAll, roleList } = roleStore;
-
+  const { setUserInfoById, list, editUserInfo, updateUser, deleteUser, setPagingArguments, refreshTable } = userStore;
   const permissionStore = usePermissionStore();
-  const {
-    setPermissions,
-    // getPermissions,
-    // getMenuList
-  } = permissionStore;
+  const { setPermissions } = permissionStore;
+
+  // 响应式数据
+  const { roleList } = toRefs(roleStore);
+  const { userInfoList, userInfoById, pagingArguments } = toRefs(userStore);
 
   // 用于dialog配置
   const dialogTitle = ref('');
@@ -89,11 +77,10 @@
   };
   // 设置dialog的options
   const setOptions = () => {
-    dialogVisible.value = true;
     fieldList.forEach((item) => {
       if (item.field === 'roleIdList') {
         item.options = {
-          data: roleList.map((item) => {
+          data: roleList.value.map((item) => {
             return {
               label: item.roleName,
               value: item.id,
@@ -113,7 +100,7 @@
     if (userInfo.id) {
       await updateUser(model as unknown as UserInfoType);
       // 修改用户状态
-      const currentStatus: string | undefined = getUserInfoList.list?.find((item) => item.id === userInfo.id)?.status;
+      const currentStatus: string | undefined = userInfoList.value.list?.find((item) => item.id === userInfo.id)?.status;
       if (!currentStatus) return;
       await editUserInfo(model as unknown as UserInfoType, currentStatus);
       ElMessage.success(`编辑${model.userNick}用户成功`);
@@ -123,7 +110,8 @@
 
   // 编辑用户
   const handleRenderEdit = async (row: UserInfoType) => {
-    setOptions();
+    dialogVisible.value = true;
+
     dialogTitle.value = '编辑用户';
 
     // json数据深拷贝
@@ -132,7 +120,7 @@
     // 获取用户信息
     await setUserInfoById(row.id);
 
-    data.roleIdList = userInfoById.roleIdList;
+    data.roleIdList = userInfoById.value.roleIdList;
     formData.value = data;
   };
   // 编辑用户
@@ -234,20 +222,15 @@
     console.log('父组件接收的多选数据', val);
   };
 
-  onMounted(() => {
-    setRoleAll();
-    setPermissions();
-  });
-
   watch(
     () => route.query,
     async (newval) => {
       const { page, pageSize } = newval;
       setPagingArguments({
-        page: Number(page) || getPagingArguments.page,
-        limit: Number(pageSize) || getPagingArguments.limit,
+        page: Number(page) || pagingArguments.value.page,
+        limit: Number(pageSize) || pagingArguments.value.limit,
       });
-      const result = await list(getPagingArguments);
+      const result = await list(pagingArguments.value);
       state.options.paginationConfig = {
         currentPage: result.currPage,
         pageSize: result.pageSize,
@@ -267,6 +250,12 @@
       },
     });
   };
+
+  onMounted(async () => {
+    await setRoleAll();
+    await setPermissions();
+    setOptions();
+  });
   const { options, optionsDialog } = toRefs(state);
 </script>
 
