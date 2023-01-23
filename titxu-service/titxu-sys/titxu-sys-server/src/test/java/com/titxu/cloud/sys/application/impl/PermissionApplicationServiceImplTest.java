@@ -19,9 +19,6 @@ class PermissionApplicationServiceImplTest {
         command.setPermissionType("1");
         command.setMenuUrl("sys/menu");
         command.setPermissionName("菜单管理");
-
-
-
         permissionApplicationService.saveOrUpdate(command);
     }
 }
