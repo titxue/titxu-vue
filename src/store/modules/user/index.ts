@@ -135,4 +135,5 @@ export const useUserStore = defineStore('user', {
       return data;
     },
   },
+  persist: true,
 });
