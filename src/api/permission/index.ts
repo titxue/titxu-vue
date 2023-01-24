@@ -1,6 +1,6 @@
 // 权限问题后期增加
 import { NavList } from './types';
-import { get, post } from '/@/utils/http/axios/http';
+import { get, post } from '../../utils/http/axios';
 import { ApiPromise } from '/@/utils/http/axios/type';
 enum URL {
   nav = '/sys/permission/nav',
