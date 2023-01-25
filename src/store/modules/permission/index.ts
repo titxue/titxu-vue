@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
 import { getMenu, getNav } from '/@/api/permission';
-import { PermissionStateType } from './types';
+import { MenuStoreType, PermissionStateType } from './types';
 import { MenuType } from '/@/api/permission/types';
 import { tranListToTreeData } from '/@/utils';
 
 export const usePermissionStore = defineStore('permission', {
   state: (): PermissionStateType => ({
     navList: [] as MenuType[],
-    menuList: [] as MenuType[],
+    menuList: [] as MenuStoreType[],
     permissions: [] as string[],
   }),
   getters: {
@@ -15,7 +15,7 @@ export const usePermissionStore = defineStore('permission', {
       if (state.permissions?.length === 0 || state.permissions === undefined) return [];
       return state.permissions;
     },
-    getMenuList(state: PermissionStateType): MenuType[] {
+    getMenuList(state: PermissionStateType): MenuStoreType[] {
       if (state.menuList?.length === 0 || state.menuList === undefined) return [];
       return state.menuList;
     },
@@ -45,15 +45,17 @@ export const usePermissionStore = defineStore('permission', {
       this.$patch({ navList: menuList, permissions: permissions });
     },
 
-    // 获取导航信息信息
+    // 获取菜单信息
     async setMenuList() {
       const { code, data } = await getMenu();
       if (code !== 0) return;
       if (data === undefined) return;
-
-      console.log('data', data);
+      // 删除无用的属性
+      data.forEach((item: MenuType) => {
+        delete item.subList;
+      });
       // 数组转换为树形结构
-      const menuList: MenuType[] = tranListToTreeData(data, '0');
+      const menuList: MenuStoreType[] = tranListToTreeData(data, '0');
       this.$patch({ menuList: menuList });
     },
   },

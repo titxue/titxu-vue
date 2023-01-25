@@ -15,5 +15,5 @@ export type MenuType = {
   permissionLevel: number;
   permissionName: string;
   permissionType: number;
-  subList: Array<MenuType>;
+  subList?: Array<MenuType>;
 };

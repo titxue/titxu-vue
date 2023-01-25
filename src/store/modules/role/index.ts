@@ -21,6 +21,8 @@ export const useRoleStore = defineStore('role', {
   actions: {
     // 获取角色信息列表
     async setRoleAll() {
+      // 如果有缓存直接返回
+      if (this.roleList.length !== 0) return;
       const { code, data } = await getRoleAll();
       if (code !== 0) return [];
       if (!data) return [];
@@ -42,4 +44,5 @@ export const useRoleStore = defineStore('role', {
       this.$reset();
     },
   },
+  persist: true,
 });
