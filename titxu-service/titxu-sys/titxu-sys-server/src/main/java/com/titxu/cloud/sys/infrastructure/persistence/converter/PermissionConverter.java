@@ -30,10 +30,9 @@ public class PermissionConverter {
                 subPermissions.add(subPermission);
             }
         }
-        Permission permission = new Permission(new PermissionId(sysPermissionDO.getId()), new PermissionName(sysPermissionDO.getPermissionName()), PermissionTypeEnum.getMenuTypeEnum(sysPermissionDO.getPermissionType()),
+        return new Permission(new PermissionId(sysPermissionDO.getId()), new PermissionName(sysPermissionDO.getPermissionName()), PermissionTypeEnum.getMenuTypeEnum(sysPermissionDO.getPermissionType()),
                 PermissionLevelEnum.getMenuLevelEnum(sysPermissionDO.getPermissionLevel()), sysPermissionDO.getMenuIcon(), toPermissionCodes(Collections.singletonList(sysPermissionDO.getPermissionCodes())), sysPermissionDO.getOrderNum(),
                 menuUrl, parent, StatusEnum.getStatusEnum(sysPermissionDO.getStatus()), subPermissions);
-        return permission;
     }
 
     public static Permission toPermission(SysPermissionDO sysPermissionDO) {
@@ -44,10 +43,9 @@ public class PermissionConverter {
         if (sysPermissionDO.getMenuUrl() != null) {
             menuUrl = new MenuUrl(sysPermissionDO.getMenuUrl());
         }
-        Permission permission = new Permission(new PermissionId(sysPermissionDO.getId()), new PermissionName(sysPermissionDO.getPermissionName()), PermissionTypeEnum.getMenuTypeEnum(sysPermissionDO.getPermissionType()),
+        return new Permission(new PermissionId(sysPermissionDO.getId()), new PermissionName(sysPermissionDO.getPermissionName()), PermissionTypeEnum.getMenuTypeEnum(sysPermissionDO.getPermissionType()),
                 PermissionLevelEnum.getMenuLevelEnum(sysPermissionDO.getPermissionLevel()), sysPermissionDO.getMenuIcon(), toPermissionCodes(Collections.singletonList(sysPermissionDO.getPermissionCodes())), sysPermissionDO.getOrderNum(),
                 menuUrl, null, StatusEnum.getStatusEnum(sysPermissionDO.getStatus()), null);
-        return permission;
     }
 
     public static PermissionCodes toPermissionCodes(List<String> permsList) {
