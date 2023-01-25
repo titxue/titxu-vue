@@ -73,11 +73,30 @@
       label: '菜单图标',
       render: ({ row }: Record<string, any>) => {
         const Component = resolveDynamicComponent(row.menuIcon);
-        return h(ElIcon, null, () => h(Component as any));
+        return h(ElIcon, null, () => h(Component as any, '1'));
       },
     },
     { prop: 'menuUrl', label: '菜单URL' },
-
+    {
+      prop: 'permissionType',
+      label: '菜单类型',
+      render: ({ row }: Record<string, any>) =>
+        h(
+          ElTag,
+          { type: row.permissionType === '0' ? 'danger' : 'success', effect: 'plain' },
+          row.permissionType === '0' ? '目录' : '菜单',
+        ),
+    },
+    {
+      prop: 'permissionLevel',
+      label: '菜单级别',
+      render: ({ row }: Record<string, any>) =>
+        h(
+          ElTag,
+          { type: row.permissionLevel === '0' ? 'danger' : 'success', effect: 'plain' },
+          row.permissionLevel === '0' ? '系统' : '租户',
+        ),
+    },
     // 按钮使用render函数渲染
     {
       width: '200',
@@ -91,7 +110,7 @@
               size: 'small',
               //   onClick: () => handleRenderEdit(row),
             },
-            { default: () => '编辑' + row.id },
+            { default: () => '编辑' + row },
           ),
           h(
             ElButton,
