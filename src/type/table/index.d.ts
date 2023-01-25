@@ -50,6 +50,7 @@ declare namespace Table {
     headerCellStyle?: import('vue').CSSProperties; // 表头单元格的style样式，是一个object为所有表头单元格设置一样的 Style。注：CSSProperties类型就是一个对象，像正常在style中写css一样 {color: #f00}
     defaultSort?: Sort; // 默认的排序列的 prop 和顺序。 它的 prop 属性指定默认的排序的列，order 指定默认排序的顺序。
     rowKey?: string; // 行数据的 Key，用来优化 Table 的渲染。
+    treeProps?: TreeProps; // 树形数据配置项
   }
   interface Pagination {
     total?: number; // 总条目数
@@ -58,5 +59,10 @@ declare namespace Table {
     pageSizes?: number[]; // 每页显示个数选择器的选项设置
     layout?: string; // 组件布局，子组件名用逗号分隔
     background?: boolean; // 是否为分页按钮添加背景色
+  }
+
+  interface TreeProps {
+    hasChildren?: string; // 指定子树的属性，也可以使用 children 属性
+    children?: string; // 指定子树的属性，也可以使用 hasChildren 属性
   }
 }

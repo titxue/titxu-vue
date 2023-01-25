@@ -1,8 +1,9 @@
-import { Menu } from '/@/api/permission/types';
+import { MenuType } from '/@/api/permission/types';
 
 export type RoleType = '' | '*' | 'admin' | 'user';
 
 export interface PermissionStateType {
-  menuList: Menu[];
+  navList: MenuType[];
+  menuList: MenuType[];
   permissions: string[];
 }

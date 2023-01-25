@@ -30,8 +30,8 @@
   const route = useRoute();
   const permissionStore = usePermissionStore();
 
-  const { setPermissions } = permissionStore;
-  const { menuList } = toRefs(permissionStore);
+  const { setNavList } = permissionStore;
+  const { navList } = toRefs(permissionStore);
 
   const handleOpen = (key: string, keyPath: string[]) => {
     console.log(key, keyPath);
@@ -49,16 +49,16 @@
 
   // 返回没有子菜单的菜单项
   const noChildern = () => {
-    return menuList.value.filter((item) => !item.subList);
+    return navList.value.filter((item) => !item.subList);
   };
 
   // 返回有子菜单的菜单项
   const hasChildern = () => {
-    return menuList.value.filter((item) => item.subList);
+    return navList.value.filter((item) => item.subList);
   };
   // 获取权限菜单
   const initPermission = async () => {
-    await setPermissions();
+    await setNavList();
     // console.log('permissionStore', permissionStore.menuList);
   };
   // vue3 生命周期

@@ -2,12 +2,12 @@
   <div>
     <el-card>
       <template #header>
-        <ElButton type="success"> 新增用户 </ElButton>
+        <ElButton type="success" @click="setMenuList"> 新增用户 </ElButton>
         <!-- <ElButton type="danger" @click="deleteUserList(deleteUserIdList)"> 删除用户 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshTable"> 刷新表格 </ElButton>
         <ElButton type="info" :icon="Refresh" @click="refreshAccessToken"> 刷新Token </ElButton> -->
       </template>
-      <Table :columns="tableColumn" :table-data="tableData || []" :options="options">
+      <Table :columns="tableColumn" :table-data="menuList || []" :options="options">
         <!-- 插槽自定义表头  addressHeader就是tableColumn中地址那一列定义的
                 <template #addressHeader="{ column }">
                     <span>{{ column.label }}(插槽自定义表头)</span>
@@ -34,66 +34,49 @@
 </template>
 
 <script setup lang="ts">
-  import { dayjs, ElButton, ElTag } from 'element-plus';
+  import { dayjs, ElButton, ElIcon, ElTag } from 'element-plus';
+  import { resolveDynamicComponent } from 'vue';
+  import { usePermissionStore } from '/@/store';
+
+  // 权限状态管理
+  const permissionStore = usePermissionStore();
+  const { setMenuList } = permissionStore;
+  const { menuList } = toRefs(permissionStore);
 
   interface State {
     options: Table.Options;
   }
   const state = reactive<State>({
-    options: { showPagination: true, height: 600, rowKey: 'name' },
+    options: {
+      showPagination: true,
+      height: 600,
+      rowKey: 'id',
+      // treeProps: { hasChildren: 'subList', children: 'subList' }
+    },
   });
 
   const { options } = toRefs(state);
-  // 基本表格数据
-  const tableData: any[] = [
-    {
-      date: 1660737564000,
-      name: '佘太君',
-      address: '上海市普陀区金沙江路 1516 弄',
-    },
-    {
-      date: 1462291200000,
-      name: '王小虎',
-      address: '上海市普陀区金沙江路 1517 弄',
-    },
-    {
-      date: 1462032000000,
-      name: '王小帅',
-      address: '上海市普陀区金沙江路 1519 弄',
-    },
-    {
-      date: 1462204800000,
-      name: '王小呆',
-      address: '上海市普陀区金沙江路 1516 弄',
-      children: [
-        {
-          date: 1462291200000,
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄',
-        },
-      ],
-    },
-  ];
+
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },
-    // {
-    //   type: 'index',
-    //   width: '50',
-    //   label: 'No.',
-    //   render: ({ row }: Record<string, any>) => {
-    //     return h('span', row.id);
-    //   },
-    // },
-    { prop: 'name', label: '名字' },
+    { prop: 'permissionName', label: '菜单名称' },
+    { prop: 'parentName', label: '父级菜单' },
     // 日期使用render函数格式化
     {
-      prop: 'date',
+      prop: 'created_time',
       label: '创建日期',
       headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}`),
       render: ({ row }: Record<string, any>) => h('span', dayjs(row.createdTime).format('YYYY-MM-DD HH:mm')),
     },
-    { prop: 'address', label: '手机号' },
-    { prop: 'email', label: '邮箱' },
+    {
+      prop: 'menuIcon',
+      label: '菜单图标',
+      render: ({ row }: Record<string, any>) => {
+        const Component = resolveDynamicComponent(row.menuIcon);
+        return h(ElIcon, null, () => h(Component as any));
+      },
+    },
+    { prop: 'menuUrl', label: '菜单URL' },
 
     // 按钮使用render函数渲染
     {
@@ -108,7 +91,7 @@
               size: 'small',
               //   onClick: () => handleRenderEdit(row),
             },
-            { default: () => '编辑' + row.name },
+            { default: () => '编辑' + row.id },
           ),
           h(
             ElButton,
@@ -122,6 +105,15 @@
         ]),
     },
   ];
+
+  onMounted(() => {
+    console.log('mounted');
+    setMenuList();
+  });
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+  .a {
+    display: none !important;
+  }
+</style>

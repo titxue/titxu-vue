@@ -1,9 +1,9 @@
-export interface NavList {
+export interface MenuListType {
   permissions: string[];
-  menuList: Menu[];
+  menuList: MenuType[];
 }
 
-export type Menu = {
+export type MenuType = {
   id: string;
   menuIcon: string;
   menuUrl: string;
@@ -15,5 +15,5 @@ export type Menu = {
   permissionLevel: number;
   permissionName: string;
   permissionType: number;
-  subList: Array<Menu>;
+  subList: Array<MenuType>;
 };
