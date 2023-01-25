@@ -76,7 +76,12 @@
         return h(ElIcon, null, () => h(Component as any));
       },
     },
-    { prop: 'menuUrl', label: '菜单URL' },
+    {
+      prop: 'menuUrl',
+      label: '菜单URL',
+      render: ({ row }: Record<string, any>) =>
+        h(ElTag, { type: row.menuUrl === null ? 'danger' : 'success', effect: 'plain' }, row.menuUrl === null ? '目录' : row.menuUrl),
+    },
     {
       prop: 'permissionType',
       label: '菜单类型',
