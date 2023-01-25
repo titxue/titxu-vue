@@ -73,7 +73,7 @@
       label: '菜单图标',
       render: ({ row }: Record<string, any>) => {
         const Component = resolveDynamicComponent(row.menuIcon);
-        return h(ElIcon, null, () => h(Component as any, '1'));
+        return h(ElIcon, null, () => h(Component as any));
       },
     },
     { prop: 'menuUrl', label: '菜单URL' },
