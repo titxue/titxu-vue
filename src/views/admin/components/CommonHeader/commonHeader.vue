@@ -110,7 +110,11 @@
   });
 
   onMounted(async () => {
-    await setUserInfo();
+    try {
+      await setUserInfo();
+    } catch (error) {
+      console.log(error);
+    }
   });
 </script>
 

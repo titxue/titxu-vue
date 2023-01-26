@@ -91,12 +91,13 @@ function createAxios(axiosConfig: AxiosRequestConfig, options: Options = {}, loa
   // 响应拦截
   Axios.interceptors.response.use(
     (response) => {
+      console.log('response', response);
       removePending(response.config);
       options.loading && closeLoading(options); // 关闭loading
 
       if (response.config.responseType == 'json') {
         if (response.data && response.data.code !== 0) {
-          if (response.data.code == 409) {
+          if (response.data.code == 401) {
             console.log('token过期');
           }
           if (options.showCodeMessage) {

@@ -80,15 +80,15 @@
       prop: 'menuUrl',
       label: '菜单URL',
       render: ({ row }: Record<string, any>) =>
-        h(ElTag, { type: row.menuUrl === null ? 'danger' : 'success', effect: 'plain' }, row.menuUrl === null ? '目录' : row.menuUrl),
+        h(ElTag, { type: row.menuUrl === null ? 'danger' : 'success', effect: 'plain' }, () =>
+          row.menuUrl === null ? '目录' : row.menuUrl,
+        ),
     },
     {
       prop: 'permissionType',
       label: '菜单类型',
       render: ({ row }: Record<string, any>) =>
-        h(
-          ElTag,
-          { type: row.permissionType === '0' ? 'danger' : 'success', effect: 'plain' },
+        h(ElTag, { type: row.permissionType === '0' ? 'danger' : 'success', effect: 'plain' }, () =>
           row.permissionType === '0' ? '目录' : '菜单',
         ),
     },
@@ -99,7 +99,9 @@
         h(
           ElTag,
           { type: row.permissionLevel === '0' ? 'danger' : 'success', effect: 'plain' },
-          row.permissionLevel === '0' ? '系统' : '租户',
+          // Non-function value encountered for default slot. Prefer function slots for better performance.
+          // 必须使用函数返回值
+          () => (row.permissionLevel === '0' ? '系统' : '租户'),
         ),
     },
     // 按钮使用render函数渲染
