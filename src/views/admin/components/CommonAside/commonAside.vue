@@ -41,7 +41,6 @@
   };
 
   const handleClick = (item: any) => {
-    console.log('aside item', item);
     // console.log('router', router.getRoutes());
     router.push('/admin/' + item.menuUrl);
     route.meta.title = `${item.parentName}-${item.permissionName}`;
