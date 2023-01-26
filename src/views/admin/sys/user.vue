@@ -42,7 +42,7 @@
 <script setup name="ViewsAdminUserUserList" lang="ts">
   import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
   import dayjs from 'dayjs';
-  import { useUserStore, useRoleStore, usePermissionStore, useAuthStore } from '/@/store';
+  import { useUserStore, useRoleStore, useAuthStore } from '/@/store';
   import { UserInfoType } from '/@/api/user/types';
   import { userDialog } from '/@/config/dialog';
   import { Refresh } from '@element-plus/icons-vue';
@@ -55,13 +55,10 @@
   const userStore = useUserStore();
   //角色状态管理
   const roleStore = useRoleStore();
-  // 权限状态管理
-  const permissionStore = usePermissionStore();
 
   const { setRoleAll } = roleStore;
   const { refreshAccessToken } = authStore;
   const { setUserInfoById, list, editUserInfo, createUser, updateUser, deleteUser, setPagingArguments, refreshTable } = userStore;
-  const { setPermissions } = permissionStore;
 
   // 响应式数据
   const { roleList } = toRefs(roleStore);
@@ -261,17 +258,21 @@
   watch(
     () => route.query,
     async (newval) => {
-      const { page, pageSize } = newval;
-      setPagingArguments({
-        page: Number(page) || pagingArguments.value.page,
-        limit: Number(pageSize) || pagingArguments.value.limit,
-      });
-      const result = await list(pagingArguments.value);
-      state.options.paginationConfig = {
-        currentPage: result.currPage,
-        pageSize: result.pageSize,
-        total: result.totalCount,
-      };
+      try {
+        const { page, pageSize } = newval;
+        setPagingArguments({
+          page: Number(page) || pagingArguments.value.page,
+          limit: Number(pageSize) || pagingArguments.value.limit,
+        });
+        const result = await list(pagingArguments.value);
+        state.options.paginationConfig = {
+          currentPage: result.currPage,
+          pageSize: result.pageSize,
+          total: result.totalCount,
+        };
+      } catch (error) {
+        console.log('watch', error);
+      }
     },
     { immediate: true },
   );
@@ -289,7 +290,6 @@
 
   onMounted(async () => {
     await setRoleAll();
-    await setPermissions();
   });
 </script>
 

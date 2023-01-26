@@ -91,7 +91,6 @@ function createAxios(axiosConfig: AxiosRequestConfig, options: Options = {}, loa
   // 响应拦截
   Axios.interceptors.response.use(
     (response) => {
-      console.log('response', response);
       removePending(response.config);
       options.loading && closeLoading(options); // 关闭loading
 
@@ -123,6 +122,17 @@ function createAxios(axiosConfig: AxiosRequestConfig, options: Options = {}, loa
       return options.reductDataFormat ? response.data : response;
     },
     (error) => {
+      if (error.config.responseType == 'json') {
+        if (error.response.data.code == 401) {
+          console.log('token过期');
+        }
+        if (options.showCodeMessage) {
+          ElNotification({
+            type: 'error',
+            message: error.response.data.msg,
+          });
+        }
+      }
       error.config && removePending(error.config);
       options.loading && closeLoading(options); // 关闭loading
       options.showErrorMessage && httpErrorStatusHandle(error); // 处理错误状态码
@@ -143,7 +153,7 @@ function httpErrorStatusHandle(error: any) {
   if (axios.isCancel(error)) return console.error(error.message);
   let message = '';
   if (error && error.response) {
-    showMessage(error.response.status);
+    message = showMessage(error.response.status);
   }
   if (error.message.includes('timeout')) message = '请求超时, 请稍后再试!';
   if (error.message.includes('Network')) message = window.navigator.onLine ? '服务器错误' : '网络错误, 请稍后再试!';
