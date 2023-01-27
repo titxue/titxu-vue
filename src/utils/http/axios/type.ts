@@ -43,13 +43,5 @@ export interface Options {
   // 当前请求使用另外的用户token
   anotherToken?: string;
 }
-export interface IWindow {
-  existLoading?: boolean;
-  lazy?: NodeJS.Timer;
-  unique?: number;
-  tokenRefreshing?: boolean;
-  requests?: Function[];
-  eventSource?: EventSource;
-  loadLangHandle?: Record<string, any>;
-}
+
 export type ApiPromise<T = any> = Promise<ApiResponse<T>>;
