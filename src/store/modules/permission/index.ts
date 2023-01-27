@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { getMenu, getNav } from '/@/api/permission';
+import { deletePermission, getMenu, getNav } from '/@/api/permission';
 import { MenuStoreType, PermissionStateType } from './types';
 import { MenuType } from '/@/api/permission/types';
 import { tranListToTreeData } from '/@/utils';
@@ -43,6 +43,11 @@ export const usePermissionStore = defineStore('permission', {
       if (!permissions) return;
 
       this.$patch({ navList: menuList, permissions: permissions });
+    },
+    async removePermission(id: string): Promise<boolean> {
+      const { code } = await deletePermission(id);
+      if (code !== 0) return false;
+      return true;
     },
 
     // 获取菜单信息

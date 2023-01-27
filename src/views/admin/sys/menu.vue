@@ -15,37 +15,57 @@
       </Table>
     </el-card>
 
-    <!-- <easy-dialog
+    <easy-dialog
       :title="dialogTitle"
       :fieldList="fieldList"
       :model="formData"
-      @submit="handleUserSubmit"
+      @submit="handleMenuSubmit"
       @update:visible="recorddialogVisible"
       :visible="dialogVisible"
       :options="optionsDialog"
       @cancel="cancelEdit"
-    >
-      如果不使用默认的按钮可以使用插槽自定义内容， 插槽返回的model就是当前表单的数据 -->
-    <!-- <template #buttons="{ model }">
-                  <el-button">提交</el-button>
-              </template>
-    </easy-dialog> -->
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-  import { dayjs, ElButton, ElIcon, ElTag } from 'element-plus';
+  import { ElButton, ElIcon, ElMessage, ElMessageBox, ElTag } from 'element-plus';
   import { resolveDynamicComponent } from 'vue';
   import { usePermissionStore } from '/@/store';
+  import { menuDialog } from '/@/config/dialog';
+  import { MenuType } from '/@/api/permission/types';
 
   // 权限状态管理
   const permissionStore = usePermissionStore();
-  const { setMenuList } = permissionStore;
+  const { setMenuList, removePermission } = permissionStore;
   const { menuList } = toRefs(permissionStore);
+
+  // 用于dialog配置
+  const dialogTitle = ref('');
+  const dialogVisible = ref(false);
+  const fieldList = ref(menuDialog.editMenu);
+  const formData = ref<Record<string, string>>();
+
+  // 监听子组件dialogVisible变化
+  const recorddialogVisible = (n: boolean) => {
+    dialogVisible.value = n;
+  };
+
+  const handleMenuSubmit = async (model: Record<string, string>) => {
+    console.log(model);
+  };
+
+  // 取消编辑
+  const cancelEdit = () => {
+    dialogVisible.value = false;
+    ElMessage.warning('取消编辑');
+  };
 
   interface State {
     options: Table.Options;
+    optionsDialog: Form.Options;
   }
+
   const state = reactive<State>({
     options: {
       showPagination: true,
@@ -53,33 +73,32 @@
       rowKey: 'id',
       // treeProps: { hasChildren: 'subList', children: 'subList' }
     },
+    optionsDialog: { showCancelButton: true },
   });
 
-  const { options } = toRefs(state);
+  const { options, optionsDialog } = toRefs(state);
 
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },
     { prop: 'permissionName', label: '菜单名称' },
     { prop: 'parentName', label: '父级菜单' },
-    // 日期使用render函数格式化
-    {
-      prop: 'created_time',
-      label: '创建日期',
-      headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}`),
-      render: ({ row }: Record<string, any>) => h('span', dayjs(row.createdTime).format('YYYY-MM-DD HH:mm')),
-    },
     {
       prop: 'menuIcon',
       label: '菜单图标',
-      render: ({ row }: Record<string, any>) => {
+      align: 'center',
+      render: ({ row }: Record<string, MenuType>) => {
         const Component = resolveDynamicComponent(row.menuIcon);
-        return h(ElIcon, null, () => h(Component as any));
+        return h(ElIcon, { size: 18 }, () => h(Component as any));
       },
+    },
+    {
+      prop: 'menuIcon',
+      label: '图标名称',
     },
     {
       prop: 'menuUrl',
       label: '菜单URL',
-      render: ({ row }: Record<string, any>) =>
+      render: ({ row }: Record<string, MenuType>) =>
         h(ElTag, { type: row.menuUrl === null ? 'danger' : 'success', effect: 'plain' }, () =>
           row.menuUrl === null ? '目录' : row.menuUrl,
         ),
@@ -87,7 +106,7 @@
     {
       prop: 'permissionType',
       label: '菜单类型',
-      render: ({ row }: Record<string, any>) =>
+      render: ({ row }: Record<string, MenuType>) =>
         h(ElTag, { type: row.permissionType === '0' ? 'danger' : 'success', effect: 'plain' }, () =>
           row.permissionType === '0' ? '目录' : '菜单',
         ),
@@ -95,7 +114,7 @@
     {
       prop: 'permissionLevel',
       label: '菜单级别',
-      render: ({ row }: Record<string, any>) =>
+      render: ({ row }: Record<string, MenuType>) =>
         h(
           ElTag,
           { type: row.permissionLevel === '0' ? 'danger' : 'success', effect: 'plain' },
@@ -108,23 +127,23 @@
     {
       width: '200',
       label: '操作',
-      render: ({ row }: Record<string, any>) =>
+      render: ({ row }: Record<string, MenuType>) =>
         h('div', null, [
           h(
             ElButton,
             {
               type: 'primary',
               size: 'small',
-              //   onClick: () => handleRenderEdit(row),
+              onClick: () => handleMenuEdit(row),
             },
-            { default: () => '编辑' + row },
+            { default: () => '编辑' },
           ),
           h(
             ElButton,
             {
               type: 'danger',
               size: 'small',
-              //   onClick: () => handleRenderDelete(row),
+              onClick: () => handleMenuDelete(row),
             },
             { default: () => '删除' },
           ),
@@ -132,14 +151,32 @@
     },
   ];
 
+  const handleMenuDelete = (row: MenuType) => {
+    ElMessageBox.confirm('此操作将永久删除该菜单, 是否继续?', '提示', {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning',
+    })
+      .then(async () => {
+        await removePermission(row.id);
+        ElMessage.success(`删除${row.permissionName}菜单成功`);
+      })
+      .catch((err) => {
+        ElMessage.error(err);
+      });
+  };
+  // 编辑 打开dialog
+  const handleMenuEdit = (row: MenuType) => {
+    // json数据深拷贝
+    const data = JSON.parse(JSON.stringify(row));
+    formData.value = data;
+    dialogVisible.value = true;
+    console.log(row);
+  };
+
   onMounted(() => {
-    console.log('mounted');
     setMenuList();
   });
 </script>
 
-<style lang="less" scoped>
-  .a {
-    display: none !important;
-  }
-</style>
+<style lang="less" scoped></style>

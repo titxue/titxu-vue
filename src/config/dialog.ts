@@ -60,3 +60,12 @@ export const userDialog = {
     },
   ],
 } as Record<string, Form.FieldItem[]>;
+
+// 菜单配置示例
+export const menuDialog = {
+  editMenu: [
+    { label: '菜单名称', field: 'permissionName' },
+    { label: '父级菜单', field: 'parentName' },
+    { label: '菜单图标', field: 'menuIcon' },
+  ],
+} as Record<string, Form.FieldItem[]>;

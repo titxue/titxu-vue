@@ -12,8 +12,8 @@ export type MenuType = {
   parentId: string;
   parentName: string;
   permissionCodes: string;
-  permissionLevel: number;
+  permissionLevel: string;
   permissionName: string;
-  permissionType: number;
+  permissionType: string;
   subList?: Array<MenuType>;
 };
