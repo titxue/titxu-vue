@@ -6,12 +6,14 @@ import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
 import com.titxu.cloud.sys.domain.model.permission.PermissionTypeEnum;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Objects;
+
 /**
  * 权限创建Specification
  **/
 public class PermissionCreateSpecification extends AbstractSpecification<Permission> {
 
-    private PermissionRepository permissionRepository;
+    private final PermissionRepository permissionRepository;
 
     public PermissionCreateSpecification(PermissionRepository permissionRepository) {
         this.permissionRepository = permissionRepository;
@@ -27,6 +29,10 @@ public class PermissionCreateSpecification extends AbstractSpecification<Permiss
         }
         if (permission.getParent() == null) {
             throw new IllegalArgumentException("上级菜单不能为空");
+        }
+        // 菜单icon 不能为数字（StringUtils.isNumeric("-1") 返回 false）
+        if (StringUtils.isNumeric(permission.getMenuIcon()) || Objects.equals(permission.getMenuIcon(), "-1")) {
+            throw new IllegalArgumentException("菜单图标不能为数字");
         }
 
         if (permission.getPermissionType() == null) {
@@ -59,4 +65,6 @@ public class PermissionCreateSpecification extends AbstractSpecification<Permiss
         }
         return true;
     }
+
+
 }
