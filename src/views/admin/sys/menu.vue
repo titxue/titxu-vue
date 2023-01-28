@@ -3,7 +3,7 @@
     <el-card>
       <template #header>
         <ElButton type="success" @click="handleMenuAdd"> 新增菜单 </ElButton>
-        <ElButton type="danger" @click="setParentMenuList"> 测试 </ElButton>
+        <ElButton type="danger" @click="refreshTable"> 刷新权限 </ElButton>
       </template>
       <Table :columns="tableColumn" :table-data="menuList || []" :options="options" />
     </el-card>
