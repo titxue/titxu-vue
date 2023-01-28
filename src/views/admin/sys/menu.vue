@@ -5,12 +5,7 @@
         <ElButton type="success" @click="handleMenuAdd"> 新增菜单 </ElButton>
         <ElButton type="danger" @click="setParentMenuList"> 测试 </ElButton>
       </template>
-      <Table :columns="tableColumn" :table-data="menuList || []" :options="options">
-        <!-- 插槽自定义表头  addressHeader就是tableColumn中地址那一列定义的
-                <template #addressHeader="{ column }">
-                    <span>{{ column.label }}(插槽自定义表头)</span>
-                </template> -->
-      </Table>
+      <Table :columns="tableColumn" :table-data="menuList || []" :options="options" />
     </el-card>
 
     <easy-dialog
