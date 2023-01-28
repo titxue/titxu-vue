@@ -65,7 +65,81 @@ export const userDialog = {
 export const menuDialog = {
   editMenu: [
     { label: '菜单名称', field: 'permissionName' },
-    { label: '父级菜单', field: 'parentName' },
+    {
+      label: '父级菜单',
+      field: 'parentName',
+      type: 'select',
+      options: {
+        data: [],
+        multiple: false,
+      },
+    },
+
     { label: '菜单图标', field: 'menuIcon' },
+    { label: '菜单URL', field: 'menuUrl' },
+    {
+      label: '菜单类型',
+      field: 'permissionType',
+      type: 'select',
+      options: {
+        data: [
+          { label: '目录', value: '0' },
+          { label: '菜单', value: '1' },
+          { label: '按钮', value: '2' },
+        ],
+        multiple: false,
+      },
+    },
+    {
+      label: '菜单级别',
+      field: 'permissionLevel',
+      type: 'select',
+      options: {
+        data: [
+          { label: '系统', value: '0' },
+          { label: '租户', value: '1' },
+        ],
+        multiple: false,
+      },
+    },
+  ],
+  addMenu: [
+    { label: '菜单名称', field: 'permissionName' },
+    {
+      label: '父级菜单',
+      field: 'parentId',
+      type: 'select',
+      options: {
+        data: [],
+        multiple: false,
+      },
+    },
+    { label: '菜单图标', field: 'menuIcon' },
+    { label: '菜单URL', field: 'menuUrl' },
+    {
+      label: '菜单类型',
+      field: 'permissionType',
+      type: 'select',
+      options: {
+        data: [
+          { label: '目录', value: '0' },
+          { label: '菜单', value: '1' },
+          { label: '按钮', value: '2' },
+        ],
+        multiple: false,
+      },
+    },
+    {
+      label: '菜单级别',
+      field: 'permissionLevel',
+      type: 'select',
+      options: {
+        data: [
+          { label: '系统', value: '0' },
+          { label: '租户', value: '1' },
+        ],
+        multiple: false,
+      },
+    },
   ],
 } as Record<string, Form.FieldItem[]>;

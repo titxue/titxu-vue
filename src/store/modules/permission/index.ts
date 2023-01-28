@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { deletePermission, getMenu, getNav } from '/@/api/permission';
+import { deletePermission, getMenu, getNav, getPermissionList, savePermission, updatePermission } from '/@/api/permission';
 import { MenuStoreType, PermissionStateType } from './types';
 import { MenuType } from '/@/api/permission/types';
 import { tranListToTreeData } from '/@/utils';
@@ -7,6 +7,7 @@ import { tranListToTreeData } from '/@/utils';
 export const usePermissionStore = defineStore('permission', {
   state: (): PermissionStateType => ({
     navList: [] as MenuType[],
+    parentMenuList: [] as MenuType[],
     menuList: [] as MenuStoreType[],
     permissions: [] as string[],
   }),
@@ -21,14 +22,39 @@ export const usePermissionStore = defineStore('permission', {
     },
   },
   actions: {
-    // 设置权限的信息
-    setInfo(partial: Partial<any>) {
-      this.$patch(partial);
-    },
-    // 重置权限信息
-    resetInfo() {
+    // 刷新权限信息
+    async refreshTable() {
+      // 清空菜单信息
       this.$reset();
+      // 重新获取权限信息
+      await this.setMenuList();
+      await this.setParentMenuList();
+      await this.setNavList();
     },
+    // 编辑菜单
+    async editMenu(data: MenuType): Promise<boolean> {
+      const { code } = await updatePermission(data);
+      if (code !== 0) return false;
+      return true;
+    },
+    // 新增菜单
+    async addMenu(data: MenuType): Promise<boolean> {
+      const { code } = await savePermission(data);
+      if (code !== 0) return false;
+      return true;
+    },
+    // 获取目录列表
+    async setParentMenuList() {
+      const { code, data } = await getPermissionList();
+      if (code !== 0) return;
+      if (data === undefined) return;
+      // 删除根节点
+      // data.shift();
+      // 删除类型不为目录的节点
+      const list = data.filter((item: MenuType) => item.permissionType === '0');
+      this.$patch({ parentMenuList: list });
+    },
+
     // 获取导航信息信息
     async setNavList() {
       // 如果有缓存直接返回
@@ -52,6 +78,7 @@ export const usePermissionStore = defineStore('permission', {
 
     // 获取菜单信息
     async setMenuList() {
+      if (this.menuList.length !== 0) return;
       const { code, data } = await getMenu();
       if (code !== 0) return;
       if (data === undefined) return;
@@ -62,6 +89,14 @@ export const usePermissionStore = defineStore('permission', {
       // 数组转换为树形结构
       const menuList: MenuStoreType[] = tranListToTreeData(data, '0');
       this.$patch({ menuList: menuList });
+    },
+    // 设置权限的信息
+    setInfo(partial: Partial<any>) {
+      this.$patch(partial);
+    },
+    // 重置权限信息
+    resetInfo() {
+      this.$reset();
     },
   },
   persist: true,

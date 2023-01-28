@@ -56,3 +56,13 @@ export function changeKey(arr: Array<any>, key: string, newKey: string) {
   });
   return newArr;
 }
+
+export function isNumber(val: string) {
+  const regPos = /^\d+(\.\d+)?$/;
+  const regNeg = /^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$/;
+  if (regPos.test(val) && regNeg.test(val)) {
+    return true;
+  } else {
+    return false;
+  }
+}

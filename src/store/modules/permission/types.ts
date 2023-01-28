@@ -6,6 +6,7 @@ export interface PermissionStateType {
   navList: MenuType[];
   menuList: MenuStoreType[];
   permissions: string[];
+  parentMenuList: MenuType[];
 }
 
 export type MenuStoreType = {

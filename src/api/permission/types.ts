@@ -1,4 +1,4 @@
-export interface NavList {
+export interface NavListType {
   permissions: string[];
   menuList: MenuType[];
 }

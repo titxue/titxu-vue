@@ -2,10 +2,8 @@
   <div>
     <el-card>
       <template #header>
-        <ElButton type="success" @click="setMenuList"> 新增用户 </ElButton>
-        <!-- <ElButton type="danger" @click="deleteUserList(deleteUserIdList)"> 删除用户 </ElButton>
-        <ElButton type="info" :icon="Refresh" @click="refreshTable"> 刷新表格 </ElButton>
-        <ElButton type="info" :icon="Refresh" @click="refreshAccessToken"> 刷新Token </ElButton> -->
+        <ElButton type="success" @click="handleMenuAdd"> 新增菜单 </ElButton>
+        <ElButton type="danger" @click="setParentMenuList"> 测试 </ElButton>
       </template>
       <Table :columns="tableColumn" :table-data="menuList || []" :options="options">
         <!-- 插槽自定义表头  addressHeader就是tableColumn中地址那一列定义的
@@ -37,8 +35,8 @@
 
   // 权限状态管理
   const permissionStore = usePermissionStore();
-  const { setMenuList, removePermission } = permissionStore;
-  const { menuList } = toRefs(permissionStore);
+  const { setMenuList, removePermission, editMenu, addMenu, refreshTable, setParentMenuList } = permissionStore;
+  const { menuList, parentMenuList } = toRefs(permissionStore);
 
   // 用于dialog配置
   const dialogTitle = ref('');
@@ -49,10 +47,6 @@
   // 监听子组件dialogVisible变化
   const recorddialogVisible = (n: boolean) => {
     dialogVisible.value = n;
-  };
-
-  const handleMenuSubmit = async (model: Record<string, string>) => {
-    console.log(model);
   };
 
   // 取消编辑
@@ -71,11 +65,84 @@
       showPagination: true,
       height: 600,
       rowKey: 'id',
-      // treeProps: { hasChildren: 'subList', children: 'subList' }
     },
     optionsDialog: { showCancelButton: true },
   });
+  // 设置dialog的fieldList
+  const setFieldOptions = (fieldList: Form.FieldItem[], row: MenuType) => {
+    console.log(fieldList);
+    fieldList.forEach((item) => {
+      // 填充父级菜单
+      if (item.field === 'parentId') {
+        console.log(parentMenuList.value);
+        item.options = {
+          data: parentMenuList.value.map((item) => {
+            return {
+              label: item.permissionName,
+              value: item.id,
+            };
+          }),
+          multiple: false,
+        };
+      }
+      if (item.field === 'menuUrl') {
+        if (row.permissionType === '0') {
+          item.disabled = true;
+          item.placeholder = '目录不需要填写';
+        } else {
+          item.disabled = false;
+          item.placeholder = '请输入菜单URL';
+        }
+      }
+    });
+  };
 
+  // 新增菜单 dialog
+  const handleMenuAdd = () => {
+    // 设置编辑用户的fieldList
+    fieldList.value = menuDialog.addMenu;
+    setFieldOptions(fieldList.value, {} as MenuType);
+    dialogTitle.value = '新增菜单';
+    formData.value = {};
+    dialogVisible.value = true;
+  };
+
+  // 编辑 打开dialog
+  const handleMenuEdit = (row: MenuType) => {
+    // 设置编辑用户的fieldList
+    fieldList.value = menuDialog.editMenu;
+    setFieldOptions(fieldList.value, row);
+    dialogTitle.value = '编辑菜单';
+    // json数据深拷贝
+    const data = JSON.parse(JSON.stringify(row));
+    formData.value = data;
+    dialogVisible.value = true;
+  };
+  // 菜单编辑提交
+  const handleMenuSubmit = async (model: Record<string, MenuType>) => {
+    console.log(model);
+    const menuInfo = model as unknown as MenuType;
+    const { id } = menuInfo;
+    if (id) {
+      // 编辑
+      const res = await editMenu(menuInfo);
+      if (res) {
+        ElMessage.success('编辑成功');
+        // 重新获取菜单列表
+        await refreshTable();
+        dialogVisible.value = false;
+      }
+    } else {
+      // 新增
+      const res = await addMenu(menuInfo);
+      if (res) {
+        ElMessage.success('新增成功');
+        // 重新获取菜单列表
+        await refreshTable();
+        dialogVisible.value = false;
+      }
+    }
+  };
   const { options, optionsDialog } = toRefs(state);
 
   const tableColumn: Table.Column[] = [
@@ -159,23 +226,19 @@
     })
       .then(async () => {
         await removePermission(row.id);
+        await refreshTable();
         ElMessage.success(`删除${row.permissionName}菜单成功`);
       })
       .catch((err) => {
         ElMessage.error(err);
       });
   };
-  // 编辑 打开dialog
-  const handleMenuEdit = (row: MenuType) => {
-    // json数据深拷贝
-    const data = JSON.parse(JSON.stringify(row));
-    formData.value = data;
-    dialogVisible.value = true;
-    console.log(row);
-  };
 
-  onMounted(() => {
-    setMenuList();
+  onMounted(async () => {
+    // 初始化菜单列表
+    await setMenuList();
+    // 初始化父级菜单列表
+    await setParentMenuList();
   });
 </script>
 

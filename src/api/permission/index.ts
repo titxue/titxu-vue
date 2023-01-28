@@ -1,5 +1,5 @@
 // 权限问题后期增加
-import { MenuListType, MenuType } from './types';
+import { MenuType, NavListType } from './types';
 import { get, post } from '../../utils/http/axios';
 import { ApiPromise } from '/@/utils/http/axios/type';
 enum URL {
@@ -14,9 +14,9 @@ enum URL {
 }
 
 // 获取导航菜单
-const getNav = async (): ApiPromise<MenuListType> => get({ url: URL.nav });
+const getNav = async (): ApiPromise<NavListType> => get({ url: URL.nav });
 // 所有权限列表
-const getPermissionList = async (): ApiPromise<any> => get({ url: URL.list });
+const getPermissionList = async (): ApiPromise<MenuType[]> => get({ url: URL.list });
 // 获取菜单列表
 const getMenu = async (): ApiPromise<MenuType[]> => get({ url: URL.selectMenu });
 // 获取权限信息
