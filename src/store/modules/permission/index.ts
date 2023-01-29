@@ -1,5 +1,13 @@
 import { defineStore } from 'pinia';
-import { deletePermission, getMenu, getNav, getPermissionList, savePermission, updatePermission } from '/@/api/permission';
+import {
+  deletePermission,
+  disablePermission,
+  getMenu,
+  getNav,
+  getPermissionList,
+  savePermission,
+  updatePermission,
+} from '/@/api/permission';
 import { MenuStoreType, PermissionStateType } from './types';
 import { MenuType } from '/@/api/permission/types';
 import { tranListToTreeData } from '/@/utils';
@@ -43,8 +51,9 @@ export const usePermissionStore = defineStore('permission', {
       if (code !== 0) return false;
       return true;
     },
-    // 获取目录列表
+    // 获取父目录列表
     async setParentMenuList() {
+      if (this.parentMenuList.length !== 0) return;
       const { code, data } = await getPermissionList();
       if (code !== 0) return;
       if (data === undefined) return;
@@ -89,6 +98,13 @@ export const usePermissionStore = defineStore('permission', {
       // 数组转换为树形结构
       const menuList: MenuStoreType[] = tranListToTreeData(data, '0');
       this.$patch({ menuList: menuList });
+    },
+    // 禁用菜单
+    async disableMenu(id: string): Promise<boolean> {
+      const { code } = await disablePermission(id);
+      if (code !== 0) return false;
+      this.refreshTable();
+      return true;
     },
     // 设置权限的信息
     setInfo(partial: Partial<any>) {

@@ -28,5 +28,5 @@ const updatePermission = async (data: any): ApiPromise<any> => post({ url: URL.u
 // 删除权限
 const deletePermission = async (id: string): ApiPromise<any> => post({ url: URL.delete + id });
 // 禁用权限
-const disablePermission = async (id: string): ApiPromise<any> => get({ url: URL.disable + id });
+const disablePermission = async (id: string): ApiPromise<any> => post({ url: URL.disable + id });
 export { getNav, getPermissionList, getMenu, getPermissionInfo, savePermission, updatePermission, deletePermission, disablePermission };

@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-  import { ElButton, ElIcon, ElMessage, ElMessageBox, ElTag } from 'element-plus';
+  import { ElButton, ElIcon, ElMessage, ElMessageBox, ElSwitch, ElTag } from 'element-plus';
   import { resolveDynamicComponent } from 'vue';
   import { usePermissionStore } from '/@/store';
   import { menuDialog } from '/@/config/dialog';
@@ -30,7 +30,7 @@
 
   // 权限状态管理
   const permissionStore = usePermissionStore();
-  const { setMenuList, removePermission, editMenu, addMenu, refreshTable, setParentMenuList } = permissionStore;
+  const { setMenuList, removePermission, editMenu, addMenu, refreshTable, setParentMenuList, disableMenu } = permissionStore;
   const { menuList, parentMenuList } = toRefs(permissionStore);
 
   // 用于dialog配置
@@ -57,7 +57,7 @@
 
   const state = reactive<State>({
     options: {
-      showPagination: true,
+      showPagination: false,
       height: 600,
       rowKey: 'id',
     },
@@ -65,7 +65,6 @@
   });
   // 设置dialog的fieldList
   const setFieldOptions = (fieldList: Form.FieldItem[], row: MenuType) => {
-    console.log(fieldList);
     fieldList.forEach((item) => {
       // 填充父级菜单
       if (item.field === 'parentId') {
@@ -146,8 +145,8 @@
 
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },
+    { prop: 'parentName', label: '父级菜单', width: '150' },
     { prop: 'permissionName', label: '菜单名称' },
-    { prop: 'parentName', label: '父级菜单' },
     {
       prop: 'menuIcon',
       label: '菜单图标',
@@ -164,6 +163,7 @@
     {
       prop: 'menuUrl',
       label: '菜单URL',
+      width: '110',
       render: ({ row }: Record<string, MenuType>) =>
         h(ElTag, { type: row.menuUrl === null ? 'danger' : 'success', effect: 'plain' }, () =>
           row.menuUrl === null ? '目录' : row.menuUrl,
@@ -187,6 +187,20 @@
           // Non-function value encountered for default slot. Prefer function slots for better performance.
           // 必须使用函数返回值
           () => (row.permissionLevel === '0' ? '系统' : '租户'),
+        ),
+    },
+    // 状态切换
+    {
+      prop: 'status',
+      label: '状态',
+      render: ({ row }: Record<string, MenuType>) =>
+        h(
+          ElSwitch,
+          {
+            modelValue: row.status === '0',
+            'onUpdate:modelValue': () => disableMenu(row.id),
+          },
+          { default: () => '' },
         ),
     },
     // 按钮使用render函数渲染
