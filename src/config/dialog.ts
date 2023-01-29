@@ -64,17 +64,16 @@ export const userDialog = {
 // 菜单配置示例
 export const menuDialog = {
   editMenu: [
-    { label: '菜单名称', field: 'permissionName' },
     {
       label: '父级菜单',
-      field: 'parentName',
+      field: 'parentId',
       type: 'select',
       options: {
         data: [],
         multiple: false,
       },
     },
-
+    { label: '菜单名称', field: 'permissionName' },
     { label: '菜单图标', field: 'menuIcon' },
     { label: '菜单URL', field: 'menuUrl' },
     {
@@ -104,7 +103,6 @@ export const menuDialog = {
     },
   ],
   addMenu: [
-    { label: '菜单名称', field: 'permissionName' },
     {
       label: '父级菜单',
       field: 'parentId',
@@ -114,6 +112,7 @@ export const menuDialog = {
         multiple: false,
       },
     },
+    { label: '菜单名称', field: 'permissionName' },
     { label: '菜单图标', field: 'menuIcon' },
     { label: '菜单URL', field: 'menuUrl' },
     {

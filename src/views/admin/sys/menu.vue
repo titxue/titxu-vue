@@ -93,7 +93,9 @@
   };
 
   // 新增菜单 dialog
-  const handleMenuAdd = () => {
+  const handleMenuAdd = async () => {
+    // 初始化父级菜单列表
+    await setParentMenuList();
     // 设置编辑用户的fieldList
     fieldList.value = menuDialog.addMenu;
     setFieldOptions(fieldList.value, {} as MenuType);
@@ -103,7 +105,9 @@
   };
 
   // 编辑 打开dialog
-  const handleMenuEdit = (row: MenuType) => {
+  const handleMenuEdit = async (row: MenuType) => {
+    // 初始化父级菜单列表
+    await setParentMenuList();
     // 设置编辑用户的fieldList
     fieldList.value = menuDialog.editMenu;
     setFieldOptions(fieldList.value, row);
@@ -232,8 +236,6 @@
   onMounted(async () => {
     // 初始化菜单列表
     await setMenuList();
-    // 初始化父级菜单列表
-    await setParentMenuList();
   });
 </script>
 
