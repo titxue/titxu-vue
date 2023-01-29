@@ -50,10 +50,10 @@ public class UserQueryServiceImpl implements UserQueryService {
         LambdaQueryWrapper<SysUserDO> lambdaQueryWrapper = new LambdaQueryWrapper<>();
 
         lambdaQueryWrapper
-                .eq(StringUtils.isBlank(params.get("userId").toString()), SysUserDO::getUserNick, params.get("userId"))
-                .eq(StringUtils.isBlank(params.get("userType").toString()), SysUserDO::getUserType, params.get("userType"))
-                .eq(StringUtils.isBlank(params.get("email").toString()), SysUserDO::getEmail, params.get("email"))
-                .eq(StringUtils.isBlank(params.get("mobile").toString()), SysUserDO::getMobile, params.get("mobile"));
+                .eq(params.get("userId") != null, SysUserDO::getUserNick, params.get("userId"))
+                .eq(params.get("userType") != null, SysUserDO::getUserType, params.get("userType"))
+                .eq(params.get("email") != null, SysUserDO::getEmail, params.get("email"))
+                .eq(params.get("mobile") != null, SysUserDO::getMobile, params.get("mobile"));
         IPage<SysUserDO> page = sysUserMapper.selectPage(new Query<SysUserDO>().getPage(params), lambdaQueryWrapper);
         IPage<SysUserDO> convertPage = page.convert(sysUserDO -> {
             UserDTO userDTO = this.find(sysUserDO.getId());
