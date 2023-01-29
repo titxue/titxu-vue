@@ -63,6 +63,7 @@
     },
     optionsDialog: { showCancelButton: true },
   });
+  const { options, optionsDialog } = toRefs(state);
   // 设置dialog的fieldList
   const setFieldOptions = (fieldList: Form.FieldItem[], row: MenuType) => {
     fieldList.forEach((item) => {
@@ -141,7 +142,6 @@
       }
     }
   };
-  const { options, optionsDialog } = toRefs(state);
 
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },

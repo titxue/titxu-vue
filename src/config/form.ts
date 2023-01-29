@@ -116,3 +116,13 @@ export const exampleForm = {
     { label: '邮箱', field: 'email', rules: [{ required: true, validator: checkEmail }] },
   ],
 } as Record<string, Form.FieldItem[]>;
+
+export const routineForm = {
+  userinfo: [
+    { label: '租户', field: 'tenantName', disabled: true },
+    { label: '用户昵称', field: 'userNick', rules: [{ required: true, message: '用户昵称不能为空' }] },
+    { label: '手机号码', field: 'mobile', rules: [{ required: true, validator: checkMobile }] },
+    { label: '邮箱地址', field: 'email', rules: [{ required: false, validator: checkEmail }] },
+    { label: '签名', field: 'remarks', type: 'textarea' },
+  ],
+} as Record<string, Form.FieldItem[]>;
