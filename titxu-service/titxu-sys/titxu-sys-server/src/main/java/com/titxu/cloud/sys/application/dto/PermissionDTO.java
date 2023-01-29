@@ -14,7 +14,7 @@ public class PermissionDTO implements Serializable {
     public PermissionDTO() {
     }
 
-    public PermissionDTO(String id, String parentId, String permissionName, String permissionType, String permissionLevel, String permissionCodes, String menuIcon, int orderNum, String menuUrl) {
+    public PermissionDTO(String id, String parentId, String permissionName, String permissionType, String permissionLevel, String permissionCodes, String menuIcon, int orderNum, String menuUrl, String status) {
         this.id = id;
         this.parentId = parentId;
         this.permissionName = permissionName;
@@ -24,6 +24,7 @@ public class PermissionDTO implements Serializable {
         this.menuIcon = menuIcon;
         this.orderNum = orderNum;
         this.menuUrl = menuUrl;
+        this.status = status;
     }
 
     /**
@@ -85,4 +86,9 @@ public class PermissionDTO implements Serializable {
      * 下级权限
      */
     private List<?> subList;
+
+    /**
+     * 状态
+     */
+    private String status;
 }

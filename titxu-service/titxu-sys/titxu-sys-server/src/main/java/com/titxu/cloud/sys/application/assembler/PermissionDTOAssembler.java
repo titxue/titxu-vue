@@ -24,6 +24,7 @@ public class PermissionDTOAssembler {
         dto.setParentName(permission.getParent() == null ? null : permission.getParent().getPermissionName().getName());
         dto.setPermissionCodes(permission.getPermissionCodes() == null ? null : permission.getPermissionCodes().getCodesString());
         dto.setPermissionLevel(permission.getPermissionLevel() == null ? null : permission.getPermissionLevel().getValue());
+        dto.setStatus(permission.getStatus() == null ? null : permission.getStatus().getValue());
         return dto;
     }
 
@@ -46,17 +47,15 @@ public class PermissionDTOAssembler {
         }
         PermissionCodes permissionCodes = null;
         if (permissionCommand.getPermissionCodes() != null) {
-            Set<String> permsSet = new HashSet<>();
-            permsSet.addAll(Arrays.asList(permissionCommand.getPermissionCodes().trim().split(",")));
+            Set<String> permsSet = new HashSet<>(Arrays.asList(permissionCommand.getPermissionCodes().trim().split(",")));
             permissionCodes = new PermissionCodes(permsSet);
         }
         MenuUrl menuUrl = null;
         if (!StringUtils.isEmpty(permissionCommand.getMenuUrl())) {
             menuUrl = new MenuUrl(permissionCommand.getMenuUrl());
         }
-        Permission permission = new Permission(permissionId, permissionName, permissionType, permissionLevel, permissionCommand.getMenuIcon(), permissionCodes, permissionCommand.getOrderNum(),
+        return new Permission(permissionId, permissionName, permissionType, permissionLevel, permissionCommand.getMenuIcon(), permissionCodes, permissionCommand.getOrderNum(),
                 menuUrl, parent, null, null);
-        return permission;
     }
 
 
