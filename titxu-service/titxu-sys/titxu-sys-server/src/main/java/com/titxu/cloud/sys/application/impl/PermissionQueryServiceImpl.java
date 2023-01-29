@@ -1,6 +1,7 @@
 package com.titxu.cloud.sys.application.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.titxu.cloud.common.mybatis.util.BaseDO;
 import com.titxu.cloud.sys.domain.model.permission.Permission;
 import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
@@ -23,17 +24,12 @@ import java.util.stream.Collectors;
 
 /**
  * 权限查询服务实现类
- *
-
- 
  **/
 @Service
 public class PermissionQueryServiceImpl implements PermissionQueryService {
 
-    @Autowired
     private PermissionRepository permissionRepository;
 
-    @Autowired
     private SysPermissionMapper sysPermissionMapper;
 
     @Override
@@ -76,23 +72,20 @@ public class PermissionQueryServiceImpl implements PermissionQueryService {
     @Override
     public Set<String> getPermissionCodes(String userId) {
         List<SysPermissionDO> sysPermissionDOList = getSysPermissionDOList(userId);
-        Set<String> permissionCodes = sysPermissionDOList.stream().filter(p -> p.getPermissionCodes() != null).
-                flatMap(p -> Arrays.asList(p.getPermissionCodes().trim().split(",")).stream()).collect(Collectors.toSet());
-        return permissionCodes;
+        return sysPermissionDOList.stream().filter(p -> p.getPermissionCodes() != null).
+                flatMap(p -> Arrays.stream(p.getPermissionCodes().trim().split(","))).collect(Collectors.toSet());
     }
 
     @Override
     public Set<String> getPermissionIds(String userId) {
         List<SysPermissionDO> sysPermissionDOList = getSysPermissionDOList(userId);
-        Set<String> permissionIds = sysPermissionDOList.stream().map(p -> p.getId()).collect(Collectors.toSet());
-        return permissionIds;
+        return sysPermissionDOList.stream().map(BaseDO::getId).collect(Collectors.toSet());
     }
 
     /**
      * 获取用户权限
-     *
-     * @param userId
-     * @return
+     * @param userId 用户id
+     * @return 权限列表
      */
     private List<SysPermissionDO> getSysPermissionDOList(String userId) {
         List<SysPermissionDO> sysPermissionDOList;
@@ -118,9 +111,9 @@ public class PermissionQueryServiceImpl implements PermissionQueryService {
     /**
      * 通过父级id获取权限
      *
-     * @param parentId
-     * @param menuIdList
-     * @return
+     * @param parentId 父级id
+     * @param menuIdList 用户权限id列表
+     * @return 权限列表
      */
     private List<PermissionDTO> queryListParentId(String parentId, Set<String> menuIdList) {
         Map<String, Object> params = new HashMap<>();
@@ -151,5 +144,14 @@ public class PermissionQueryServiceImpl implements PermissionQueryService {
             subMenuList.add(entity);
         }
         return subMenuList;
+    }
+
+    @Autowired
+    public void setPermissionRepository(PermissionRepository permissionRepository) {
+        this.permissionRepository = permissionRepository;
+    }
+    @Autowired
+    public void setSysPermissionMapper(SysPermissionMapper sysPermissionMapper) {
+        this.sysPermissionMapper = sysPermissionMapper;
     }
 }

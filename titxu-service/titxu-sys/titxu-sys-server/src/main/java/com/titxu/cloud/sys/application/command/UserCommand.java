@@ -48,4 +48,10 @@ public class UserCommand {
      */
     @Schema(name = "角色列表")
     private List<String> roleIdList;
+
+    /**
+     * 签名信息
+     */
+    @Schema(name = "签名信息")
+    private String remarks;
 }

@@ -18,7 +18,7 @@ public class UserConverter {
         if (sysUserDO == null) {
             return null;
         }
-        return new User(new UserId(sysUserDO.getId()), new UserNick(sysUserDO.getUserNick()), StatusEnum.getStatusEnum(sysUserDO.getStatus()), account, new TenantId(sysUserDO.getTenantId()), roleIdList);
+        return new User(new UserId(sysUserDO.getId()), new UserNick(sysUserDO.getUserNick()), StatusEnum.getStatusEnum(sysUserDO.getStatus()), account, new TenantId(sysUserDO.getTenantId()), roleIdList,new Remarks(sysUserDO.getRemarks()));
     }
 
     public static SysUserDO fromUser(User user, String accountId) {

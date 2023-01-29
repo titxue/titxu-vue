@@ -32,8 +32,12 @@ public class UserDTOAssembler {
         if (userCommand.getEmail() != null) {
             email = new Email(userCommand.getEmail());
         }
+        Remarks remarks = null;
+        if (userCommand.getRemarks() != null) {
+            remarks = new Remarks(userCommand.getRemarks());
+        }
         Account account = new Account(new Mobile(userCommand.getMobile()), email);
-        return new User(new UserId(userCommand.getId()), userNick, null, account, null, roleIdList);
+        return new User(new UserId(userCommand.getId()), userNick, null, account, null, roleIdList, remarks);
     }
 
     public static UserDTO fromUser(final User user) {
@@ -48,6 +52,7 @@ public class UserDTOAssembler {
         userDTO.setMobile(user.getAccount().getMobile() == null ? null : user.getAccount().getMobile().getMobile());
         userDTO.setRoleIdList(roleIdList);
         userDTO.setStatus(user.getStatus() == null ? null : user.getStatus().getValue());
+        userDTO.setRemarks(user.getRemarks() == null ? null : user.getRemarks().remarks());
         return userDTO;
     }
 }

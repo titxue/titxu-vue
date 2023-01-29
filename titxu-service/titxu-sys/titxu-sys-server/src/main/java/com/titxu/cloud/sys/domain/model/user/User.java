@@ -31,7 +31,7 @@ public class User implements Entity<User> {
     /**
      * 账号
      */
-    private Account account;
+    private final Account account;
 
     /**
      * 当前租户
@@ -43,14 +43,20 @@ public class User implements Entity<User> {
      */
     private List<RoleId> roleIds;
 
+    /**
+     * 备注信息（前端签名）
+     */
+    private Remarks remarks;
 
-    public User(UserId userId, UserNick userNick, StatusEnum status, Account account, TenantId tenantId, List<RoleId> roleIds) {
+
+    public User(UserId userId, UserNick userNick, StatusEnum status, Account account, TenantId tenantId, List<RoleId> roleIds, Remarks remarks) {
         this.userId = userId;
         this.userNick = userNick;
         this.status = status;
         this.account = account;
         this.tenantId = tenantId;
         this.roleIds = roleIds;
+        this.remarks = remarks;
     }
 
     public User(UserNick userNick, Account account, List<RoleId> roleIds) {
@@ -117,5 +123,14 @@ public class User implements Entity<User> {
 
     public void setRoleIds(List<RoleId> roleIds) {
         this.roleIds = roleIds;
+    }
+
+
+    public Remarks getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(Remarks remarks) {
+        this.remarks = remarks;
     }
 }

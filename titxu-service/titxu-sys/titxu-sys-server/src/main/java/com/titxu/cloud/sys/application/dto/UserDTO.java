@@ -62,15 +62,21 @@ public class UserDTO implements Serializable {
      */
     private List<TenantDTO> tenants;
 
+    /**
+     * 签名信息
+     */
+    private String remarks;
+
     public UserDTO() {
     }
 
-    public UserDTO(String id, String userNick, String email, String mobile, String status, List<String> roleIdList) {
+    public UserDTO(String id, String userNick, String email, String mobile, String status, List<String> roleIdList,String remarks) {
         this.id = id;
         this.userNick = userNick;
         this.email = email;
         this.mobile = mobile;
         this.status = status;
         this.roleIdList = roleIdList;
+        this.remarks = remarks;
     }
 }
