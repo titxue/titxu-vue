@@ -20,7 +20,7 @@
     },
     size: {
       type: String,
-      default: 'default',
+      default: 'small',
     },
   });
   const symbolId = computed(() => `#${props.prefix}-${props.name}`);

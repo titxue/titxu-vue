@@ -23,6 +23,7 @@
 
 <script setup lang="ts">
   import { ElButton, ElIcon, ElMessage, ElMessageBox, ElSwitch, ElTag } from 'element-plus';
+  import SvgIcon from '/@/components/SvgIcon/index.vue';
   import { resolveDynamicComponent } from 'vue';
   import { usePermissionStore } from '/@/store';
   import { menuDialog } from '/@/config/dialog';
@@ -119,7 +120,6 @@
   };
   // 菜单编辑提交
   const handleMenuSubmit = async (model: Record<string, MenuType>) => {
-    console.log(model);
     const menuInfo = model as unknown as MenuType;
     const { id } = menuInfo;
     if (id) {
@@ -143,22 +143,38 @@
     }
   };
 
+  const isSvgIcon = (menuIcon: string): boolean => {
+    if (menuIcon !== null) {
+      return menuIcon.indexOf('svg-') !== -1;
+    }
+    return false;
+  };
+
   const tableColumn: Table.Column[] = [
     { type: 'selection', width: '50' },
-    { prop: 'parentName', label: '父级菜单', width: '150' },
+    { prop: 'parentName', label: '父级菜单', width: '120' },
     { prop: 'permissionName', label: '菜单名称' },
     {
       prop: 'menuIcon',
       label: '菜单图标',
       align: 'center',
       render: ({ row }: Record<string, MenuType>) => {
-        const Component = resolveDynamicComponent(row.menuIcon);
-        return h(ElIcon, { size: 18 }, () => h(Component as any));
+        const menuIcon = row.menuIcon;
+
+        if (menuIcon !== undefined && menuIcon !== '') {
+          if (isSvgIcon(menuIcon)) {
+            return h(SvgIcon, { name: menuIcon });
+          }
+          const Component = resolveDynamicComponent(menuIcon);
+          return h(ElIcon, { size: 20 }, () => h(Component as any));
+        }
+        return h(SvgIcon, { name: 'svg-role' });
       },
     },
     {
       prop: 'menuIcon',
       label: '图标名称',
+      render: ({ row }: Record<string, MenuType>) => h(ElTag, { type: 'info', effect: 'plain' }, () => row.menuIcon || '默认图标'),
     },
     {
       prop: 'menuUrl',

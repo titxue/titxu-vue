@@ -88,7 +88,7 @@
 
   const logout = async () => {
     await userLogout();
-    router.push('/login');
+    // router.push('/login');
     ElMessage.success('退出登陆成功');
   };
 
