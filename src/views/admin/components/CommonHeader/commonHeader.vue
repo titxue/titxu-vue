@@ -13,7 +13,7 @@
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>我的</el-dropdown-item>
+            <el-dropdown-item @click="skipUserInfo">我的</el-dropdown-item>
             <el-dropdown-item @click="logout()">退出</el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -33,6 +33,12 @@
   const { userLogout } = authStore;
   const { setUserInfo } = userStore;
   const { userInfo } = toRefs(userStore);
+
+  // 跳转到个人信息
+  const skipUserInfo = () => {
+    router.push('/admin/routine/userinfo');
+  };
+
   // 激活标签页
   const activeTab = ref('');
 

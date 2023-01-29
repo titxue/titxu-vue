@@ -27,6 +27,7 @@ export interface ReqUserUpdateParams {
   mobile: string;
   email?: string;
   roleIdList?: string[];
+  remarks?: string;
 }
 
 export interface ReqUserCreateParams {

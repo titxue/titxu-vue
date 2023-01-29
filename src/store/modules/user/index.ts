@@ -41,6 +41,8 @@ export const useUserStore = defineStore('user', {
 
     // 设置用户的信息
     async setUserInfo() {
+      // 重置userInfo
+      this.$patch({ userInfo: {} });
       const { code, data } = await getUserInfo();
       if (code === 0) {
         this.$patch({ userInfo: data });
@@ -89,13 +91,14 @@ export const useUserStore = defineStore('user', {
       return code;
     },
     // 修改用户信息
-    async updateUser(data: UserInfoType) {
+    async updateUser(data: UserInfoType): Promise<void> {
       const { code } = await updateUser({
         id: data.id,
         userNick: data.userNick,
         mobile: data.mobile,
         email: data.email,
         roleIdList: data.roleIdList,
+        remarks: data.remarks,
       });
       if (code !== 0) {
         return Promise.reject('修改用户信息失败');

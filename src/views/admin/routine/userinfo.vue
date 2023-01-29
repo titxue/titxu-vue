@@ -8,7 +8,7 @@
           </div>
 
           <div class="userinfo-form">
-            <easy-form :fieldList="fieldList" :model="userInfo" :options="optionsForm" />
+            <easy-form :fieldList="fieldList" :model="userInfo" :options="optionsForm" @submit="handleUpdateUserSubmit" />
           </div>
         </el-card>
       </el-col>
@@ -20,13 +20,15 @@
 </template>
 
 <script lang="ts" setup>
+  import { ElMessage } from 'element-plus';
+  import { UserInfoType } from '/@/api/user/types';
   import { routineForm } from '/@/config/form';
   import { useUserStore } from '/@/store';
   // const { proxy } = getCurrentInstance()
   // const router = useRouter()
   // const route = useRoute()
   const userStore = useUserStore();
-  const { setUserInfo } = userStore;
+  const { setUserInfo, updateUser } = userStore;
   const { userInfo } = toRefs(userStore);
 
   const fieldList = ref(routineForm.userinfo);
@@ -44,6 +46,14 @@
     },
   });
   const { optionsForm } = toRefs(state);
+
+  const handleUpdateUserSubmit = async (data: Record<string, UserInfoType>) => {
+    const userInfo = data as unknown as UserInfoType;
+    await updateUser(userInfo);
+    // 重新获取用户信息
+    setUserInfo();
+    ElMessage.success('更新成功');
+  };
 
   onMounted(() => {
     setUserInfo();
