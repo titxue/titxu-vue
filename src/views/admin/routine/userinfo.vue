@@ -13,7 +13,14 @@
         </el-card>
       </el-col>
       <el-col :span="12">
-        <div class="grid-content ep-bg-purple-light"></div>
+        <el-card class="box-card log-card">
+          <template #header>
+            <div class="card-header">
+              <span>操作日志</span>
+              <el-button class="button" text @click="listLogin">刷新日志</el-button>
+            </div>
+          </template>
+        </el-card>
       </el-col>
     </el-row>
   </div>
@@ -21,6 +28,7 @@
 
 <script lang="ts" setup>
   import { ElMessage } from 'element-plus';
+  import { listLogin } from '/@/api/log';
   import { UserInfoType } from '/@/api/user/types';
   import { routineForm } from '/@/config/form';
   import { useUserStore } from '/@/store';
@@ -33,7 +41,6 @@
 
   const fieldList = ref(routineForm.userinfo);
   // const userInfo = ref<Record<string, string>>();
-
   interface State {
     optionsForm: Form.Options;
   }
@@ -61,7 +68,19 @@
 </script>
 
 <style lang="less" scoped>
+  .log-card {
+    margin-left: 30px;
+  }
+
   .box-card {
+    height: 100%;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .box-avatar {
       display: flex;
       justify-content: center;
