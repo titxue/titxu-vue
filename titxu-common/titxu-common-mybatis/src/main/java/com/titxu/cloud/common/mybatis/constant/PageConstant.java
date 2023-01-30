@@ -3,8 +3,6 @@ package com.titxu.cloud.common.mybatis.constant;
 /**
  * 分页查询
  *
-
-
  **/
 public interface PageConstant {
 

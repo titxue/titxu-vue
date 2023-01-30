@@ -74,20 +74,25 @@ public class SysLogAspect {
         try {
             obj = point.proceed();
             // obj 转换为对象
-            @SuppressWarnings("unchecked")
-            Result<LinkedHashMap<String,Object>> result = (Result<LinkedHashMap<String,Object>>)obj;
-            LinkedHashMap<String, Object> data = result.getData();
-            if (data==null){
-                return obj;
-            }
-            JSONObject userInfo = JSONUtil.parseObj(data.get("user_info"));
 
-            if (userInfo!=null){
-                String userNick = userInfo.getStr("userNick");
-                String username = userInfo.getStr("username");
-                logDTO.setUserNick(userNick);
-                logDTO.setMobile(username);
+            if (((Result<?>)obj).getData() instanceof LinkedHashMap){
+                @SuppressWarnings(value = "unchecked")
+                Result<LinkedHashMap<String,Object>> result = (Result<LinkedHashMap<String,Object>>)obj;
+                LinkedHashMap<String, Object> data = result.getData();
+
+                JSONObject userInfo = JSONUtil.parseObj(data.get("user_info"));
+
+                if (userInfo!=null){
+                    String userNick = userInfo.getStr("userNick");
+                    String username = userInfo.getStr("username");
+                    logDTO.setUserNick(userNick);
+                    logDTO.setMobile(username);
+                }
             }
+
+
+
+
 
 
         } catch (Exception e) {

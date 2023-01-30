@@ -1,11 +1,13 @@
 package com.titxu.cloud.sys.application.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.common.mybatis.util.PageAssembler;
 import com.titxu.cloud.common.mybatis.util.Query;
 import com.titxu.cloud.sys.application.LogQueryService;
+import com.titxu.cloud.sys.application.command.PageCommand;
 import com.titxu.cloud.sys.infrastructure.persistence.entity.SysLogDO;
 import com.titxu.cloud.sys.infrastructure.persistence.mapper.SysLogMapper;
 import org.apache.commons.lang3.StringUtils;
@@ -20,7 +22,7 @@ import java.util.Map;
 @Service
 public class LogQueryServiceImpl implements LogQueryService {
 
-    @Autowired
+
     private SysLogMapper sysLogMapper;
 
     @Override
@@ -28,9 +30,29 @@ public class LogQueryServiceImpl implements LogQueryService {
         String key = (String) params.get("key");
         IPage<SysLogDO> page = sysLogMapper.selectPage(
                 new Query<SysLogDO>().getPage(params),
-                new QueryWrapper<SysLogDO>().like(StringUtils.isNotBlank(key), "userNick", key)
+                new QueryWrapper<SysLogDO>().like(StringUtils.isNotBlank(key), "user_name", key)
         );
         return PageAssembler.toPage(page);
     }
 
+    /**
+     * 自定义查询字段
+     * @param command 参数
+     * @return 日志
+     */
+    @Override
+    public Page queryPage(PageCommand command) {
+        Map<String, Object> params = BeanUtil.beanToMap(command);
+        IPage<SysLogDO> page = sysLogMapper.selectPage(
+                new Query<SysLogDO>().getPage(params),
+                new QueryWrapper<SysLogDO>().like(StringUtils.isNotBlank(command.getKey()), command.getValue(), command.getValue())
+        );
+        return PageAssembler.toPage(page);
+    }
+
+
+    @Autowired
+    public void setSysLogMapper(SysLogMapper sysLogMapper) {
+        this.sysLogMapper = sysLogMapper;
+    }
 }
