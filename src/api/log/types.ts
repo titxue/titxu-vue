@@ -1,10 +1,23 @@
-export interface RoleType {
+export interface LogType {
   id: string;
-  roleName: string;
-  roleCode: string;
-  status: string;
-  permissionIdList: string[];
-  remark: string;
-  createTime: string;
+  userNick: string;
+  mobile: string;
+  operation: string;
+  method: string;
+  params: string;
+  time: string;
+  ip: string;
+  tenantId: string;
   createdBy: string;
+  updatedBy: string;
+  createTime: string;
+  updatedTime: string;
+  delFlag: string;
+}
+export interface LogPageType {
+  totalCount: number;
+  pageSize: number;
+  totalPage: number;
+  currPage: number;
+  list: LogType[];
 }

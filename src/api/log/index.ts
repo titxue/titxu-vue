@@ -1,3 +1,4 @@
+import { LogPageType } from './types';
 import { post } from '/@/utils/http/axios';
 import { ApiPromise } from '/@/utils/http/axios/type';
 enum URL {
@@ -5,6 +6,13 @@ enum URL {
 }
 
 // 获取角色信息
-const listLogin = async (): ApiPromise<any> => post({ url: URL.listLogin, data: {} });
+const listLogin = async (currPage: string): ApiPromise<LogPageType> =>
+  post({
+    url: URL.listLogin,
+    data: {
+      page: currPage,
+      limit: 10,
+    },
+  });
 
 export { listLogin };
