@@ -45,7 +45,7 @@ public class LogQueryServiceImpl implements LogQueryService {
         Map<String, Object> params = BeanUtil.beanToMap(command);
         IPage<SysLogDO> page = sysLogMapper.selectPage(
                 new Query<SysLogDO>().getPage(params),
-                new QueryWrapper<SysLogDO>().like(StringUtils.isNotBlank(command.getKey()), command.getValue(), command.getValue())
+                new QueryWrapper<SysLogDO>().like(StringUtils.isNotBlank(command.getValue()), command.getValue(), command.getValue())
         );
         return PageAssembler.toPage(page);
     }
