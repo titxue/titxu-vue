@@ -136,6 +136,7 @@
     fieldList.value = userDialog.addUser;
     // 设置新增用户的options
     setOptions(fieldList.value);
+    formData.value = {};
     dialogTitle.value = '新增用户';
     dialogVisible.value = true;
   };
