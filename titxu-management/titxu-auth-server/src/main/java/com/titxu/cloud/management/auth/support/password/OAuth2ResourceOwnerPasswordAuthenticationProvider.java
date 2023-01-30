@@ -3,8 +3,6 @@ package com.titxu.cloud.management.auth.support.password;
 
 import com.titxu.cloud.management.auth.support.base.CustomeAuthorizationGrantType;
 import com.titxu.cloud.management.auth.support.base.OAuth2ResourceOwnerBaseAuthenticationProvider;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
@@ -22,9 +20,6 @@ import java.util.Map;
  */
 public class OAuth2ResourceOwnerPasswordAuthenticationProvider
         extends OAuth2ResourceOwnerBaseAuthenticationProvider<OAuth2ResourceOwnerPasswordAuthenticationToken> {
-
-    private static final Logger LOGGER = LogManager.getLogger(OAuth2ResourceOwnerPasswordAuthenticationProvider.class);
-
 
     /**
      * Constructs an {@code OAuth2AuthorizationCodeAuthenticationProvider} using the
@@ -50,9 +45,7 @@ public class OAuth2ResourceOwnerPasswordAuthenticationProvider
 
     @Override
     public boolean supports(Class<?> authentication) {
-        boolean supports = OAuth2ResourceOwnerPasswordAuthenticationToken.class.isAssignableFrom(authentication);
-        LOGGER.info("supports authentication=" + authentication + " returning " + supports);
-        return supports;
+        return OAuth2ResourceOwnerPasswordAuthenticationToken.class.isAssignableFrom(authentication);
     }
 
     @Override
