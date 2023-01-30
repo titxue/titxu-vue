@@ -23,7 +23,7 @@ import com.titxu.cloud.common.core.util.TenantContext;
 import com.titxu.cloud.common.log.event.SysLogEvent;
 import com.titxu.cloud.common.log.util.SysLogUtils;
 import com.titxu.cloud.common.web.util.Result;
-import com.titxu.cloud.sys.dto.LogDTO;
+import com.titxu.cloud.sys.api.dto.LogDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
@@ -75,10 +75,10 @@ public class ClientAuthenticationFailureEventHandler implements AuthenticationFa
         logDTO.setTenantId(TenantContext.getTenantId());
         SpringContextHolder.publishEvent(new SysLogEvent(logDTO));
         // 写出错误信息
-        sendErrorResponse(request, response, exception);
+        sendErrorResponse(response, exception);
     }
 
-    private void sendErrorResponse(HttpServletRequest request, HttpServletResponse response,
+    private void sendErrorResponse(HttpServletResponse response,
                                    AuthenticationException exception) throws IOException {
         ServletServerHttpResponse httpResponse = new ServletServerHttpResponse(response);
         httpResponse.setStatusCode(HttpStatus.UNAUTHORIZED);

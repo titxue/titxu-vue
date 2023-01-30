@@ -16,7 +16,8 @@
 
 package com.titxu.cloud.common.log.event;
 
-import com.titxu.cloud.sys.dto.LogDTO;
+
+import com.titxu.cloud.sys.api.dto.LogDTO;
 import org.springframework.context.ApplicationEvent;
 
 /**

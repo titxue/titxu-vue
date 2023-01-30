@@ -18,7 +18,7 @@ package com.titxu.cloud.common.log.util;
 
 import cn.hutool.http.HttpUtil;
 import com.titxu.cloud.common.core.util.IPUtils;
-import com.titxu.cloud.sys.dto.LogDTO;
+import com.titxu.cloud.sys.api.dto.LogDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.experimental.UtilityClass;
 import org.springframework.core.LocalVariableTableParameterNameDiscoverer;

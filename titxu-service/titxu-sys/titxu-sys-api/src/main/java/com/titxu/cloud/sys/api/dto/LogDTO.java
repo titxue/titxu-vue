@@ -1,4 +1,4 @@
-package com.titxu.cloud.sys.dto;
+package com.titxu.cloud.sys.api.dto;
 
 import lombok.Data;
 
@@ -13,6 +13,7 @@ public class LogDTO implements Serializable {
     /**
      * 用户名
      */
+
     private String userNick;
 
     /**

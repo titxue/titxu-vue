@@ -1,6 +1,6 @@
-package com.titxu.cloud.sys.service;
+package com.titxu.cloud.sys.api.service;
 
-import com.titxu.cloud.sys.dto.LogDTO;
+import com.titxu.cloud.sys.api.dto.LogDTO;
 
 /**
  * 日志保存服务接口

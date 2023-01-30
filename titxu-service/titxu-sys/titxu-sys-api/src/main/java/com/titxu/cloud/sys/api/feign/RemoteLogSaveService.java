@@ -1,7 +1,7 @@
 package com.titxu.cloud.sys.api.feign;
 
 import com.titxu.cloud.common.core.constant.AuthConstants;
-import com.titxu.cloud.sys.dto.LogDTO;
+import com.titxu.cloud.sys.api.dto.LogDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

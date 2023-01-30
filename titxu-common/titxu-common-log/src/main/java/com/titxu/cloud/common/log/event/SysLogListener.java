@@ -16,8 +16,8 @@
 
 package com.titxu.cloud.common.log.event;
 
+import com.titxu.cloud.sys.api.dto.LogDTO;
 import com.titxu.cloud.sys.api.feign.RemoteLogSaveService;
-import com.titxu.cloud.sys.dto.LogDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
@@ -39,6 +39,7 @@ public class SysLogListener {
     @EventListener(SysLogEvent.class)
     public void saveSysLog(SysLogEvent event) {
         LogDTO logDTO = (LogDTO) event.getSource();
+        log.info("异步监听日志事件：{}",logDTO.getOperation());
         remoteLogSaveService.saveLog(logDTO);
     }
 

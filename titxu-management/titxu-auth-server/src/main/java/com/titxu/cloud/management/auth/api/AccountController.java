@@ -6,6 +6,7 @@ import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.BasicAuth;
 import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.common.core.util.SpringContextHolder;
+import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.security.annotation.Inner;
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;
 import com.titxu.cloud.management.auth.application.dto.OAuth2Dto;
@@ -61,6 +62,7 @@ public class AccountController {
      * 获取微服务 服务列表
      */
     @Operation(summary = "登陆接口")
+    @SysLog("登陆操作")
     @PostMapping("/login")
     public Result<Map<String, Object>> loginByMobile(@RequestBody LoginPasswordCommand command) {
         // 进行参数转换后期再OAuth2Dto实现参数验证，参数封装转换指定类

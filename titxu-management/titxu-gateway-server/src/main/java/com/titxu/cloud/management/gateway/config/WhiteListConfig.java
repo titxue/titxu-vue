@@ -13,7 +13,6 @@ import java.util.List;
 @Configuration
 @ConfigurationProperties(prefix = "whitelist")
 public class WhiteListConfig {
-
     private List<String> urls;
 
 }

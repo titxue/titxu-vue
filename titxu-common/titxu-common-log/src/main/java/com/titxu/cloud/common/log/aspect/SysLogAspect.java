@@ -1,96 +1,105 @@
+/*
+ * Copyright (c) 2020 pig4cloud Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.titxu.cloud.common.log.aspect;
 
-import com.google.gson.Gson;
-import com.titxu.cloud.common.core.util.HttpContextUtils;
-import com.titxu.cloud.common.core.util.IPUtils;
-import com.titxu.cloud.common.core.util.WebUtils;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
+import com.titxu.cloud.common.core.util.Result;
+import com.titxu.cloud.common.core.util.SpringContextHolder;
 import com.titxu.cloud.common.log.annotation.SysLog;
-import com.titxu.cloud.sys.api.feign.RemoteLogSaveService;
-import com.titxu.cloud.sys.dto.LogDTO;
-import jakarta.annotation.Resource;
-import jakarta.servlet.http.HttpServletRequest;
+import com.titxu.cloud.common.log.event.SysLogEvent;
+import com.titxu.cloud.common.log.util.SysLogUtils;
+import com.titxu.cloud.sys.api.dto.LogDTO;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.expression.EvaluationContext;
 
-import java.lang.reflect.Method;
+import java.util.LinkedHashMap;
 
 /**
- * 系统日志，切面处理类
- **/
+ * 操作日志使用spring event异步入库
+ */
 @Aspect
-@Component
+@Slf4j
 public class SysLogAspect {
 
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+    @Around("@annotation(sysLog)")
+    @SneakyThrows
+    public Object around(ProceedingJoinPoint point, SysLog sysLog) {
+        String strClassName = point.getTarget().getClass().getName();
+        String strMethodName = point.getSignature().getName();
+        log.debug("[类名]:{},[方法]:{}", strClassName, strMethodName);
 
+        String value = sysLog.value();
+        String expression = sysLog.expression();
+        // 当前表达式存在 SPEL，会覆盖 value 的值
+        if (StrUtil.isNotBlank(expression)) {
+            // 解析SPEL
+            MethodSignature signature = (MethodSignature) point.getSignature();
+            EvaluationContext context = SysLogUtils.getContext(point.getArgs(), signature.getMethod());
+            try {
+                value = SysLogUtils.getValue(context, expression, String.class);
+            } catch (Exception e) {
+                // SPEL 表达式异常，获取 value 的值
+                log.error("@SysLog 解析SPEL {} 异常", expression);
+            }
+        }
 
-    private RemoteLogSaveService remoteLogSaveService;
+        LogDTO logDTO = SysLogUtils.getSysLog();
+        logDTO.setOperation(value);
 
-    @Resource
-    public void setRemoteLogSaveService(RemoteLogSaveService remoteLogSaveService) {
-        this.remoteLogSaveService = remoteLogSaveService;
-    }
+        // 发送异步日志事件
+        Long startTime = System.currentTimeMillis();
+        Object obj;
 
-
-    @Pointcut("@annotation(com.titxu.cloud.common.log.annotation.SysLog)")
-    public void logPointCut() {
-
-    }
-
-    @Around("logPointCut()")
-    public Object around(ProceedingJoinPoint point) throws Throwable {
-        long beginTime = System.currentTimeMillis();
-        //执行方法
-        Object result = point.proceed();
-        //执行时长(毫秒)
-        long time = System.currentTimeMillis() - beginTime;
         try {
-            //保存日志
-            saveSysLog(point, time);
+            obj = point.proceed();
+            // obj 转换为对象
+            @SuppressWarnings("unchecked")
+            Result<LinkedHashMap<String,Object>> result = (Result<LinkedHashMap<String,Object>>)obj;
+            LinkedHashMap<String, Object> data = result.getData();
+            if (data==null){
+                return obj;
+            }
+            JSONObject userInfo = JSONUtil.parseObj(data.get("user_info"));
+
+            if (userInfo!=null){
+                String userNick = userInfo.getStr("userNick");
+                String username = userInfo.getStr("username");
+                logDTO.setUserNick(userNick);
+                logDTO.setMobile(username);
+            }
+
+
         } catch (Exception e) {
-            logger.error("保存日志失败：" + e.getMessage());
+            logDTO.setParams(e.getMessage());
+            throw e;
+        } finally {
+            Long endTime = System.currentTimeMillis();
+            logDTO.setTime(endTime - startTime);
+            SpringContextHolder.publishEvent(new SysLogEvent(logDTO));
         }
 
-        return result;
+        return obj;
     }
 
-    private void saveSysLog(ProceedingJoinPoint joinPoint, long time) {
-        LogDTO logDTO = new LogDTO();
-        logDTO.setTime(time);
-        logDTO.setMobile(WebUtils.getUserName());
-        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-        Method method = signature.getMethod();
-        SysLog syslog = method.getAnnotation(SysLog.class);
-        if (syslog != null) {
-            //注解上的描述
-            String operation = syslog.value();
-            logDTO.setOperation(operation);
-        }
-        //请求的方法名
-        String className = joinPoint.getTarget().getClass().getName();
-        String methodName = signature.getName();
-        String methodString = className + "." + methodName + "()";
-        logDTO.setMethod(methodString);
-        //请求的参数
-        Object[] args = joinPoint.getArgs();
-        try {
-            String params = new Gson().toJson(args);
-            logDTO.setParams(params);
-        } catch (Exception e) {
-            logger.error(e.getMessage());
-        }
-
-        //获取request
-        HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
-        //设置IP地址
-        String ip = IPUtils.getIpAddr(request);
-        logDTO.setIp(ip);
-        remoteLogSaveService.saveLog(logDTO);
-    }
 }

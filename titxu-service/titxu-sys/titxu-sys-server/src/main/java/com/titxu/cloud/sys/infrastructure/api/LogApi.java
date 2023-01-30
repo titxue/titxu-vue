@@ -1,10 +1,10 @@
 package com.titxu.cloud.sys.infrastructure.api;
 
 import com.titxu.cloud.common.security.annotation.Inner;
+import com.titxu.cloud.sys.api.dto.LogDTO;
+import com.titxu.cloud.sys.api.service.LogSaveService;
 import com.titxu.cloud.sys.domain.model.log.Log;
 import com.titxu.cloud.sys.domain.model.log.LogRepository;
-import com.titxu.cloud.sys.dto.LogDTO;
-import com.titxu.cloud.sys.service.LogSaveService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
