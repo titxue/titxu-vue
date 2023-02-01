@@ -2,6 +2,7 @@ package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.common.core.util.WebUtils;
+import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.sys.api.dto.LogDTO;
 import com.titxu.cloud.sys.api.service.LogSaveService;
@@ -45,6 +46,7 @@ public class LogController {
      * 保存日志
      */
     @Operation(summary = "保存日志")
+    @SysLog("保存日志")
     @PostMapping("/saveLog")
     public void saveLog(@RequestBody LogDTO logDTO) {
         logSaveService.save(logDTO);
