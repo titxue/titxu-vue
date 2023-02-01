@@ -90,8 +90,7 @@
   };
   // 监听分页
   watch(currPage, (newPage) => {
-    console.log('newPage', newPage);
-    // setLogList(newPage.toString());
+    setLogList(newPage.toString());
   });
 
   onMounted(() => {
