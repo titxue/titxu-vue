@@ -21,7 +21,7 @@ public class PageCommand {
     private String order;
 
     @Schema(name = "升序")
-    private String asc = "asc";
+    private String asc;
 
     @Schema
     private String key;

@@ -2,7 +2,6 @@ package com.titxu.cloud.sys.api;
 
 import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.common.core.util.WebUtils;
-import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.mybatis.util.Page;
 import com.titxu.cloud.sys.api.dto.LogDTO;
 import com.titxu.cloud.sys.api.service.LogSaveService;
@@ -55,7 +54,6 @@ public class LogController {
      * 查询登陆日志
      */
     @Operation(summary = "查询登陆日志")
-    @SysLog("登陆日志")
     @PostMapping("/listLogin")
     @PreAuthorize("hasAuthority('sys:log:list')")
     public Result<Page> listLoginLog(@RequestBody PageCommand pageCommand) {
