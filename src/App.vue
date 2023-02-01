@@ -1,8 +1,14 @@
 <template>
-  <router-view />
+  <el-config-provider :locale="locale">
+    <router-view />
+  </el-config-provider>
 </template>
 <script setup lang="ts">
-  console.log(import.meta.env.BASE_URL);
+  import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
+  import en from 'element-plus/dist/locale/en.mjs';
+
+  const language = ref('zh-cn');
+  const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en));
 </script>
 
 <style>

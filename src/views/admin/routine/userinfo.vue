@@ -39,7 +39,6 @@
                 :pageCount="page.totalPage"
                 layout="total, prev, pager, next"
                 :total="page.totalCount"
-                @size-change="sizeChangeLog"
                 @current-change="currentChangeLog"
               />
             </div>
@@ -85,9 +84,6 @@
   const currentChangeLog = (page: number) => {
     console.log('currentChangeLog', page);
     setLogList(page.toString());
-  };
-  const sizeChangeLog = (page: any) => {
-    console.log('sizeChangeLog' + page);
   };
 
   const handleUpdateUserSubmit = async (data: Record<string, UserInfoType>) => {
