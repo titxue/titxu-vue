@@ -26,7 +26,7 @@
                 <el-timeline-item
                   v-for="(activity, index) in logList"
                   :key="index"
-                  :timestamp="dayjs(activity.createTime).format('YYYY-MM-DD HH:mm:ss')"
+                  :timestamp="dayjs(activity.createdTime).format('YYYY-MM-DD HH:mm:ss')"
                 >
                   {{ activity.operation }}
                 </el-timeline-item>

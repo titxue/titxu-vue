@@ -8,7 +8,7 @@ export interface LogType {
   time: string;
   ip: string;
   tenantId: string;
-  createdBy: string;
+  createdTime: string;
   updatedBy: string;
   createTime: string;
   updatedTime: string;
