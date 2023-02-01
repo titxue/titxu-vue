@@ -1,10 +1,9 @@
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosPromise, Method } from 'axios';
 import { ElLoading, LoadingOptions, ElNotification } from 'element-plus';
-import { clearRefreshToken, clearToken, getRefreshToken, getToken, TokenPrefix } from '../../auth';
+import { getToken, TokenPrefix } from '../../auth';
 import { anyObj, ApiPromise, Options } from './type';
 import { showMessage } from './status';
-import { refresh } from '/@/api/auth';
 
 const pendingMap = new Map();
 const loadingInstance: LoadingInstance = {
@@ -123,30 +122,30 @@ function createAxios(axiosConfig: AxiosRequestConfig, options: Options = {}, loa
       return options.reductDataFormat ? response.data : response;
     },
     (error) => {
-      if (error.config.responseType == 'json') {
-        if (error.response.data.code == 401) {
-          console.log('token过期');
-          const refreshTokenParam = getRefreshToken();
-          if (refreshTokenParam === null) return;
-          refresh(refreshTokenParam)
-            .then((res) => {
-              console.log(res);
-              return Axios(error.config);
-            })
-            .catch((err) => {
-              clearToken();
-              clearRefreshToken();
-              console.log(err);
-              return Axios(error.config);
-            });
-        }
-        if (options.showCodeMessage) {
-          ElNotification({
-            type: 'error',
-            message: error.response.data.msg,
-          });
-        }
-      }
+      // if (error.config.responseType == 'json') {
+      //   if (error.response.data.code == 401) {
+      //     console.log('token过期');
+      //     const refreshTokenParam = getRefreshToken();
+      //     if (refreshTokenParam === null) return;
+      //     refresh(refreshTokenParam)
+      //       .then((res) => {
+      //         console.log(res);
+      //         return Axios(error.config);
+      //       })
+      //       .catch((err) => {
+      //         clearToken();
+      //         clearRefreshToken();
+      //         console.log(err);
+      //         return Axios(error.config);
+      //       });
+      //   }
+      //   if (options.showCodeMessage) {
+      //     ElNotification({
+      //       type: 'error',
+      //       message: error.response.data.msg,
+      //     });
+      //   }
+      // }
       error.config && removePending(error.config);
       options.loading && closeLoading(options); // 关闭loading
       options.showErrorMessage && httpErrorStatusHandle(error); // 处理错误状态码

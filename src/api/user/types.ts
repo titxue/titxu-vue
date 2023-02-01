@@ -72,4 +72,23 @@ export interface UserInfoType {
   permissionCodes: string[];
   permissionIds: string[];
   roleIdList: string[];
+  tenants: tenantType[];
+}
+
+export interface _UserInfoType {
+  id: string;
+  userNick: string;
+  status: string;
+  remarks?: string;
+  mobile: string;
+  email?: string;
+  permissionCodes: string[];
+  permissionIds: string[];
+  roleIdList: string[];
+  tenants: tenantType[];
+}
+export interface tenantType {
+  tenantId: string;
+  tenantName: string;
+  tenantCode: string;
 }

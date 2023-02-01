@@ -34,11 +34,11 @@
             </div>
             <div class="pagination-centent">
               <el-pagination
-                v-model:current-page="page.currPage"
-                :page-size="page.pageSize"
-                :pageCount="page.totalPage"
+                v-model:current-page="currPage"
+                :page-size="pageSize"
+                :pageCount="totalPage"
                 layout="total, prev, pager, next"
-                :total="page.totalCount"
+                :total="totalCount"
                 @current-change="currentChangeLog"
               />
             </div>
@@ -65,6 +65,7 @@
   const { userInfo } = toRefs(userStore);
   const { setLogList } = logStore;
   const { logList, page } = toRefs(logStore);
+  const { currPage, pageSize, totalCount, totalPage } = toRefs(page.value);
 
   const fieldList = ref(routineForm.userinfo);
   // const userInfo = ref<Record<string, string>>();
@@ -93,6 +94,11 @@
     setUserInfo();
     ElMessage.success('更新成功');
   };
+  // 监听分页
+  watch(currPage, (newPage) => {
+    console.log('newPage', newPage);
+    // setLogList(newPage.toString());
+  });
 
   onMounted(() => {
     setUserInfo();
