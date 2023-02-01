@@ -39,7 +39,6 @@
                 :pageCount="totalPage"
                 layout="total, prev, pager, next"
                 :total="totalCount"
-                @current-change="currentChangeLog"
               />
             </div>
           </div>
@@ -81,11 +80,6 @@
     },
   });
   const { optionsForm } = toRefs(state);
-
-  const currentChangeLog = (page: number) => {
-    console.log('currentChangeLog', page);
-    setLogList(page.toString());
-  };
 
   const handleUpdateUserSubmit = async (data: Record<string, UserInfoType>) => {
     const userInfo = data as unknown as UserInfoType;
