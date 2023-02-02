@@ -22,10 +22,8 @@ import java.util.Map;
 @RequestMapping("/tenant")
 public class TenantController {
 
-    @Autowired
     private TenantQueryService tenantQueryService;
 
-    @Autowired
     private TenantApplicationService tenantApplicationService;
 
     /**
@@ -49,5 +47,15 @@ public class TenantController {
     public Result disable(@PathVariable("id") String id) {
         tenantApplicationService.disable(id);
         return Result.ok();
+    }
+
+
+    @Autowired
+    public void setTenantQueryService(TenantQueryService tenantQueryService) {
+        this.tenantQueryService = tenantQueryService;
+    }
+    @Autowired
+    public void setTenantApplicationService(TenantApplicationService tenantApplicationService) {
+        this.tenantApplicationService = tenantApplicationService;
     }
 }
