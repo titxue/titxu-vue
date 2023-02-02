@@ -1,5 +1,6 @@
 package com.titxu.cloud.management.auth.infrastructure.client;
 
+import com.titxu.cloud.common.core.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.reactive.ReactorLoadBalancerExchangeFilterFunction;
@@ -38,8 +39,11 @@ public class HttpService {
                 .filter(reactorLoadBalancerExchangeFilterFunction)
                 .baseUrl(String.format("http://%s/", ServiceName))
                 .defaultStatusHandler(HttpStatusCode::isError, resp -> {
-                    log.error("请求失败:{}", resp.toString());
-                    throw new RuntimeException("请求失败");
+                    log.error("请求失败:{}", resp.statusCode().value());
+                    if (resp.statusCode().is4xxClientError()){
+                        throw new BaseException("资源无法访问",resp.statusCode().value());
+                    }
+                    throw new BaseException("请求出现错误",resp.statusCode().value());
                 })
                 .build();
 
