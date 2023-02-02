@@ -19,8 +19,10 @@ package com.titxu.cloud.common.log.aspect;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.titxu.cloud.common.core.constant.CommonConstant;
 import com.titxu.cloud.common.core.util.Result;
 import com.titxu.cloud.common.core.util.SpringContextHolder;
+import com.titxu.cloud.common.core.util.WebUtils;
 import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.log.event.SysLogEvent;
 import com.titxu.cloud.common.log.util.SysLogUtils;
@@ -88,6 +90,14 @@ public class SysLogAspect {
                     logDTO.setUserNick(userNick);
                     logDTO.setMobile(username);
                 }
+            }else {
+                JSONObject jwtPayload = WebUtils.getJwtPayload();
+                String userName = jwtPayload.getStr(CommonConstant.USER_NAME);
+                String userNick = jwtPayload.getStr(CommonConstant.USER_NICK);
+                String tenantId = jwtPayload.getStr(CommonConstant.TENANT_KEY);
+                logDTO.setMobile(userName);
+                logDTO.setUserNick(userNick);
+                logDTO.setUserNick(tenantId);
             }
 
 
