@@ -23,7 +23,7 @@ const saveRole = async (data: RoleSaveOrUpdateType): ApiPromise<any> => post({ u
 // 修改角色
 const updateRole = async (data: RoleSaveOrUpdateType): ApiPromise<any> => post({ url: URL.update, data: data });
 // 删除角色
-const deleteRoleByIds = async (ids: string[]): ApiPromise<any> => post({ url: URL.delete, data: { roleIds: ids } });
+const deleteRoleByIds = async (ids: string[]): ApiPromise<any> => post({ url: URL.delete, data: ids });
 // 禁用角色
 const disableRole = async (id: string): ApiPromise<any> => post({ url: URL.disable + id });
 

@@ -198,6 +198,7 @@
       id: data.id,
       roleName: data.roleName,
       roleCode: data.roleCode,
+      remarks: data.remarks,
     };
     dialogTitle.value = '编辑角色';
     dialogVisible.value = true;
