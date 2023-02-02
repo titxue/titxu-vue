@@ -87,9 +87,15 @@
   };
 
   const logout = async () => {
-    await userLogout();
+    userLogout()
+      .then(() => {
+        router.push('/login');
+        ElMessage.success('退出登陆成功');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     // router.push('/login');
-    ElMessage.success('退出登陆成功');
   };
 
   let getImgSrc = () => {

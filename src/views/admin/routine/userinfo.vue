@@ -35,10 +35,10 @@
             <div class="pagination-centent">
               <el-pagination
                 v-model:current-page="currPage"
-                :page-size="pageSize"
-                :pageCount="totalPage"
+                :page-size="page.pageSize"
+                :pageCount="page.totalPage"
                 layout="total, prev, pager, next"
-                :total="totalCount"
+                :total="page.totalCount"
               />
             </div>
           </div>
@@ -64,7 +64,7 @@
   const { userInfo } = toRefs(userStore);
   const { setLogList } = logStore;
   const { logList, page } = toRefs(logStore);
-  const { currPage, pageSize, totalCount, totalPage } = toRefs(page.value);
+  const { currPage } = toRefs(page.value);
 
   const fieldList = ref(routineForm.userinfo);
   // const userInfo = ref<Record<string, string>>();

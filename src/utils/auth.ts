@@ -34,4 +34,8 @@ const setRefreshToken = (token: string) => {
 const clearRefreshToken = () => {
   localStorage.removeItem(RefreshTokenKey);
 };
-export { TokenPrefix, isLogin, getToken, setToken, clearToken, getRefreshToken, setRefreshToken, clearRefreshToken };
+const removeToken = () => {
+  localStorage.removeItem(AccessToken);
+  localStorage.removeItem(RefreshTokenKey);
+};
+export { TokenPrefix, isLogin, getToken, setToken, clearToken, getRefreshToken, setRefreshToken, clearRefreshToken, removeToken };
