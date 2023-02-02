@@ -2,7 +2,7 @@
   <el-aside width="210px">
     <el-menu class="el-menu-vertical-demo" default-active="sys" @open="handleOpen" @close="handleClose">
       <h3>{{ false ? '后台' : '后台管理' }}</h3>
-      <el-menu-item :index="item.menuUrl + ''" v-for="item in noChildern()" :key="item.id" @click="handleClick(item)">
+      <el-menu-item :index="item.menuUrl + ''" v-for="item in noChildern()" :key="item.id" @click="handleClick">
         <component class="icons" :is="item.menuIcon" />
         <!-- <template #title>{{item.label}}</template> -->
         <span>{{ item.permissionName }}</span>
@@ -13,7 +13,7 @@
           <span>{{ item.permissionName }}</span>
         </template>
         <el-menu-item-group v-for="subItem in item.subList" :index="subItem.menuUrl + ''" :key="subItem.id">
-          <el-menu-item :index="item.menuUrl + '/' + subItem.menuUrl" @click="handleClick(subItem)">
+          <el-menu-item :index="item.menuUrl + '/' + subItem.menuUrl" @click="handleClick">
             <component class="icons" :is="subItem.menuIcon" />
             <span>{{ subItem.permissionName }}</span>
           </el-menu-item>
@@ -24,6 +24,7 @@
 </template>
 
 <script setup lang="ts">
+  import { MenuItemRegistered } from 'element-plus/es/components/menu/src/types';
   import { usePermissionStore } from '/@/store';
 
   const router = useRouter();
@@ -40,10 +41,8 @@
     console.log(key, keyPath);
   };
 
-  const handleClick = (item: any) => {
-    // console.log('router', router.getRoutes());
-    router.push('/admin/' + item.menuUrl);
-    route.meta.title = `${item.parentName}-${item.permissionName}`;
+  const handleClick = (menuItem: MenuItemRegistered) => {
+    router.push('/admin/' + menuItem.index);
   };
 
   // 返回没有子菜单的菜单项
@@ -57,6 +56,7 @@
   };
   // 获取权限菜单
   const initPermission = async () => {
+    route.meta.title = `后台管理`;
     await setNavList();
     // console.log('permissionStore', permissionStore.menuList);
   };

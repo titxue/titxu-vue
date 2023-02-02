@@ -83,7 +83,7 @@
       }
       if (item.field === 'menuUrl') {
         if (row.permissionType === '0') {
-          item.disabled = true;
+          item.disabled = false;
           item.placeholder = '目录不需要填写';
         } else {
           item.disabled = false;
