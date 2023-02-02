@@ -46,6 +46,7 @@
   import { UserInfoType } from '/@/api/user/types';
   import { userDialog } from '/@/config/dialog';
   import { Refresh } from '@element-plus/icons-vue';
+  import { setPaginationOptions } from '/@/utils/index';
   const router = useRouter();
   const route = useRoute();
 
@@ -174,10 +175,10 @@
     { prop: 'userNick', label: '名字' },
     // 日期使用render函数格式化
     {
-      prop: 'createdTime',
-      label: '创建日期',
+      prop: 'updatedTime',
+      label: '更新日期',
       headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}`),
-      render: ({ row }: Record<string, UserInfoType>) => h('span', dayjs(row.createdTime).format('YYYY-MM-DD HH:mm')),
+      render: ({ row }: Record<string, UserInfoType>) => h('span', dayjs(row.updatedTime).format('YYYY-MM-DD HH:mm')),
     },
     { prop: 'mobile', label: '手机号' },
     { prop: 'email', label: '邮箱' },
@@ -266,11 +267,7 @@
           limit: Number(pageSize) || pagingArguments.value.limit,
         });
         const result = await list(pagingArguments.value);
-        state.options.paginationConfig = {
-          currentPage: result.currPage,
-          pageSize: result.pageSize,
-          total: result.totalCount,
-        };
+        setPaginationOptions(result, state.options);
       } catch (error) {
         console.log('watch', error);
       }

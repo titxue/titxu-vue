@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
 import { getUserList, updateUser, deleteUser, disableUser, getUserInfoById, getUserInfo, saveUserInfo } from '/@/api/user/index';
-import { PageUserInfoType, UserInfoType } from '/@/api/user/types';
+import { UserInfoType } from '/@/api/user/types';
 import { UserStoreType } from './types';
-import { PagingArgumentsType } from '/@/api/types';
+import { PageResultType, PagingArgumentsType } from '/@/api/types';
 
 export const useUserStore = defineStore('user', {
   state: (): UserStoreType => ({
     userInfo: {} as UserInfoType,
-    userInfoList: {} as PageUserInfoType,
+    userInfoList: {} as PageResultType<UserInfoType>,
     userInfoById: {} as UserInfoType,
     pagingArguments: {
       page: 1,
@@ -21,7 +21,7 @@ export const useUserStore = defineStore('user', {
     },
 
     // 获取用户信息列表
-    getUserInfoList(state: UserStoreType): PageUserInfoType {
+    getUserInfoList(state: UserStoreType): PageResultType<UserInfoType> {
       return state.userInfoList;
     },
     // 获取用户信息
@@ -35,7 +35,7 @@ export const useUserStore = defineStore('user', {
   },
   actions: {
     // 设置用户信息列表
-    setUserInfoList(partial: Partial<PageUserInfoType>) {
+    setUserInfoList(partial: Partial<PageResultType<UserInfoType>>) {
       this.$patch({ userInfoList: partial });
     },
 
@@ -129,7 +129,7 @@ export const useUserStore = defineStore('user', {
       }
     },
     // 获取用户列表
-    async list(params?: PagingArgumentsType): Promise<PageUserInfoType> {
+    async list(params?: PagingArgumentsType): Promise<PageResultType<UserInfoType>> {
       const { code, data } = await getUserList(params);
       if (code !== 0 || !data) {
         return Promise.reject('获取用户列表失败');

@@ -1,6 +1,8 @@
 // import { resolve } from 'path';
 // import fs from 'fs';
 
+import { PageType } from '../store/types';
+
 // function pathResolve(dir: string) {
 //   return resolve(process.cwd(), '.', dir);
 // }
@@ -65,4 +67,13 @@ export function isNumber(val: string) {
   } else {
     return false;
   }
+}
+
+// 设置表格分页options
+export function setPaginationOptions(page: PageType, options: Table.Options) {
+  options.paginationConfig = {
+    currentPage: page.currPage,
+    pageSize: page.pageSize,
+    total: page.totalCount,
+  };
 }

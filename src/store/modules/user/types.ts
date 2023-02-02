@@ -1,9 +1,9 @@
-import { PagingArgumentsType } from '/@/api/types';
-import { PageUserInfoType, UserInfoType } from '/@/api/user/types';
+import { PageResultType, PagingArgumentsType } from '/@/api/types';
+import { UserInfoType } from '/@/api/user/types';
 
 export interface UserStoreType {
   userInfo: UserInfoType;
   userInfoById: UserInfoType;
-  userInfoList: PageUserInfoType;
+  userInfoList: PageResultType<UserInfoType>;
   pagingArguments: PagingArgumentsType;
 }

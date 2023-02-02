@@ -142,3 +142,40 @@ export const menuDialog = {
     },
   ],
 } as Record<string, Form.FieldItem[]>;
+
+// 角色配置示例
+export const roleDialog = {
+  editRole: [
+    {
+      label: '角色名称',
+      field: 'roleName',
+    },
+    {
+      label: '角色编码',
+      field: 'roleCode',
+    },
+    {
+      label: '备注',
+      field: 'remarks',
+    },
+    {
+      label: '权限',
+      field: 'permissionIdList',
+      type: 'checkbox',
+      options: {
+        data: [
+          { label: '目录', value: '0' },
+          { label: '菜单', value: '1' },
+          { label: '按钮', value: '2' },
+        ],
+        multiple: false,
+      },
+    },
+  ],
+  addRole: [
+    {
+      label: '角色编码',
+      field: 'roleCode',
+    },
+  ],
+} as Record<string, Form.FieldItem[]>;

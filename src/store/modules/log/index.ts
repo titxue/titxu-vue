@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
-import { LogStoreType, PageType } from './types';
+import { PageType } from '../../types';
+import { LogStoreType } from './types';
 import { listLogin } from '/@/api/log';
 
 export const useLogStore = defineStore('log', {

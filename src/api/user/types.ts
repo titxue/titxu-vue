@@ -38,13 +38,13 @@ export interface ReqUserCreateParams {
   roleIdList?: string[];
 }
 
-export interface PageUserInfoType {
-  totalCount: number;
-  pageSize: number;
-  totalPage: number;
-  currPage: number;
-  list?: UserInfoType[];
-}
+// export interface PageUserInfoType {
+//   totalCount: number;
+//   pageSize: number;
+//   totalPage: number;
+//   currPage: number;
+//   list?: UserInfoType[];
+// }
 
 export interface ResultOkType {
   msg: string;
