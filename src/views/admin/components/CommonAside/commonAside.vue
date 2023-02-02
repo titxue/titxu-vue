@@ -2,18 +2,18 @@
   <el-aside width="210px">
     <el-menu class="el-menu-vertical-demo" default-active="sys" @open="handleOpen" @close="handleClose">
       <h3>{{ false ? '后台' : '后台管理' }}</h3>
-      <el-menu-item :index="item.id + ''" v-for="item in noChildern()" :key="item.permissionName" @click="handleClick(item)">
+      <el-menu-item :index="item.menuUrl + ''" v-for="item in noChildern()" :key="item.id" @click="handleClick(item)">
         <component class="icons" :is="item.menuIcon" />
         <!-- <template #title>{{item.label}}</template> -->
         <span>{{ item.permissionName }}</span>
       </el-menu-item>
-      <el-sub-menu :index="item.id + ''" v-for="item in hasChildern()" :key="item.permissionName">
+      <el-sub-menu :index="item.menuUrl + ''" v-for="item in hasChildern()" :key="item.id">
         <template #title>
           <component class="icons" :is="item.menuIcon" />
           <span>{{ item.permissionName }}</span>
         </template>
-        <el-menu-item-group v-for="(subItem, subIndex) in item.subList" :index="subItem.menuUrl + ''" :key="subItem.permissionName">
-          <el-menu-item :index="subIndex + ''" @click="handleClick(subItem)">
+        <el-menu-item-group v-for="subItem in item.subList" :index="subItem.menuUrl + ''" :key="subItem.id">
+          <el-menu-item :index="item.menuUrl + '/' + subItem.menuUrl" @click="handleClick(subItem)">
             <component class="icons" :is="subItem.menuIcon" />
             <span>{{ subItem.permissionName }}</span>
           </el-menu-item>
