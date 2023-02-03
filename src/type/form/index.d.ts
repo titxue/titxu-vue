@@ -1,9 +1,10 @@
 declare namespace Form {
-  type ItemType = 'password' | 'text' | 'textarea' | 'radio' | 'checkbox' | 'select';
+  type ItemType = 'password' | 'text' | 'textarea' | 'radio' | 'checkbox' | 'tree' | 'select';
   // 当FiledItem的type === 'radio' | 'checkbox'时，options的参数类型
   interface IFieldOptions {
     labelkey?: string;
     valueKey?: string;
+    childrenKey?: string;
     placeholder?: string;
     data: Recode<string, any>[];
     multiple?: boolean; // 是否多选

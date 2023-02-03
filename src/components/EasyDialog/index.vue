@@ -7,81 +7,96 @@
     :draggable="draggable || true"
     v-bind="_options"
   >
-    <el-form
-      class="px-15 pb-10"
-      @submit.prevent
-      :model="form"
-      ref="formRef"
-      label-position="right"
-      label-width="80px"
-      style="max-width: 100%"
-    >
-      <template v-for="(item, index) in fieldList" :key="index">
-        <!-- 单选框 -->
-        <el-form-item :label="item.label" v-if="item.type === 'radio' && index !== undefined" :rules="item.rules" :prop="[item.field]">
-          <el-radio-group v-model="form[item.field]" :disabled="item.disabled">
-            <el-radio
-              :label="val[item.options?.valueKey || 'value']"
-              size="default"
-              v-for="val in item.options?.data"
-              :key="val[item.options?.valueKey || 'value']"
-              border
-            >
-              {{ val[item.options?.labelkey || 'label'] }}
-            </el-radio>
-          </el-radio-group>
-        </el-form-item>
-        <!-- 复选框 -->
-        <el-form-item :label="item.label" v-else-if="item.type === 'checkbox'" :rules="item.rules" :prop="[item.field]">
-          <el-checkbox-group v-model="form[item.field]" :disabled="item.disabled">
-            <el-checkbox
-              v-for="c in item.options?.data"
-              :key="c[item.options?.valueKey || 'value']"
-              :label="c[item.options?.valueKey || 'value']"
-              >{{ c[item.options?.labelkey || 'label'] }}</el-checkbox
-            >
-          </el-checkbox-group>
-        </el-form-item>
-        <!-- 下拉框 -->
-        <el-form-item :label="item.label" v-else-if="item.type === 'select'" :rules="item.rules" :prop="[item.field]">
-          <!-- <EasySelect
+    <el-scrollbar max-height="400px">
+      <el-form
+        class="px-15 pb-10"
+        @submit.prevent
+        :model="form"
+        ref="formRef"
+        label-position="right"
+        label-width="80px"
+        style="max-width: 100%"
+      >
+        <template v-for="(item, index) in fieldList" :key="index">
+          <!-- 单选框 -->
+          <el-form-item :label="item.label" v-if="item.type === 'radio' && index !== undefined" :rules="item.rules" :prop="[item.field]">
+            <el-radio-group v-model="form[item.field]" :disabled="item.disabled">
+              <el-radio
+                :label="val[item.options?.valueKey || 'value']"
+                size="default"
+                v-for="val in item.options?.data"
+                :key="val[item.options?.valueKey || 'value']"
+                border
+              >
+                {{ val[item.options?.labelkey || 'label'] }}
+              </el-radio>
+            </el-radio-group>
+          </el-form-item>
+          <!-- 复选框 -->
+          <el-form-item :label="item.label" v-else-if="item.type === 'checkbox'" :rules="item.rules" :prop="[item.field]">
+            <el-checkbox-group v-model="form[item.field]" :disabled="item.disabled">
+              <el-checkbox
+                v-for="c in item.options?.data"
+                :key="c[item.options?.valueKey || 'value']"
+                :label="c[item.options?.valueKey || 'value']"
+                >{{ c[item.options?.labelkey || 'label'] }}</el-checkbox
+              >
+            </el-checkbox-group>
+          </el-form-item>
+          <!-- 树形控件 -->
+          <el-form-item :label="item.label" v-else-if="item.type === 'tree'" :rules="item.rules" :prop="[item.field]">
+            <el-tree
+              ref="treeRef"
+              :data="item.options?.data"
+              show-checkbox
+              :node-key="item.options?.valueKey"
+              default-expand-all
+              :default-checked-keys="form[item.field]"
+              :props="{ label: item.options?.labelkey, children: item.options?.childrenKey }"
+            />
+          </el-form-item>
+          <!-- 下拉框 -->
+          <el-form-item :label="item.label" v-else-if="item.type === 'select'" :rules="item.rules" :prop="[item.field]">
+            <!-- <EasySelect
                   v-model="model[item.field]"
                   clearable
                   :disabled="item.disabled"
                   :label-key="item.options?.labelkey"
                   :value-key="item.options?.valueKey"
                   :select-data="item.options?.data" /> -->
-          <el-select
-            v-model="form[item.field]"
-            :multiple="item.options?.multiple === undefined ? true : item.options?.multiple"
-            :placeholder="item.options?.placeholder || '请选择'"
-            :clearable="item.clearable"
-          >
-            <el-option
-              v-for="s in item.options?.data"
-              :key="s[item.options?.valueKey || 'value']"
-              :label="s[item.options?.labelkey || 'label']"
-              :value="s[item.options?.valueKey || 'value']"
+            <el-select
+              v-model="form[item.field]"
+              :multiple="item.options?.multiple === undefined ? true : item.options?.multiple"
+              :placeholder="item.options?.placeholder || '请选择'"
+              :clearable="item.clearable"
+            >
+              <el-option
+                v-for="s in item.options?.data"
+                :key="s[item.options?.valueKey || 'value']"
+                :label="s[item.options?.labelkey || 'label']"
+                :value="s[item.options?.valueKey || 'value']"
+              />
+            </el-select>
+          </el-form-item>
+          <!-- 默认输入框 -->
+          <el-form-item :label="item.label" :rules="item.rules" :prop="[item.field]" v-else>
+            <el-input
+              v-model="form[item.field]"
+              :readonly="item.readonly"
+              :type="item.type ?? 'text'"
+              :placeholder="item.placeholder || item.label"
+              :disabled="item.disabled"
+              :showPassword="item.showPassword"
+              :clearable="item.clearable"
+              @keyup.enter="handleKeyUp(item.enterable)"
             />
-          </el-select>
-        </el-form-item>
-        <!-- 默认输入框 -->
-        <el-form-item :label="item.label" :rules="item.rules" :prop="[item.field]" v-else>
-          <el-input
-            v-model="form[item.field]"
-            :readonly="item.readonly"
-            :type="item.type ?? 'text'"
-            :placeholder="item.placeholder || item.label"
-            :disabled="item.disabled"
-            :showPassword="item.showPassword"
-            :clearable="item.clearable"
-            @keyup.enter="handleKeyUp(item.enterable)"
-          />
-        </el-form-item>
-      </template>
+          </el-form-item>
+        </template>
 
-      <el-form-item />
-    </el-form>
+        <el-form-item />
+      </el-form>
+    </el-scrollbar>
+
     <template #footer>
       <span class="px-15">
         <slot name="buttons" :model="form" :formRef="formRef">
@@ -98,7 +113,7 @@
   </el-dialog>
 </template>
 <script lang="ts" setup>
-  import type { FormInstance } from 'element-plus';
+  import type { ElTree, FormInstance } from 'element-plus';
   import { ComputedRef, ref, computed } from 'vue';
 
   // 父组件传递的值
@@ -125,6 +140,7 @@
   const form = ref<Record<string, any>>({});
   const formRef = ref<FormInstance>();
   const props = defineProps<Props>();
+  const treeRef = ref<InstanceType<typeof ElTree>>();
   // 设置option默认值，如果传入自定义的配置则合并option配置项
   const _options: ComputedRef<Form.Options> = computed(() => {
     const option = {
@@ -217,6 +233,9 @@
   //   position: absolute !important;
   //   bottom: 0;
   // }
+  .example-showcase .el-loading-mask {
+    z-index: 9;
+  }
 
   .el-select {
     width: 100%;

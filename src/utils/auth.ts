@@ -35,7 +35,6 @@ const clearRefreshToken = () => {
   localStorage.removeItem(RefreshTokenKey);
 };
 const removeToken = () => {
-  localStorage.removeItem(AccessToken);
-  localStorage.removeItem(RefreshTokenKey);
+  localStorage.clear();
 };
 export { TokenPrefix, isLogin, getToken, setToken, clearToken, getRefreshToken, setRefreshToken, clearRefreshToken, removeToken };

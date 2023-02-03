@@ -4,7 +4,7 @@ export type RoleType = {
   roleCode: string;
   status: string;
   permissionIdList: string[];
-  remark: string;
+  remarks: string;
   createTime: string;
   createdBy: string;
 };

@@ -4,11 +4,13 @@ import {
   disablePermission,
   getMenu,
   getNav,
+  getPermissionInfo,
   getPermissionList,
+  getPermissionTree,
   savePermission,
   updatePermission,
 } from '/@/api/permission';
-import { MenuStoreType, PermissionStateType } from './types';
+import { MenuStoreType, PermissionStateType, PermissionType } from './types';
 import { MenuType } from '/@/api/permission/types';
 import { tranListToTreeData } from '/@/utils';
 
@@ -18,6 +20,8 @@ export const usePermissionStore = defineStore('permission', {
     parentMenuList: [] as MenuType[],
     menuList: [] as MenuStoreType[],
     permissions: [] as string[],
+    permissionTree: [] as PermissionType[],
+    permissionInfo: {} as any,
   }),
   getters: {
     getPermissions(state: PermissionStateType): string[] {
@@ -63,6 +67,13 @@ export const usePermissionStore = defineStore('permission', {
       const list = data.filter((item: MenuType) => item.permissionType === '0');
       this.$patch({ parentMenuList: list });
     },
+    // 获取权限树
+    async setPermissionTree() {
+      if (this.permissionTree.length !== 0) return;
+      const { code, data } = await getPermissionTree();
+      if (code !== 0) return;
+      this.$patch({ permissionTree: data });
+    },
 
     // 获取导航信息信息
     async setNavList() {
@@ -98,6 +109,12 @@ export const usePermissionStore = defineStore('permission', {
       // 数组转换为树形结构
       const menuList: MenuStoreType[] = tranListToTreeData(data, '0');
       this.$patch({ menuList: menuList });
+    },
+    async setPermissionInfoById(id: string) {
+      const { code, data } = await getPermissionInfo(id);
+      if (code !== 0) return;
+
+      this.$patch({ permissionInfo: data });
     },
     // 禁用菜单
     async disableMenu(id: string): Promise<boolean> {

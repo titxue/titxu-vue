@@ -7,7 +7,24 @@ export interface PermissionStateType {
   menuList: MenuStoreType[];
   permissions: string[];
   parentMenuList: MenuType[];
+  permissionTree: PermissionType[];
+  permissionInfo: any;
 }
+
+export type PermissionType = {
+  id: string;
+  parentId: string;
+  parentName: string;
+  permissionName: string;
+  permissionType: string;
+  permissionLevel: string;
+  permissionCodes: string;
+  menuIcon: string;
+  orderNum: number;
+  menuUrl: string;
+  open: boolean;
+  subList: Array<PermissionType>;
+};
 
 export type MenuStoreType = {
   id: string;

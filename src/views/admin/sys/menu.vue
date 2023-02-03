@@ -4,7 +4,7 @@
       <template #header>
         <ElButton type="success" @click="handleMenuAdd"> 新增菜单 </ElButton>
         <ElButton type="danger" @click="refreshTable"> 刷新权限 </ElButton>
-        <ElButton type="danger" @click="setRoleList"> 刷新 </ElButton>
+        <ElButton type="danger" @click="setPermissionTree"> 获取权限树 </ElButton>
       </template>
       <Table :columns="tableColumn" :table-data="menuList || []" :options="options" />
     </el-card>
@@ -26,15 +26,14 @@
   import { ElButton, ElIcon, ElMessage, ElMessageBox, ElSwitch, ElTag } from 'element-plus';
   import SvgIcon from '/@/components/SvgIcon/index.vue';
   import { resolveDynamicComponent } from 'vue';
-  import { usePermissionStore, useRoleStore } from '/@/store';
+  import { usePermissionStore } from '/@/store';
   import { menuDialog } from '/@/config/dialog';
   import { MenuType } from '/@/api/permission/types';
 
   // 权限状态管理
   const permissionStore = usePermissionStore();
-  const roleStore = useRoleStore();
-  const { setRoleList } = roleStore;
-  const { setMenuList, removePermission, editMenu, addMenu, refreshTable, setParentMenuList, disableMenu } = permissionStore;
+  const { setMenuList, removePermission, editMenu, addMenu, refreshTable, setParentMenuList, disableMenu, setPermissionTree } =
+    permissionStore;
   const { menuList, parentMenuList } = toRefs(permissionStore);
 
   // 用于dialog配置

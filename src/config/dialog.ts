@@ -161,13 +161,12 @@ export const roleDialog = {
     {
       label: '权限',
       field: 'permissionIdList',
-      type: 'checkbox',
+      type: 'tree',
       options: {
-        data: [
-          { label: '目录', value: '0' },
-          { label: '菜单', value: '1' },
-          { label: '按钮', value: '2' },
-        ],
+        labelkey: 'permissionName',
+        valueKey: 'id',
+        childrenKey: 'subList',
+        data: [],
         multiple: false,
       },
     },

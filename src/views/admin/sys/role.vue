@@ -37,36 +37,56 @@
   import { RoleResultType, RoleSaveOrUpdateType } from '/@/api/role/types';
   import { roleDialog } from '/@/config/dialog';
   import { useRoleStore } from '/@/store/modules/role';
+  import { usePermissionStore } from '/@/store/modules/permission';
   import { setPaginationOptions } from '/@/utils/index';
+  // import { PermissionType } from '/@/store/modules/permission/types';
   const router = useRouter();
   const route = useRoute();
 
-  //角色状态管理
+  //状态管理
   const roleStore = useRoleStore();
+  const permissionStore = usePermissionStore();
 
   const { setRoleList, switchRoleStatus, deleteRoleByIds, setPagingArguments, updateRole, addRole, setRoleInfoById } = roleStore;
+  const { setPermissionTree } = permissionStore;
 
   // 响应式数据
-  const { rolePageList, pagingArguments, rolePage } = toRefs(roleStore);
+  const { rolePageList, pagingArguments, rolePage, roleInfo } = toRefs(roleStore);
+  const { permissionTree } = permissionStore;
 
   // 用于dialog配置
   const dialogTitle = ref('');
   const dialogVisible = ref(false);
-  const roleFormData = ref<Record<string, RoleSaveOrUpdateType>>();
+  const roleFormData = ref<Record<string, any>>();
   const roleFieldList = ref(roleDialog.editRole);
+  // 设置dialog的options
+  const setOptions = (field: Form.FieldItem[]) => {
+    field.forEach((item) => {
+      if (item.field === 'permissionIdList') {
+        item.options = {
+          labelkey: 'permissionName',
+          valueKey: 'id',
+          childrenKey: 'subList',
+          // data: JSON.parse(JSON.stringify(permissionTree)) as PermissionType[],
+          data: toRaw(permissionTree),
+        };
+      }
+    });
+  };
 
   const handleRoleSubmit = async (model: Record<string, RoleSaveOrUpdateType>) => {
-    const userInfo = model as unknown as RoleSaveOrUpdateType;
+    const roleInfo = model as unknown as RoleSaveOrUpdateType;
+
     // 编辑用户
     // id不为空则是编辑用户
-    if (userInfo.id !== undefined && userInfo.id !== null) {
+    if (roleInfo.id !== undefined && roleInfo.id !== null) {
       await updateRole(model as unknown as RoleSaveOrUpdateType);
-      ElMessage.success(`编辑${model.userNick}用户成功`);
+      ElMessage.success(`编辑${model.userNick}角色成功`);
     } else {
       // 新增用户
       await addRole(model as unknown as RoleSaveOrUpdateType);
       roleFormData.value = {};
-      ElMessage.success(`新增${model.userNick}用户成功`);
+      ElMessage.success(`新增${model.userNick}角色成功`);
     }
   };
   // 监听子组件dialogVisible变化
@@ -86,6 +106,11 @@
     options: Table.Options;
     optionsDialog: Form.Options;
   }
+  // type PermissionTreeType = {
+  //   id: string;
+  //   label: string;
+  //   children: string;
+  // };
 
   const state = reactive<State>({
     options: { showPagination: true, height: 600 },
@@ -188,20 +213,24 @@
   };
   // 编辑角色
   const handleRenderEdit = async (row: RoleResultType) => {
-    // 设置编辑用户的fieldList
-    roleFieldList.value = roleDialog.editRole;
-    // json数据深拷贝
-    const data = JSON.parse(JSON.stringify(row));
-    await setRoleInfoById(data.id);
-    // 设置编辑角色的formData
-    roleFormData.value = {
-      id: data.id,
-      roleName: data.roleName,
-      roleCode: data.roleCode,
-      remarks: data.remarks,
-    };
+    roleFormData.value = {};
+    roleStore.$patch({
+      roleInfo: {},
+    });
     dialogTitle.value = '编辑角色';
     dialogVisible.value = true;
+
+    // 设置编辑用户的fieldList
+    roleFieldList.value = roleDialog.editRole;
+
+    setOptions(roleFieldList.value);
+    // await setPermissionInfoById(data.id);
+    await setRoleInfoById(row.id);
+
+    // 设置编辑角色的formData
+    roleFormData.value = roleInfo.value;
+
+    console.log('roleInfo', roleFormData.value);
   };
   // 新增角色
   const handleRenderAdd = () => {
@@ -240,6 +269,7 @@
   onMounted(async () => {
     // 获取角色分页列表
     await setRoleList();
+    await setPermissionTree();
     setPaginationOptions(rolePage.value, state.options);
   });
 </script>
