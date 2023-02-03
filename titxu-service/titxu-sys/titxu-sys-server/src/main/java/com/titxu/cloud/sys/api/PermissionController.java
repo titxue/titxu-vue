@@ -55,6 +55,16 @@ public class PermissionController {
     }
 
     /**
+     * 权限树
+     */
+    @Operation(summary = "权限树")
+    @GetMapping("/tree")
+    public Result<List<PermissionDTO>> tree() {
+        List<PermissionDTO> permissionList = permissionQueryService.treeAllPermission();
+        return Result.ok(permissionList);
+    }
+
+    /**
      * 菜单列表
      */
     @Operation(summary = "菜单列表")

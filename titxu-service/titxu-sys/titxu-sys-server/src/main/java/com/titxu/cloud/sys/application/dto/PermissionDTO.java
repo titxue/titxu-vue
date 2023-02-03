@@ -78,7 +78,7 @@ public class PermissionDTO implements Serializable {
     private String menuUrl;
 
     /**
-     * ztree属性
+     * z—tree属性
      */
     private Boolean open;
 

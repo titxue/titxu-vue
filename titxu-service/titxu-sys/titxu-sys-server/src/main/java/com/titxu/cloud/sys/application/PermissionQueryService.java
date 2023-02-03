@@ -17,6 +17,12 @@ public interface PermissionQueryService {
     List<PermissionDTO> listAllPermission();
 
     /**
+     * 权限树
+     * @return 权限树
+     */
+    List<PermissionDTO> treeAllPermission();
+
+    /**
      * 所有菜单（不包括按钮）
      * @return 所有菜单信息列表
      */

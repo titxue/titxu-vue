@@ -34,23 +34,19 @@ public class PermissionQueryServiceImpl implements PermissionQueryService {
 
     @Override
     public List<PermissionDTO> listAllPermission() {
-        List<Permission> permissionList;
-        if (TenantId.PLATFORM_TENANT.equals(TenantContext.getTenantId())) {
-            permissionList = permissionRepository.queryList(new HashMap<>());
-        } else {
-            permissionList = permissionRepository.queryList(new RoleCode(RoleCode.TENANT_ADMIN));
-        }
+        List<Permission> permissionList =getPermissionOrAdminList();
         return PermissionDTOAssembler.getPermissionList(permissionList);
     }
 
     @Override
+    public List<PermissionDTO> treeAllPermission() {
+        List<Permission> permissionList =getPermissionOrAdminList();
+        return PermissionDTOAssembler.getPermissionTree(permissionList);
+    }
+
+    @Override
     public List<PermissionDTO> listAllMenu() {
-        List<Permission> permissionList;
-        if (TenantId.PLATFORM_TENANT.equals(TenantContext.getTenantId())) {
-            permissionList = permissionRepository.queryList(new HashMap<>());
-        } else {
-            permissionList = permissionRepository.queryList(new RoleCode(RoleCode.TENANT_ADMIN));
-        }
+        List<Permission> permissionList =getPermissionOrAdminList();
         return PermissionDTOAssembler.getMenuList(permissionList);
     }
 
@@ -80,6 +76,20 @@ public class PermissionQueryServiceImpl implements PermissionQueryService {
     public Set<String> getPermissionIds(String userId) {
         List<SysPermissionDO> sysPermissionDOList = getSysPermissionDOList(userId);
         return sysPermissionDOList.stream().map(BaseDO::getId).collect(Collectors.toSet());
+    }
+
+    /**
+     * 获取权限列表，管理员获取所有权限
+     * @return permissionList 权限列表
+     */
+    private List<Permission> getPermissionOrAdminList(){
+        List<Permission> permissionList;
+        if (TenantId.PLATFORM_TENANT.equals(TenantContext.getTenantId())) {
+            permissionList = permissionRepository.queryList(new HashMap<>());
+        } else {
+            permissionList = permissionRepository.queryList(new RoleCode(RoleCode.TENANT_ADMIN));
+        }
+        return permissionList;
     }
 
     /**

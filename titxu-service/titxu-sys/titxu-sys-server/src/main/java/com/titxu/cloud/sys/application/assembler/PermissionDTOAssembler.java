@@ -4,8 +4,10 @@ import com.titxu.cloud.sys.application.command.PermissionCommand;
 import com.titxu.cloud.sys.application.dto.PermissionDTO;
 import com.titxu.cloud.sys.domain.model.permission.*;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.lang.NonNull;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Assembler class for the Permission.
@@ -25,6 +27,7 @@ public class PermissionDTOAssembler {
         dto.setPermissionCodes(permission.getPermissionCodes() == null ? null : permission.getPermissionCodes().getCodesString());
         dto.setPermissionLevel(permission.getPermissionLevel() == null ? null : permission.getPermissionLevel().getValue());
         dto.setStatus(permission.getStatus() == null ? null : permission.getStatus().getValue());
+        dto.setOpen(permission.getParent() != null && permission.hasSub());
         return dto;
     }
 
@@ -59,10 +62,7 @@ public class PermissionDTOAssembler {
     }
 
 
-    public static List<PermissionDTO> getPermissionList(final List<Permission> permissionList) {
-        if (permissionList == null) {
-            return null;
-        }
+    public static List<PermissionDTO> getPermissionList(@NonNull final List<Permission> permissionList) {
         final List<PermissionDTO> List = new ArrayList<>();
         for (Permission permission : permissionList) {
             List.add(fromPermission(permission));
@@ -70,10 +70,41 @@ public class PermissionDTOAssembler {
         return List;
     }
 
-    public static List<PermissionDTO> getMenuList(final List<Permission> permissionList) {
-        if (permissionList == null) {
-            return null;
-        }
+    /**
+     * 转换为权限树
+     *
+     * @param permissionList 权限列表
+     * @return 权限树
+     */
+    public static List<PermissionDTO> getPermissionTree(@NonNull final List<Permission> permissionList) {
+        // 权限树
+        return permissionList.stream()
+                // 过滤出根节点
+                .filter(Permission::isRoot)
+                // 为根节点递归添加子节点
+                .map(permission -> covert(permission, permissionList))
+                .toList();
+    }
+
+    /**
+     * 将权限转换为带有子级的权限对象
+     * 当找不到子级权限的时候map操作不会再递归调用covert
+     */
+    private static PermissionDTO covert(Permission permission, List<Permission> permissionList) {
+        // 转换为PermissionDTO
+        PermissionDTO permissionDTO = fromPermission(permission);
+        List<PermissionDTO> children = permissionList.stream()
+                // 父级不为空并且子级父id等于父级id
+                .filter(subPermission -> subPermission.getParent() != null && subPermission.getParent().sameIdentityAs(permission))
+                // 递归子级
+                .map(subPermission -> covert(subPermission, permissionList)).collect(Collectors.toList());
+        permissionDTO.setSubList(children);
+        // 有子节点设置为true
+        permissionDTO.setOpen(permissionDTO.getSubList() != null && !permissionDTO.getSubList().isEmpty());
+        return permissionDTO;
+    }
+
+    public static List<PermissionDTO> getMenuList(@NonNull final List<Permission> permissionList) {
         final List<PermissionDTO> List = new ArrayList<>();
         for (Permission permission : permissionList) {
             if (permission.isMenu()) {

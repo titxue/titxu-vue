@@ -15,7 +15,7 @@ public class Permission implements Entity<Permission> {
     /**
      * id
      */
-    private PermissionId permissionId;
+    private final PermissionId permissionId;
 
     /**
      * 权限名称
@@ -92,17 +92,22 @@ public class Permission implements Entity<Permission> {
 
     /**
      * 是否是菜单
-     *
-     * @return
+     * @return true | false
      */
     public boolean isMenu() {
         return permissionType == PermissionTypeEnum.CATALOG || permissionType == PermissionTypeEnum.MENU;
     }
+    /**
+     * 是否是根节点
+     * @return true | false
+     */
+    public boolean isRoot() {
+        return parent != null && parent.getPermissionId().sameValueAs(new PermissionId(ROOT_ID));
+    }
 
     /**
      * 是否有子权限
-     *
-     * @return
+     * @return true | false
      */
     public boolean hasSub() {
         return subList != null && !subList.isEmpty();
