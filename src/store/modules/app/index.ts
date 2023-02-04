@@ -10,6 +10,13 @@ export const useAppStore = defineStore(
       title: '管理',
       h1: '主页',
       theme: '',
+      cdnUrl: '',
+      upload: {
+        mode: 'local',
+        maxsize: 0,
+        mimetype: '',
+        savename: '',
+      },
     }),
     getters: {},
     actions: {

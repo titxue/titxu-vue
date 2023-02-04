@@ -11,14 +11,12 @@ import 'element-plus/theme-chalk/index.css';
 
 // 支持SVG
 import 'virtual:svg-icons-register';
+import { registerIcons } from '/@/utils/common';
 
 const app = createApp(App);
 
 // 注册所有图标
-import * as ElementPlusIconsVue from '@element-plus/icons-vue';
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-  app.component(key, component);
-}
+registerIcons(app); // icons
 
 app.use(router);
 app.use(piniaStore);

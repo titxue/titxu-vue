@@ -18,3 +18,17 @@ export type MenuType = {
   subList?: Array<MenuType>;
   status: string;
 };
+export type PermissionType = {
+  id: string;
+  parentId: string;
+  parentName: string;
+  permissionName: string;
+  permissionType: string;
+  permissionLevel: string;
+  permissionCodes: string;
+  menuIcon: string;
+  orderNum: number;
+  menuUrl: string;
+  open: boolean;
+  subList: Array<PermissionType>;
+};
