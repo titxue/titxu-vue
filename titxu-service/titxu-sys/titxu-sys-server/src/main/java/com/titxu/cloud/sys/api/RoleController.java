@@ -116,10 +116,10 @@ public class RoleController {
      */
     @Operation(summary = "删除角色")
     @SysLog("删除角色")
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     @PreAuthorize("hasAuthority('sys:role:delete')")
-    public Result<?> delete(@RequestBody String[] roleIds) {
-        roleApplicationService.deleteBatch(Arrays.asList(roleIds));
+    public Result<?> delete(@RequestBody String[] ids) {
+        roleApplicationService.deleteBatch(Arrays.asList(ids));
         return Result.ok();
     }
 

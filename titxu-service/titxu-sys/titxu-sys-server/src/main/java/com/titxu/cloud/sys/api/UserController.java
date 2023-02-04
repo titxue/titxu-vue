@@ -109,8 +109,8 @@ public class UserController {
     @SysLog("删除用户")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('sys:user:delete')")
-    public Result<?> delete(@RequestBody String[] userIds) {
-        userApplicationService.deleteBatch(Arrays.asList(userIds));
+    public Result<?> delete(@RequestBody String[] ids) {
+        userApplicationService.deleteBatch(Arrays.asList(ids));
         return Result.ok();
     }
 
