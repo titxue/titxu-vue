@@ -63,16 +63,7 @@ public class RoleController {
         return Result.ok(list);
     }
 
-    /**
-     * 角色信息
-     */
-    @Operation(summary = "角色信息")
-    @GetMapping("/info/{id}")
-    @PreAuthorize("hasAuthority('sys:role:info')")
-    public Result<RoleDTO> info(@PathVariable("id") String id) {
-        RoleDTO role = roleQueryService.getById(id);
-        return Result.ok(role);
-    }
+
 
     /**
      * 保存角色
@@ -86,7 +77,27 @@ public class RoleController {
         roleApplicationService.saveOrUpdate(roleCommand);
         return Result.ok();
     }
+    /**
+     * 角色信息
+     */
+    @Operation(summary = "角色信息")
+    @GetMapping("/info/{id}")
+    @PreAuthorize("hasAuthority('sys:role:info')")
+    public Result<RoleDTO> info(@PathVariable("id") String id) {
+        RoleDTO role = roleQueryService.getById(id);
+        return Result.ok(role);
+    }
 
+    /**
+     * 更新查询角色信息
+     */
+    @Operation(summary = "更新查询角色信息")
+    @GetMapping("/update")
+    @PreAuthorize("hasAuthority('sys:role:info')")
+    public Result<RoleDTO> updateInfo(@RequestParam("id") String id) {
+        RoleDTO role = roleQueryService.getById(id);
+        return Result.ok(role);
+    }
     /**
      * 修改角色
      */
