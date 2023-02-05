@@ -4,8 +4,8 @@
       <template #header>
         <ElButton type="success" @click="handleRenderAdd"> 新增用户 </ElButton>
         <ElButton type="danger" @click="deleteUserList(deleteUserIdList)"> 删除用户 </ElButton>
-        <ElButton type="info" :icon="Refresh" @click="refreshTable"> 刷新表格 </ElButton>
-        <ElButton type="info" :icon="Refresh" @click="refreshAccessToken"> 刷新Token </ElButton>
+        <ElButton type="info" @click="refreshTable"> 刷新表格 </ElButton>
+        <ElButton type="info" @click="refreshAccessToken"> 刷新Token </ElButton>
       </template>
       <Table
         :columns="tableColumn"
@@ -39,14 +39,13 @@
   </div>
 </template>
 
-<script setup name="ViewsAdminUserUserList" lang="ts">
+<script setup lang="ts">
   import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
   import dayjs from 'dayjs';
   import { useUserStore, useRoleStore, useAuthStore } from '/@/store';
   import { UserInfoType } from '/@/api/user/types';
   import { userDialog } from '/@/config/dialog';
-  import { Refresh } from '@element-plus/icons-vue';
-  import { setPaginationOptions } from '/@/utils/index';
+  import { setPaginationOptions } from '/@/utils';
   const router = useRouter();
   const route = useRoute();
 
@@ -113,7 +112,7 @@
       formData.value = {};
       ElMessage.success(`新增${model.userNick}用户成功`);
     }
-    refreshTable();
+    await refreshTable();
   };
 
   // 编辑用户
@@ -228,7 +227,7 @@
       .then(async () => {
         await deleteUser(new Array(row.id));
         ElMessage.success(`删除${row.userNick}用户成功`);
-        refreshTable();
+        await refreshTable();
       })
       .catch((err) => {
         ElMessage.error(err);
@@ -250,7 +249,7 @@
       .then(async () => {
         await deleteUser(ids);
         ElMessage.success(`删除${ids.length}个用户成功`);
-        refreshTable();
+        await refreshTable();
       })
       .catch((err) => {
         ElMessage.error(err);

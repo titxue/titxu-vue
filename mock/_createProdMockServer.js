@@ -10,4 +10,3 @@ Object.keys(modules).forEach((key) => {
 export function setupProdMockServer() {
   createProdMockServer(mockModules);
 }
-//# sourceMappingURL=_createProdMockServer.js.map

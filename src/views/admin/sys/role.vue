@@ -38,7 +38,7 @@
   import { roleDialog } from '/@/config/dialog';
   import { useRoleStore } from '/@/store/modules/role';
   import { usePermissionStore } from '/@/store/modules/permission';
-  import { setPaginationOptions } from '/@/utils/index';
+  import { setPaginationOptions } from '/@/utils';
   // import { PermissionType } from '/@/store/modules/permission/types';
   const router = useRouter();
   const route = useRoute();

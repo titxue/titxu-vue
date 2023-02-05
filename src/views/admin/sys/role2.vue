@@ -23,11 +23,12 @@
   import { cloneDeep } from 'lodash-es';
   import xTableClass from '/@/utils/xTable';
   import { ADMIN_URL, xTableApi } from '/@/api/common';
-  import { defaultOptButtons } from '/@/components/v1/table';
+  // import { defaultOptButtons } from '/@/components/v1/table/index';
   import RoleForm from './components/roleForm.vue';
   import Table from '/@/components/v1/table/index.vue';
   import TableHeader from '/@/components/v1/table/header/index.vue';
   import { RoleResultType } from '/@/api/role/types';
+  import { defaultOptButtons } from '/@/components/v1/table/index';
 
   const formRef = ref();
   const tableRef = ref();

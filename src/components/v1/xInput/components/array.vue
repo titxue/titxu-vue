@@ -4,7 +4,7 @@
       <el-col :span="10" class="ba-array-key">键名</el-col>
       <el-col :span="10" class="ba-array-value">键值</el-col>
     </el-row>
-    <el-row class="ba-array-item" v-for="(item, idx) in state.value" :gutter="10" :key="idx">
+    <el-row class="ba-array-item" v-for="(item, _idx) in state.value" :gutter="10" :key="_idx">
       <el-col :span="10">
         <el-input v-model="item.key" />
       </el-col>
@@ -12,7 +12,7 @@
         <el-input v-model="item.value" />
       </el-col>
       <el-col :span="4">
-        <el-button @click="onDelArrayItem(idx)" size="small" icon="el-icon-Delete" circle />
+        <el-button @click="onDelArrayItem(_idx)" size="small" icon="el-icon-Delete" circle />
       </el-col>
     </el-row>
     <el-row :gutter="10">
@@ -54,8 +54,8 @@ const onInput = () => {
     // emits('update:modelValue', state.value)
   };
 
-  const onDelArrayItem = (idx: number) => {
-    state.value.splice(idx, 1);
+  const onDelArrayItem = (_idx: number) => {
+    state.value.splice(_idx, 1);
   };
 
   watch(

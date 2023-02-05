@@ -1,9 +1,0 @@
-export const ADMIN_INFO = 'adminInfo';
-export const STORE_CONFIG = 'storeConfig_v2';
-export const STORE_TAB_VIEW_CONFIG = 'storeTabViewConfig';
-export const STORE_TERMINAL = 'storeTerminal';
-export const WORKING_TIME = 'workingTime';
-export const BEFORE_RESIZE_LAYOUT = 'beforeResizeLayout';
-export const USER_INFO = 'userInfo';
-export const BA_ACCOUNT = 'ba_account';
-//# sourceMappingURL=cacheKey.js.map

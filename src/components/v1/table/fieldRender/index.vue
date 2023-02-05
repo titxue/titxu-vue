@@ -21,9 +21,9 @@
   <div v-if="field.render === 'images'" class="ba-render-image">
     <template v-if="Array.isArray(fieldValue) && fieldValue.length">
       <el-image
-        v-for="(item, idx) in fieldValue"
-        :key="idx"
-        :initial-index="idx"
+        v-for="(item, _idx) in fieldValue"
+        :key="_idx"
+        :initial-index="_idx"
         :preview-teleported="true"
         :preview-src-list="arrayFullUrl(fieldValue)"
         class="images-item"
@@ -43,7 +43,7 @@
   <!-- tags -->
   <div v-if="field.render === 'tags'">
     <template v-if="Array.isArray(fieldValue)">
-      <template v-for="(tag, idx) in fieldValue" :key="idx">
+      <template v-for="(tag, _idx) in fieldValue" :key="_idx">
         <el-tag
           v-if="tag"
           class="m-10"
@@ -110,7 +110,7 @@
 
   <!-- 按钮组 -->
   <div v-if="field.render === 'buttons' && field.buttons">
-    <template v-for="(btn, idx) in field.buttons" :key="idx">
+    <template v-for="(btn, _idx) in field.buttons" :key="_idx">
       <template v-if="btn.display ? btn.display(row, field) : true">
         <el-tooltip v-if="btn.render === 'tipButton'" :disabled="!btn.title" :content="btn.title ? btn.title : ''" placement="top">
           <el-button
