@@ -21,13 +21,13 @@
   import CommonAside from './admin/components/CommonAside/commonAside.vue';
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .common-layout {
     height: 100%;
 
     & > .el-container {
       height: 100%;
-      background-color: #f5f5f5;
+      //background-color: #f5f5f5;
 
       & > .el-aside {
         display: flex;

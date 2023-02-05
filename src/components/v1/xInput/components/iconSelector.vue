@@ -196,7 +196,7 @@
   });
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .size-small {
     height: 24px;
   }

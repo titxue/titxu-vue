@@ -44,7 +44,7 @@
   });
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .banner {
     display: flex;
     align-items: center;

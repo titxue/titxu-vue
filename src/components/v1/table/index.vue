@@ -199,7 +199,7 @@
   });
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .ba-data-table :deep(.el-button + .el-button) {
     margin-left: 6px;
   }

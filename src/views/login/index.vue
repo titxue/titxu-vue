@@ -32,7 +32,7 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .container {
     display: flex;
     height: 100vh;

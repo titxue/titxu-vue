@@ -4,7 +4,7 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .tips {
     color: var(--el-text-color-placeholder);
   }

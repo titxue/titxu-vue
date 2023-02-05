@@ -1,3 +1,6 @@
 /dist/*
 /public/*
 public/*
+src/styles/dark.scss
+src/styles/markdown.scss
+src/styles/var.scss

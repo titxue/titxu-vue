@@ -159,10 +159,10 @@
   };
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .table-header {
     position: relative;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     box-sizing: border-box;
     display: flex;
     align-items: center;

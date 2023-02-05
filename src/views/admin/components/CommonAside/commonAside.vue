@@ -66,7 +66,7 @@
   });
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .icons {
     width: 18px;
     height: 18px;
@@ -97,7 +97,7 @@
     border-right: none;
 
     h3 {
-      color: rgb(70, 163, 221);
+      //color: rgb(70, 163, 221);
       text-align: center;
       margin-top: 10px;
     }

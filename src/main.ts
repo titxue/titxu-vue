@@ -2,22 +2,26 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import piniaStore from './store';
-import '/@/styles/index.less';
-import '/@/styles/reset.less';
+import { registerIcons } from '/@/utils/common';
+import 'element-plus/dist/index.css';
+import 'element-plus/theme-chalk/display.css';
+import '/@/styles/index.scss';
 import 'uno.css';
-import '/@/assets/styles/base.less';
-import 'element-plus/es/components/message/style/css'; // 引入样式
-import 'element-plus/theme-chalk/index.css';
 
 // 支持SVG
 import 'virtual:svg-icons-register';
-import { registerIcons } from '/@/utils/common';
+import ElementPlus from 'element-plus';
+import { loadLang } from '/@/lang';
 
 const app = createApp(App);
+app.use(router);
+app.use(piniaStore);
+// 全局语言包加载
+const i18n = await loadLang(app);
 
+app.use(router);
+app.use(ElementPlus, { i18n: i18n.global.t });
 // 注册所有图标
 registerIcons(app); // icons
 
-app.use(router);
-app.use(piniaStore);
 app.mount('#app');

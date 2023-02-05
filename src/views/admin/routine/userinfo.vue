@@ -99,7 +99,7 @@
   });
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .log-card {
     margin-left: 30px;
   }

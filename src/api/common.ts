@@ -13,6 +13,7 @@ export enum ADMIN_URL {
  * 生成一个控制器的：增、删、改、查、排序的操作url
  */
 export class xTableApi {
+  // @ts-ignore
   private controllerUrl: string;
   public actionUrl: Map<string, string>;
 

@@ -1,0 +1,1 @@
+{"version":3,"file":"restart.js","sourceRoot":"","sources":["restart.ts"],"names":[],"mappings":"AAIA,OAAO,WAAW,MAAM,qBAAqB,CAAC;AAC9C,MAAM,CAAC,MAAM,mBAAmB,GAAG,GAAG,EAAE;IACtC,OAAO,WAAW,CAAC;QACjB,OAAO,EAAE,CAAC,gBAAgB,EAAE,mBAAmB,CAAC;KACjD,CAAC,CAAC;AACL,CAAC,CAAC"}

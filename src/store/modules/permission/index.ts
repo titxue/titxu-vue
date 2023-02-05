@@ -10,8 +10,8 @@ import {
   savePermission,
   updatePermission,
 } from '/@/api/permission';
-import { MenuStoreType, PermissionStateType, PermissionType } from './types';
-import { MenuType } from '/@/api/permission/types';
+import { MenuStoreType, PermissionStateType } from './types';
+import { MenuType, PermissionType } from '/@/api/permission/types';
 import { tranListToTreeData } from '/@/utils';
 
 export const usePermissionStore = defineStore('permission', {
@@ -46,14 +46,12 @@ export const usePermissionStore = defineStore('permission', {
     // 编辑菜单
     async editMenu(data: MenuType): Promise<boolean> {
       const { code } = await updatePermission(data);
-      if (code !== 0) return false;
-      return true;
+      return code === 0;
     },
     // 新增菜单
     async addMenu(data: MenuType): Promise<boolean> {
       const { code } = await savePermission(data);
-      if (code !== 0) return false;
-      return true;
+      return code === 0;
     },
     // 获取父目录列表
     async setParentMenuList() {
@@ -92,8 +90,7 @@ export const usePermissionStore = defineStore('permission', {
     },
     async removePermission(id: string): Promise<boolean> {
       const { code } = await deletePermission(id);
-      if (code !== 0) return false;
-      return true;
+      return code === 0;
     },
 
     // 获取菜单信息
@@ -120,7 +117,7 @@ export const usePermissionStore = defineStore('permission', {
     async disableMenu(id: string): Promise<boolean> {
       const { code } = await disablePermission(id);
       if (code !== 0) return false;
-      this.refreshTable();
+      await this.refreshTable();
       return true;
     },
     // 设置权限的信息

@@ -75,7 +75,7 @@
   </header>
 </template>
 
-<style lang="less">
+<style lang="scss">
   .prose {
     color: #334155;
     font-size: 0.875em;

@@ -1,22 +1,33 @@
 <template>
-  <el-config-provider :locale="locale">
+  <el-config-provider :locale="lang">
     <router-view />
   </el-config-provider>
 </template>
 <script setup lang="ts">
-  import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
-  import en from 'element-plus/dist/locale/en.mjs';
+  import { onMounted, watch } from 'vue';
+  import { useI18n } from 'vue-i18n';
+  import iconfontInit from '/@/utils/iconfont';
+  import { useRoute } from 'vue-router';
+  import { setTitleFromRoute } from '/@/utils/common';
+  import { useConfigStore } from '/@/store/modules/config';
 
-  const language = ref('zh-cn');
-  const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en));
+  const config = useConfigStore();
+  const route = useRoute();
+
+  // 初始化 element 的语言包
+  const { getLocaleMessage } = useI18n();
+  const lang = getLocaleMessage(config.lang.defaultLang) as any;
+  onMounted(() => {
+    iconfontInit();
+
+    // Modules onMounted mark, Please do not remove.
+  });
+
+  // 监听路由变化时更新浏览器标题
+  watch(
+    () => route.path,
+    () => {
+      setTitleFromRoute();
+    },
+  );
 </script>
-
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-    background-color: var(--color-bg-1);
-  }
-</style>

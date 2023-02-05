@@ -31,7 +31,7 @@
   });
   const fontSize = reactive({ default: '32px', small: '20px', large: '48px' });
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .svg-icon-spin {
     width: v-bind('fontSize.default');
     height: v-bind('fontSize.default');

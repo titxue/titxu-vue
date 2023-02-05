@@ -130,7 +130,7 @@
   });
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   header {
     height: 50px;
     margin: 20px 16px 0 16px;
@@ -179,7 +179,7 @@
         font-weight: 400;
         letter-spacing: 0;
         line-height: 22px;
-        color: rgba(0, 0, 0, 0.65);
+        //color: rgba(0, 0, 0, 0.65);
         text-align: left;
         vertical-align: top;
       }

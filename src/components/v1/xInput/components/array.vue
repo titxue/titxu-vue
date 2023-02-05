@@ -66,7 +66,7 @@ const onInput = () => {
   );
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .ba-array-key,
   .ba-array-value {
     display: flex;

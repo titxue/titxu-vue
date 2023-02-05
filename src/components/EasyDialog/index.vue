@@ -225,7 +225,7 @@
     }
   });
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
   // ::v-deep(.el-dialog__footer){
   //   width: 100% !important;
   //   box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, .36), 0px 8px 20px rgba(0, 0, 0, .72) !important;

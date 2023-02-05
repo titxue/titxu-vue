@@ -74,7 +74,7 @@
   };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .login-form {
     &-wrapper {
       width: 320px;

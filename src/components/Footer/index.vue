@@ -6,7 +6,7 @@
   import SvgIcon from '/@/components/SvgIcon/index.vue';
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   .footer {
     display: flex;
     align-items: center;

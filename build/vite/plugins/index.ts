@@ -61,6 +61,7 @@ export function createVitePlugins(isBuild: boolean) {
   vitePlugins.push(ConfigMockPlugin(isBuild));
 
   // rollup-plugin-visualizer
+  // @ts-ignore
   vitePlugins.push(ConfigVisualizerConfig());
 
   vitePlugins.push(ConfigImageminPlugin());

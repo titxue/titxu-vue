@@ -159,7 +159,7 @@
   });
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .ba-form-item-label {
     display: inline-block;
 

@@ -297,7 +297,7 @@
   });
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .ba-upload-image :deep(.el-upload--picture-card) {
     display: inline-flex;
     align-items: center;

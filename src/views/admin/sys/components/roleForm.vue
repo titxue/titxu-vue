@@ -160,7 +160,7 @@
   });
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   :deep(.penultimate-node) {
     .el-tree-node__children {
       padding-left: 60px;

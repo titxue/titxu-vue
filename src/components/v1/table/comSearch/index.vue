@@ -187,7 +187,7 @@
   };
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .table-com-search {
     overflow: hidden;
     box-sizing: border-box;

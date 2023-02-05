@@ -259,7 +259,7 @@
   };
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .m-10 {
     margin: 4px;
   }

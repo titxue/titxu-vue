@@ -1,0 +1,13 @@
+export const APP_TITLE = 'titxu admin';
+export const VITE_PORT = 3000;
+export const API_PREFIX = '/api';
+export const API_BASE_URL = '/api';
+export const API_TARGET_URL = 'http://localhost:10000';
+export const MOCK_API_BASE_URL = '/mock/api';
+export const MOCK_API_TARGET_URL = 'http://localhost:3000';
+export const ICONFONTURL = '//at.alicdn.com/t/font_3004192_9jmc1z9neiw.js';
+export const ANALYSIS = true;
+export const MARKDOWN = true;
+export const COMPRESSION = true;
+export const VITE_DROP_CONSOLE = true;
+//# sourceMappingURL=constant.js.map

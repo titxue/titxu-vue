@@ -1,7 +1,12 @@
 module.exports = {
   root: true,
   plugins: ['stylelint-order'],
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-prettier',
+    'stylelint-config-standard-scss',
+    'stylelint-config-recommended-vue/scss',
+  ],
   customSyntax: 'postcss-html',
   rules: {
     'function-no-unknown': null,
@@ -21,7 +26,23 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen', 'function', 'if', 'each', 'include', 'mixin'],
+        ignoreAtRules: [
+          'tailwind',
+          'apply',
+          'variants',
+          'responsive',
+          'screen',
+          'function',
+          'if',
+          'each',
+          'include',
+          'mixin',
+          'use',
+          'extend',
+          'else',
+          'return',
+          '/^!default/',
+        ],
       },
     ],
     'no-empty-source': null,
@@ -81,8 +102,8 @@ module.exports = {
       },
     },
     {
-      files: ['*.less', '**/*.less'],
-      customSyntax: 'postcss-less',
+      files: ['*.scss', '**/*.scss'],
+      customSyntax: 'postcss-scss',
       extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue'],
     },
   ],
