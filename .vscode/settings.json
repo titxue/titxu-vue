@@ -40,7 +40,11 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true
+    "**/.DS_Store": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+      },
+      "**/*.js.map": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
