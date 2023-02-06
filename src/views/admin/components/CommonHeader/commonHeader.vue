@@ -24,11 +24,12 @@
 
 <script setup lang="ts">
   import { ElMessage, TabPaneName } from 'element-plus';
-  import { useUserStore, useAuthStore } from '/@/store';
+  import { useUserStore, useAuthStore, useConfigStore } from '/@/store';
 
   const router = useRouter();
   const authStore = useAuthStore();
   const userStore = useUserStore();
+  const configStore = useConfigStore();
 
   const { userLogout } = authStore;
   const { setUserInfo } = userStore;
@@ -141,7 +142,7 @@
 
   .demo-tabs > .el-tabs__content {
     padding: 32px;
-    color: #ffffff;
+    //color: #ffffff;
     font-size: 32px;
     font-weight: 600;
   }
@@ -151,15 +152,17 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
-    // background-color: #ffffff;
 
     .nav-menus {
-      background-color: #ffffff;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
+      border-radius: var(--el-border-radius-base);
+      box-shadow: var(--el-box-shadow-light);
+      //box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+      //border-radius: 4px;
       display: flex;
       align-items: center;
       height: 100%;
+      background-color: v-bind('configStore.getColorVal("headerBarBackground")');
+      overflow: hidden;
 
       .user {
         width: 24px;

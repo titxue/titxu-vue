@@ -82,11 +82,11 @@
   }
 
   .el-aside {
-    background-color: #ffffff;
+    background: var(--ba-bg-color-overlay);
     margin: 16px 0 16px 16px;
-    // height: calc(100vh - 32px);
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    height: calc(100vh - 32px);
+    box-shadow: var(--el-box-shadow-light);
+    border-radius: var(--el-border-radius-base);
     overflow: hidden;
     transition: width 0.3s ease;
     width: 260px;

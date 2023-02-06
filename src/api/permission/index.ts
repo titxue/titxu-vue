@@ -15,23 +15,23 @@ enum URL {
 }
 
 // 获取导航菜单
-const getNav = async (): ApiPromise<NavListType> => get({ url: URL.nav }, { loading: true });
+const getNav = async (): ApiPromise<NavListType> => get({ url: URL.nav });
 // 所有权限列表
-const getPermissionList = async (): ApiPromise<MenuType[]> => get({ url: URL.list }, { loading: true });
+const getPermissionList = async (): ApiPromise<MenuType[]> => get({ url: URL.list });
 // 所有权限树
-const getPermissionTree = async (): ApiPromise<any> => get({ url: URL.tree }, { loading: true });
+const getPermissionTree = async (): ApiPromise<any> => get({ url: URL.tree });
 // 获取菜单列表
-const getMenu = async (): ApiPromise<MenuType[]> => get({ url: URL.selectMenu }, { loading: true });
+const getMenu = async (): ApiPromise<MenuType[]> => get({ url: URL.selectMenu });
 // 获取权限信息
-const getPermissionInfo = async (id: string): ApiPromise<any> => get({ url: URL.info + id }, { loading: true });
+const getPermissionInfo = async (id: string): ApiPromise<any> => get({ url: URL.info + id });
 // 保存权限
-const savePermission = async (data: any): ApiPromise<any> => post({ url: URL.save, data: data }, { loading: true });
+const savePermission = async (data: any): ApiPromise<any> => post({ url: URL.save, data: data });
 // 修改权限
-const updatePermission = async (data: any): ApiPromise<any> => post({ url: URL.update, data: data }, { loading: true });
+const updatePermission = async (data: any): ApiPromise<any> => post({ url: URL.update, data: data });
 // 删除权限
-const deletePermission = async (id: string): ApiPromise<any> => post({ url: URL.delete + id }, { loading: true });
+const deletePermission = async (id: string): ApiPromise<any> => post({ url: URL.delete + id });
 // 禁用权限
-const disablePermission = async (id: string): ApiPromise<any> => post({ url: URL.disable + id }, { loading: true });
+const disablePermission = async (id: string): ApiPromise<any> => post({ url: URL.disable + id });
 export {
   getNav,
   getPermissionList,

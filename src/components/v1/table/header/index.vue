@@ -168,8 +168,8 @@
     align-items: center;
     width: 100%;
     max-width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #f6f6f6;
+    background-color: var(--ba-bg-color-overlay);
+    border: 1px solid var(--ba-border-color);
     border-bottom: none;
     padding: 13px 15px;
     font-size: 14px;
