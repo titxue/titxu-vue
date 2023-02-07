@@ -23,12 +23,11 @@
   import { cloneDeep } from 'lodash-es';
   import xTableClass from '/@/utils/xTable';
   import { ADMIN_URL, xTableApi } from '/@/api/common';
-  // import { defaultOptButtons } from '/@/components/v1/table/index';
+  import { defaultOptButtons } from '/@/components/v1/table/index';
   import RoleForm from './components/roleForm.vue';
   import Table from '/@/components/v1/table/index.vue';
   import TableHeader from '/@/components/v1/table/header/index.vue';
   import { RoleResultType } from '/@/api/role/types';
-  import { defaultOptButtons } from '/@/components/v1/table/index';
   import { disableRole } from '/@/api/role';
 
   const formRef = ref();
@@ -56,7 +55,9 @@
       ],
     },
     {
-      defaultItems: {},
+      defaultItems: {
+        status: '0',
+      },
     },
     {
       // 提交前
@@ -72,9 +73,10 @@
         // 表单验证通过后执行的api请求操作
         let submitCallback = () => {
           xTable.form.submitLoading = true;
-          if (xTable.form.defaultItems!.status !== item.status) {
+          if (xTable.form.oldItems!.status !== item.status && xTable.form.operate === 'edit') {
             disableRole(item.id);
           }
+
           xTable.api
             .postData(xTable.form.operate!, item)
             .then((res: anyObj) => {

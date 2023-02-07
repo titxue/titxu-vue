@@ -71,6 +71,8 @@ declare global {
     submitLoading?: boolean;
     // 默认表单数据(添加时)
     defaultItems?: anyObj;
+    // 旧表单数据(添加时)
+    oldItems?: anyObj;
     // 表单加载状态
     loading?: boolean;
     // 表单扩展数据，随意定义，以便一些自定义数据可以随baTable实例传递

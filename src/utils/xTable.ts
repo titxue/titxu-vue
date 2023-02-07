@@ -42,6 +42,7 @@ export default class xTable<T> {
     items: {},
     submitLoading: false,
     defaultItems: {},
+    oldItems: {},
     loading: false,
     extend: {},
   });
@@ -132,7 +133,7 @@ export default class xTable<T> {
       .then((res: anyObj) => {
         this.form.items = res.data;
         // 编辑时候默认值直接把res.data赋值
-        this.form.defaultItems = Object.assign({}, res.data);
+        this.form.oldItems = Object.assign({}, res.data);
         this.runAfter('requestEdit', { res });
       })
       .catch((err) => {
@@ -140,6 +141,8 @@ export default class xTable<T> {
         this.runAfter('requestEdit', { err });
       })
       .finally(() => {
+        // 清空旧数据
+        this.form.oldItems = {};
         this.form.loading = false;
       });
   };
