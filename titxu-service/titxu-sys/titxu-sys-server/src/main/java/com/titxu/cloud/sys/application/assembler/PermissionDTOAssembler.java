@@ -85,17 +85,58 @@ public class PermissionDTOAssembler {
                 .map(permission -> covert(permission, permissionList))
                 .toList();
     }
+    /**
+     * 转换为权限树
+     *
+     * @param permissionList 权限列表
+     * @return 权限树
+     */
+    public static List<PermissionDTO> getMenuTree(@NonNull final List<Permission> permissionList) {
+        // 权限树
+        return permissionList.stream()
+                // 过滤出根节点
+                .filter(Permission::isRoot)
+                // 为根节点递归添加子节点
+                .map(permission -> covert(permission, permissionList, true))
+                .toList();
+    }
+    /**
+     * 将权限转换为带有子级的权限对象
+     * 当找不到子级权限的时候map操作不会再递归调用covert
+     * @param permission 权限
+     * @param permissionList 权限列表
+     * @param isMenu 是否是菜单
+     * @return 带有子级的权限对象
+     */
+    private static PermissionDTO covert(Permission permission, List<Permission> permissionList, Boolean isMenu) {
+        isMenu = isMenu != null && isMenu;
+        Boolean finalIsMenu = isMenu;
+        // 转换为PermissionDTO
+        PermissionDTO permissionDTO = fromPermission(permission);
+        List<PermissionDTO> children = permissionList.stream()
+                // 父级不为空并且子级父id等于父级id
+                .filter(subPermission -> subPermission.getParent() != null && subPermission.getParent().sameIdentityAs(permission) && subPermission.isMenu())
+                // 递归子级
+                .map(subPermission -> covert(subPermission, permissionList, finalIsMenu)).collect(Collectors.toList());
+        permissionDTO.setSubList(children);
+        // 有子节点设置为true
+        permissionDTO.setOpen(permissionDTO.getSubList() != null && !permissionDTO.getSubList().isEmpty());
+        return permissionDTO;
+    }
 
     /**
      * 将权限转换为带有子级的权限对象
      * 当找不到子级权限的时候map操作不会再递归调用covert
+     * @param permission 权限
+     * @param permissionList 权限列表
+     * @return 带有子级的权限对象
      */
     private static PermissionDTO covert(Permission permission, List<Permission> permissionList) {
         // 转换为PermissionDTO
         PermissionDTO permissionDTO = fromPermission(permission);
         List<PermissionDTO> children = permissionList.stream()
                 // 父级不为空并且子级父id等于父级id
-                .filter(subPermission -> subPermission.getParent() != null && subPermission.getParent().sameIdentityAs(permission))
+                .filter(subPermission -> subPermission.getParent() != null && subPermission.getParent().sameIdentityAs(permission) && subPermission.isMenu())
                 // 递归子级
                 .map(subPermission -> covert(subPermission, permissionList)).collect(Collectors.toList());
         permissionDTO.setSubList(children);
@@ -103,6 +144,7 @@ public class PermissionDTOAssembler {
         permissionDTO.setOpen(permissionDTO.getSubList() != null && !permissionDTO.getSubList().isEmpty());
         return permissionDTO;
     }
+
 
     public static List<PermissionDTO> getMenuList(@NonNull final List<Permission> permissionList) {
         final List<PermissionDTO> List = new ArrayList<>();

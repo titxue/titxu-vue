@@ -51,6 +51,12 @@ public class PermissionQueryServiceImpl implements PermissionQueryService {
     }
 
     @Override
+    public List<PermissionDTO> treeAllMenu() {
+        List<Permission> permissionList =getPermissionOrAdminList();
+        return PermissionDTOAssembler.getMenuTree(permissionList);
+    }
+
+    @Override
     public PermissionDTO getById(String id) {
         Permission permission = permissionRepository.find(new PermissionId(id));
         return PermissionDTOAssembler.fromPermission(permission);

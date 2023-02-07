@@ -46,11 +46,19 @@ public class PermissionController {
 
     /**
      * 所有权限列表
+     * 默认树形结构
+     * @param isTree 是否树形结构
      */
     @Operation(summary = "所有权限列表")
     @GetMapping("/list")
-    public Result<List<PermissionDTO>> list() {
-        List<PermissionDTO> permissionList = permissionQueryService.listAllPermission();
+    public Result<List<PermissionDTO>> list(@RequestParam(value = "isTree", required = false, defaultValue = "true") Boolean isTree) {
+        List<PermissionDTO> permissionList;
+        if (isTree) {
+            permissionList = permissionQueryService.treeAllMenu();
+        } else {
+            permissionList = permissionQueryService.listAllPermission();
+        }
+
         return Result.ok(permissionList);
     }
 
@@ -97,7 +105,16 @@ public class PermissionController {
         permissionApplicationService.saveOrUpdate(permissionCommand);
         return Result.ok();
     }
-
+    /**
+     * 更新时获取权限信息
+     */
+    @Operation(summary = "根据id查询权限信息")
+    @GetMapping("/update")
+    @PreAuthorize("hasAuthority('sys:permission:info')")
+    public Result<PermissionDTO> updateById(@RequestParam("id") String id) {
+        PermissionDTO permission = permissionQueryService.getById(id);
+        return Result.ok(permission);
+    }
     /**
      * 修改权限
      */
