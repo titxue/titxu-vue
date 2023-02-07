@@ -100,7 +100,7 @@ public class UserQueryServiceImpl implements UserQueryService {
         List<TenantDTO> tenants = new ArrayList<>();
         for (SysUserDO sysUserDO : sysUserDOList) {
             TenantDTO tenantDTO = new TenantDTO();
-            tenantDTO.setTenantId(sysUserDO.getTenantId());
+            tenantDTO.setId(sysUserDO.getTenantId());
             tenantDTO.setTenantCode(sysUserDO.getTenantCode());
             tenantDTO.setTenantName(sysUserDO.getTenantName());
             tenants.add(tenantDTO);

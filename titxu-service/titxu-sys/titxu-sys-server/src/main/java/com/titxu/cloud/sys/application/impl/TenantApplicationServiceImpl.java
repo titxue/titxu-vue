@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.application.impl;
 
+import com.titxu.cloud.common.core.exception.BaseException;
 import com.titxu.cloud.sys.domain.model.tenant.Tenant;
 import com.titxu.cloud.sys.domain.model.tenant.TenantId;
 import com.titxu.cloud.sys.domain.model.tenant.TenantRepository;
@@ -25,7 +26,7 @@ public class TenantApplicationServiceImpl implements TenantApplicationService {
     public void disable(String id) {
         TenantId tenantId = new TenantId(id);
         if (tenantId.isPlatformId()) {
-            throw new RuntimeException("平台租户无法删除");
+            throw new BaseException("系统租户无法修改状态");
         }
         Tenant tenant = tenantRepository.find(tenantId);
         tenant.disable();

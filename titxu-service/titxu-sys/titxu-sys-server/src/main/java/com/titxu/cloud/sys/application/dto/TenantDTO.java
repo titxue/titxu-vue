@@ -13,7 +13,7 @@ public class TenantDTO implements Serializable {
     /**
      * 租户id
      */
-    private String tenantId;
+    private String id;
 
     /**
      * 租户名称
@@ -25,27 +25,11 @@ public class TenantDTO implements Serializable {
      */
     private String tenantCode;
 
-    public String getTenantId() {
-        return tenantId;
-    }
+    /**
+     * 状态
+     */
+    private String status;
 
-    public void setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-    }
 
-    public String getTenantName() {
-        return tenantName;
-    }
 
-    public void setTenantName(String tenantName) {
-        this.tenantName = tenantName;
-    }
-
-    public String getTenantCode() {
-        return tenantCode;
-    }
-
-    public void setTenantCode(String tenantCode) {
-        this.tenantCode = tenantCode;
-    }
 }
