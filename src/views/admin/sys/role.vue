@@ -1,277 +1,120 @@
 <template>
   <div>
-    <el-card>
-      <template #header>
-        <ElButton type="success" @click="handleRenderAdd"> 新增角色 </ElButton>
-        <ElButton type="danger" @click="deleteRoleList(deleteRoleIdList)"> 删除角色 </ElButton>
-      </template>
-      <Table
-        :table-data="rolePageList"
-        :columns="tableColumn"
-        :options="options"
-        @selection-change="handleSelection"
-        @pagination-change="handlePaginationChange"
-      >
-        <!-- 插槽自定义表头  addressHeader就是tableColumn中地址那一列定义的
-                <template #addressHeader="{ column }">
-                    <span>{{ column.label }}(插槽自定义表头)</span>
-                </template> -->
-      </Table>
-    </el-card>
-    <easy-dialog
-      :title="dialogTitle"
-      :fieldList="roleFieldList"
-      :model="roleFormData"
-      @submit="handleRoleSubmit"
-      @update:visible="recorddialogVisible"
-      :visible="dialogVisible"
-      :options="optionsDialog"
-      @cancel="cancelEdit"
-    />
+    <div class="default-main ba-table-box">
+      <el-alert class="ba-table-alert" v-if="xTable.table.remark" :title="xTable.table.remark" type="info" show-icon />
+
+      <!-- 表格顶部菜单 -->
+      <TableHeader
+        :buttons="['refresh', 'add', 'edit', 'delete', 'quickSearch', 'columnDisplay']"
+        quick-search-placeholder="通过角色名称模糊搜索"
+      />
+
+      <!-- 表格 -->
+      <!-- 要使用`el-table`组件原有的属性，直接加在Table标签上即可 -->
+      <Table ref="tableRef" />
+
+      <!-- 表单 -->
+      <RoleForm ref="formRef" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  import dayjs from 'dayjs';
-  import { ElButton, ElMessage, ElMessageBox, ElSwitch, ElTag } from 'element-plus';
-  import { RoleResultType, RoleSaveOrUpdateType } from '/@/api/role/types';
-  import { roleDialog } from '/@/config/dialog';
-  import { useRoleStore } from '/@/store/modules/role';
-  import { usePermissionStore } from '/@/store/modules/permission';
-  import { setPaginationOptions } from '/@/utils';
-  // import { PermissionType } from '/@/store/modules/permission/types';
-  const router = useRouter();
-  const route = useRoute();
+  import { cloneDeep } from 'lodash-es';
+  import xTableClass from '/@/utils/xTable';
+  import { ADMIN_URL, xTableApi } from '/@/api/common';
+  import { defaultOptButtons } from '/@/components/v1/table/index';
+  import RoleForm from './components/roleForm.vue';
+  import Table from '/@/components/v1/table/index.vue';
+  import TableHeader from '/@/components/v1/table/header/index.vue';
+  import { RoleResultType } from '/@/api/role/types';
+  import { disableRole } from '/@/api/role';
 
-  //状态管理
-  const roleStore = useRoleStore();
-  const permissionStore = usePermissionStore();
-
-  const { setRoleList, switchRoleStatus, deleteRoleByIds, setPagingArguments, updateRole, addRole, setRoleInfoById } = roleStore;
-  const { setPermissionTree } = permissionStore;
-
-  // 响应式数据
-  const { rolePageList, pagingArguments, rolePage, roleInfo } = toRefs(roleStore);
-  const { permissionTree } = permissionStore;
-
-  // 用于dialog配置
-  const dialogTitle = ref('');
-  const dialogVisible = ref(false);
-  const roleFormData = ref<Record<string, any>>();
-  const roleFieldList = ref(roleDialog.editRole);
-  // 设置dialog的options
-  const setOptions = (field: Form.FieldItem[]) => {
-    field.forEach((item) => {
-      if (item.field === 'permissionIdList') {
-        item.options = {
-          labelkey: 'permissionName',
-          valueKey: 'id',
-          childrenKey: 'subList',
-          // data: JSON.parse(JSON.stringify(permissionTree)) as PermissionType[],
-          data: toRaw(permissionTree),
-        };
-      }
-    });
-  };
-
-  const handleRoleSubmit = async (model: Record<string, RoleSaveOrUpdateType>) => {
-    const roleInfo = model as unknown as RoleSaveOrUpdateType;
-
-    // 编辑用户
-    // id不为空则是编辑用户
-    if (roleInfo.id !== undefined && roleInfo.id !== null) {
-      await updateRole(model as unknown as RoleSaveOrUpdateType);
-      ElMessage.success(`编辑${model.userNick}角色成功`);
-    } else {
-      // 新增用户
-      await addRole(model as unknown as RoleSaveOrUpdateType);
-      roleFormData.value = {};
-      ElMessage.success(`新增${model.userNick}角色成功`);
-    }
-  };
-  // 监听子组件dialogVisible变化
-  const recorddialogVisible = (n: boolean) => {
-    dialogVisible.value = n;
-  };
-  // 取消编辑
-  const cancelEdit = () => {
-    dialogVisible.value = false;
-    ElMessage.warning('取消编辑');
-  };
-
-  // ---------------------------------------表格相关---------------------------------------
-  // import Table from '@/components/Table/index.vue'
-  // 本项目Table组件自动引入，如复制此代码，需根据路径引入Table组件后使用
-  interface State {
-    options: Table.Options;
-    optionsDialog: Form.Options;
-  }
-  // type PermissionTreeType = {
-  //   id: string;
-  //   label: string;
-  //   children: string;
-  // };
-
-  const state = reactive<State>({
-    options: { showPagination: true, height: 600 },
-    optionsDialog: { showCancelButton: true },
-  });
-
-  const { options, optionsDialog } = toRefs(state);
-
-  const tableColumn: Table.Column[] = [
-    { type: 'selection', width: '50' },
-
-    { prop: 'roleName', label: '角色名称' },
-    { prop: 'roleCode', label: '角色编码' },
+  const formRef = ref();
+  const tableRef = ref();
+  const xTable: xTableClass<RoleResultType> = new xTableClass(
+    new xTableApi(ADMIN_URL.role),
     {
-      prop: 'updatedTime',
-      label: '更新日期',
-      width: '155',
-      headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}`),
-      render: ({ row }: Record<string, RoleResultType>) =>
-        h('span', dayjs(row.updatedTime ?? '1111-11-11T11:11:11').format('YYYY-MM-DD HH:mm:ss')),
+      expandAll: true,
+      dblClickNotEditColumn: [undefined],
+      column: [
+        { type: 'selection', align: 'center' },
+        { label: '角色名称', prop: 'roleName', align: 'center', width: '200' },
+        { label: '角色编码', prop: 'roleCode', align: 'center' },
+        {
+          label: '状态',
+          prop: 'status',
+          align: 'center',
+          render: 'tag',
+          custom: { '0': 'success', '1': 'danger' },
+          replaceValue: { '0': '启用', '1': '禁用' },
+        },
+        { label: '更新时间', prop: 'updatedTime', align: 'center', width: '160', render: 'datetime' },
+        { label: '创建时间', prop: 'createdTime', align: 'center', width: '160', render: 'datetime' },
+        { label: '操作', align: 'center', width: '130', render: 'buttons', buttons: defaultOptButtons(['edit', 'delete']) },
+      ],
     },
-    // 状态切换
     {
-      prop: 'status',
-      label: '状态',
-      render: ({ row }: Record<string, RoleResultType>) =>
-        h(
-          ElSwitch,
-          {
-            modelValue: row.status === '0',
-            'onUpdate:modelValue': () => switchRoleStatus(row.id),
-          },
-          { default: () => '' },
-        ),
-    },
-
-    // 按钮使用render函数渲染
-    {
-      width: '140',
-      label: '操作',
-      render: ({ row }: Record<string, RoleResultType>) =>
-        h('div', null, [
-          h(
-            ElButton,
-            {
-              type: 'primary',
-              size: 'small',
-              onClick: () => handleRenderEdit(row),
-            },
-            { default: () => '编辑' },
-          ),
-          h(
-            ElButton,
-            {
-              type: 'danger',
-              size: 'small',
-              onClick: () => handleRenderDelete(row),
-            },
-            { default: () => '删除' },
-          ),
-        ]),
-    },
-  ];
-
-  // 删除用户id列表
-  const deleteRoleIdList = ref<string[]>([]);
-  const handleSelection = (val: RoleResultType[]) => {
-    // console.log('父组件接收的多选数据', val);
-    // 返回id列表
-    deleteRoleIdList.value = val.map((item) => item.id);
-  };
-  // 删除多选
-  const deleteRoleList = async (ids: string[]) => {
-    ElMessageBox.confirm('此操作将永久删除该角色, 是否继续?', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-    })
-      .then(async () => {
-        await deleteRoleByIds(ids);
-        ElMessage.success(`删除${ids.length}个角色成功`);
-      })
-      .catch((err) => {
-        ElMessage.error(err);
-      });
-  };
-  const handleRenderDelete = (row: RoleResultType) => {
-    ElMessageBox.confirm('此操作将永久删除该角色, 是否继续?', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-    })
-      .then(async () => {
-        await deleteRoleByIds(Array.of(row.id));
-        ElMessage.success(`删除${row.roleName}角色成功`);
-      })
-      .catch((err) => {
-        ElMessage.error(err);
-      });
-  };
-  // 编辑角色
-  const handleRenderEdit = async (row: RoleResultType) => {
-    roleFormData.value = {};
-    roleStore.$patch({
-      roleInfo: {},
-    });
-    dialogTitle.value = '编辑角色';
-    dialogVisible.value = true;
-
-    // 设置编辑用户的fieldList
-    roleFieldList.value = roleDialog.editRole;
-
-    setOptions(roleFieldList.value);
-    // await setPermissionInfoById(data.id);
-    await setRoleInfoById(row.id);
-
-    // 设置编辑角色的formData
-    roleFormData.value = roleInfo.value;
-
-    console.log('roleInfo', roleFormData.value);
-  };
-  // 新增角色
-  const handleRenderAdd = () => {
-    roleFormData.value = {};
-    dialogTitle.value = '新增用户';
-    dialogVisible.value = true;
-  };
-  watch(
-    () => route.query,
-    async (newval) => {
-      try {
-        const { page, pageSize } = newval;
-        setPagingArguments({
-          page: Number(page) || pagingArguments.value.page,
-          limit: Number(pageSize) || pagingArguments.value.limit,
-        });
-        await setRoleList(pagingArguments.value);
-        setPaginationOptions(rolePage.value, state.options);
-      } catch (error) {
-        console.log('watch', error);
-      }
-    },
-    { immediate: true },
-  );
-  // pageSize或者currentPage改变触发
-  const handlePaginationChange = (page: number, pageSize: number) => {
-    router.push({
-      path: route.path,
-      query: {
-        page,
-        pageSize,
+      defaultItems: {
+        status: '0',
       },
-    });
-  };
+    },
+    {
+      // 提交前
+      onSubmit: ({ formEl, items }) => {
+        const item = cloneDeep(items);
+        item.permissionIdList = formRef.value.getCheckeds();
 
-  onMounted(async () => {
-    // 获取角色分页列表
-    await setRoleList();
-    await setPermissionTree();
-    setPaginationOptions(rolePage.value, state.options);
+        for (const key in item) {
+          if (item[key] === null) {
+            delete item[key];
+          }
+        }
+        // 表单验证通过后执行的api请求操作
+        let submitCallback = () => {
+          xTable.form.submitLoading = true;
+          if (xTable.form.oldItems!.status !== item.status && xTable.form.operate === 'edit') {
+            disableRole(item.id);
+          }
+
+          xTable.api
+            .postData(xTable.form.operate!, item)
+            .then((res: anyObj) => {
+              xTable.onTableHeaderAction('refresh', {});
+              xTable.form.submitLoading = false;
+              xTable.form.operateIds?.shift();
+              if (xTable.form.operateIds!.length > 0) {
+                xTable.toggleForm('edit', xTable.form.operateIds);
+              } else {
+                xTable.toggleForm();
+              }
+              xTable.runAfter('onSubmit', { res });
+            })
+            .catch(() => {
+              xTable.form.submitLoading = false;
+            });
+        };
+
+        if (formEl) {
+          xTable.form.ref = formEl;
+          formEl.validate((valid) => {
+            if (valid) {
+              submitCallback();
+            }
+          });
+        } else {
+          submitCallback();
+        }
+        return false;
+      },
+    },
+  );
+
+  provide('xTable', xTable);
+
+  onMounted(() => {
+    xTable.table.ref = tableRef.value;
+    xTable.mount();
+    xTable.getIndex();
   });
 </script>
-
-<style lang="scss" scoped></style>

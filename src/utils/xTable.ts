@@ -13,7 +13,7 @@ export default class xTable<T> {
   // API实例
   public api: xTableApi;
 
-  /* 表格状态-s 属性对应含义请查阅 BaTable 的类型定义 */
+  /* 表格状态-s 属性对应含义请查阅 xTable 的类型定义 */
   public table: XTable = reactive({
     ref: undefined,
     pk: 'id',
@@ -33,7 +33,7 @@ export default class xTable<T> {
   });
   /* 表格状态-e */
 
-  /* 表单状态-s 属性对应含义请查阅 BaTableForm 的类型定义 */
+  /* 表单状态-s 属性对应含义请查阅 xTableForm 的类型定义 */
   public form: XTableForm = reactive({
     ref: undefined,
     labelWidth: 160,
@@ -48,10 +48,10 @@ export default class xTable<T> {
   });
   /* 表单状态-e */
 
-  // BaTable前置处理函数列表（前置埋点）
+  // xTable前置处理函数列表（前置埋点）
   public before: XTableBefore;
 
-  // BaTable后置处理函数列表（后置埋点）
+  // xTable后置处理函数列表（后置埋点）
   public after: XTableAfter;
 
   // 通用搜索数据
