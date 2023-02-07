@@ -77,7 +77,7 @@ export default class xTable<T> {
    */
   runBefore(funName: string, args: any = {}) {
     if (this.before && this.before[funName] && typeof this.before[funName] == 'function') {
-      return this.before[funName]!({ ...args }) === false ? false : true;
+      return this.before[funName]!({ ...args }) !== false;
     }
     return true;
   }
@@ -89,7 +89,7 @@ export default class xTable<T> {
    */
   runAfter(funName: string, args: any = {}) {
     if (this.after && this.after[funName] && typeof this.after[funName] == 'function') {
-      return this.after[funName]!({ ...args }) === false ? false : true;
+      return this.after[funName]!({ ...args }) !== false;
     }
     return true;
   }
@@ -97,7 +97,7 @@ export default class xTable<T> {
   /* API请求方法-s */
   // 查看
   getIndex = () => {
-    if (this.runBefore('getIndex') === false) return;
+    if (!this.runBefore('getIndex')) return;
     this.table.loading = true;
     return this.api
       .index(this.table.filter)
@@ -114,7 +114,7 @@ export default class xTable<T> {
   };
   // 删除
   postDel = (ids: string[]) => {
-    if (this.runBefore('postDel', { ids }) === false) return;
+    if (!this.runBefore('postDel', { ids })) return;
     this.api.del(ids).then((res: anyObj) => {
       this.onTableHeaderAction('refresh', {});
       this.runAfter('postDel', { res });
@@ -122,7 +122,7 @@ export default class xTable<T> {
   };
   // 编辑
   requestEdit = (id: string) => {
-    if (this.runBefore('requestEdit', { id }) === false) return;
+    if (!this.runBefore('requestEdit', { id })) return;
     this.form.loading = true;
     this.form.items = {};
     return this.api
@@ -131,6 +131,8 @@ export default class xTable<T> {
       })
       .then((res: anyObj) => {
         this.form.items = res.data;
+        // 编辑时候默认值直接把res.data赋值
+        this.form.defaultItems = Object.assign({}, res.data);
         this.runAfter('requestEdit', { res });
       })
       .catch((err) => {
@@ -150,7 +152,7 @@ export default class xTable<T> {
    */
   onTableDblclick = (row: TableRow, column: TableColumnCtx<TableRow>) => {
     if (!this.table.dblClickNotEditColumn!.includes('all') && !this.table.dblClickNotEditColumn!.includes(column.property)) {
-      if (this.runBefore('onTableDblclick', { row, column }) === false) return;
+      if (!this.runBefore('onTableDblclick', { row, column })) return;
       this.toggleForm('edit', [row[this.table.pk!]]);
       this.runAfter('onTableDblclick', { row, column });
     }
@@ -162,7 +164,7 @@ export default class xTable<T> {
    * @param operateIds 被操作项的数组:add=[],edit=[1,2,...]
    */
   toggleForm = (operate = '', operateIds: string[] = []) => {
-    if (this.runBefore('toggleForm', { operate, operateIds }) === false) return;
+    if (!this.runBefore('toggleForm', { operate, operateIds })) return;
     if (this.form.ref) {
       this.form.ref.resetFields();
     }
@@ -184,7 +186,7 @@ export default class xTable<T> {
    * @param formEl 表单组件ref
    */
   onSubmit = (formEl: InstanceType<typeof ElForm> | undefined = undefined) => {
-    if (this.runBefore('onSubmit', { formEl: formEl, operate: this.form.operate!, items: this.form.items! }) === false) return;
+    if (!this.runBefore('onSubmit', { formEl: formEl, operate: this.form.operate!, items: this.form.items! })) return;
 
     Object.keys(this.form.items!).forEach((item) => {
       if (this.form.items![item] === null) delete this.form.items![item];
@@ -239,7 +241,7 @@ export default class xTable<T> {
    * @param data 携带数据
    */
   onTableAction = (event: string, data: anyObj) => {
-    if (this.runBefore('onTableAction', { event, data }) === false) return;
+    if (!this.runBefore('onTableAction', { event, data })) return;
     const actionFun = new Map([
       [
         'selection-change',
@@ -330,7 +332,7 @@ export default class xTable<T> {
    * @param data 携带数据
    */
   onTableHeaderAction = (event: string, data: anyObj) => {
-    if (this.runBefore('onTableHeaderAction', { event, data }) === false) return;
+    if (!this.runBefore('onTableHeaderAction', { event, data })) return;
     const actionFun = new Map([
       [
         'refresh',
@@ -462,7 +464,7 @@ export default class xTable<T> {
    * 表格初始化
    */
   mount = () => {
-    if (this.runBefore('mount') === false) return;
+    if (!this.runBefore('mount')) return;
 
     // 监听路由变化,响应通用搜索更新
     onBeforeRouteUpdate((to) => {
@@ -516,7 +518,7 @@ export default class xTable<T> {
               form[prop + '-end'] = range[1] ?? '';
             }
           } else if (field[key].operator == 'NULL' || field[key].operator == 'NOT NULL') {
-            form[prop] = queryProp ? true : false;
+            form[prop] = !!queryProp;
           } else if (field[key].render == 'datetime') {
             form[prop + '-default'] = new Date(queryProp);
           } else {

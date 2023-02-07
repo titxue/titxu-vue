@@ -29,6 +29,7 @@
   import TableHeader from '/@/components/v1/table/header/index.vue';
   import { RoleResultType } from '/@/api/role/types';
   import { defaultOptButtons } from '/@/components/v1/table/index';
+  import { disableRole } from '/@/api/role';
 
   const formRef = ref();
   const tableRef = ref();
@@ -55,27 +56,27 @@
       ],
     },
     {
-      defaultItems: {
-        status: '1',
-      },
+      defaultItems: {},
     },
     {
       // 提交前
       onSubmit: ({ formEl, items }) => {
-        var items = cloneDeep(items);
-        items.permissionIdList = formRef.value.getCheckeds();
+        const item = cloneDeep(items);
+        item.permissionIdList = formRef.value.getCheckeds();
 
-        for (const key in items) {
-          if (items[key] === null) {
-            delete items[key];
+        for (const key in item) {
+          if (item[key] === null) {
+            delete item[key];
           }
         }
-
         // 表单验证通过后执行的api请求操作
         let submitCallback = () => {
           xTable.form.submitLoading = true;
+          if (xTable.form.defaultItems!.status !== item.status) {
+            disableRole(item.id);
+          }
           xTable.api
-            .postData(xTable.form.operate!, items)
+            .postData(xTable.form.operate!, item)
             .then((res: anyObj) => {
               xTable.onTableHeaderAction('refresh', {});
               xTable.form.submitLoading = false;

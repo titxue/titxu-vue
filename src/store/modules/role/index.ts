@@ -27,6 +27,12 @@ export const useRoleStore = defineStore('role', {
     },
   },
   actions: {
+    // 设置角色的信息
+    setInfo(partial: Partial<RoleType>) {
+      // 清除缓存
+      this.$patch({ roleInfo: {} });
+      this.$patch({ roleInfo: partial });
+    },
     // 获取角色信息列表
     async setRoleAll() {
       // 如果有缓存直接返回
@@ -90,10 +96,7 @@ export const useRoleStore = defineStore('role', {
       this.setRoleList();
       return true;
     },
-    // 设置权限的信息
-    setInfo(partial: Partial<any>) {
-      this.$patch(partial);
-    },
+
     // 重置权限信息
     resetInfo() {
       this.$reset();

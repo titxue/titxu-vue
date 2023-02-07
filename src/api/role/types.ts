@@ -27,5 +27,6 @@ export type RoleSaveOrUpdateType = {
   roleName: string;
   roleCode: string;
   remarks: string;
+  status: string;
   permissionIdList: string[];
 };
