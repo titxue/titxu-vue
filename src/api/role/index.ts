@@ -17,8 +17,7 @@ const getRoleInfoById = async (id: string): ApiPromise<RoleType> => get({ url: U
 // 获取全部角色列表
 const getRoleAll = async (): ApiPromise<RoleType[]> => get({ url: URL.all });
 // 所有角色分页列表
-const getRoleList = async (params?: PagingArgumentsType): ApiPromise<PageResultType<RoleResultType>> =>
-  get({ url: URL.list, params }, { loading: true });
+const getRoleList = async (params?: PagingArgumentsType): ApiPromise<PageResultType<RoleResultType>> => get({ url: URL.list, params });
 // 保存角色
 const saveRole = async (data: RoleSaveOrUpdateType): ApiPromise<any> => post({ url: URL.save, data: data });
 // 修改角色
