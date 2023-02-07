@@ -109,6 +109,9 @@ public class PermissionDTOAssembler {
      * @return 带有子级的权限对象
      */
     private static PermissionDTO covert(Permission permission, List<Permission> permissionList, Boolean isMenu) {
+        /*
+          递归冗余设计变量
+         */
         isMenu = isMenu != null && isMenu;
         Boolean finalIsMenu = isMenu;
         // 转换为PermissionDTO
