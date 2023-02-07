@@ -50,6 +50,11 @@ public class UserCommand {
     private List<String> roleIdList;
 
     /**
+     * 状态
+     */
+    @Schema(name = "状态")
+    private String status;
+    /**
      * 签名信息
      */
     @Schema(name = "签名信息")

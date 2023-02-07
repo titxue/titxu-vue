@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.application.impl;
 
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.common.core.util.TenantContext;
 import com.titxu.cloud.sys.application.UserApplicationService;
 import com.titxu.cloud.sys.application.assembler.UserDTOAssembler;
@@ -36,7 +37,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
         }
         UserFactory userFactory = new UserFactory(userRepository);
         User user = userFactory.createUser(new Mobile(userCommand.getMobile()), new Email(userCommand.getEmail()), Password.create(Password.DEFAULT),
-                new UserNick(userCommand.getUserNick()), roleIdList, new TenantId(TenantContext.getTenantId()));
+                new UserNick(userCommand.getUserNick()), roleIdList, new TenantId(TenantContext.getTenantId()), StatusEnum.getStatusEnum(userCommand.getStatus()));
         userRepository.store(user);
     }
 

@@ -59,11 +59,11 @@ public class User implements Entity<User> {
         this.remarks = remarks;
     }
 
-    public User(UserNick userNick, Account account, List<RoleId> roleIds) {
+    public User(UserNick userNick, Account account, List<RoleId> roleIds,StatusEnum statusEnum) {
         this.userNick = userNick;
         this.account = account;
         this.roleIds = roleIds;
-        this.status = StatusEnum.ENABLE;
+        this.status = statusEnum;
     }
 
     /**

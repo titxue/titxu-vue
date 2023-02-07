@@ -88,7 +88,15 @@ public class UserController {
         userApplicationService.save(userCommand);
         return Result.ok();
     }
-
+    /**
+     * 更新查询角色信息
+     */
+    @Operation(summary = "更新查询角色信息")
+    @GetMapping("/update")
+    @PreAuthorize("hasAuthority('sys:user:info')")
+    public Result<UserDTO> updateInfo(@RequestParam("id") String id) {
+        return Result.ok(userQueryService.find(id));
+    }
     /**
      * 修改用户
      */
@@ -107,7 +115,7 @@ public class UserController {
      */
     @Operation(summary = "删除用户")
     @SysLog("删除用户")
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     @PreAuthorize("hasAuthority('sys:user:delete')")
     public Result<?> delete(@RequestBody String[] ids) {
         userApplicationService.deleteBatch(Arrays.asList(ids));

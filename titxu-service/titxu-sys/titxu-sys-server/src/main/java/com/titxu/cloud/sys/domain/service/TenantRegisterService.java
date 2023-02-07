@@ -20,13 +20,13 @@ import java.util.Map;
  **/
 public class TenantRegisterService {
 
-    private TenantRepository tenantRepository;
+    private final TenantRepository tenantRepository;
 
-    private RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
-    private PermissionRepository permissionRepository;
+    private final PermissionRepository permissionRepository;
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public TenantRegisterService(TenantRepository tenantRepository, RoleRepository roleRepository, PermissionRepository permissionRepository, UserRepository userRepository) {
         this.tenantRepository = tenantRepository;
@@ -55,7 +55,7 @@ public class TenantRegisterService {
         List<RoleId> roleIdList = new ArrayList<>();
         roleIdList.add(adminRoleId);
         UserFactory userFactory = new UserFactory(userRepository);
-        User user = userFactory.createUser(mobile, null, password, userNick, roleIdList, new TenantId(tenantId.getId()));
+        User user = userFactory.createUser(mobile, null, password, userNick, roleIdList, new TenantId(tenantId.getId()), StatusEnum.ENABLE);
         UserId userId = userRepository.store(user);
         tenant = new Tenant(tenantId, tenantCode, tenantName, StatusEnum.ENABLE, userId);
         tenantRepository.store(tenant);
