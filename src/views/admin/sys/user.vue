@@ -1,292 +1,115 @@
 <template>
-  <div>
-    <el-card>
-      <template #header>
-        <ElButton type="success" @click="handleRenderAdd"> 新增用户 </ElButton>
-        <ElButton type="danger" @click="deleteUserList(deleteUserIdList)"> 删除用户 </ElButton>
-        <ElButton type="info" @click="refreshTable"> 刷新表格 </ElButton>
-        <ElButton type="info" @click="refreshAccessToken"> 刷新Token </ElButton>
-      </template>
-      <Table
-        :columns="tableColumn"
-        :table-data="userInfoList.list || []"
-        :options="options"
-        @pagination-change="handlePaginationChange"
-        @selection-change="handleSelection"
-      >
-        <!-- 插槽自定义表头  addressHeader就是tableColumn中地址那一列定义的
-                <template #addressHeader="{ column }">
-                    <span>{{ column.label }}(插槽自定义表头)</span>
-                </template> -->
-      </Table>
-    </el-card>
+  <div class="default-main ba-table-box">
+    <el-alert class="ba-table-alert" v-if="xTable.table.remark" :title="xTable.table.remark" type="info" show-icon />
 
-    <easy-dialog
-      :title="dialogTitle"
-      :fieldList="fieldList"
-      :model="formData"
-      @submit="handleUserSubmit"
-      @update:visible="recorddialogVisible"
-      :visible="dialogVisible"
-      :options="optionsDialog"
-      @cancel="cancelEdit"
-    >
-      <!-- 如果不使用默认的按钮可以使用插槽自定义内容， 插槽返回的model就是当前表单的数据 -->
-      <!-- <template #buttons="{ model }">
-                  <el-button">提交</el-button>
-              </template> -->
-    </easy-dialog>
+    <!-- 表格顶部菜单 -->
+    <TableHeader
+      :buttons="['refresh', 'add', 'edit', 'delete', 'quickSearch', 'columnDisplay']"
+      quick-search-placeholder="通过角色名称模糊搜索"
+    />
+
+    <!-- 表格 -->
+    <!-- 要使用`el-table`组件原有的属性，直接加在Table标签上即可 -->
+    <Table ref="tableRef" />
+
+    <!-- 表单 -->
+    <UserForm ref="formRef" />
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ElMessageBox, ElMessage, ElTag, ElButton } from 'element-plus';
-  import dayjs from 'dayjs';
-  import { useUserStore, useRoleStore, useAuthStore } from '/@/store';
+  import { cloneDeep } from 'lodash-es';
+  import xTableClass from '/@/utils/xTable';
+  import { ADMIN_URL, xTableApi } from '/@/api/common';
+  import { defaultOptButtons } from '/@/components/v1/table/index';
+  import UserForm from './components/userForm.vue';
+  import Table from '/@/components/v1/table/index.vue';
+  import TableHeader from '/@/components/v1/table/header/index.vue';
   import { UserInfoType } from '/@/api/user/types';
-  import { userDialog } from '/@/config/dialog';
-  import { setPaginationOptions } from '/@/utils';
-  const router = useRouter();
-  const route = useRoute();
 
-  // auth状态管理
-  const authStore = useAuthStore();
-  // user状态管理
-  const userStore = useUserStore();
-  //角色状态管理
-  const roleStore = useRoleStore();
-
-  const { setRoleAll } = roleStore;
-  const { refreshAccessToken } = authStore;
-  const { setUserInfoById, list, editUserInfo, createUser, updateUser, deleteUser, setPagingArguments, refreshTable } = userStore;
-
-  // 响应式数据
-  const { roleList } = toRefs(roleStore);
-  const { userInfoList, userInfoById, pagingArguments } = toRefs(userStore);
-
-  // 删除用户id列表
-  const deleteUserIdList = ref<string[]>([]);
-
-  // 用于dialog配置
-  const dialogTitle = ref('');
-  const dialogVisible = ref(false);
-  const fieldList = ref(userDialog.editUser);
-  const formData = ref<Record<string, any>>();
-  // 监听子组件dialogVisible变化
-  const recorddialogVisible = (n: any) => {
-    dialogVisible.value = n;
-  };
-  // 设置dialog的options
-  const setOptions = (field: Form.FieldItem[]) => {
-    field.forEach((item) => {
-      if (item.field === 'roleIdList') {
-        item.options = {
-          data: roleList.value.map((item) => {
-            return {
-              label: item.roleName,
-              value: item.id,
-            };
-          }),
-        };
-      }
-    });
-  };
-  /**
-   * 注意： model数据模型非必填项，如果仅仅是用于数据收集，model参数可以不用填，表单的submit事件会返回所有搜集的数据对象
-   *       如果是编辑的情况下，页面需要回显数据，则model数据模型必须要填写
-   */
-  const handleUserSubmit = async (model: Record<string, UserInfoType>) => {
-    const userInfo = model as unknown as UserInfoType;
-    // 编辑用户
-    // id不为空则是编辑用户
-    if (userInfo.id !== undefined && userInfo.id !== null) {
-      await updateUser(model as unknown as UserInfoType);
-      // 修改用户状态
-      const currentStatus: string | undefined = userInfoList.value.list?.find((item) => item.id === userInfo.id)?.status;
-      if (!currentStatus) return;
-      await editUserInfo(model as unknown as UserInfoType, currentStatus);
-      ElMessage.success(`编辑${model.userNick}用户成功`);
-    } else {
-      // 新增用户
-      await createUser(model as unknown as UserInfoType);
-      formData.value = {};
-      ElMessage.success(`新增${model.userNick}用户成功`);
-    }
-    await refreshTable();
-  };
-
-  // 编辑用户
-  const handleRenderEdit = async (row: UserInfoType) => {
-    // 设置编辑用户的fieldList
-    fieldList.value = userDialog.editUser;
-    // 设置编辑用户的options
-    setOptions(fieldList.value);
-    dialogTitle.value = '编辑用户';
-    // json数据深拷贝
-    const data = JSON.parse(JSON.stringify(row));
-    // 获取用户信息
-    await setUserInfoById(row.id);
-    data.roleIdList = userInfoById.value.roleIdList;
-    formData.value = data;
-    dialogVisible.value = true;
-  };
-  // 新增用户
-  const handleRenderAdd = () => {
-    // 设置新增用户的fieldList
-    fieldList.value = userDialog.addUser;
-    // 设置新增用户的options
-    setOptions(fieldList.value);
-    formData.value = {};
-    dialogTitle.value = '新增用户';
-    dialogVisible.value = true;
-  };
-  // 取消编辑
-  const cancelEdit = () => {
-    dialogVisible.value = false;
-    ElMessage.warning('取消编辑');
-  };
-
-  // ---------------------------------------表格相关---------------------------------------
-  // import Table from '@/components/Table/index.vue'
-  // 本项目Table组件自动引入，如复制此代码，需根据路径引入Table组件后使用
-  interface State {
-    options: Table.Options;
-    optionsDialog: Form.Options;
-  }
-
-  const state = reactive<State>({
-    options: { showPagination: true, height: 600 },
-    optionsDialog: { showCancelButton: true },
-  });
-
-  const { options, optionsDialog } = toRefs(state);
-
-  const tableColumn: Table.Column[] = [
-    { type: 'selection', width: '50' },
-    // {
-    //   type: 'index',
-    //   width: '50',
-    //   label: 'No.',
-    //   render: ({ row }: Record<string, UserInfoType>) => {
-    //     return h('span', row.id);
-    //   },
-    // },
-    { prop: 'userNick', label: '名字' },
-    // 日期使用render函数格式化
+  const formRef = ref();
+  const tableRef = ref();
+  const xTable: xTableClass<UserInfoType> = new xTableClass(
+    new xTableApi(ADMIN_URL.user),
     {
-      prop: 'updatedTime',
-      label: '更新日期',
-      headerRender: ({ column }) => h(ElTag, { type: 'danger', effect: 'plain' }, () => `${column.label}`),
-      render: ({ row }: Record<string, UserInfoType>) => h('span', dayjs(row.updatedTime).format('YYYY-MM-DD HH:mm')),
+      expandAll: true,
+      dblClickNotEditColumn: [undefined],
+      column: [
+        { type: 'selection', align: 'center' },
+        { label: '用户昵称', prop: 'userNick', align: 'center', width: '150' },
+        { label: '手机号', prop: 'mobile', align: 'center' },
+        { label: '邮箱', prop: 'email', align: 'center' },
+        { label: '租户', prop: 'tenantName', align: 'center' },
+        {
+          label: '状态',
+          prop: 'status',
+          align: 'center',
+          render: 'tag',
+          custom: { '0': 'success', '1': 'danger' },
+          replaceValue: { '0': '启用', '1': '禁用' },
+        },
+        { label: '更新时间', prop: 'updatedTime', align: 'center', width: '160', render: 'datetime' },
+        { label: '创建时间', prop: 'createdTime', align: 'center', width: '160', render: 'datetime' },
+        { label: '操作', align: 'center', width: '130', render: 'buttons', buttons: defaultOptButtons(['edit', 'delete']) },
+      ],
     },
-    { prop: 'mobile', label: '手机号' },
-    { prop: 'email', label: '邮箱' },
     {
-      prop: 'status',
-      label: '状态',
-      render: ({ row }: Record<string, UserInfoType>) => {
-        return h(ElTag, { type: row.status === '0' ? 'success' : 'danger' }, () => (row.status === '0' ? '有效' : '禁用'));
+      defaultItems: {
+        status: '0',
       },
     },
-
-    // 按钮使用render函数渲染
     {
-      width: '140',
-      label: '操作',
-      render: ({ row }: Record<string, UserInfoType>) =>
-        h('div', null, [
-          h(
-            ElButton,
-            {
-              type: 'primary',
-              size: 'small',
-              onClick: () => handleRenderEdit(row),
-            },
-            { default: () => '编辑' },
-          ),
-          h(
-            ElButton,
-            {
-              type: 'danger',
-              size: 'small',
-              onClick: () => handleRenderDelete(row),
-            },
-            { default: () => '删除' },
-          ),
-        ]),
+      // 提交前
+      onSubmit: ({ formEl, items }) => {
+        const item = cloneDeep(items);
+
+        for (const key in item) {
+          if (item[key] === null || item[key].length === 0) {
+            delete item[key];
+          }
+        }
+        // 表单验证通过后执行的api请求操作
+        let submitCallback = () => {
+          xTable.form.submitLoading = true;
+          xTable.api
+            .postData(xTable.form.operate!, item)
+            .then((res: anyObj) => {
+              xTable.onTableHeaderAction('refresh', {});
+              xTable.form.submitLoading = false;
+              xTable.form.operateIds?.shift();
+              if (xTable.form.operateIds!.length > 0) {
+                xTable.toggleForm('edit', xTable.form.operateIds);
+              } else {
+                xTable.toggleForm();
+              }
+              xTable.runAfter('onSubmit', { res });
+            })
+            .catch(() => {
+              xTable.form.submitLoading = false;
+            });
+        };
+
+        if (formEl) {
+          xTable.form.ref = formEl;
+          formEl.validate((valid) => {
+            if (valid) {
+              submitCallback();
+            }
+          });
+        } else {
+          submitCallback();
+        }
+        return false;
+      },
     },
-  ];
-
-  // 删除用户
-  const handleRenderDelete = (row: UserInfoType) => {
-    ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-    })
-      .then(async () => {
-        await deleteUser(new Array(row.id));
-        ElMessage.success(`删除${row.userNick}用户成功`);
-        await refreshTable();
-      })
-      .catch((err) => {
-        ElMessage.error(err);
-      });
-  };
-  const handleSelection = (val: UserInfoType[]) => {
-    // console.log('父组件接收的多选数据', val);
-    // 返回id列表
-    deleteUserIdList.value = val.map((item) => item.id);
-  };
-
-  // 删除多选
-  const deleteUserList = async (ids: string[]) => {
-    ElMessageBox.confirm('此操作将永久删除该用户, 是否继续?', '提示', {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-    })
-      .then(async () => {
-        await deleteUser(ids);
-        ElMessage.success(`删除${ids.length}个用户成功`);
-        await refreshTable();
-      })
-      .catch((err) => {
-        ElMessage.error(err);
-      });
-  };
-
-  watch(
-    () => route.query,
-    async (newval) => {
-      try {
-        const { page, pageSize } = newval;
-        setPagingArguments({
-          page: Number(page) || pagingArguments.value.page,
-          limit: Number(pageSize) || pagingArguments.value.limit,
-        });
-        const result = await list(pagingArguments.value);
-        setPaginationOptions(result, state.options);
-      } catch (error) {
-        console.log('watch', error);
-      }
-    },
-    { immediate: true },
   );
 
-  // pageSize或者currentPage改变触发
-  const handlePaginationChange = (page: number, pageSize: number) => {
-    router.push({
-      path: route.path,
-      query: {
-        page,
-        pageSize,
-      },
-    });
-  };
+  provide('xTable', xTable);
 
-  onMounted(async () => {
-    await setRoleAll();
+  onMounted(() => {
+    xTable.table.ref = tableRef.value;
+    xTable.mount();
+    xTable.getIndex();
   });
 </script>
 

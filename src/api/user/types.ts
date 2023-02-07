@@ -1,3 +1,5 @@
+import { tenantType } from '/@/api/tenant/types';
+
 export interface ReqParams {
   username: string;
   password: string;
@@ -86,9 +88,4 @@ export interface _UserInfoType {
   permissionIds: string[];
   roleIdList: string[];
   tenants: tenantType[];
-}
-export interface tenantType {
-  tenantId: string;
-  tenantName: string;
-  tenantCode: string;
 }
