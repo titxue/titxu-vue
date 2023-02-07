@@ -27,11 +27,13 @@
           v-if="!xTable.form.loading"
         >
           <el-form-item prop="parentName" label="父级菜单">
-            <el-input v-model="xTable.form.items!.parentName" type="string" placeholder="请输入用户昵称" />
+            <el-select v-model="xTable.form.items!.permissionLevel" placeholder="请选择父级菜单" multiple clearable collapse-tags>
+              <el-option v-for="item in state.roleList" :key="item.id" :label="item.roleName" :value="item.id" />
+            </el-select>
           </el-form-item>
 
           <el-form-item prop="permissionName" label="菜单名称">
-            <el-input v-model="xTable.form.items!.permissionName" type="string" placeholder="请输入手机号" />
+            <el-input v-model="xTable.form.items!.permissionName" type="string" placeholder="请输入菜单名称" />
           </el-form-item>
           <el-form-item prop="menuIcon" label="菜单图标">
             <el-input v-model="xTable.form.items!.menuIcon" type="string" placeholder="请输入菜单图标" />
@@ -46,7 +48,7 @@
           </el-form-item>
           <!-- 下拉框 -->
           <el-form-item prop="permissionLevel" label="菜单级别">
-            <el-select v-model="xTable.form.items!.permissionLevel" placeholder="请选择菜单基本" multiple clearable collapse-tags>
+            <el-select v-model="xTable.form.items!.permissionLevel" placeholder="请选择菜单级别" multiple clearable collapse-tags>
               <el-option v-for="item in state.roleList" :key="item.id" :label="item.roleName" :value="item.id" />
             </el-select>
           </el-form-item>
