@@ -61,4 +61,8 @@ public class WebUtils {
     public String getUserName() {
         return getJwtPayload().getStr(CommonConstant.USER_NAME);
     }
+
+    public String getUserNick() {
+        return getJwtPayload().getStr(CommonConstant.USER_NICK);
+    }
 }

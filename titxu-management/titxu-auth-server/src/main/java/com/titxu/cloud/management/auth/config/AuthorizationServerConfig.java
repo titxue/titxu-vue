@@ -216,9 +216,9 @@ public class AuthorizationServerConfig {
                         // token 签名算法
                         .idTokenSignatureAlgorithm(SignatureAlgorithm.RS256)
                         // 授权token过期时间
-                        .accessTokenTimeToLive(Duration.ofSeconds(30 * 60))
+                        .accessTokenTimeToLive(Duration.ofSeconds(60 * 60 * 12))
                         // 刷新token过期时间
-                        .refreshTokenTimeToLive(Duration.ofSeconds(60 * 60))
+                        .refreshTokenTimeToLive(Duration.ofSeconds(60 * 60 * 24 * 7))
                         // 刷新token是否可重复使用
                         .reuseRefreshTokens(false)
                         .build())
@@ -282,7 +282,6 @@ public class AuthorizationServerConfig {
      * JWKSource有助于在应用程序中实现安全的密钥管理，以确保应用程序的安全性。
      *
      * @return JwtEncoder
-     * @throws Exception Exception
      */
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
