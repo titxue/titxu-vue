@@ -17,14 +17,11 @@ import java.util.List;
 
 /**
  * 角色应用服务实现类
- *
-
- 
  **/
 @Service
 public class RoleApplicationServiceImpl implements RoleApplicationService {
 
-    @Autowired
+
     private RoleRepository roleRepository;
 
     @Override
@@ -57,5 +54,10 @@ public class RoleApplicationServiceImpl implements RoleApplicationService {
         roleUpdateSpecification.isSatisfiedBy(role);
         role.disable();
         roleRepository.store(role);
+    }
+
+    @Autowired
+    public void setRoleRepository(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
     }
 }

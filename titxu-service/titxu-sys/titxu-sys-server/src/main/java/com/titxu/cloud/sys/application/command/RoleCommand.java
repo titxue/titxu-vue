@@ -43,6 +43,12 @@ public class RoleCommand {
     private String remarks;
 
     /**
+     * 状态
+     */
+    @Schema(name = "状态")
+    private String status;
+
+    /**
      * 权限
      */
     @Schema(name = "权限")

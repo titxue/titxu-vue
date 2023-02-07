@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.application.assembler;
 
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.domain.model.permission.PermissionId;
 import com.titxu.cloud.sys.domain.model.role.Role;
 import com.titxu.cloud.sys.domain.model.role.RoleCode;
@@ -26,9 +27,7 @@ public class RoleDTOAssembler {
         dto.setRemarks(role.getRemarks());
         if (role.getPermissionIds() != null) {
             List<String> permissionIdList = new ArrayList<>();
-            role.getPermissionIds().forEach(permissionId -> {
-                permissionIdList.add(permissionId.getId());
-            });
+            role.getPermissionIds().forEach(permissionId -> permissionIdList.add(permissionId.getId()));
             dto.setPermissionIdList(permissionIdList);
         }
         dto.setStatus(role.getStatus() == null ? null : role.getStatus().getValue());
@@ -55,8 +54,11 @@ public class RoleDTOAssembler {
                 permissionIdList.add(new PermissionId(permissionId));
             }
         }
-        Role Role = new Role(roleId, roleCode, roleName, roleCommand.getRemarks(), null, permissionIdList);
-        return Role;
+        StatusEnum statusEnum = null;
+        if (roleCommand.getStatus() == null) {
+            statusEnum = StatusEnum.ENABLE;
+        }
+        return new Role(roleId, roleCode, roleName, roleCommand.getRemarks(), statusEnum, permissionIdList);
     }
 
     public static RoleDTO getRoleDTO(final SysRoleDO sysRoleDO) {
