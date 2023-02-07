@@ -4,7 +4,7 @@ import Table from '/@/components/table/index.vue';
 import { TableColumnCtx } from 'element-plus/es/components/table/src/table-column/defaults';
 
 declare global {
-  /* baTable */
+  /* xTable */
   interface XTable {
     // 表格 ref，通常在 页面onMounted 时赋值
     ref?: typeof Table;
@@ -43,7 +43,7 @@ declare global {
     dblClickNotEditColumn?: (string | undefined)[];
     // 是否展开所有子项，树状表格专用属性
     expandAll?: boolean;
-    // 表格扩展数据，随意定义，以便一些自定义数据可以随baTable实例传递
+    // 表格扩展数据，随意定义，以便一些自定义数据可以随xTable实例传递
     extend?: anyObj;
   }
 
@@ -55,7 +55,7 @@ declare global {
     };
   }
 
-  /* baTableForm */
+  /* xTableForm */
   interface XTableForm {
     // 表单ref，实例化表格时通常无需传递
     ref?: InstanceType<typeof ElForm> | undefined;
@@ -75,7 +75,7 @@ declare global {
     oldItems?: anyObj;
     // 表单加载状态
     loading?: boolean;
-    // 表单扩展数据，随意定义，以便一些自定义数据可以随baTable实例传递
+    // 表单扩展数据，随意定义，以便一些自定义数据可以随xTable实例传递
     extend?: anyObj;
   }
 

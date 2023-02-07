@@ -103,8 +103,13 @@ export default class xTable<T> {
     return this.api
       .index(this.table.filter)
       .then((res: ApiResponse<PageResultType<T>>) => {
-        this.table.data = res.data!.list;
-        this.table.total = res.data?.totalCount;
+        if (res.data.list === undefined) {
+          this.table.data = res.data as any;
+          this.table.total = res.data?.totalCount;
+        } else {
+          this.table.data = res.data!.list;
+          this.table.total = res.data?.totalCount;
+        }
 
         // this.table.remark = "表格"
         this.runAfter('getIndex', { res });

@@ -9,6 +9,7 @@ export enum ADMIN_URL {
   user = '/sys/user/',
   role = '/sys/role/',
   tenant = '/sys/tenant/',
+  permission = '/sys/permission/',
 }
 
 /**

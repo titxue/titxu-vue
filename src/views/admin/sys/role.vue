@@ -33,7 +33,6 @@
   const xTable: xTableClass<RoleResultType> = new xTableClass(
     new xTableApi(ADMIN_URL.role),
     {
-      expandAll: true,
       dblClickNotEditColumn: [undefined],
       column: [
         { type: 'selection', align: 'center' },

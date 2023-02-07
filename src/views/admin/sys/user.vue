@@ -32,7 +32,6 @@
   const xTable: xTableClass<UserInfoType> = new xTableClass(
     new xTableApi(ADMIN_URL.user),
     {
-      expandAll: true,
       dblClickNotEditColumn: [undefined],
       column: [
         { type: 'selection', align: 'center' },
