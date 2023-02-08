@@ -71,4 +71,10 @@ public class PermissionCommand {
      */
     @Schema(name = "菜单url")
     private String menuUrl;
+
+    /**
+     * 状态
+     */
+    @Schema(name = "状态")
+    private String status;
 }

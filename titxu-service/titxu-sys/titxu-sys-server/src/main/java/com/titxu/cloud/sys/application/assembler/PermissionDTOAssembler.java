@@ -1,5 +1,6 @@
 package com.titxu.cloud.sys.application.assembler;
 
+import com.titxu.cloud.common.core.domain.StatusEnum;
 import com.titxu.cloud.sys.application.command.PermissionCommand;
 import com.titxu.cloud.sys.application.dto.PermissionDTO;
 import com.titxu.cloud.sys.domain.model.permission.*;
@@ -57,8 +58,12 @@ public class PermissionDTOAssembler {
         if (!StringUtils.isEmpty(permissionCommand.getMenuUrl())) {
             menuUrl = new MenuUrl(permissionCommand.getMenuUrl());
         }
+        StatusEnum status = null;
+        if (permissionCommand.getStatus() != null) {
+            status = StatusEnum.getStatusEnum(permissionCommand.getStatus());
+        }
         return new Permission(permissionId, permissionName, permissionType, permissionLevel, permissionCommand.getMenuIcon(), permissionCodes, permissionCommand.getOrderNum(),
-                menuUrl, parent, null, null);
+                menuUrl, parent, status, null);
     }
 
 
