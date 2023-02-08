@@ -12,10 +12,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -69,9 +66,9 @@ public class LogController {
      * 列表
      */
     @Operation(summary = "分页查询日志")
-    @PostMapping("/list")
+    @GetMapping("/list")
     @PreAuthorize("hasAuthority('sys:log:list')")
-    public Result<Page> list(@RequestBody Map<String, Object> params) {
+    public Result<Page> list(@RequestParam Map<String, Object> params) {
         Page page = logQueryService.queryPage(params);
         return Result.ok(page);
     }
