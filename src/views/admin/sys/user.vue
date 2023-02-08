@@ -4,7 +4,7 @@
 
     <!-- 表格顶部菜单 -->
     <TableHeader
-      :buttons="['refresh', 'add', 'edit', 'delete', 'quickSearch', 'columnDisplay']"
+      :buttons="['refresh', 'add', 'edit', 'delete', 'quickSearch', 'comSearch', 'columnDisplay']"
       quick-search-placeholder="通过角色名称模糊搜索"
     />
 
@@ -34,8 +34,8 @@
     {
       dblClickNotEditColumn: [undefined],
       column: [
-        { type: 'selection', align: 'center' },
-        { label: '用户昵称', prop: 'userNick', align: 'center', width: '150' },
+        { type: 'selection', align: 'center', operator: false },
+        { label: '用户昵称', prop: 'userNick', align: 'center', operator: 'LIKE' },
         { label: '手机号', prop: 'mobile', align: 'center' },
         { label: '邮箱', prop: 'email', align: 'center' },
         { label: '租户', prop: 'tenantName', align: 'center' },

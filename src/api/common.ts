@@ -6,6 +6,7 @@ import createAxios from '../utils/http/axios/axios';
 
 // 角色模块
 export enum ADMIN_URL {
+  log = '/sys/log/',
   user = '/sys/user/',
   role = '/sys/role/',
   tenant = '/sys/tenant/',
