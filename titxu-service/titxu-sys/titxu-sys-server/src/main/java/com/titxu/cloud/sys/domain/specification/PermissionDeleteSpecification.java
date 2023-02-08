@@ -10,7 +10,7 @@ import com.titxu.cloud.sys.domain.model.permission.PermissionRepository;
  **/
 public class PermissionDeleteSpecification extends AbstractSpecification<PermissionId> {
 
-    private PermissionRepository permissionRepository;
+    private final PermissionRepository permissionRepository;
 
     public PermissionDeleteSpecification(PermissionRepository permissionRepository) {
         this.permissionRepository = permissionRepository;

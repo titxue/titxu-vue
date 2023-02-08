@@ -12,47 +12,46 @@ public interface PermissionRepository {
 
     /**
      * 查找菜单
-     *
-     * @param params
-     * @return
+     * @param params 参数
+     * @return List<Permission>
      */
     List<Permission> queryList(Map<String, Object> params);
 
     /**
      * 角色编码获取权限
-     *
-     * @param rolecode
-     * @return
+     * @param rolecode 角色编码
+     * @return List<Permission>
      */
     List<Permission> queryList(RoleCode rolecode);
 
     /**
      * 获取权限
-     *
-     * @param permissionId
-     * @return
+     * @param permissionId 权限id
+     * @return Permission
      */
     Permission find(PermissionId permissionId);
 
     /**
      * 获取权限
-     *
-     * @param permissionName
-     * @return
+     * @param permissionName 权限名称
+     * @return Permission
      */
     Permission find(PermissionName permissionName);
 
     /**
      * 保存
-     *
-     * @param permission
+     * @param permission 权限
      */
     PermissionId store(Permission permission);
 
     /**
      * 删除
-     *
-     * @param permissionId
+     * @param permissionId 权限id
      */
     void remove(PermissionId permissionId);
+    /**
+     * 删除
+     * @param permissionIds 权限id
+     */
+    void remove(List<PermissionId> permissionIds);
 }

@@ -25,7 +25,7 @@ import java.util.Map;
 @Repository
 public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, SysPermissionDO> implements PermissionRepository, IService<SysPermissionDO> {
 
-    @Autowired
+
     private SysRolePermissionMapper sysRolePermissionMapper;
 
     @Override
@@ -56,8 +56,7 @@ public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, S
         if (sysPermissionDO == null) {
             return null;
         }
-        Permission permission = PermissionConverter.toPermission(sysPermissionDO, getParentPermission(sysPermissionDO.getParentId()), getSubPermission(sysPermissionDO.getId()));
-        return permission;
+        return PermissionConverter.toPermission(sysPermissionDO, getParentPermission(sysPermissionDO.getParentId()), getSubPermission(sysPermissionDO.getId()));
     }
 
     @Override
@@ -66,14 +65,12 @@ public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, S
         if (sysPermissionDO == null) {
             return null;
         }
-        Permission permission = PermissionConverter.toPermission(sysPermissionDO, getParentPermission(sysPermissionDO.getParentId()), getSubPermission(sysPermissionDO.getId()));
-        return permission;
+        return PermissionConverter.toPermission(sysPermissionDO, getParentPermission(sysPermissionDO.getParentId()), getSubPermission(sysPermissionDO.getId()));
     }
 
     /**
      * 设置父权限
-     *
-     * @param parentId
+     * @param parentId 父权限id
      */
     private SysPermissionDO getParentPermission(String parentId) {
         SysPermissionDO parent = null;
@@ -85,12 +82,10 @@ public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, S
 
     /**
      * 设置子权限
-     *
-     * @param permissionId
+     * @param permissionId 权限id
      */
     private List<SysPermissionDO> getSubPermission(String permissionId) {
-        List<SysPermissionDO> list = this.list(new QueryWrapper<SysPermissionDO>().eq("parent_id", permissionId));
-        return list;
+        return this.list(new QueryWrapper<SysPermissionDO>().eq("parent_id", permissionId));
     }
 
     @Override
@@ -108,4 +103,16 @@ public class PermissionRepositoryImpl extends ServiceImpl<SysPermissionMapper, S
         sysRolePermissionMapper.deleteByPermissionIds(permissionIds);
     }
 
+    @Override
+    public void remove(List<PermissionId> permissionIds) {
+        // 转换为字符串id集合
+        List<String> ids = permissionIds.stream().map(PermissionId::getId).toList();
+        this.removeByIds(ids);
+        sysRolePermissionMapper.deleteByPermissionIds(ids);
+    }
+
+    @Autowired
+    public void setSysRolePermissionMapper(SysRolePermissionMapper sysRolePermissionMapper) {
+        this.sysRolePermissionMapper = sysRolePermissionMapper;
+    }
 }

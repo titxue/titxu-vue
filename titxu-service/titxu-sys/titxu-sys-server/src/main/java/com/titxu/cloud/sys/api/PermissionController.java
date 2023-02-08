@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -127,9 +128,10 @@ public class PermissionController {
         permissionApplicationService.saveOrUpdate(permissionCommand);
         return Result.ok();
     }
-
     /**
-     * 删除权限
+     * 删除权限 单个删除
+     * @param id 权限id
+     * @return Result
      */
     @Operation(summary = "删除权限")
     @SysLog("删除权限")
@@ -137,6 +139,17 @@ public class PermissionController {
     @PreAuthorize("hasAuthority('sys:permission:delete')")
     public Result<?> delete(@PathVariable("id") String id) {
         permissionApplicationService.delete(id);
+        return Result.ok();
+    }
+    /**
+     * 批量删除权限
+     */
+    @Operation(summary = "删除权限")
+    @SysLog("删除权限")
+    @DeleteMapping("/delete")
+    @PreAuthorize("hasAuthority('sys:permission:delete')")
+    public Result<?> delete(@RequestBody String[] ids) {
+        permissionApplicationService.deleteBatch(Arrays.asList(ids));
         return Result.ok();
     }
 
