@@ -21,7 +21,8 @@ export const usePermissionStore = defineStore('permission', {
     menuList: [] as MenuStoreType[],
     permissions: [] as string[],
     permissionTree: [] as PermissionType[],
-    permissionInfo: {} as any,
+    permissionInfo: {},
+    selectMenu: [] as MenuType[],
   }),
   getters: {
     getPermissions(state: PermissionStateType): string[] {
@@ -92,7 +93,13 @@ export const usePermissionStore = defineStore('permission', {
       const { code } = await deletePermission(id);
       return code === 0;
     },
-
+    // 获取菜单信息列表
+    async setSelectMenu() {
+      if (this.selectMenu.length !== 0) return;
+      const { code, data } = await getMenu();
+      if (code !== 0) return;
+      this.$patch({ selectMenu: data as MenuType[] });
+    },
     // 获取菜单信息
     async setMenuList() {
       if (this.menuList.length !== 0) return;

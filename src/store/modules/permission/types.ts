@@ -9,6 +9,7 @@ export interface PermissionStateType {
   parentMenuList: MenuType[];
   permissionTree: PermissionType[];
   permissionInfo: any;
+  selectMenu: MenuType[];
 }
 
 export type MenuStoreType = {
