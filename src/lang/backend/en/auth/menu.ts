@@ -32,7 +32,7 @@ export default {
   'English name, which does not need to start with `/admin`, such as auth/menu':
     'The English name does not need to start with `/admin`, such as: auth/menu.',
   'Web side component path, please start with /src, such as: /src/views/backend/dashboard':
-    'Please start with /src for web side component paths, such as: /src/views/backend/dashboard.vue',
+    'Please start with /src for web side component paths, such as: /src/views/backend/index.vue',
   'The web side routing path (path) does not need to start with `/admin`, such as auth/menu':
     'The web side routing path (Path) does not need to start with `/admin`, such as: auth/menu.',
   'Use in controller `get_ route_ Remark()` function, which can obtain the value of this field for your own use, such as the banner file of the console':

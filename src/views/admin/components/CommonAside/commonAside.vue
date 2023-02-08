@@ -1,13 +1,13 @@
 <template>
   <el-aside width="210px">
-    <el-menu class="el-menu-vertical-demo" default-active="sys" @open="handleOpen" @close="handleClose">
+    <el-menu class="el-menu-vertical-demo" :default-active="navTabStore.getActiveNav" @open="handleOpen" @close="handleClose">
       <h3>{{ false ? '后台' : '后台管理' }}</h3>
-      <el-menu-item :index="item.menuUrl + ''" v-for="item in noChildern()" :key="item.id" @click="handleClick">
+      <el-menu-item :index="item.menuUrl" v-for="item in noChildern()" :key="item.id" @click="handleClick">
         <Icon class="icons" :name="item.menuIcon" />
         <!-- <template #title>{{item.label}}</template> -->
         <span>{{ item.permissionName }}</span>
       </el-menu-item>
-      <el-sub-menu :index="item.menuUrl + ''" v-for="item in hasChildern()" :key="item.id">
+      <el-sub-menu :index="item.menuUrl" v-for="item in hasChildern()" :key="item.id">
         <template #title>
           <Icon class="icons" :name="item.menuIcon" />
           <span>{{ item.permissionName }}</span>
@@ -25,12 +25,12 @@
 
 <script setup lang="ts">
   import { MenuItemRegistered } from 'element-plus/es/components/menu/src/types';
-  import { usePermissionStore } from '/@/store';
+  import { usePermissionStore, useNavTabStore } from '/@/store';
   import Icon from '/@/components/v1/icon/index.vue';
 
   const router = useRouter();
-  const route = useRoute();
   const permissionStore = usePermissionStore();
+  const navTabStore = useNavTabStore();
 
   const { setNavList } = permissionStore;
   const { navList } = toRefs(permissionStore);
@@ -57,7 +57,7 @@
   };
   // 获取权限菜单
   const initPermission = async () => {
-    route.meta.title = `后台管理`;
+    // route.meta.title = `后台管理`;
     await setNavList();
     // console.log('permissionStore', permissionStore.menuList);
   };

@@ -4,10 +4,13 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { isLogin } from '../utils/auth';
 
-routes.push({
-  path: '/',
-  redirect: '/login',
-});
+// for (const routesKey in routes) {
+//   console.log(routesKey);
+//   if (routes[routesKey] === 'admin') {
+//     routes[routesKey].redirect = '/admin/dashboard';
+//   }
+// }
+
 //导入生成的路由数据
 const router = createRouter({
   history: createWebHashHistory(),
@@ -19,6 +22,12 @@ router.beforeEach(async (_to, _from, next) => {
   NProgress.configure({ showSpinner: false });
 
   NProgress.start();
+
+  // 如果路径是admin，重定向到admin/dashboard
+  if (_to.path === '/admin') {
+    next('/admin/dashboard');
+    return;
+  }
 
   // 白名单
   const whiteList = ['/login', '/'];
@@ -46,11 +55,9 @@ router.beforeEach(async (_to, _from, next) => {
 });
 
 router.afterEach((_to, _from) => {
-  //获取 document.querySelector title = 直接改掉 这么简单
-  // if (_from.meta.title) {
-  //   document.title = _from.meta.title.toString();
-  //   console.log('title', document.title);
-  // }
+  if (_to.path === '/admin/dashboard') {
+    _to.meta.title = '控制台';
+  }
   NProgress.done();
 });
 

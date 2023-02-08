@@ -1,8 +1,8 @@
 <template>
   <el-header class="header">
     <div class="nav-tab">
-      <el-tabs v-model="activeTab" type="card" class="demo-tabs" closable @tab-change="tabChange" @tab-remove="removeTab">
-        <el-tab-pane v-for="item in state.tabList" :key="item.path" :label="item.title" :name="item.path" />
+      <el-tabs v-model="navTabStore.activeTab" type="card" class="demo-tabs" closable @tab-change="tabChange" @tab-remove="removeTab">
+        <el-tab-pane v-for="item in navTabStore.tabList" :key="item.path" :label="item.title" :name="item.path" />
       </el-tabs>
     </div>
     <div class="nav-menus">
@@ -24,39 +24,27 @@
 
 <script setup lang="ts">
   import { ElMessage, TabPaneName } from 'element-plus';
-  import { useUserStore, useAuthStore, useConfigStore, usePermissionStore } from '/@/store';
+  import { useUserStore, useAuthStore, useNavTabStore, usePermissionStore, useConfigStore } from '/@/store';
 
   const router = useRouter();
   const authStore = useAuthStore();
   const userStore = useUserStore();
-  const configStore = useConfigStore();
+  const navTabStore = useNavTabStore();
   const permissionStore = usePermissionStore();
+  const configStore = useConfigStore();
   const { userLogout } = authStore;
   const { setUserInfo } = userStore;
   const { userInfo } = toRefs(userStore);
-
-  interface TabType {
-    title: string;
-    path: string;
-  }
 
   // 跳转到个人信息
   const skipUserInfo = () => {
     router.push('/admin/routine/userinfo');
   };
 
-  // 激活标签页
-  const activeTab = ref('');
-
-  const state: {
-    tabList: TabType[];
-  } = reactive({
-    tabList: [],
-  });
   // 点击标签跳转路由
   const tabChange = (tab: TabPaneName) => {
     router.push(tab as string);
-    activeTab.value = tab as string;
+    navTabStore.activeTab = tab as string;
   };
 
   //添加标签导航
@@ -69,8 +57,8 @@
 
   // 删除标签
   const removeTab = (targetName: string) => {
-    const tabs = state.tabList;
-    let activeName = activeTab.value;
+    const tabs = navTabStore.tabList;
+    let activeName = navTabStore.activeTab;
     if (activeName === targetName) {
       tabs.forEach((tab, index) => {
         if (tab.path === targetName) {
@@ -82,8 +70,8 @@
       });
     }
 
-    activeTab.value = activeName;
-    state.tabList = tabs.filter((tab) => tab.path !== targetName);
+    navTabStore.activeTab = activeName;
+    navTabStore.tabList = tabs.filter((tab) => tab.path !== targetName);
   };
 
   const logout = async () => {
@@ -106,15 +94,15 @@
   };
   //添加标签导航
   function addTab(tab: { title: string; path: string }) {
-    const notTab = state.tabList.findIndex((e) => e.path == tab.path) == -1;
+    const notTab = navTabStore.tabList.findIndex((e) => e.path == tab.path) == -1;
     if (notTab) {
-      state.tabList.push(tab);
+      navTabStore.tabList.push(tab);
     }
   }
 
   //获取路由跳转后的tab数据
   onBeforeRouteUpdate((p) => {
-    activeTab.value = p.path;
+    navTabStore.activeTab = p.path;
     addTab({
       title: p.meta.title as string,
       path: p.path,
@@ -122,7 +110,7 @@
   });
   function setCurrentRoute() {
     const currentRoute = router.currentRoute.value;
-    activeTab.value = currentRoute.path;
+    navTabStore.activeTab = currentRoute.path;
     addTab({
       title: currentRoute.meta.title as string,
       path: currentRoute.path,
@@ -130,7 +118,6 @@
   }
 
   function setRouteMeta() {
-    console.log(router);
     const store = usePermissionStore();
     const routers = router.getRoutes();
     const menuList = store.selectMenu;
@@ -150,8 +137,8 @@
     try {
       await permissionStore.setSelectMenu();
       await setUserInfo();
-      setRouteMeta();
-      setCurrentRoute();
+      await setRouteMeta();
+      await setCurrentRoute();
     } catch (error) {
       // console.log(error);
     }

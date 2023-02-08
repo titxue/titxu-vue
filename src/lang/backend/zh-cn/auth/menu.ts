@@ -31,7 +31,7 @@ export default {
   'Please enter the URL address of the link or iframe': '请输入链接或Iframe的URL地址',
   'English name, which does not need to start with `/admin`, such as auth/menu': '英文名称，无需以`/admin`开头，如:auth/menu',
   'Web side component path, please start with /src, such as: /src/views/backend/dashboard':
-    'web端组件路径，请以/src开头，如:/src/views/backend/dashboard.vue',
+    'web端组件路径，请以/src开头，如:/src/views/backend/index.vue',
   'The web side routing path (path) does not need to start with `/admin`, such as auth/menu':
     'web端路由路径(path)，无需以`/admin`开头，如:auth/menu',
   'Use in controller `get_ route_ Remark()` function, which can obtain the value of this field for your own use, such as the banner file of the console':

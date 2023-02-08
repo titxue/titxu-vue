@@ -37,7 +37,7 @@
         { type: 'selection', align: 'center', operator: false },
         { label: '用户昵称', prop: 'userNick', align: 'center', operator: 'LIKE' },
         { label: '手机号', prop: 'mobile', align: 'center' },
-        { label: '邮箱', prop: 'email', align: 'center' },
+        { label: '邮箱', prop: 'email', align: 'center', width: '150' },
         { label: '租户', prop: 'tenantName', align: 'center' },
         {
           label: '状态',
