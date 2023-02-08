@@ -126,8 +126,10 @@
       if (element.meta.title === undefined) {
         for (let j = 0; j < menuList.length; j++) {
           const menu = menuList[j];
-          if (element.path.includes(menu.menuUrl)) {
+          const path = element.path.split('/');
+          if (path[path.length - 1] === menu.menuUrl) {
             element.meta.title = menu.permissionName;
+            console.log(element.path);
           }
         }
       }
