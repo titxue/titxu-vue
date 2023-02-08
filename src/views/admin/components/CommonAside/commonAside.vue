@@ -3,18 +3,18 @@
     <el-menu class="el-menu-vertical-demo" default-active="sys" @open="handleOpen" @close="handleClose">
       <h3>{{ false ? '后台' : '后台管理' }}</h3>
       <el-menu-item :index="item.menuUrl + ''" v-for="item in noChildern()" :key="item.id" @click="handleClick">
-        <component class="icons" :is="item.menuIcon" />
+        <Icon class="icons" :name="item.menuIcon" />
         <!-- <template #title>{{item.label}}</template> -->
         <span>{{ item.permissionName }}</span>
       </el-menu-item>
       <el-sub-menu :index="item.menuUrl + ''" v-for="item in hasChildern()" :key="item.id">
         <template #title>
-          <component class="icons" :is="item.menuIcon" />
+          <Icon class="icons" :name="item.menuIcon" />
           <span>{{ item.permissionName }}</span>
         </template>
         <el-menu-item-group v-for="subItem in item.subList" :index="subItem.menuUrl + ''" :key="subItem.id">
           <el-menu-item :index="item.menuUrl + '/' + subItem.menuUrl" @click="handleClick">
-            <component class="icons" :is="subItem.menuIcon" />
+            <Icon class="icons" :name="subItem.menuIcon" />
             <span>{{ subItem.permissionName }}</span>
           </el-menu-item>
         </el-menu-item-group>
@@ -26,6 +26,7 @@
 <script setup lang="ts">
   import { MenuItemRegistered } from 'element-plus/es/components/menu/src/types';
   import { usePermissionStore } from '/@/store';
+  import Icon from '/@/components/v1/icon/index.vue';
 
   const router = useRouter();
   const route = useRoute();

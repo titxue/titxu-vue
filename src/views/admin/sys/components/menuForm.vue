@@ -26,9 +26,9 @@
           :label-width="xTable.form.labelWidth + 'px'"
           v-if="!xTable.form.loading"
         >
-          <el-form-item prop="parentName" label="父级菜单">
-            <el-select v-model="xTable.form.items!.permissionLevel" placeholder="请选择父级菜单" multiple clearable collapse-tags>
-              <el-option v-for="item in state.roleList" :key="item.id" :label="item.roleName" :value="item.id" />
+          <el-form-item prop="parentId" label="父级菜单">
+            <el-select v-model="xTable.form.items!.parentId" placeholder="请选择父级菜单">
+              <el-option v-for="item in state.permissionList" :key="item.id" :label="item.permissionName" :value="item.id" />
             </el-select>
           </el-form-item>
 
@@ -42,14 +42,14 @@
             <el-input v-model="xTable.form.items!.menuUrl" type="string" placeholder="请输入菜单URL路径" />
           </el-form-item>
           <el-form-item prop="permissionType" label="菜单类型">
-            <el-select v-model="xTable.form.items!.permissionType" placeholder="请选择菜单类型" multiple clearable collapse-tags>
-              <el-option v-for="item in state.roleList" :key="item.id" :label="item.roleName" :value="item.id" />
+            <el-select v-model="xTable.form.items!.permissionType" placeholder="请选择菜单类型">
+              <el-option v-for="item in state.permissionType" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
           </el-form-item>
           <!-- 下拉框 -->
           <el-form-item prop="permissionLevel" label="菜单级别">
-            <el-select v-model="xTable.form.items!.permissionLevel" placeholder="请选择菜单级别" multiple clearable collapse-tags>
-              <el-option v-for="item in state.roleList" :key="item.id" :label="item.roleName" :value="item.id" />
+            <el-select v-model="xTable.form.items!.permissionLevel" placeholder="请选择菜单级别">
+              <el-option v-for="item in state.permissionLevel" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
           </el-form-item>
           <el-form-item prop="status" label="状态">
@@ -74,23 +74,32 @@
 
 <script setup lang="ts">
   import type xTableClass from '/@/utils/xTable';
-  import type { ElForm } from 'element-plus';
-  import { getRoleAll } from '/@/api/role';
-  import { RoleType } from '/@/api/role/types';
-  import { UserInfoType } from '/@/api/user/types';
-
+  import type { ElForm, ElSelect } from 'element-plus';
+  import { MenuType, PermissionType } from '/@/api/permission/types';
+  import { getMenu } from '/@/api/permission';
   const formRef = ref<InstanceType<typeof ElForm>>();
-  const xTable = inject('xTable') as xTableClass<UserInfoType>;
+  const xTable = inject('xTable') as xTableClass<PermissionType>;
 
   const state: {
-    roleList: RoleType[];
+    permissionList: anyObj[];
+    permissionLevel: InstanceType<typeof ElSelect.Option>[];
+    permissionType: InstanceType<typeof ElSelect.Option>[];
   } = reactive({
-    roleList: [],
+    permissionList: [],
+    permissionType: [
+      { label: '目录', value: '0' },
+      { label: '菜单', value: '1' },
+      { label: '按钮', value: '2' },
+    ],
+    permissionLevel: [
+      { label: '系统', value: '0' },
+      { label: '租户', value: '1' },
+    ],
   });
 
-  // 获取角色列表
-  getRoleAll().then((res) => {
-    state.roleList = res.data as RoleType[];
+  getMenu().then((res) => {
+    state.permissionList = res.data?.filter((item: MenuType) => item.permissionType !== '1') as MenuType[];
+    console.log('menu:', state.permissionList);
   });
 </script>
 
