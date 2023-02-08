@@ -55,9 +55,6 @@
   import { routineForm } from '/@/config/form';
   import { useLogStore, useUserStore } from '/@/store';
 
-  // const { proxy } = getCurrentInstance()
-  // const router = useRouter()
-  // const route = useRoute()
   const userStore = useUserStore();
   const logStore = useLogStore();
   const { setUserInfo, updateUser } = userStore;
