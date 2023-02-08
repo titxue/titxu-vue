@@ -6,16 +6,14 @@ import { TabPaneName } from 'element-plus';
 export const useNavTabStore = defineStore('navTab', {
   state: () => ({
     tabList: [] as TabType[],
-    activeTab: {} as TabPaneName,
+    activeTab: '' as TabPaneName,
     activeNav: '' as string,
   }),
   getters: {
     // 获取当前激活的nav
     getActiveNav(state) {
-      console.log('getActiveNav', state.activeTab);
       const activeTabStr: string = state.activeTab as string;
-      // const activeTabs: string[] = activeTabStr.split('/');
-      // return activeTabs[activeTabs.length - 1];
+      if (Object.keys(activeTabStr).length === 0) return 'dashboard';
       return activeTabStr.replace('/admin/', '');
     },
   },
