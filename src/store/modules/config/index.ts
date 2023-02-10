@@ -38,7 +38,7 @@ export const useConfigStore = defineStore(
       // 是否只保持一个子菜单的展开(手风琴)
       menuUniqueOpened: false,
       // 显示菜单栏顶栏(LOGO)
-      menuShowTopBar: true,
+      menuShowTopBar: false,
 
       /* 顶栏 */
       // 顶栏文字色

@@ -8,7 +8,6 @@ import 'element-plus/theme-chalk/display.css';
 import '/@/styles/index.scss';
 import 'uno.css';
 
-// 支持SVG
 import 'virtual:svg-icons-register';
 import ElementPlus from 'element-plus';
 import { loadLang } from '/@/lang';
@@ -19,7 +18,6 @@ app.use(piniaStore);
 // 全局语言包加载
 const i18n = await loadLang(app);
 
-app.use(router);
 app.use(ElementPlus, { i18n: i18n.global.t });
 // 注册所有图标
 registerIcons(app); // icons

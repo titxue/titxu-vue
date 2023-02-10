@@ -18,12 +18,18 @@
           </el-dropdown-menu>
         </template>
       </el-dropdown>
+      <div class="x-tabs-icon" @click="openDrawer">
+        <Icon name="el-icon-Setting" size="20" class="close-icon" />
+        <Config />
+      </div>
     </div>
   </el-header>
 </template>
 
 <script setup lang="ts">
   import { ElMessage, TabPaneName } from 'element-plus';
+  import Config from '/@/views/admin/components/CommonHeader/config.vue';
+  import Icon from '/@/components/v1/icon/index.vue';
   import { useUserStore, useAuthStore, useNavTabStore, usePermissionStore, useConfigStore } from '/@/store';
 
   const router = useRouter();
@@ -35,6 +41,10 @@
   const { userLogout } = authStore;
   const { setUserInfo } = userStore;
   const { userInfo } = toRefs(userStore);
+
+  const openDrawer = () => {
+    configStore.setLayout('showDrawer', true);
+  };
 
   // 跳转到个人信息
   const skipUserInfo = () => {
@@ -148,6 +158,18 @@
 </script>
 
 <style lang="scss" scoped>
+  .dark {
+    .close-icon {
+      color: v-bind('configStore.getColorVal("headerBarTabColor")') !important;
+    }
+
+    .ba-nav-tab.active {
+      .close-icon {
+        color: v-bind('configStore.getColorVal("headerBarTabActiveColor")') !important;
+      }
+    }
+  }
+
   header {
     height: 50px;
     margin: 20px 16px 0 16px;
@@ -179,6 +201,13 @@
       height: 100%;
       background-color: v-bind('configStore.getColorVal("headerBarBackground")');
       overflow: hidden;
+
+      .x-tabs-icon {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
 
       .user {
         width: 24px;

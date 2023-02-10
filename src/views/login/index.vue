@@ -1,9 +1,5 @@
 <template>
   <div class="container">
-    <div class="logo">
-      <img :src="logo" width="240" />
-    </div>
-    <LoginBanner />
     <div class="content">
       <div class="content-inner">
         <LoginForm />
@@ -14,19 +10,19 @@
 </template>
 
 <script setup lang="ts">
-  import LoginBanner from './components/banner.vue';
   import LoginForm from './components/login-form.vue';
-  import logo from '/@/assets/icons/svg/logo.svg';
-
-  // const theme = localStorage.getItem('theme');
   //
-  // if (theme == 'dark') {
-  //   document.documentElement.classList.add('dark');
-  //   document.body.setAttribute('arco-theme', 'dark');
-  // } else {
-  //   document.documentElement.classList.remove('dark');
-  //   document.body.removeAttribute('arco-theme');
-  // }
+  // onBeforeMount(() => {
+  //   const theme = localStorage.getItem('vueuse-color-scheme');
+  //
+  //   if (theme == 'dark') {
+  //     document.documentElement.classList.add('dark');
+  //     document.body.setAttribute('arco-theme', 'dark');
+  //   } else {
+  //     document.documentElement.classList.remove('dark');
+  //     document.body.removeAttribute('arco-theme');
+  //   }
+  // });
 </script>
 
 <style lang="scss" scoped>

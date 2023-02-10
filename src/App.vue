@@ -4,14 +4,13 @@
   </el-config-provider>
 </template>
 <script setup lang="ts">
-  import { onMounted, watch } from 'vue';
   import { useI18n } from 'vue-i18n';
   import iconfontInit from '/@/utils/iconfont';
   import { useRoute } from 'vue-router';
   import { setTitleFromRoute } from '/@/utils/common';
-  import { useConfigStore } from '/@/store/modules/config';
+  import { useConfigOutsideStore } from '/@/store/modules/config';
 
-  const config = useConfigStore();
+  const config = useConfigOutsideStore();
   const route = useRoute();
 
   // 初始化 element 的语言包

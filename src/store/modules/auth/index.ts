@@ -67,7 +67,7 @@ export const useAuthStore = defineStore('auth', {
       clearToken();
       clearRefreshToken();
       // 路由表重置
-      location.reload();
+      // location.reload();
     },
     // 重置权限信息
     resetInfo() {
