@@ -9,6 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <description>
+        微信服务
+    </description>
+
     <artifactId>titxu-service</artifactId>
     <packaging>pom</packaging>
     <modules>
