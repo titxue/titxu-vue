@@ -10,7 +10,7 @@ import com.titxu.cloud.common.log.annotation.SysLog;
 import com.titxu.cloud.common.security.annotation.Inner;
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;
 import com.titxu.cloud.management.auth.application.dto.OAuth2Dto;
-import com.titxu.cloud.management.auth.infrastructure.client.RemoteAuthService;
+import com.titxu.cloud.management.auth.infrastructure.feign.RemoteAuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
