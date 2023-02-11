@@ -1,6 +1,6 @@
 package com.titxu.cloud.sys;
 
-import com.titxu.cloud.common.security.feign.FeignConfiguration;
+import com.titxu.cloud.common.feign.config.FeignConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;

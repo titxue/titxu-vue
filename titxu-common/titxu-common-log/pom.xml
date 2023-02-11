@@ -38,10 +38,10 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
         </dependency>
-        <!-- openfeign 远程调用 -->
+        <!-- feign -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.titxu.cloud</groupId>
+            <artifactId>titxu-common-feign</artifactId>
         </dependency>
     </dependencies>
 </project>

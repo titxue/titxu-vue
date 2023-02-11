@@ -24,6 +24,7 @@
         <module>titxu-common-swagger</module>
         <module>titxu-common-tenant</module>
         <module>titxu-common-security</module>
+        <module>titxu-common-feign</module>
     </modules>
 
 

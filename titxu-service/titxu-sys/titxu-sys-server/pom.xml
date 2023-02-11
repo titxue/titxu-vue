@@ -76,10 +76,10 @@
             <artifactId>kaptcha</artifactId>
             <version>${kaptcha.version}</version>
         </dependency>
-        <!-- openfeign 远程调用 -->
+        <!-- feign -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.titxu.cloud</groupId>
+            <artifactId>titxu-common-feign</artifactId>
         </dependency>
         <!--undertow容器-->
         <dependency>

@@ -2,8 +2,8 @@ package com.titxu.cloud.management.auth.config;
 
 
 import com.titxu.cloud.common.core.util.PublicKeyUtils;
-import com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider;
-import com.titxu.cloud.management.auth.support.core.FormIdentityLoginConfigurer;
+import com.titxu.cloud.management.auth.infrastructure.support.core.DaoAuthenticationProvider;
+import com.titxu.cloud.management.auth.infrastructure.support.core.FormIdentityLoginConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -74,9 +74,7 @@ public class WebSecurityConfiguration {
      */
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> {
-            web.ignoring().requestMatchers(URL_WHITELIST);
-        };
+        return (web) -> web.ignoring().requestMatchers(URL_WHITELIST);
     }
 
     /**
@@ -120,13 +118,11 @@ public class WebSecurityConfiguration {
         });
 
         // 异常处理
-        http.exceptionHandling(exceptionHandlingCustomizer -> {
-            exceptionHandlingCustomizer
-                    // 访问被拒绝处理程序
-                    .accessDeniedHandler(accessDeniedHandler)
-                    // 身份验证入口点
-                    .authenticationEntryPoint(authenticationEntryPoint);
-        });
+        http.exceptionHandling(exceptionHandlingCustomizer -> exceptionHandlingCustomizer
+                // 访问被拒绝处理程序
+                .accessDeniedHandler(accessDeniedHandler)
+                // 身份验证入口点
+                .authenticationEntryPoint(authenticationEntryPoint));
 
         // csrf
         http.csrf().disable();

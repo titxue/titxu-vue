@@ -119,6 +119,11 @@
                 <version>${titxu.cloud.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.titxu.cloud</groupId>
+                <artifactId>titxu-wechat-api</artifactId>
+                <version>${titxu.cloud.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-oauth2-authorization-server</artifactId>
                 <version>${spring-security-oauth2-authorization-server.version}</version>
