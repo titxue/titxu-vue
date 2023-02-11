@@ -1,0 +1,998 @@
+2023-02-11 13:44:18,216 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 13:44:18,222 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:44:18,225 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:44:18,630 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:44:18,631 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 13:44:18,633 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 13:44:18,633 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 13:44:18,636 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 13:44:18,685 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 13:44:18,686 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 13:44:18,717 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 13:44:19,865 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:44:19,866 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:44:19,906 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 13:44:19,915 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 7128d140-c177-4209-b882-9fee4c648b81_config-0
+2023-02-11 13:44:19,959 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 13:44:19,960 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 13:44:19,962 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 13:44:19,964 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 13:44:19,984 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 13:44:21,263 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676094263155_10.0.0.10_49408
+2023-02-11 13:44:21,265 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Notify connected event to listeners.
+2023-02-11 13:44:21,266 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 13:44:21,266 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Connected,notify listen context...
+2023-02-11 13:44:21,267 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [7128d140-c177-4209-b882-9fee4c648b81_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 13:44:21,393 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 13:44:21,455 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 13:44:21,500 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 13:44:21,503 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 13:44:21,529 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 13:44:23,056 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 13:44:23,168 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 13:44:25,265 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 13:44:25,312 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 13:44:25,475 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 9.083 seconds (process running for 10.934)
+2023-02-11 13:44:25,485 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 13:44:25,487 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 13:44:25,496 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 13:44:25,497 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 13:44:25,498 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 13:44:25,499 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 13:44:25,500 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 13:44:26,495 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 13:44:26,495 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 13:44:26,496 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 13:44:26,496 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 13:45:05,756 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 13:45:05,759 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:45:05,761 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:45:06,239 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:45:06,241 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 13:45:06,245 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 13:45:06,246 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 13:45:06,250 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 13:45:06,348 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 13:45:06,349 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 13:45:06,383 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 13:45:06,564 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:45:06,565 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 13:45:06,584 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 13:45:06,588 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of ff796f24-830f-4b2c-8539-9aae00376510_config-0
+2023-02-11 13:45:06,605 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$857/0x0000000800f80448
+2023-02-11 13:45:06,606 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$858/0x0000000800f80878
+2023-02-11 13:45:06,606 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 13:45:06,607 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 13:45:06,616 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 13:45:07,599 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676094309512_10.0.0.10_49699
+2023-02-11 13:45:07,600 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Notify connected event to listeners.
+2023-02-11 13:45:07,600 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 13:45:07,600 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Connected,notify listen context...
+2023-02-11 13:45:07,601 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [ff796f24-830f-4b2c-8539-9aae00376510_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$876/0x00000008010b0fe8
+2023-02-11 13:45:07,644 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 13:45:07,673 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 13:45:07,691 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 13:45:07,692 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 13:45:07,723 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 13:45:08,716 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 13:45:08,818 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 13:45:10,598 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 13:45:10,617 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 13:45:10,693 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 5.695 seconds (process running for 7.398)
+2023-02-11 13:45:10,698 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 13:45:10,698 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 13:45:10,706 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 13:45:10,706 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 13:45:10,708 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 13:45:10,708 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 13:45:10,708 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 13:45:11,523 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 13:45:11,523 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 13:45:11,524 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 13:45:11,524 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:04:22,765 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:04:22,769 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:04:22,771 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:04:23,320 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:04:23,322 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:04:23,326 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:04:23,327 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:04:23,332 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:04:23,398 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:04:23,399 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:04:23,433 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:04:23,656 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:04:23,658 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:04:23,697 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:04:23,702 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0
+2023-02-11 14:04:23,724 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80be8
+2023-02-11 14:04:23,725 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f81018
+2023-02-11 14:04:23,726 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:04:23,726 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:04:23,736 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:04:24,800 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676095466639_10.0.0.10_55283
+2023-02-11 14:04:24,802 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Notify connected event to listeners.
+2023-02-11 14:04:24,802 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:04:24,803 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Connected,notify listen context...
+2023-02-11 14:04:24,803 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e233b0ee-99cc-488d-80ca-516ba0f11aaa_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b14c0
+2023-02-11 14:04:24,901 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:04:24,929 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:04:24,963 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:04:24,965 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:04:25,002 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:04:26,368 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:04:26,514 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:04:28,887 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:04:28,916 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:04:29,044 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 7.113 seconds (process running for 8.866)
+2023-02-11 14:04:29,057 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:04:29,058 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:04:29,070 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:04:29,071 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:04:29,073 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:04:29,074 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:04:29,075 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:04:30,282 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:04:30,283 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:04:30,283 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:04:30,284 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:05:04,886 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:05:04,892 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:05:04,896 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:05:05,336 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:05:05,337 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:05:05,339 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:05:05,340 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:05:05,342 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:05:05,453 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:05:05,454 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:05:05,493 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:05:05,645 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:05:05,646 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:05:05,672 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:05:05,682 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of b04248b2-7018-49d6-932b-4b73664e7579_config-0
+2023-02-11 14:05:05,708 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 14:05:05,709 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 14:05:05,710 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:05:05,711 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:05:05,724 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:05:06,872 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676095508648_10.0.0.10_55493
+2023-02-11 14:05:06,875 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Notify connected event to listeners.
+2023-02-11 14:05:06,876 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Connected,notify listen context...
+2023-02-11 14:05:06,876 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:05:06,877 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b04248b2-7018-49d6-932b-4b73664e7579_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 14:05:06,952 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:05:06,976 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:05:07,013 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:05:07,015 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:05:07,033 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:05:08,367 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:05:08,525 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:05:10,470 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:05:10,493 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:05:10,615 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 6.711 seconds (process running for 8.517)
+2023-02-11 14:05:10,622 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:05:10,623 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:05:10,639 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:05:10,640 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:05:10,642 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:05:10,642 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:05:10,642 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:05:11,556 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] RemoteWechatServiceTest.java:22 - result:ResponseModel(status=1, msg=, data={guid=259258d0-924d-3175-9eb5-d1c706950364})
+2023-02-11 14:05:11,602 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:05:11,602 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:05:11,603 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:05:11,603 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:42:31,326 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:42:31,329 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:42:31,331 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:42:31,844 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:42:31,846 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:42:31,850 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:42:31,851 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:42:31,856 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:42:31,917 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:42:31,918 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:42:31,954 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:42:32,103 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:42:32,104 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:42:32,135 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:42:32,139 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0
+2023-02-11 14:42:32,158 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 14:42:32,159 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 14:42:32,159 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:42:32,160 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:42:32,169 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:42:33,359 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676097754743_10.0.0.10_49888
+2023-02-11 14:42:33,361 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:42:33,361 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Notify connected event to listeners.
+2023-02-11 14:42:33,361 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Connected,notify listen context...
+2023-02-11 14:42:33,362 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [dc89c7ee-e39a-48af-a627-17ece91d0b4e_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 14:42:33,443 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:42:33,471 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:42:33,498 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:42:33,500 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:42:33,516 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:42:34,678 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:42:34,806 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:42:36,887 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:42:36,926 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:42:37,078 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 6.774 seconds (process running for 8.639)
+2023-02-11 14:42:37,083 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:42:37,084 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:42:37,093 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:42:37,093 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:42:37,094 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:42:37,095 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:42:37,095 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:42:38,129 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] RemoteWechatServiceTest.java:25 - result:ResponseModel(status=1, msg=, data={guid=a289a06e-6b10-3cf7-94ba-7bb4203d63b1})
+2023-02-11 14:42:38,212 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:42:38,212 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:42:38,212 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:42:38,214 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:49:19,910 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:49:19,916 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:19,921 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:20,430 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:20,432 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:49:20,436 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:49:20,437 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:49:20,442 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:49:20,524 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:49:20,525 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:49:20,556 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:49:20,752 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:20,753 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:20,779 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:49:20,788 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0
+2023-02-11 14:49:20,832 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 14:49:20,834 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 14:49:20,835 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:49:20,837 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:49:20,851 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:49:21,935 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676098163029_10.0.0.10_51800
+2023-02-11 14:49:21,936 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Notify connected event to listeners.
+2023-02-11 14:49:21,936 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:49:21,937 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Connected,notify listen context...
+2023-02-11 14:49:21,937 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [e5d24a9a-d44e-4eb4-ac8d-1f93f6b660d1_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b14c0
+2023-02-11 14:49:22,002 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:49:22,034 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:49:22,076 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:49:22,078 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:49:22,115 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:49:23,004 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:49:23,103 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:49:25,206 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:49:25,237 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:49:25,340 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 6.257 seconds (process running for 7.852)
+2023-02-11 14:49:25,345 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:49:25,346 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:49:25,353 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:49:25,354 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:49:25,355 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:49:25,355 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:49:25,355 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:49:26,076 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] RemoteWechatServiceTest.java:31 - guid:863e18e5-9bbe-38e0-8aba-d8a8b1ee0ae9
+2023-02-11 14:49:26,154 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:49:26,155 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:49:26,155 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:49:26,155 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:49:44,351 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:49:44,354 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:44,356 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:44,872 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:44,873 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:49:44,876 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:49:44,877 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:49:44,882 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:49:44,961 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:49:44,962 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:49:44,998 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:49:45,145 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:45,145 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:49:45,187 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:49:45,197 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 45e8dec5-f0c5-451b-97b9-562ff155631c_config-0
+2023-02-11 14:49:45,231 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 14:49:45,233 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 14:49:45,234 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:49:45,236 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:49:45,251 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:49:46,435 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676098187541_10.0.0.10_51916
+2023-02-11 14:49:46,438 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Notify connected event to listeners.
+2023-02-11 14:49:46,439 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Connected,notify listen context...
+2023-02-11 14:49:46,439 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:49:46,440 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [45e8dec5-f0c5-451b-97b9-562ff155631c_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 14:49:46,505 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:49:46,534 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:49:46,552 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:49:46,555 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:49:46,573 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:49:47,967 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:49:48,098 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:49:50,234 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:49:50,273 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:49:50,461 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 7.016 seconds (process running for 8.927)
+2023-02-11 14:49:50,475 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:49:50,476 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:49:50,492 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:49:50,493 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:49:50,494 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:49:50,496 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:49:50,497 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:49:51,572 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:49:51,572 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:49:51,573 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:49:51,573 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:50:13,308 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:50:13,311 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:50:13,313 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:50:13,636 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:50:13,637 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:50:13,639 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:50:13,639 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:50:13,641 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:50:13,695 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:50:13,695 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:50:13,720 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:50:13,839 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:50:13,839 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:50:13,860 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:50:13,864 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 675db658-033d-4ec3-adca-4dca96dcf6bc_config-0
+2023-02-11 14:50:13,883 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 14:50:13,884 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 14:50:13,884 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:50:13,885 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:50:13,894 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:50:14,696 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676098215809_10.0.0.10_52051
+2023-02-11 14:50:14,698 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:50:14,698 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Notify connected event to listeners.
+2023-02-11 14:50:14,699 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Connected,notify listen context...
+2023-02-11 14:50:14,699 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [675db658-033d-4ec3-adca-4dca96dcf6bc_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 14:50:14,768 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:50:14,791 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:50:14,823 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:50:14,825 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:50:14,845 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:50:16,074 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:50:16,226 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:50:18,203 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:50:18,229 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:50:18,393 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 5.733 seconds (process running for 7.536)
+2023-02-11 14:50:18,403 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:50:18,405 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:50:18,417 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:50:18,418 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:50:18,419 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:50:18,420 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:50:18,420 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:50:19,476 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:50:19,476 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:50:19,477 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:50:19,478 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 14:54:25,289 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:54:25,295 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:54:25,300 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:54:25,880 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:54:25,881 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 14:54:25,883 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 14:54:25,884 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 14:54:25,887 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 14:54:25,941 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 14:54:25,942 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 14:54:25,969 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 14:54:26,165 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:54:26,167 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 14:54:26,205 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 14:54:26,215 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0
+2023-02-11 14:54:26,253 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 14:54:26,254 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 14:54:26,255 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 14:54:26,256 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 14:54:26,265 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 14:54:27,596 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676098468683_10.0.0.10_53199
+2023-02-11 14:54:27,598 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Notify connected event to listeners.
+2023-02-11 14:54:27,599 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Connected,notify listen context...
+2023-02-11 14:54:27,599 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 14:54:27,600 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [d2629649-c59a-4585-be83-7ffe7e91d4a9_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 14:54:27,715 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 14:54:27,760 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 14:54:27,795 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 14:54:27,798 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 14:54:27,831 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 14:54:29,367 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 14:54:29,563 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 14:54:31,942 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 14:54:31,981 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 14:54:32,072 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 7.925 seconds (process running for 10.077)
+2023-02-11 14:54:32,078 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 14:54:32,078 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 14:54:32,089 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:54:32,090 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 14:54:32,091 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 14:54:32,091 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 14:54:32,092 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 14:54:33,136 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] RemoteWechatServiceTest.java:55 - profile:ResponseModel(status=1, msg=, data={account=, avatar=http://wx.qlogo.cn/mmhead/ver_1/3YVDcoiaHLP8QWcmIA0FIbRkGztpKHRurYMPv8hhFx26SkyqnMsiaB7PVwzMX1SAJhCEJ07wL8xzD2iaZoo25XrsqibPO3PaSyavDA9C8CPeyibI/0, nickname=一只小鸟, wxid=wxid_irpufrgztlqs21})
+2023-02-11 14:54:33,180 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 14:54:33,180 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 14:54:33,181 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 14:54:33,181 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:10:45,474 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:10:45,480 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:10:45,484 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:10:45,918 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:10:45,919 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:10:45,921 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:10:45,922 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:10:45,926 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:10:45,975 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:10:45,976 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:10:46,003 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:10:47,223 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:10:47,225 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:10:47,266 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:10:47,275 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0
+2023-02-11 16:10:47,320 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 16:10:47,321 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 16:10:47,323 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:10:47,324 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:10:47,344 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:10:50,958 [main] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - Server check fail, please check server nas.titxu.com ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 4 milliseconds, 137823 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@65a9ea3c[status=PENDING, info=[GrpcFuture{clientCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@70f68288, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@46911148, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@2db1b657}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:196)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:307)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:359)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:891)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1038)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:946)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:402)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:184)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:96)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:141)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:50)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:46)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:603)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:383)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1386)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:543)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+2023-02-11 16:10:50,969 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:10:51,690 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676103053479_10.0.0.10_58103
+2023-02-11 16:10:51,691 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Notify connected event to listeners.
+2023-02-11 16:10:51,691 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:10:51,691 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Connected,notify listen context...
+2023-02-11 16:10:51,692 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [a33a67cc-41fc-4f21-9ebc-322d61029d5f_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b2f30
+2023-02-11 16:10:51,745 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:10:51,763 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:10:51,780 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:10:51,782 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:10:51,798 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:10:52,739 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:10:52,837 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:10:55,085 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:10:55,114 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:10:55,271 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 11.556 seconds (process running for 13.485)
+2023-02-11 16:10:55,284 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:10:55,285 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:10:55,302 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:10:55,303 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:10:55,304 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:10:55,304 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:10:55,304 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:10:56,475 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:10:56,475 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:10:56,476 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:10:56,477 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:11:19,726 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:11:19,729 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:11:19,731 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:11:20,085 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:11:20,086 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:11:20,088 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:11:20,089 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:11:20,091 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:11:20,163 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:11:20,164 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:11:20,196 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:11:20,345 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:11:20,346 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:11:20,365 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:11:20,369 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of b7d5909a-70ec-4a64-a9b3-557576a11115_config-0
+2023-02-11 16:11:20,388 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f84988
+2023-02-11 16:11:20,389 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f84db8
+2023-02-11 16:11:20,389 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:11:20,390 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:11:20,399 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:11:21,441 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676103083268_10.0.0.10_58270
+2023-02-11 16:11:21,443 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Notify connected event to listeners.
+2023-02-11 16:11:21,443 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:11:21,443 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Connected,notify listen context...
+2023-02-11 16:11:21,443 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [b7d5909a-70ec-4a64-a9b3-557576a11115_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b4b50
+2023-02-11 16:11:21,511 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:11:21,543 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:11:21,583 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:11:21,586 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:11:21,619 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:11:22,776 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:11:22,979 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:11:24,799 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:11:24,823 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:11:24,953 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 6.049 seconds (process running for 7.828)
+2023-02-11 16:11:24,959 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:11:24,960 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:11:24,972 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:11:24,973 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:11:24,975 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:11:24,976 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:11:24,977 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:11:25,873 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:11:25,873 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:11:25,874 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:11:25,875 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:24:21,392 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:24:21,396 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:24:21,399 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:24:21,781 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:24:21,782 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:24:21,784 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:24:21,785 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:24:21,787 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:24:21,845 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:24:21,845 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:24:21,868 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:24:22,020 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:24:22,020 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:24:22,040 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:24:22,044 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0
+2023-02-11 16:24:22,066 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80000
+2023-02-11 16:24:22,066 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80430
+2023-02-11 16:24:22,067 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:24:22,068 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:24:22,077 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:24:23,269 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676103865079_10.0.0.10_61918
+2023-02-11 16:24:23,271 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Notify connected event to listeners.
+2023-02-11 16:24:23,272 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Connected,notify listen context...
+2023-02-11 16:24:23,272 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:24:23,273 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0ae0
+2023-02-11 16:24:23,347 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:24:23,373 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:24:23,401 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:24:23,403 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:24:23,422 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:24:24,603 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:24:24,775 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:24:26,391 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:24:26,419 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:24:26,556 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 5.805 seconds (process running for 7.49)
+2023-02-11 16:24:26,564 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:24:26,565 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:24:26,576 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:24:26,577 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:24:26,580 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:24:26,580 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:24:26,580 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:25:11,686 [nacos-grpc-client-executor-nas.titxu.com-14] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 2232
+2023-02-11 16:25:11,687 [nacos-grpc-client-executor-nas.titxu.com-14] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 2232
+2023-02-11 16:25:11,690 [nacos-grpc-client-executor-nas.titxu.com-14] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1676103865079_10.0.0.10_61918]Request stream onCompleted, switch server
+2023-02-11 16:25:11,695 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Server healthy check fail, currentConnection = 1676103865079_10.0.0.10_61918
+2023-02-11 16:25:11,695 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2023-02-11 16:25:11,815 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Success to connect a server [nas.titxu.com:8848], connectionId = 1676103913763_10.0.0.10_62140
+2023-02-11 16:25:11,815 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Abandon prev connection, server is nas.titxu.com:8848, connectionId is 1676103865079_10.0.0.10_61918
+2023-02-11 16:25:11,815 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] RpcClient.java:580 - Close current connection 1676103865079_10.0.0.10_61918
+2023-02-11 16:25:11,819 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2023-02-11 16:25:11,819 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Notify disconnected event to listeners
+2023-02-11 16:25:11,820 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:645 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] DisConnected,clear listen context...
+2023-02-11 16:25:11,820 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Notify connected event to listeners.
+2023-02-11 16:25:11,820 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Connected,notify listen context...
+2023-02-11 16:25:11,943 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Success to connect a server [nas.titxu.com:8848], connectionId = 1676103913886_10.0.0.10_62141
+2023-02-11 16:25:11,943 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Abandon prev connection, server is nas.titxu.com:8848, connectionId is 1676103913763_10.0.0.10_62140
+2023-02-11 16:25:11,944 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] RpcClient.java:580 - Close current connection 1676103913763_10.0.0.10_62140
+2023-02-11 16:25:11,944 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Notify disconnected event to listeners
+2023-02-11 16:25:11,945 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:645 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] DisConnected,clear listen context...
+2023-02-11 16:25:11,945 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Notify connected event to listeners.
+2023-02-11 16:25:11,945 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Connected,notify listen context...
+2023-02-11 16:25:11,946 [nacos-grpc-client-executor-nas.titxu.com-30] WARN  [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:86 - [1676103913763_10.0.0.10_62140]Ignore error event,isRunning:true,isAbandon=true
+2023-02-11 16:25:52,272 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:25:52,272 [nacos-grpc-client-executor-nas.titxu.com-33] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 2233
+2023-02-11 16:25:52,272 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:25:52,272 [nacos-grpc-client-executor-nas.titxu.com-33] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 2233
+2023-02-11 16:25:52,272 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:25:52,272 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:25:52,273 [nacos-grpc-client-executor-nas.titxu.com-33] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1676103913886_10.0.0.10_62141]Request stream onCompleted, switch server
+2023-02-11 16:25:52,287 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Server healthy check fail, currentConnection = 1676103913886_10.0.0.10_62141
+2023-02-11 16:25:52,287 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [8260aa51-410d-4dfb-97dd-f4ba8338c30e_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2023-02-11 16:30:28,524 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:30:28,530 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:30:28,534 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:30:28,971 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:30:28,972 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:30:28,977 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:30:28,978 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:30:28,982 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:30:29,060 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:30:29,060 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:30:29,087 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:30:29,231 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:30:29,232 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:30:29,264 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:30:29,273 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0
+2023-02-11 16:30:29,316 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80be8
+2023-02-11 16:30:29,317 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f81018
+2023-02-11 16:30:29,319 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:30:29,320 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:30:29,340 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:30:30,529 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676104232336_10.0.0.10_63768
+2023-02-11 16:30:30,532 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:30:30,532 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Notify connected event to listeners.
+2023-02-11 16:30:30,533 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b1708
+2023-02-11 16:30:30,533 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Connected,notify listen context...
+2023-02-11 16:30:30,659 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:30:30,699 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:30:30,735 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:30:30,738 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:30:30,778 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:30:32,687 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:30:32,944 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:30:35,703 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:30:35,742 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:30:35,897 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 8.452 seconds (process running for 10.478)
+2023-02-11 16:30:35,908 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:30:35,910 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:30:35,934 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:30:35,935 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:30:35,938 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:30:35,939 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:30:35,940 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:31:56,293 [nacos-grpc-client-executor-nas.titxu.com-19] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 2234
+2023-02-11 16:31:56,297 [nacos-grpc-client-executor-nas.titxu.com-19] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 2234
+2023-02-11 16:31:56,344 [nacos-grpc-client-executor-nas.titxu.com-19] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1676104232336_10.0.0.10_63768]Request stream onCompleted, switch server
+2023-02-11 16:31:57,821 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Server healthy check fail, currentConnection = 1676104232336_10.0.0.10_63768
+2023-02-11 16:31:57,826 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [c0e7db47-fa58-45bc-99f8-0a7d3b07dec1_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2023-02-11 16:32:28,741 [com.alibaba.nacos.client.remote.worker] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - Server check fail, please check server nas.titxu.com ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 27892 milliseconds, 221751 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@726aeb5a[status=PENDING, info=[GrpcFuture{clientCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@7e27c2ce, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@718f4b97, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@4ad225ca}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:196)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:307)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:498)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:339)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-11 16:32:28,823 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:32:28,823 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:32:28,823 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:32:28,824 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:42:26,859 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:42:26,865 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:42:26,869 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:42:27,346 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:42:27,347 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:42:27,352 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:42:27,353 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:42:27,358 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:42:27,451 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:42:27,452 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:42:27,483 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:42:27,743 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:42:27,745 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:42:27,783 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:42:27,793 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0
+2023-02-11 16:42:27,837 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 16:42:27,839 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 16:42:27,841 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:42:27,842 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:42:27,863 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:42:29,185 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676104951024_10.0.0.10_50826
+2023-02-11 16:42:29,187 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:42:29,187 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Notify connected event to listeners.
+2023-02-11 16:42:29,188 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 16:42:29,188 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [f1e9aa12-5bc3-489f-8d55-588d6506d8d7_config-0] Connected,notify listen context...
+2023-02-11 16:42:29,258 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:42:29,286 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:42:29,305 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:42:29,306 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:42:29,324 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:42:30,772 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:42:30,943 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:42:33,066 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:42:33,106 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:42:33,294 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 7.694 seconds (process running for 9.568)
+2023-02-11 16:42:33,300 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:42:33,300 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:42:33,309 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:42:33,310 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:42:33,314 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:42:33,314 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:42:33,314 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:42:34,422 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:42:34,423 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:42:34,424 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:42:34,424 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:44:00,882 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:44:00,889 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:44:00,893 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:44:01,484 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:44:01,485 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:44:01,487 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:44:01,487 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:44:01,489 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:44:01,574 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:44:01,575 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:44:01,608 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:44:02,792 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:44:02,793 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:44:02,836 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:44:02,845 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0
+2023-02-11 16:44:02,888 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 16:44:02,889 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 16:44:02,891 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:44:02,892 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:44:02,908 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:44:06,456 [main] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - Server check fail, please check server nas.titxu.com ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 2 milliseconds, 440893 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@65a9ea3c[status=PENDING, info=[GrpcFuture{clientCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@70f68288, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@46911148, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@2db1b657}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:196)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:307)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:359)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:891)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1038)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:946)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:402)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:184)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:96)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:141)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:50)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:46)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:603)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:383)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1386)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:543)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+2023-02-11 16:44:06,465 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:44:07,066 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676105048940_10.0.0.10_51298
+2023-02-11 16:44:07,068 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Notify connected event to listeners.
+2023-02-11 16:44:07,068 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Connected,notify listen context...
+2023-02-11 16:44:07,069 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:44:07,070 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [9c82177c-6ac4-4838-8e1f-b73a5d1648be_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b2f30
+2023-02-11 16:44:07,146 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:44:07,179 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:44:07,199 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:44:07,202 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:44:07,237 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:44:08,850 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:44:09,061 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:44:11,293 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:44:11,335 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:44:11,532 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 12.693 seconds (process running for 14.369)
+2023-02-11 16:44:11,543 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:44:11,544 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:44:11,552 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:44:11,553 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:44:11,554 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:44:11,554 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:44:11,554 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:44:31,799 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:44:31,800 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:44:31,800 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:44:31,801 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
+2023-02-11 16:55:22,237 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:55:22,244 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:55:22,249 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:55:22,736 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:55:22,738 [main] INFO  [com.alibaba.nacos.client.env.SearchableProperties] SearchableProperties.java:197 - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2023-02-11 16:55:22,742 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:87 - [settings] [req-serv] nacos-server port:8848
+2023-02-11 16:55:22,743 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:98 - [settings] [http-client] connect timeout:1000
+2023-02-11 16:55:22,748 [main] INFO  [com.alibaba.nacos.client.utils.ParamUtil] ParamUtil.java:105 - PER_TASK_CONFIG_SIZE: 3000.0
+2023-02-11 16:55:22,806 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2023-02-11 16:55:22,807 [main] INFO  [c.a.n.p.auth.spi.client.ClientAuthPluginManager] ClientAuthPluginManager.java:56 - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2023-02-11 16:55:22,835 [main] INFO  [c.a.n.client.auth.ram.identify.CredentialWatcher] CredentialWatcher.java:165 - null No credential found
+2023-02-11 16:55:23,063 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:55:23,064 [main] WARN  [com.alibaba.nacos.client.logging.NacosLogging] NacosLogging.java:64 - Load Logback Configuration of Nacos fail, message: org/slf4j/impl/StaticLoggerBinder
+2023-02-11 16:55:23,104 [main] INFO  [c.a.n.client.config.impl.LocalConfigInfoProcessor] LocalConfigInfoProcessor.java:68 - LOCAL_SNAPSHOT_PATH:/Users/lxue/nacos/config
+2023-02-11 16:55:23,115 [main] INFO  [com.alibaba.nacos.common.remote.client] RpcClientFactory.java:94 - [RpcClientFactory] create a new rpc client of 892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0
+2023-02-11 16:55:23,160 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$855/0x0000000800f80448
+2023-02-11 16:55:23,161 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$856/0x0000000800f80878
+2023-02-11 16:55:23,164 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2023-02-11 16:55:23,165 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2023-02-11 16:55:23,187 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Try to connect to server on start up, server: {serverIp = 'nas.titxu.com', server main port = 8848}
+2023-02-11 16:55:24,580 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Success to connect to server [nas.titxu.com:8848] on start up, connectionId = 1676105726097_10.0.0.10_54607
+2023-02-11 16:55:24,582 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Notify connected event to listeners.
+2023-02-11 16:55:24,583 [com.alibaba.nacos.client.remote.worker] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:638 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Connected,notify listen context...
+2023-02-11 16:55:24,583 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2023-02-11 16:55:24,584 [main] INFO  [com.alibaba.nacos.common.remote.client] LoggerUtils.java:60 - [892e3d4c-f2cf-4e0f-ab00-5faa36663147_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$875/0x00000008010b0fe8
+2023-02-11 16:55:24,709 [main] INFO  [com.alibaba.nacos.client.config.impl.Limiter] Limiter.java:62 - limitTime:5.0
+2023-02-11 16:55:24,747 [main] INFO  [com.alibaba.nacos.client.config.utils.JvmUtil] JvmUtil.java:54 - isMultiInstance:false
+2023-02-11 16:55:24,768 [main] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[titxu-wechat-server.yaml] & group[DEFAULT_GROUP]
+2023-02-11 16:55:24,771 [main] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:108 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-titxu-wechat-server,DEFAULT_GROUP'}]
+2023-02-11 16:55:24,787 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] SpringApplication.java:630 - No active profile set, falling back to 1 default profile: "default"
+2023-02-11 16:55:26,309 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.titxu.cloud.wechat]' package. Please check your configuration.
+2023-02-11 16:55:26,467 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=1d4a4ef8-639e-3881-88b6-c0e9e03fecdb
+2023-02-11 16:55:28,635 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] LoadBalancerCacheAutoConfiguration.java:81 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-02-11 16:55:28,675 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-11 16:55:28,799 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] StartupInfoLogger.java:57 - Started RemoteWechatServiceTest in 7.388 seconds (process running for 9.142)
+2023-02-11 16:55:28,810 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:67 - nacos.cache.data.init.snapshot = true 
+2023-02-11 16:55:28,811 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server.yaml+DEFAULT_GROUP
+2023-02-11 16:55:28,825 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:55:28,826 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server.yaml, group=DEFAULT_GROUP
+2023-02-11 16:55:28,827 [main] INFO  [com.alibaba.nacos.client.config.impl.ClientWorker] ClientWorker.java:379 - [fixed-nas.titxu.com_8848] [subscribe] titxu-wechat-server+DEFAULT_GROUP
+2023-02-11 16:55:28,828 [main] INFO  [com.alibaba.nacos.client.config.impl.CacheData] CacheData.java:197 - [fixed-nas.titxu.com_8848] [add-listener] ok, tenant=, dataId=titxu-wechat-server, group=DEFAULT_GROUP, cnt=1
+2023-02-11 16:55:28,828 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=titxu-wechat-server, group=DEFAULT_GROUP
+2023-02-11 16:55:33,941 [main] INFO  [c.t.c.w.i.feign.wechat.RemoteWechatServiceTest] RemoteWechatServiceTest.java:68 - profile:ResponseModel(status=1, msg=, data={})
+2023-02-11 16:55:33,986 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:136 - [NotifyCenter] Start destroying Publisher
+2023-02-11 16:55:33,986 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:102 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-11 16:55:33,986 [Thread-7] WARN  [com.alibaba.nacos.common.notify.NotifyCenter] NotifyCenter.java:153 - [NotifyCenter] Destruction of the end
+2023-02-11 16:55:33,987 [Thread-1] WARN  [c.alibaba.nacos.common.http.HttpClientBeanHolder] HttpClientBeanHolder.java:111 - [HttpClientBeanHolder] Destruction of the end
