@@ -23,6 +23,21 @@ spring:
 #        password: admin
 #        instance:
 #          prefer-ip: true
+  kafka:
+    bootstrap-servers: nas.titxu.com:9092 #这个是kafka的地址,对应你server.properties中配置的
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer #序列化
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 1 # 消息发送重试次数
+      acks: 1 #应答级别:多少个分区副本备份完成时向生产者发送ack确认(可选0、1、all/-1)
+      batch-size: 16384 #批量大小
+      properties:
+        linger:
+          ms: 0 #提交延迟
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: test-consumer-group #消费者的ID，这个对应 config/consumer.properties中的group.id
 
 #
 #
@@ -44,3 +59,10 @@ mybatis-plus:
 
 #swagger:
 #  enabled: false
+
+
+
+
+server:
+  port: 8099
+

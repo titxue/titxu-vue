@@ -28,7 +28,14 @@ public interface RemoteWechatService {
      * 设置接收通知地址
      */
     @PostMapping("/global/set_callback_url")
-    ResponseModel<Map<String, String>> clientSetCallbackUrl(@RequestBody ClientOpenReqModel clientOpenReqModel);
+    ResponseModel<Map<String, String>> clientSetCallbackUrl(@RequestBody CallbackUrlReqModel callbackUrlReqModel);
+
+    /**
+     * 设置接收通知地址
+     */
+    @PostMapping("/global/set_callback_kafka")
+    ResponseModel<Map<String, String>> clientSetCallbackKafka(@RequestBody CallbackKafkaReqModel model);
+
 
     /**
      * 获取自己的信息

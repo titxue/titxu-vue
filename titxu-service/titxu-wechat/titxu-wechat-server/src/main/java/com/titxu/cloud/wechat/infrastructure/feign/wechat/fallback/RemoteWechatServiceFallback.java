@@ -29,8 +29,13 @@ public class RemoteWechatServiceFallback implements RemoteWechatService {
     }
 
     @Override
-    public ResponseModel<Map<String, String>> clientSetCallbackUrl(ClientOpenReqModel clientOpenReqModel) {
+    public ResponseModel<Map<String, String>> clientSetCallbackUrl(CallbackUrlReqModel callbackUrlReqModel) {
         return new ResponseModel<Map<String, String>>().errorMsg("设置微信消息回调地址" + ERROR_MSG);
+    }
+
+    @Override
+    public ResponseModel<Map<String, String>> clientSetCallbackKafka(CallbackKafkaReqModel model) {
+        return new ResponseModel<Map<String, String>>().errorMsg("设置微信消息推送配置" + ERROR_MSG);
     }
 
     @Override

@@ -40,7 +40,7 @@ class RemoteWechatServiceTest {
     @Test
     void open() {
         ClientOpenReqModel reqModel = new ClientOpenReqModel();
-        reqModel.setGuid("863e18e5-9bbe-38e0-8aba-d8a8b1ee0ae9");
+        reqModel.setGuid("a4aa424b-5283-3e1d-af22-25652aa5801b");
         remoteWechatService.open(reqModel);
     }
 
@@ -50,7 +50,7 @@ class RemoteWechatServiceTest {
     @Test
     void getProfile() {
         ClientReqModel reqModel = new ClientReqModel();
-        reqModel.setGuid("e9a69815-a17a-3f07-86bd-55a39f7ba5ed");
+        reqModel.setGuid("a4aa424b-5283-3e1d-af22-25652aa5801b");
         ResponseModel<Map<String, String>> profile = remoteWechatService.getProfile(reqModel);
         log.info("profile:{}", profile);
     }
@@ -63,7 +63,7 @@ class RemoteWechatServiceTest {
         SendTextReqModel textReqModel = new SendTextReqModel();
         textReqModel.setGuid("e9a69815-a17a-3f07-86bd-55a39f7ba5ed");
         textReqModel.setContent("测试发送消息");
-        textReqModel.setToWxid("wxid_k1x0k65919no22");
+        textReqModel.setToWxid("43784291946@chatroom");
         ResponseModel<Map<String, String>> profile = remoteWechatService.sendText(textReqModel);
         log.info("profile:{}", profile);
     }
