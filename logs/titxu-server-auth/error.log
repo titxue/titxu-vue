@@ -133,7 +133,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:25:24,288 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -271,7 +271,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:27:03,224 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -409,7 +409,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:27:03,230 [nacos-grpc-client-executor-nas.titxu.com-32] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1673540676370_10.0.0.10_62024]Request stream onCompleted, switch server
@@ -549,7 +549,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:27:52,152 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -687,7 +687,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:28:29,903 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -825,7 +825,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:31:17,339 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -963,7 +963,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:31:34,143 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1101,7 +1101,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:31:36,391 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1239,7 +1239,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:31:49,584 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1377,7 +1377,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:32:49,529 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1515,7 +1515,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:33:30,909 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1653,7 +1653,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:37:12,249 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1791,7 +1791,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:37:27,833 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -1929,7 +1929,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:44:38,951 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -2067,7 +2067,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:45:03,706 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -2205,7 +2205,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:45:36,148 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -2343,7 +2343,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:45:38,394 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -2481,7 +2481,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:45:39,453 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -2619,7 +2619,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy120.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 00:47:04,618 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
@@ -3000,7 +3000,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:04:24,338 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -3138,7 +3138,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:07:46,985 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
@@ -3456,7 +3456,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:31:23,623 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -3594,7 +3594,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:31:25,030 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -3732,7 +3732,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:31:51,013 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -3870,7 +3870,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:32:19,130 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -4008,7 +4008,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 11:33:46,166 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
@@ -4206,7 +4206,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 12:36:45,849 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -4344,7 +4344,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 12:37:35,078 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
@@ -4542,7 +4542,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 12:59:38,452 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -4680,7 +4680,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 13:00:56,814 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -4818,7 +4818,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 13:01:42,117 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -4956,7 +4956,7 @@ Caused by: feign.FeignException$Unauthorized: [401 Unauthorized] during [POST] t
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 14:38:10,257 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -5088,7 +5088,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -5249,7 +5249,7 @@ Caused by: feign.FeignException$InternalServerError: [500 Internal Server Error]
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 14:39:13,562 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -5381,7 +5381,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -5542,7 +5542,7 @@ Caused by: feign.FeignException$InternalServerError: [500 Internal Server Error]
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 14:40:59,252 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -5674,7 +5674,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -5835,7 +5835,7 @@ Caused by: feign.FeignException$InternalServerError: [500 Internal Server Error]
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 14:42:19,766 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -5967,7 +5967,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -6128,7 +6128,7 @@ Caused by: feign.FeignException$InternalServerError: [500 Internal Server Error]
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 15:03:04,670 [XNIO-1 task-2] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -6260,7 +6260,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -6421,7 +6421,7 @@ Caused by: feign.FeignException$InternalServerError: [500 Internal Server Error]
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 15:44:41,514 [nacos-grpc-client-executor-nas.titxu.com-509] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1673593360785_10.0.0.10_65300]Request stream onCompleted, switch server
@@ -6626,7 +6626,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -6781,7 +6781,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -6936,7 +6936,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -7091,7 +7091,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -7247,7 +7247,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -7402,7 +7402,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -7557,7 +7557,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -7714,7 +7714,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -7870,7 +7870,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8026,7 +8026,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8182,7 +8182,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8338,7 +8338,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8494,7 +8494,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8650,7 +8650,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8806,7 +8806,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -8962,7 +8962,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -9118,7 +9118,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -9381,7 +9381,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -9539,7 +9539,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -9695,7 +9695,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -9931,7 +9931,7 @@ Caused by: feign.FeignException$InternalServerError: [500 Internal Server Error]
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 2023-01-13 18:46:36,173 [XNIO-1 task-3] ERROR [o.s.s.w.a.UsernamePasswordAuthenticationFilter] AbstractAuthenticationProcessingFilter.java:244 - An internal error occurred while trying to authenticate the user.
@@ -10063,7 +10063,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -10219,7 +10219,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -10374,7 +10374,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -10530,7 +10530,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -10685,7 +10685,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -10841,7 +10841,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -10997,7 +10997,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -11153,7 +11153,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -11309,7 +11309,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -11468,7 +11468,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -11624,7 +11624,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -11779,7 +11779,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -11935,7 +11935,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -12091,7 +12091,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -12247,7 +12247,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -12403,7 +12403,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -12559,7 +12559,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -12715,7 +12715,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:94)
 	... 116 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -12870,7 +12870,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -13025,7 +13025,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -13180,7 +13180,7 @@ Caused by: feign.RetryableException: Connect timed out executing POST http://tit
 	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
 	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
 	at jdk.proxy2/jdk.proxy2.$Proxy121.loginByUserName(Unknown Source)
-	at com.titxu.cloud.common.security.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
 	at com.titxu.cloud.ops.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:113)
 	... 115 common frames omitted
 Caused by: java.net.SocketTimeoutException: Connect timed out
@@ -13206,3 +13206,442 @@ Caused by: java.net.SocketTimeoutException: Connect timed out
 	at org.springframework.cloud.openfeign.loadbalancer.FeignBlockingLoadBalancerClient.execute(FeignBlockingLoadBalancerClient.java:134)
 	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:102)
 	... 125 common frames omitted
+2023-01-21 14:00:13,512 [XNIO-1 task-2] ERROR [c.titxu.cloud.common.web.util.BaseExceptionHandler] BaseExceptionHandler.java:45 - Timeout on blocking read for 5000000000 NANOSECONDS
+java.lang.IllegalStateException: Timeout on blocking read for 5000000000 NANOSECONDS
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:123)
+	at reactor.core.publisher.Mono.block(Mono.java:1734)
+	at org.springframework.web.service.invoker.HttpServiceMethod$ResponseFunction.execute(HttpServiceMethod.java:296)
+	at org.springframework.web.service.invoker.HttpServiceMethod.invoke(HttpServiceMethod.java:105)
+	at org.springframework.web.service.invoker.HttpServiceProxyFactory$HttpServiceMethodInterceptor.invoke(HttpServiceProxyFactory.java:271)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy2/jdk.proxy2.$Proxy134.login(Unknown Source)
+	at com.titxu.cloud.management.auth.api.AccountController.loginByMobile(AccountController.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1010)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:913)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:884)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at com.titxu.cloud.management.auth.filter.CaptchaFilter.doFilterInternal(CaptchaFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:399)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapUnsecured$1(ObservationFilterChainDecorator.java:87)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:219)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1512)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-21 14:00:19,098 [XNIO-1 task-3] ERROR [c.t.c.m.a.s.b.OAuth2ResourceOwnerBaseAuthenticationProvider] OAuth2ResourceOwnerBaseAuthenticationProvider.java:219 - problem in authenticate
+org.springframework.security.authentication.InternalAuthenticationServiceException: Connect timed out executing POST http://titxu-server-sys/remote/auth/loginByUserName?userName=18555555555
+	at com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:126)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ObservationAuthenticationManager.lambda$authenticate$1(ObservationAuthenticationManager.java:53)
+	at io.micrometer.observation.Observation.observe(Observation.java:559)
+	at org.springframework.security.authentication.ObservationAuthenticationManager.authenticate(ObservationAuthenticationManager.java:52)
+	at com.titxu.cloud.management.auth.support.base.OAuth2ResourceOwnerBaseAuthenticationProvider.authenticate(OAuth2ResourceOwnerBaseAuthenticationProvider.java:143)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ObservationAuthenticationManager.lambda$authenticate$1(ObservationAuthenticationManager.java:53)
+	at io.micrometer.observation.Observation.observe(Observation.java:559)
+	at org.springframework.security.authentication.ObservationAuthenticationManager.authenticate(ObservationAuthenticationManager.java:52)
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter.doFilterInternal(OAuth2TokenEndpointFilter.java:167)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter.doFilterInternal(OAuth2ClientAuthenticationFilter.java:125)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter.doFilterInternal(NimbusJwkSetEndpointFilter.java:85)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter.doFilterInternal(OAuth2AuthorizationEndpointFilter.java:156)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter.doFilterInternal(OAuth2AuthorizationServerMetadataEndpointFilter.java:84)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.AuthorizationServerContextFilter.doFilterInternal(AuthorizationServerContextFilter.java:61)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:173)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:186)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:280)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:170)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:134)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1512)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: feign.RetryableException: Connect timed out executing POST http://titxu-server-sys/remote/auth/loginByUserName?userName=18555555555
+	at feign.FeignException.errorExecuting(FeignException.java:277)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:112)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:72)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:98)
+	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory$1.proceed(FeignCachingInvocationHandlerFactory.java:66)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:351)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53)
+	at jdk.proxy2/jdk.proxy2.$Proxy124.loginByUserName(Unknown Source)
+	at com.titxu.cloud.management.auth.application.impl.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:40)
+	at com.titxu.cloud.management.auth.support.core.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:114)
+	... 145 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:279)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:384)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:406)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1430)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1401)
+	at feign.Client$Default.convertAndSend(Client.java:219)
+	at feign.Client$Default.execute(Client.java:105)
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:56)
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:91)
+	at org.springframework.cloud.openfeign.loadbalancer.FeignBlockingLoadBalancerClient.execute(FeignBlockingLoadBalancerClient.java:134)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:102)
+	... 155 common frames omitted
+2023-01-21 14:00:39,182 [XNIO-1 task-3] ERROR [c.titxu.cloud.common.web.util.BaseExceptionHandler] BaseExceptionHandler.java:45 - Timeout on blocking read for 5000000000 NANOSECONDS
+java.lang.IllegalStateException: Timeout on blocking read for 5000000000 NANOSECONDS
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:123)
+	at reactor.core.publisher.Mono.block(Mono.java:1734)
+	at org.springframework.web.service.invoker.HttpServiceMethod$ResponseFunction.execute(HttpServiceMethod.java:296)
+	at org.springframework.web.service.invoker.HttpServiceMethod.invoke(HttpServiceMethod.java:105)
+	at org.springframework.web.service.invoker.HttpServiceProxyFactory$HttpServiceMethodInterceptor.invoke(HttpServiceProxyFactory.java:271)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy2/jdk.proxy2.$Proxy134.login(Unknown Source)
+	at com.titxu.cloud.management.auth.api.AccountController.loginByMobile(AccountController.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1010)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:913)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:884)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at com.titxu.cloud.management.auth.filter.CaptchaFilter.doFilterInternal(CaptchaFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:399)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapUnsecured$1(ObservationFilterChainDecorator.java:87)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:219)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-21 14:17:51,835 [XNIO-1 task-2] ERROR [c.titxu.cloud.common.web.util.BaseExceptionHandler] BaseExceptionHandler.java:51 - Request method 'POST' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:126)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:504)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1274)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1010)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:913)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:884)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at com.titxu.cloud.management.auth.filter.CaptchaFilter.doFilterInternal(CaptchaFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:399)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapUnsecured$1(ObservationFilterChainDecorator.java:87)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:219)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1512)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-21 14:24:45,104 [nacos-grpc-client-executor-nas.titxu.com-107] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1674281855673_10.0.0.10_53140]Request stream onCompleted, switch server
+2023-01-21 14:24:45,106 [nacos-grpc-client-executor-nas.titxu.com-113] ERROR [c.a.nacos.common.remote.client.grpc.GrpcClient] LoggerUtils.java:99 - [1674281845130_10.0.0.10_53082]Request stream onCompleted, switch server

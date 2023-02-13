@@ -1,4 +1,4 @@
-package com.titxu.cloud.common.security.service;
+package com.titxu.cloud.management.auth.application.service;
 
 import com.titxu.cloud.common.security.domain.AuthUser;
 import com.titxu.cloud.sys.api.dto.AuthenticationDTO;

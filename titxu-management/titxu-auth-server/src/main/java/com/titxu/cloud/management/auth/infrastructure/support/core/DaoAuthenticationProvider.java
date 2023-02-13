@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.extra.spring.SpringUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.core.util.WebUtils;
-import com.titxu.cloud.common.security.service.IUserDetailsService;
+import com.titxu.cloud.management.auth.application.service.IUserDetailsService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;
 import org.springframework.core.Ordered;

@@ -3,7 +3,7 @@ package com.titxu.cloud.management.auth.infrastructure.support.core;
 import cn.hutool.extra.spring.SpringUtil;
 import com.titxu.cloud.common.core.constant.AuthConstants;
 import com.titxu.cloud.common.security.domain.AuthUser;
-import com.titxu.cloud.common.security.service.IUserDetailsService;
+import com.titxu.cloud.management.auth.application.service.IUserDetailsService;
 import org.springframework.core.Ordered;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.userdetails.User;

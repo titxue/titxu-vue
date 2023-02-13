@@ -20,7 +20,7 @@ public class TestProducer {
     @Test
     @SneakyThrows
     void sendMsg() {
-        CompletableFuture<SendResult<Object, Object>> test_msg = kafkaTemplate.send("quickstart-events", "test msg");
+        CompletableFuture<SendResult<Object, Object>> test_msg = kafkaTemplate.send("wechat-events", "test msg");
         log.info("发送成功{}", test_msg.get().toString());
     }
 }

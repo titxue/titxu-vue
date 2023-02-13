@@ -1,7 +1,7 @@
 package com.titxu.cloud.management.auth.api;
 
 import com.titxu.cloud.common.web.util.Result;
-import com.titxu.cloud.management.auth.application.LoginService;
+import com.titxu.cloud.management.auth.application.service.LoginService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

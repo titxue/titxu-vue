@@ -1,4 +1,4 @@
-package com.titxu.cloud.management.auth.application;
+package com.titxu.cloud.management.auth.application.service;
 
 
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;

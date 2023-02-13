@@ -1,19 +1,27 @@
-package com.titxu.cloud.common.security.service;
+package com.titxu.cloud.management.auth.application.service.impl;
 
+import com.titxu.cloud.common.core.constant.AuthConstants;
+import com.titxu.cloud.management.auth.application.service.IUserDetailsService;
 import com.titxu.cloud.sys.api.dto.AuthenticationDTO;
 import com.titxu.cloud.sys.api.feign.RemoteAuthenticationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Primary;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 /**
  * 自定义用户认证和授权
  **/
 @Primary
 @Slf4j
+@Service
 public class UserDetailsServiceImpl implements IUserDetailsService {
 
 
@@ -26,22 +34,22 @@ public class UserDetailsServiceImpl implements IUserDetailsService {
         this.remoteAuthenticationService = remoteAuthenticationService;
     }
 
-//    @Autowired
-//    public void setCacheManager(CacheManager cacheManager) {
-//        this.cacheManager = cacheManager;
-//    }
+    @Autowired
+    public void setCacheManager(CacheManager cacheManager) {
+        this.cacheManager = cacheManager;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        Cache cache = cacheManager.getCache(AuthConstants.USER_DETAILS);
-//        if (cache != null && cache.get(username) != null) {
-//            return (User) cache.get(username).get();
-//        }
+        Cache cache = cacheManager.getCache(AuthConstants.USER_DETAILS);
+        if (cache != null && cache.get(username) != null) {
+            return (User) Objects.requireNonNull(Objects.requireNonNull(cache.get(username)).get());
+        }
         AuthenticationDTO authenticationDTO = remoteAuthenticationService.loginByUserName(username);
         UserDetails userDetails = getUserDetails(authenticationDTO);
-//        if (cache != null) {
-//            cache.put(username, userDetails);
-//        }
+        if (cache != null) {
+            cache.put(username, userDetails);
+        }
         if (authenticationDTO != null) {
             return userDetails;
         } else {

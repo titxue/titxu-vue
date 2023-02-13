@@ -1,9 +1,9 @@
-package com.titxu.cloud.management.auth.application.impl;
+package com.titxu.cloud.management.auth.application.service.impl;
 
 
 import com.alibaba.fastjson2.JSON;
 import com.titxu.cloud.common.core.constant.AuthConstants;
-import com.titxu.cloud.management.auth.application.LoginService;
+import com.titxu.cloud.management.auth.application.service.LoginService;
 import com.titxu.cloud.management.auth.application.command.LoginPasswordCommand;
 import com.titxu.cloud.management.auth.application.command.RefreshCommand;
 import lombok.extern.slf4j.Slf4j;
