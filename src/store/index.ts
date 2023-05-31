@@ -8,9 +8,20 @@ import { useAuthStore } from './modules/auth';
 import { useLogStore } from './modules/log';
 import { useConfigStore } from './modules/config';
 import { useNavTabStore } from './modules/navTab';
+import { useWifiStore } from './modules/wifi';
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
-export { useAppStore, useUserStore, usePermissionStore, useRoleStore, useAuthStore, useLogStore, useConfigStore, useNavTabStore };
+export {
+  useAppStore,
+  useUserStore,
+  usePermissionStore,
+  useRoleStore,
+  useAuthStore,
+  useLogStore,
+  useConfigStore,
+  useNavTabStore,
+  useWifiStore,
+};
 export default pinia;

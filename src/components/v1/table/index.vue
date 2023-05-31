@@ -9,7 +9,7 @@
       :data="xTable.table.data"
       :row-key="xTable.table.pk"
       :border="true"
-      v-loading="xTable.table.loading"
+      v-loading="!!xTable.table.loading"
       stripe
       @select-all="onSelectAll"
       @select="onSelect"

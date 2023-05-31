@@ -26,22 +26,19 @@
           :label-width="xTable.form.labelWidth + 'px'"
           v-if="!xTable.form.loading"
         >
-          <el-form-item prop="userNick" label="用户昵称">
-            <el-input v-model="xTable.form.items!.userNick" type="string" placeholder="请输入用户昵称" />
+          <el-form-item prop="name" label="商家名称">
+            <el-input v-model="xTable.form.items!.name" type="string" placeholder="请输入商家名称" />
           </el-form-item>
-
-          <el-form-item prop="mobile" label="手机号">
-            <el-input v-model="xTable.form.items!.mobile" type="string" placeholder="请输入手机号" />
+          <el-form-item prop="contactName" label="联系人姓名">
+            <el-input v-model="xTable.form.items!.contactName" type="string" placeholder="请输入联系人姓名" />
+          </el-form-item>
+          <el-form-item prop="contactPhone" label="联系人电话">
+            <el-input v-model="xTable.form.items!.contactPhone" type="string" placeholder="请输入联系人电话" />
           </el-form-item>
           <el-form-item prop="email" label="邮箱">
             <el-input v-model="xTable.form.items!.email" type="string" placeholder="请输入邮箱" />
           </el-form-item>
-          <!-- 下拉框 -->
-          <el-form-item prop="roleIdList" label="角色列表">
-            <el-select v-model="xTable.form.items!.roleIdList" placeholder="请选择角色" multiple clearable collapse-tags>
-              <el-option v-for="item in state.roleList" :key="item.id" :label="item.roleName" :value="item.id" />
-            </el-select>
-          </el-form-item>
+
           <el-form-item prop="status" label="状态">
             <el-radio-group v-model="xTable.form.items!.status">
               <el-radio border label="0">启用</el-radio>
@@ -67,10 +64,10 @@
   import type { ElForm } from 'element-plus';
   import { getRoleAll } from '/@/api/role';
   import { RoleType } from '/@/api/role/types';
-  import { UserInfoType } from '/@/api/user/types';
+  import { MerchantType } from '/@/api/merchants/types';
 
   const formRef = ref<InstanceType<typeof ElForm>>();
-  const xTable = inject('xTable') as xTableClass<UserInfoType>;
+  const xTable = inject('xTable') as xTableClass<MerchantType>;
 
   const state: {
     roleList: RoleType[];

@@ -11,6 +11,8 @@ export enum ADMIN_URL {
   role = '/sys/role/',
   tenant = '/sys/tenant/',
   permission = '/sys/permission/',
+  merchants = '/wifi/merchants/',
+  wifiInfo = '/wifi/wifiInfo/',
 }
 
 /**
